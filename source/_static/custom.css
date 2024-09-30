@@ -114,3 +114,14 @@ p[class="centered"] strong {
     font-size: smaller;
     font-weight: normal;
 }
+
+div.container {
+    bottom: 0px !important;
+    left: 0px !important;
+    padding: 0;
+    width: 100%;
+}
+
+div.container header {
+    padding: 10px;
+}
