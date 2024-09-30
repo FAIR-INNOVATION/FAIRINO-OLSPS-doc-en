@@ -1,2 +1,2 @@
-# FAIRINO_OLSPS_doc
+# FAIRINO_OLSPS_doc_en
 FAIR Olsps documentation
