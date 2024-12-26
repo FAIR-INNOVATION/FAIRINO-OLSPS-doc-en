@@ -7,5 +7,7 @@ AIRLab Software User Manual
     :caption: Contents
 
     foreword
+    environment
     quick_start
     analysis
+    plug
