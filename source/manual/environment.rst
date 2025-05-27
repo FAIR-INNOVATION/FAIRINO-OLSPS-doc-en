@@ -14,13 +14,7 @@ Tool Preparation
 
 System image preparation
 ---------------------------
-The first version of the FAIRINO AIRLab image can be obtained through Baidu Netdisk:
-
-Link:：https://pan.baidu.com/s/1Q5tAIsoYbcF7tUrK_q0QhA?pwd=i1i2
-
-Extraction code：i1i2
-
-Download to the system image and store it in a USB drive.
+Contact fairino technical personnel to obtain the initial version mirror version of AIRLab. Download to the system image and store on a USB drive.
 
 Boot disk creation
 -------------------
@@ -172,35 +166,10 @@ Start AIRLab software
 
 .. centered:: Figure 2-16    Enter the system
 
-2. Click the folder icon on the left to enter the following interface;
+2. Click the AIRLab software start icon to start the AIRLab software system. Then you can operate the software according to our user manual.
 
 .. figure:: environment/17.png
 	:align: center
 	:width: 5in
 
-.. centered:: Figure 2-17    System home directory
-
-3. Right-click in a blank space to pop up the menu bar and click "Open in Terminal";
-
-.. figure:: environment/18.png
-	:align: center
-	:width: 5in
-
-.. centered:: Figure 2-18    Open the terminal in the system home directory
-
-4. Enter the following characters "./airlab.sh" in the terminal and press Enter;
-
-.. figure:: environment/19.png
-	:align: center
-	:width: 5in
-
-.. centered:: Figure 2-19    Start AIRLab software
-
-5. The AIRLab system will be started, and then you can operate the software according to our user manual.
-
-.. figure:: environment/20.png
-	:align: center
-	:width: 5in
-
-.. centered:: Figure 2-20    Enter the main interface of AIRLab software
-
+.. centered:: Figure 2-17   Go to the main interface of the AIRLab software
