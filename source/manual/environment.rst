@@ -172,4 +172,4 @@ Start AIRLab software
 	:align: center
 	:width: 5in
 
-.. centered:: Figure 2-17   Go to the main interface of the AIRLab software
+.. centered:: Figure 2-17  Go to the main interface of the AIRLab software

@@ -121,7 +121,7 @@ If the placement method is selected as regular placement, it is necessary to tea
 
 1. Start the AI node
 
-Open the terminal under the binpicking_for_block path, run server_start.sh, and the display of Avoid_BP_Server is ready in the newly opened terminal indicates that the AI node has been successfully started.
+Open the terminal under the /zhenhua_lock_mp/ path, run server_start.sh, If the four terminals from Server1 to Server4 are displayed in the newly opened terminal, the AI node is successfully started.
 
 .. figure:: plug/8.png
 	:align: center
@@ -129,7 +129,7 @@ Open the terminal under the binpicking_for_block path, run server_start.sh, and 
 
 .. centered:: Figure 5-8  Start AI Node
 
-4. Run AIRLab software
+1. Run AIRLab software
    
 Start AIRLab software with one click (make sure the robot arm is connected and the visual node is successfully started), open the bin picking plug-in, first perform grabbing posture sampling, and after successful sampling, perform position binding, and then run the program.
 
