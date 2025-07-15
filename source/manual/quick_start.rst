@@ -298,70 +298,87 @@ The purpose of this step is to calibrate the relative positions of the camera an
 
 .. centered:: Figure 3-17  AIRLab Software-Camera Display
 
-- Step2: Calibrate the software interface; after importing the camera, click the plus sign on the right side of the import module, the AIRLab interface will show the module setting page, select the camera icon, click the “OK” button, and the camera setting page will appear in the AIRLab interface.
+- Step2: Connect camera.Click the "Import Module" on the right side, then select the camera. Upon entering the "Camera Settings" pop-up window, simply click the "Search Devices" button. AIRLab will automatically scan and connect to successfully linked camera devices, if the camera is successfully connected to AIRLab. If the connection fails, AIRLab will display "Not Connected." In such cases, please manually verify whether the camera is properly connected.
 
 .. figure:: quick_start/18.png
 	:align: center
-	:width: 2.5in
+	:width: 6in
 
 .. centered:: Figure 3-18  Camera settings page
-
-Click the “Camera Hand-Eye Calibration” button at the bottom of the page, the AIRLab interface displays the Hand-Eye Calibration page as shown in the figure.
 
 .. figure:: quick_start/19.png
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 3-19  Hand-eye calibration page
+.. centered:: Figure 3-19  Camera connection successful
 
-After selecting the type of hand-eye calibration and the calibration algorithm, click the “Calibration Start” button to indicate that the hand-eye calibration is now started. Select the operation mode, including “automatic” and “manual” operation mode. The automatic operation mode is described below.
-
-1. After selecting the operation mode as “Auto” and clicking the “Auto Run” button, the software will start to calibrate the hand and eye automatically, and the camera will emit blue light during the process of taking pictures, which is normal shooting.
+Click "Device Debugging" in the pop-up window, then select the "Hand-Eye Calibration" button.
 
 .. figure:: quick_start/20.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 3-20  Point cloud camera hand-eye calibration
+.. centered:: Figure 3-20  Device Debugging - HEC
+
+The AIRLab interface will display the hand-eye calibration page as shown in the figure.
 
 .. figure:: quick_start/21.png
 	:align: center
-	:width: 5in
+	:width: 3in
 
-.. centered:: Figure 3-21  Point cloud calibration results
+.. centered:: Figure 3-21  Hand-eye calibration page 
 
-2. The camera will automatically calibrate the process will take 8 photos, calibration will be prompted after the end of the calibration of the calibration success or failure, prompted by the calibration of the success of the next step, prompted by the calibration of the failure of the calibration need to click on the “auto-run” to re-run the calibration.
+After selecting the type of hand-eye calibration and the calibration algorithm, click the “Calibration Start” button to indicate that the hand-eye calibration is now started. Select the operation mode, including “automatic” and “manual” operation mode. The automatic operation mode is described below.
 
-3. After this round of camera calibration, you can change the position of the calibration board and click the “Auto Run” button again for the next round of calibration. The purpose of this step is to improve the accuracy of the system, you can choose to calibrate for 3~5 rounds, and the system will choose the coordinate system with the highest accuracy to use;
-
-4. Click the “Calibration End” button to end the point cloud camera hand-eye calibration;
-
-- Step3: Verify the accuracy; randomly select a location to place the calibration plate, click on the “Take Picture” button in Figure 3-19, keep the calibration plate position unchanged, move the robot three times to take three photos, click on the “Verify Result” button, a pop-up window will appear as shown in Figure 3-22. The four points in the pop-up window are the coordinates of the four fixed points on the calibration board. By clicking on the button “Move to point 1”, the robot is moved to the specified position on the calibration board, and then the integrated error is obtained.
+1. After selecting the operation mode as “Auto” and clicking the “Auto Op” button, the software will start to calibrate the hand and eye automatically, and the camera will emit blue light during the process of taking pictures, which is normal shooting.
 
 .. figure:: quick_start/22.png
 	:align: center
 	:width: 3.5in
 
-.. centered:: Figure 3-22  Authentication Results-Pop-up Window
-
-If you need to re-verify, you need to click the “Re-verify” button to clear the error and then carry out the above verification process again. A combined error value in the range of 0.5 to 1.0 indicates a good hand-eye calibration result, while a value in the range of 1.0 to 1.5 indicates a lesser calibration result. Other results represent poor results for this calibration and require recalibration.
-
-Start Running
--------------------
-After completing the above steps, the robot can be controlled to start the welding task, which is divided into five main steps.
-
-- Step1: Get the ground equations as follows
-
-  Click the plus sign on the right side of the import module, the module setting page will appear in the interface, select the camera and click “OK” button. The “Camera Settings” page will appear on the interface, click the “Shoot Ground” button, and the photo will be taken successfully.
-
-- Step2: Edit the weld seams and determine the list of weld seams, please refer to 4.5.3 Weld Seam Editing for detailed operation.
-
-- Step3: Set the program configuration mode, as in Figure 3-23. note: users need to set this parameter according to the actual need before running the program, the specific meaning of the parameter is shown in 4.6.9 Program Configuration.
+.. centered:: Figure 3-22  Point cloud camera hand-eye calibration
 
 .. figure:: quick_start/23.png
 	:align: center
+	:width: 5in
+
+.. centered:: Figure 3-23  Point cloud calibration results
+
+2. The camera will automatically calibrate the process will take 8 photos, calibration will be prompted after the end of the calibration of the calibration success or failure, prompted by the calibration of the success of the next step, prompted by the calibration of the failure of the calibration need to click on the “Auto Op” to re-run the calibration.
+
+3. After this round of camera calibration, you can change the position of the calibration board and click the “Auto Op” button again for the next round of calibration. The purpose of this step is to improve the accuracy of the system, you can choose to calibrate for 3~5 rounds, and the system will choose the coordinate system with the highest accuracy to use;
+
+4. Click the “Calibration End” button to end the point cloud camera hand-eye calibration;
+
+- Step3: Verify the accuracy; randomly select a location to place the calibration plate, click on the “Photography” button, keep the calibration plate position unchanged, move the robot three times to take three photos, click on the “Verify Result” button, a pop-up window will appear as shown in Figure 3-24. The four points in the pop-up window are the coordinates of the four fixed points on the calibration board. By clicking on the button “Move to point 1”, the robot is moved to the specified position on the calibration board, and then the integrated error is obtained.
+
+.. figure:: quick_start/24.png
+	:align: center
+	:width: 3.5in
+
+.. centered:: Figure 3-24  Authentication Results-Pop-up Window
+
+If you need to re-verify, you need to click the “Revalidate” button to clear the error and then carry out the above verification process again. A combined error value in the range of 0.5 to 1.0 indicates a good hand-eye calibration result, while a value in the range of 1.0 to 1.5 indicates a lesser calibration result. Other results represent poor results for this calibration and require recalibration.
+
+Start Running
+-------------------
+After completing the above steps, the robot can be controlled to start the welding task, which is divided into four main steps.
+
+- Step1: Get the ground equations as follows
+
+  Select "Camera Settings - Device Debugging", click "Capture Ground" button, and the photo will be taken successfully,then click “Get Ground Equation” ,then click “GrndEffVerif” button view the ground fitting effect; If the ground fitting effect is normal, proceed to the next step; Otherwise, it may need to be recalibrated.
+
+- Step2: Edit the weld seams and determine the list of weld seams, please refer to 4.5.3 Weld Seam Editing for detailed operation.
+
+- Step3:  Set the program configuration mode, as in Figure 3-25. 
+
+.. important::
+    users need to set this parameter according to the actual need before running the program, the specific meaning of the parameter is shown in 4.6.9 Program Configuration.
+
+.. figure:: quick_start/25.png
+	:align: center
 	:width: 3in
 
-.. centered:: Figure 3-23  Setup Program Configuration
+.. centered:: Figure 3-25  Setup Program Configuration
 
 - Step4: After the configuration is completed, click one button to run, the program will start from the “workpiece positioning” until the welding is completed.
