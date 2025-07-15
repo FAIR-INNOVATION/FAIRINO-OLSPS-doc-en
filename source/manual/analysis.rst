@@ -1373,9 +1373,3 @@ After the user selects the measurement unit to switch, the input box labeled in 
     :width: 3in
 
 .. centered:: Figure 4-122   Before switching units of measurement
-
-.. figure:: analysis/4/123.png
-    :align: center
-    :width: 3in
-
-.. centered:: Figure 4-123   After switching units of measurement

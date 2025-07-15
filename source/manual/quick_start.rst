@@ -272,7 +272,7 @@ Step6: If you need to reset, click the "Cancel" button in Figure 3-13 to calibra
 
 Import Engineering
 ---------------------
-Open the AIRLab software and select Import or New Project, as shown below.
+Open the AIRLab software, as shown in the figure, click "New" or "Project" to quickly create or open a new project file.
 
 .. figure:: quick_start/15.png
 	:align: center
@@ -294,7 +294,7 @@ The purpose of this step is to calibrate the relative positions of the camera an
 
 .. figure:: quick_start/17.png
 	:align: center
-	:width: 5in
+	:width: 6in
 
 .. centered:: Figure 3-17  AIRLab Software-Camera Display
 
