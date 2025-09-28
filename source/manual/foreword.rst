@@ -14,4 +14,4 @@ Environmental Requirements
 --------------------------------
 
 - Robot version: V6.0 and above.
-- Controller software version: V3.8.2
+- Controller software version: V3.8.2.10

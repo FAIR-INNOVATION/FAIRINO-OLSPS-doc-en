@@ -3,23 +3,23 @@ AIRLab Software Analysis
 .. toctree:: 
     :maxdepth: 5
 
-The initial interface of the AIRLab software is shown in Figure 4-1 and is divided into five main sections. In the middle of the interface is the main display box (divided into scene display and camera display), on the top is the menu bar, on the leftmost side is the engineering module area, on the rightmost side is the operation area, and at the bottom of the interface is the command feedback area. This section will provide a detailed description of the functions and usage of the above areas, the pop-up windows and other pages that appear in the AIRLab software, and the sub-page functions.
+The initial interface of the AIRLab software is shown in Figure 3-1 and is divided into five main sections. In the middle of the interface is the main display box (divided into scene display and camera display), on the top is the menu bar, on the leftmost side is the engineering module area, on the rightmost side is the operation area, and at the bottom of the interface is the command feedback area. This section will provide a detailed description of the functions and usage of the above areas, the pop-up windows and other pages that appear in the AIRLab software, and the sub-page functions.
 
 .. figure:: analysis/4/1.png
 	:align: center
 	:width: 7.5in
 
-.. centered:: Figure 4-1  AIRLab Software Initial Interface
+.. centered:: Figure 3-1  AIRLab Software Initial Interface
 
 Menu Bar
 --------------------------
-The menu bar contains all the items shown in Figure 4-2, primarily including the following buttons: File, View, Window, Process, Simulation, Plug-in, and icon buttons (from left to right): Add Point, Add Coordinate System, Switch Mode, Pause Run, Start Run, Stop Run, Field of View Movement, Field of View Rotation.
+The menu bar contains all the items shown in Figure 3-2, primarily including the following buttons: File, View, Window, Process, Simulation, Plug-in, and icon buttons (from left to right): Add Point, Add Coordinate System, Switch Mode, Pause Run, Start Run, Stop Run, Field of View Movement, Field of View Rotation.
 
 .. figure:: analysis/4/2.png
 	:align: center
 	:width: 7.5in
 
-.. centered:: Figure 4-2  AIRLab Menu Bar
+.. centered:: Figure 3-2  AIRLab Menu Bar
 
 File
 ~~~~~~~~~~~~~~~~~~~
@@ -29,7 +29,7 @@ Click the“File”button, the menu shown below will appear:“New”,“Open”
 	:align: center
 	:width: 2in
 
-.. centered:: Figure 4-3  AIRLab Menu Bar - File
+.. centered:: Figure 3-3  AIRLab Menu Bar - File
 
 Select “New” click, “New Project” pop-up window will show, select the type of weld project in the pop-up window, then click “Confirm” button to complete the project new.
 
@@ -37,7 +37,7 @@ Select “New” click, “New Project” pop-up window will show, select the ty
 	:align: center
 	:width: 2in
 
-.. centered:: Figure 4-4  AIRLab Menu Bar - File - New 
+.. centered:: Figure 3-4  AIRLab Menu Bar - File - New 
 
 Select “Open” click, the “Select Project” pop-up window appears, find the path of your project, select the double-click or click on the pop-up window after clicking the “Open” button, that is, import the project successfully.
 
@@ -45,7 +45,7 @@ Select “Open” click, the “Select Project” pop-up window appears, find th
 	:align: center
 	:width: 4in
 
-.. centered:: Figure 4-5  AIRLab Menu Bar - File - Open
+.. centered:: Figure 3-5  AIRLab Menu Bar - File - Open
 
 Select “Export” click, “Save Project” pop-up window appears, this function will save AIRLab's current project under user-defined path. After naming the project in the “File name” column of the popup window, click “Save” to complete the export of the current project.
 
@@ -53,7 +53,7 @@ Select “Export” click, “Save Project” pop-up window appears, this functi
 	:align: center
 	:width: 4in
 
-.. centered:: Figure 4-6  AIRLab Menu Bar - File - Export
+.. centered:: Figure 3-6  AIRLab Menu Bar - File - Export
 
 If exported when there is currently no project present, AIRLab will provide a pop-up message prompt, as shown in the following figure.
 
@@ -61,35 +61,35 @@ If exported when there is currently no project present, AIRLab will provide a po
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 4-7  AIRLab export failed
+.. centered:: Figure 3-7  AIRLab export failed
 
 View
 ~~~~~~~~~~~~~~~~~~~
-View contains 12 functions, as shown in Figure 4-8, the main function is to adjust the viewing angle of the robot in the main display frame. They are: Zoom, Pan, Rotate, Reset, Fit all, Front view, Back view, Top view, Bottom view, Left view, Right view, and Full view.
+View contains 12 functions, as shown in Figure 3-8, the main function is to adjust the viewing angle of the robot in the main display frame. They are: Zoom, Pan, Rotate, Reset, Fit all, Front view, Back view, Top view, Bottom view, Left view, Right view, and Full view.
 
 .. figure:: analysis/4/8.png
 	:align: center
 	:width: 2in
 
-.. centered:: Figure 4-8  AIRLab Menu Bar - View
+.. centered:: Figure 3-8  AIRLab Menu Bar - View
 
-See Table 4-1 for a description of the specific functions of the view.
+See Table 3-1 for a description of the specific functions of the view.
 
-.. centered:: Table 4-1  View Function Description Table
+.. centered:: Table 3-1  View Function Description Table
 
-.. image:: analysis/4/表4-1.png
+.. image:: analysis/4/表3-1.png
 	:align: center
 	:width: 6in
 
 Window
 ~~~~~~~~~~~~~~~~~~~
-The 'Window' contains 9 secondary options, namely 'Software Upgrade', 'Welding Data Collection', 'About', 'Logs','Virtual Camera','Global Settings', 'Torch Cleaning and Wire Cutting', 'Automatic Cycle Operation', and 'User Data Backup'. Click on different options, and AIRLab will display different function pop ups. For detailed functions and usage instructions, please refer to the pop-up introduction in section 4.6.
+The “Window” menu contains eleven secondary options: “Software Upgrade”, “Welding Data Acquisition”, “Version Verification”, “Log”, “Virtual Camera”, “Global Settings”, “Torch Cleaning and Wire Cutting”, “Automatic Loop Operation”, “User Data Backup”, “3D File Parsing”, and “Multi-Station Automatic Operation”. Clicking different options will bring up different function dialogs in AIRLab. Detailed functions and usage instructions can be found in Section 3.6.
 
-.. figure:: analysis/4/9.png
+.. figure:: analysis/4/en_windows.png
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 4-9   AIRLab Menu Bar-Window
+.. centered:: Figure 3-9   AIRLab Menu Bar-Window
 
 Process
 ~~~~~~~~~~~~~~~~~~~
@@ -99,17 +99,17 @@ The “Process” includes “Welding Process” and “Cylindrical Filling”, 
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 4-10  AIRLab Menu Bar - Process
+.. centered:: Figure 3-10  AIRLab Menu Bar - Process
 
 Simulation
 ~~~~~~~~~~~~~~~~~~~
-This button is used to switch between the simulation robot and the real robot. Before using this button, you need to successfully import or create a project and successfully establish Ros2 communication connection with the real robot. Clicking this button after completing the above prerequisites will enable switching between the virtual robot and the physical robot both. After switching the real robot, the robot pose displayed in the AIRLab scene will be synchronized with the actual robot, as shown in Figure 4-11.
+This button is used to switch between the simulation robot and the real robot. Before using this button, you need to successfully import or create a project and successfully establish Ros2 communication connection with the real robot. Clicking this button after completing the above prerequisites will enable switching between the virtual robot and the physical robot both. After switching the real robot, the robot pose displayed in the AIRLab scene will be synchronized with the actual robot, as shown in Figure 3-11.
 
 .. figure:: analysis/4/11.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 4-11  AIRLab display after live switching
+.. centered:: Figure 3-11  AIRLab display after live switching
 
 Simulation Scene: used for simulation will not synchronize and update the robot position in the 3D scene in real time; 
 
@@ -117,13 +117,13 @@ Real Scene: update the current tool coordinate system, DH compensation parameter
 
 Plugin
 ~~~~~~~~~~~~~~~~~~~
-In order to enhance the scalability and user experience of AIRLab software, AIRLab provides plug-in modules, allowing users to develop plug-ins that meet their needs. These plug-ins can be loaded into AIRLab software through dynamic libraries (.so), thereby expanding and enhancing the software functions. The existing plug-ins include three functional modules: bin pickinging, spray, and conversational intelligent assistant. For the introduction and specific operations of each plug-in, please refer to the plug-in section in Chapter 5.
+In order to enhance the scalability and user experience of AIRLab software, AIRLab provides plug-in modules, allowing users to develop plug-ins that meet their needs. These plug-ins can be loaded into AIRLab software through dynamic libraries (.so), thereby expanding and enhancing the software functions. The existing plug-ins include three functional modules: bin pickinging, spray, and conversational intelligent assistant. For the introduction and specific operations of each plug-in, please refer to the plug-in section in Chapter 4.
 
 .. figure:: analysis/4/12.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 4-12  AIRLab-Plugin
+.. centered:: Figure 3-12  AIRLab-Plugin
 
 Mode switching
 ~~~~~~~~~~~~~~~~~~~
@@ -131,19 +131,19 @@ After the AIRLab software establishes Ros2 communication with the physical robot
 
 Points added
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-This function is used to quickly record the current position of the robot. After clicking this button, a new position targetX will be added under the position information section of the engineering module on the left side of AIRLab. The function of X is to prevent duplicate names of newly added positions, as shown in Figure 4-13. The j1, j2, j3, j4, j5, j6, x, y, z, rx, ry, and rz information of this point are the current joint coordinates and Cartesian coordinates of the robot.
+This function is used to quickly record the current position of the robot. After clicking this button, a new position targetX will be added under the position information section of the engineering module on the left side of AIRLab. The function of X is to prevent duplicate names of newly added positions, as shown in Figure 3-13. The j1, j2, j3, j4, j5, j6, x, y, z, rx, ry, and rz information of this point are the current joint coordinates and Cartesian coordinates of the robot.
 
 .. figure:: analysis/4/13.png
 	:align: center
 	:width: 2in
 
-.. centered:: Figure 4-13  AIRLab Menu Bar - Point Additions
+.. centered:: Figure 3-13  AIRLab Menu Bar - Point Additions
 
 .. figure:: analysis/4/14.png
 	:align: center
 	:width: 4.5in
 
-.. centered:: Figure 4-14  AIRLab Terminal - Printing of Point Addition Successful Information
+.. centered:: Figure 3-14  AIRLab Terminal - Printing of Point Addition Successful Information
 
 Coordinate system creation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -158,21 +158,67 @@ Click the Delete button above to remove the selected reference coordinate system
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 4-15  AIRLab - Reference Coordinate System
+.. centered:: Figure 3-15  AIRLab - Reference Coordinate System
 
-Figure 4-16 shows the coordinate system displayed, and Figure 4-17 shows the coordinate system not displayed.
+Figure 3-16 shows the coordinate system displayed, and Figure 3-17 shows the coordinate system not displayed.
 
 .. figure:: analysis/4/16.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 4-16  AIRLab Menu Bar-RCS-Display CS
+.. centered:: Figure 3-16  AIRLab Menu Bar-RCS-Display CS
 
 .. figure:: analysis/4/17.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 4-17  AIRLab menu bar-RCS-Not show CS
+.. centered:: Figure 3-17  AIRLab menu bar-RCS-Not show CS
+
+
+Offline Simulation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To enable intelligent recommendation of offline welding postures and improve simulation efficiency, AIRLab has added an "Offline Simulation" function. As shown in the figure, click the "Offline Simulation" icon button in the toolbar to enter the simulation state, and the icon color will turn yellow and highlighted.Click the icon again,exit the simulation state.
+
+.. figure:: analysis/4/open-Offline-Simulation-state.png
+	:align: center
+	:width: 6in
+
+.. centered:: Figure 3-18  open "Offline Simulation" state 
+
+After importing the robot, tool, and workpiece, click "Weld Seam Editing". Select a weld seam for editing, and after completion, click the "Offline Simulation" button in the pop-up window. AIRLab will dynamically simulate the path trajectory of the current weld seam from the approach point to the exit point in the 3D scene, showing whether the welding torch posture and robot position of the weld seam are reasonable, as shown in the figure.
+
+.. figure:: analysis/4/offlin-simulation2.png
+	:align: center
+	:width: 6in
+
+.. centered:: Figure 3-19  Offline Simulate one weld seam
+
+After editing all the weld seams to be welded, click the "Weld Seam Editing" icon button, and click "Weld Seams Edited in Offline Simulation " in the triggered menu, as shown in the figure. 
+
+.. figure:: analysis/4/offlin-simulation3.png
+	:align: center
+	:width: 3in
+
+.. centered:: Figure 3-20 the menu content
+
+AIRLab will automatically generate a Lua program under the program module, and display the offline simulated welding torch posture, weld seam position, welding process, trajectory planning and other contents in the 3D scene.
+
+.. figure:: analysis/4/offlin-simulation4.png
+	:align: center
+	:width: 6in
+
+.. centered:: Figure 3-21  Offline Simulation of Edited Weld Seams
+
+To prevent users from mistakenly running programs in the offline simulation state, AIRLab has added a running prompt when in the offline simulation state, as shown in the figure.
+
+.. figure:: analysis/4/offlin-simulation5.png
+	:align: center
+	:width: 3in
+
+.. centered:: Figure 3-22  running prompt in offline simulation state
+
+
 
 Pause running
 ~~~~~~~~~~~~~~~~~~~
@@ -197,7 +243,7 @@ Click the "View Movement" button, and a view movement pop-up window will appear 
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 4-18  Field of view movement pop-up
+.. centered:: Figure 3-23  Field of view movement pop-up
 
 View Rotate
 ~~~~~~~~~~~~~~~~~~~
@@ -207,50 +253,50 @@ Click the "View Rotation" button, and a view rotation pop-up window will appear 
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 4-19  Vision rotation pop-up
+.. centered:: Figure 3-24  Vision rotation pop-up
 
 Main Frame
 --------------------------
-The main display box is divided into scene display and camera display, where the scene mainly displays the robot, tool, workpiece, extended axis model, etc., as in Figure 4-20. the camera mainly displays the obtained point cloud map, as in Figure 4-21.
+The main display box is divided into scene display and camera display, where the scene mainly displays the robot, tool, workpiece, extended axis model, etc., as in Figure 3-20. the camera mainly displays the obtained point cloud map, as in Figure 3-21.
 
 .. figure:: analysis/4/20.png
 	:align: center
 	:width: 5.5in
 
-.. centered:: Figure 4-20  AIRLab Main Display Box - Scene Display
+.. centered:: Figure 3-25  AIRLab Main Display Box - Scene Display
 
 .. figure:: analysis/4/21.png
     :align: center
     :width: 5.5in
 
-.. centered:: Figure 4-21  AIRLab Main Display Frame - Camera Display
+.. centered:: Figure 3-26  AIRLab Main Display Frame - Camera Display
 
 Command Feedback Area
 --------------------------
-The instruction feedback area displays the execution results of program instructions, as shown in Figure 4-22.
+The instruction feedback area displays the execution results of program instructions, as shown in Figure 3-22.
 
 .. figure:: analysis/4/22.png
     :align: center
     :width: 6.5in
 
-.. centered:: Figure 4-22  AIRLab Command Feedback Area-Terminal
+.. centered:: Figure 3-27  AIRLab Command Feedback Area-Terminal
 
 Operating Area
 --------------------------
 
 Cartesian space movement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This area includes two parts: tool coordinate system relative to the reference coordinate system, and long press tap trigger, move step and rotate step settings, as shown in Figure 4-23.
+This area includes two parts: tool coordinate system relative to the reference coordinate system, and long press tap trigger, move step and rotate step settings, as shown in Figure 3-23.
 
 .. figure:: analysis/4/23.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-23  AIRLab Operation Area - Cartesian Space Movements
+.. centered:: Figure 3-28  AIRLab Operation Area - Cartesian Space Movements
 
 - The Tool Coordinate System Relative to Reference Coordinate System section, which shows the value of the tool coordinate system relative to the reference coordinate system.
 
-- Long press tap trigger, move step and rotate step setting section. As shown in Figure 4-34, if the currently imported robot model is a solid robot, long press the X+ button, the solid robot will execute the X+ tap command; if the currently imported robot model is not a solid robot, long press the X+ button, the simulation robot will execute the X+ tap command.
+- Long press tap trigger, move step and rotate step setting section. As shown in Figure 3-24, if the currently imported robot model is a solid robot, long press the X+ button, the solid robot will execute the X+ tap command; if the currently imported robot model is not a solid robot, long press the X+ button, the simulation robot will execute the X+ tap command.
 
 .. important::
     To control the robot's JOG pointing by long-pressing the buttons, if the buttons are released while the robot is running, the robot will stop moving immediately; if the buttons are held down all the way and not released, the robot will run the value of the set rotation step and then stop moving. the X-, Y+, Y-, Z+, Z- buttons operate in the same way. If the Rx+, Rx-, Ry+, Ry-, Rz+, Rz- buttons are pressed and held down, the robot will otherwise remain unchanged, except that it will move according to the set value of the rotation step.
@@ -259,17 +305,17 @@ This area includes two parts: tool coordinate system relative to the reference c
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-24  AIRLab Operation Area-Long Press Tap
+.. centered:: Figure 3-29  AIRLab Operation Area-Long Press Tap
 
 Joint space space movement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This area includes 12 joint coordinate long press trigger buttons for joints J1-J6, 6 joint coordinate change text boxes and 6 joint sliders in three parts, as shown in Figure 4-25.
+This area includes 12 joint coordinate long press trigger buttons for joints J1-J6, 6 joint coordinate change text boxes and 6 joint sliders in three parts, as shown in Figure 3-25.
 
 .. figure:: analysis/4/25.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-25  AIRLab Operating Area - Joint Space Space Mobility
+.. centered:: Figure 3-30  AIRLab Operating Area - Joint Space Space Mobility
 
 - You can control the movement of the solid robot J1 joints in manual mode and joint coordinate system by long-pressing the "+" or "-" button of J1. " button to control the movement of the J1 joints of the solid robot in manual mode and in the joint coordinate system. The "+" or "-" buttons of the other joints operate in the same way.
 
@@ -282,13 +328,13 @@ This area includes 12 joint coordinate long press trigger buttons for joints J1-
 
 Moving extended axis settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This section includes "exaxis+", "exaxis-" and the step setting box, as shown in Figure 4-26. "exaxis+", "exaxis-" functions are similar to the pointing X+ and X- under the tool coordinate system, and the motion of the extended axis can be controlled by the above two buttons. Long press the button to control the extended axis running, if you release the button during the extended axis running, the extended axis will stop moving immediately; if you keep pressing the button and do not release it, the extended axis will run the value set in the Step Setting box and then stop moving.
+This section includes "exaxis+", "exaxis-" and the step setting box, as shown in Figure 3-26. "exaxis+", "exaxis-" functions are similar to the pointing X+ and X- under the tool coordinate system, and the motion of the extended axis can be controlled by the above two buttons. Long press the button to control the extended axis running, if you release the button during the extended axis running, the extended axis will stop moving immediately; if you keep pressing the button and do not release it, the extended axis will run the value set in the Step Setting box and then stop moving.
 
 .. figure:: analysis/4/26.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-26  AIRLab Operation Area - Moving the Extended Axis Position
+.. centered:: Figure 3-31  AIRLab Operation Area - Moving the Extended Axis Position
 
 Engineering Module Analysis
 -----------------------------------
@@ -302,7 +348,7 @@ Click the Import icon on the far left to enter the import module, where users ca
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-27  Module Setup Page
+.. centered:: Figure 3-32  Module Setup Page
 
 - Import Robot: Select Robot, and the robot configuration page will be displayed, allowing you to choose the robot model to import.
 
@@ -310,7 +356,7 @@ Click the Import icon on the far left to enter the import module, where users ca
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-28  Robot Settings Page
+.. centered:: Figure 3-33  Robot Settings Page
 
 Take FR5 as an example, select FR5 robot and click Import, then import FR5 robot model in the 3D scene, and the terminal shows Import Robot Success which means importing robot model is successful.
 
@@ -318,7 +364,7 @@ Take FR5 as an example, select FR5 robot and click Import, then import FR5 robot
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-29  Successful introduction of the robot
+.. centered:: Figure 3-34  Successful introduction of the robot
 
 Considering more flexible and rich robot deployment scenarios, we provide a free installation function. The user setting module sets the tilt angle and rotation angle in the page, and the robot model in the 3D scene or shows the corresponding installation effect. After modification, click Set to complete the robot installation method settings.
 
@@ -326,7 +372,7 @@ Considering more flexible and rich robot deployment scenarios, we provide a free
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-30  Setting the robot tilt and rotation angles
+.. centered:: Figure 3-35  Setting the robot tilt and rotation angles
 
 .. important::
     After the robot is installed, the robot must be set up correctly, otherwise it will affect the use of the robot's drag function as well as the collision detection function.
@@ -339,7 +385,7 @@ You can delete the currently imported robot model by clicking the “Delete” b
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-31  Tool Setup Page
+.. centered:: Figure 3-36  Tool Setup Page
 
 Click Open, select the tool model you want to import under the corresponding path, and click “Open”.
 
@@ -347,7 +393,7 @@ Click Open, select the tool model you want to import under the corresponding pat
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-32  Selection Tool Model
+.. centered:: Figure 3-37  Selection Tool Model
 
 The imported tool model is displayed in the 3D scene, and the terminal displays “Successful tool import”, which means that the tool model has been successfully imported.
 
@@ -355,7 +401,7 @@ The imported tool model is displayed in the 3D scene, and the terminal displays 
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-33  Import Tool Success
+.. centered:: Figure 3-38  Import Tool Success
 
 After importing a tool, you can set the current coordinate system of the tool and the appearance position of the tool;
 
@@ -365,7 +411,7 @@ Click the “Get Current” button under the tool coordinate system on the tool 
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-34  Get the current tool coordinate system
+.. centered:: Figure 3-39  Get the current tool coordinate system
 
 If you need to modify the appearance position of the tool, modify the coordinates under Appearance Position on the Tool Settings page, and then click the “Set Tool Appearance” button to finish setting the appearance position of the tool.
 
@@ -373,7 +419,7 @@ If you need to modify the appearance position of the tool, modify the coordinate
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-35  Setting the Tool Appearance Position
+.. centered:: Figure 3-40  Setting the Tool Appearance Position
 
 You can delete the currently imported tool model by clicking the “Delete” button on the tool settings page.
 
@@ -383,7 +429,7 @@ You can delete the currently imported tool model by clicking the “Delete” bu
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-36  Workpiece Setting Page
+.. centered:: Figure 3-41  Workpiece Setting Page
 
 Click “Open” button, select the workpiece model to be imported under the corresponding path, click “Open”, the imported workpiece model will be displayed in the 3D scene, and the workpiece will be imported successfully.
 
@@ -395,7 +441,7 @@ Delete workpiece: Click “Delete Workpiece” button in the workpiece setting p
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-37  Imported artifacts successfully
+.. centered:: Figure 3-42  Imported artifacts successfully
 
 - Import Extended Axis: Select the Extended Axis.The AIRLab interface displays the Extended Axis Settings page, select the Extended Axis and click Import.
 
@@ -403,7 +449,7 @@ Delete workpiece: Click “Delete Workpiece” button in the workpiece setting p
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-38  Extended Axis Setup Page
+.. centered:: Figure 3-43  Extended Axis Setup Page
 
 The imported extended axis model is displayed in the 3D scene of AIRLab software, and the extended axis is imported successfully.
 
@@ -411,19 +457,19 @@ The imported extended axis model is displayed in the 3D scene of AIRLab software
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-39  Extended axis imported successfully
+.. centered:: Figure 3-44  Extended axis imported successfully
 
 Delete Extended Axis: Click “Delete Extended Axis” in the Extended Axis Settings page to delete the extended axis imported in the current 3D scene.
 
 - Connect Camera: Click the Camera button, and a "Camera Settings" pop-up window will appear in the 3D scene. The camera settings pop-up is divided into three sections: Camera Configuration, Device Information, and Device Debugging.
 
-Click the “Search Devices”, AIRLab will search for connected cameras and automatically connect them. If the connection is successful, the interface will be as shown in the figure Figure 4-40; If the connection fails, it will be displayed as not connected in the connection status column, and there will be no camera related parameters.
+Click the “Search Devices”, AIRLab will search for connected cameras and automatically connect them. If the connection is successful, the interface will be as shown in the figure Figure 3-40; If the connection fails, it will be displayed as not connected in the connection status column, and there will be no camera related parameters.
 
 .. figure:: analysis/4/40.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-40  Camera settings page
+.. centered:: Figure 3-45  Camera settings page
 
 After successful camera connection:Click "Get Parameters" to retrieve the current camera configuration settings. If need to modify the desired parameters, click "Set Parameters" will successfully update them.The follow descriptions are parameter descriptions:
 
@@ -443,7 +489,7 @@ Device Information:Click "Device Info" to view connected camera details (name,
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-41  Camera Infomation
+.. centered:: Figure 3-46  Camera Infomation
 
 Device Debugging:Click "Device Debugging" to access camera calibration functions, including:Aging Debug,Single Capture,Save Point Cloud.
 
@@ -451,7 +497,7 @@ Device Debugging:Click "Device Debugging" to access camera calibration functio
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-42   Camera Debugging
+.. centered:: Figure 3-47   Camera Debugging
 
 Filter distance threshold:When the image contains excessive noise, increase the threshold; when preserving fine edges is required, decrease the threshold.
 
@@ -467,6 +513,100 @@ Save Image:After single capture,Click "Save Image",Select output path to save 2
 
 Camera Calibration:Include Calibration and verification.Refer to Section 3.5 "Point Cloud Camera Hand-Eye Calibration" for detailed procedures.
 
+
+SLAM mapping
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To reduce the model-free construction time for complex workpieces such as box girders and improve workpiece construction efficiency, AIRLab has added a SLAM mapping function before the model-free construction step. The usage instructions are as follows:
+
+Click the newly added "SLAM Mapping" icon button in the left project area, then click the "New" button. A "SLAM Mapping" pop-up window (as shown in the figure) will appear.
+
+.. figure:: analysis/4/slam0.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-48 SLAM mapping pop-up window
+
+At the current external axis position (Note: Please first set the zero position of the external axis; it is recommended to mark the zero position on the external axis at the same time), first add a movement node: you can click "Teach Current Position" to add a real-time point, or select an existing point to add a new one. Secondly, add a photo node. The newly added "Movement Node + Photo Node" must ensure that the robot, at the current external axis position, has a photo range that basically covers the structure of the box girder. Then add a SLAM mapping node; currently, the sub-map number must start from 0, as shown in the figure.
+
+.. figure:: analysis/4/slam1.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-49 Add a new "SLAM Mapping: Sub-map 0" node
+
+Move the external axis to a new position, then follow the procedure for creating the first sub-map to add programs for subsequent sub-maps. The number of sub-maps shall be determined by the user based on the actual workpiece requirements.
+
+.. figure:: analysis/4/slam2.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-50 Add a new "SLAM Mapping: Sub-map 1" node
+
+.. figure:: analysis/4/slam3.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-51 Add a new "SLAM Mapping: Sub-map 2" node
+
+.. important::
+    Sub-map numbers must not be duplicated!
+
+.. figure:: analysis/4/slam4.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-52  Sub-map numbers must not be duplicated in naming.
+
+After completing the creation of sub-maps, you need to add the last node of the SLAM mapping program: set the SLAM mapping model name, as shown in the figure. 
+
+.. figure:: analysis/4/slam5.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-53 Set the SLAM Mapping Model Name
+
+Once the program creation is complete, click the pop-up menu of the "SLAM Mapping" button and select "Run Program". The robot will then start executing the SLAM mapping program. After each photo is taken, the 3D interface of AIRLab will display the collected point cloud map, as shown in the figure.
+
+.. figure:: analysis/4/slam6.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-54 run SLAM mapping programs
+
+.. figure:: analysis/4/slam7.png
+    :align: center
+    :width: 5in
+
+.. centered:: Figure 3-55  Collected Point Cloud
+
+After the program finishes running, AIRLab will import the constructed workpiece model into the 3D scene, as shown in the figure.
+
+.. figure:: analysis/4/slam9.png
+    :align: center
+    :width: 4in
+
+.. centered:: Figure 3-56  SLAM Mapping Model of the Box Girder
+
+If the program is interrupted midway, you can resume operation from the nearest movement node, as shown in the figure. 
+
+.. figure:: analysis/4/slam10.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-57  Resume Operation After Interruption
+
+If the constructed model is not complete enough, AIRLab provides a supplementary shooting function: click the photo icon button, and a SLAM mapping supplementary shooting pop-up window will appear, as shown in the figure.
+
+.. figure:: analysis/4/slam11.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-58  supplementary shooting pop-up window
+
+Currently, AIRLab requires that supplementary shooting must be performed at the position of Sub-map No. 0. Follow the steps in the pop-up window to start the operation: select No.0, move the external axis to the target position, teach the supplementary shooting points, and take photos. After all supplementary shooting is completed, click the "Re-run SLAM Mapping" button. AIRLab will then generate a new SLAM mapping model of the workpiece.
+
+
+
 Model Construction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If the workpiece to be welded does not have a model file, you need to perform a model-less build of the workpiece first, otherwise, you can directly import the workpiece model to perform the 4.5.3 weld editing operation.
@@ -481,7 +621,7 @@ Alternatively, click “Add Current Position” to create a new waypoint at the
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-43  Adding Move nodes
+.. centered:: Figure 3-59  Adding Move nodes
 
 The principle of the model-less photo point of demonstration is that the camera is able to clearly and completely capture all positions of the model-less workpiece, especially the position of the weld seam that needs to be welded.
 
@@ -489,7 +629,7 @@ The principle of the model-less photo point of demonstration is that the camera 
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-44  Photographic points of the workpiece at different angles    
+.. centered:: Figure 3-60  Photographic points of the workpiece at different angles    
 
 Add photo node:Click the Confirm button under Add Capture Node to create a new image capture node in Model Construction.
 
@@ -499,7 +639,7 @@ Add Modeless construction node: After adding several groups of “Move+Photo” 
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-45  Adding Modeless cons nodes
+.. centered:: Figure 3-61  Adding Modeless cons nodes
 
 After adding nodes, you can perform the following adjustments,
 
@@ -515,7 +655,7 @@ After the model construction program is completed, click the “Model Const” m
     :align: center
     :width: 2.5in
 
-.. centered:: Figure 4-46  Click on the model const blocks
+.. centered:: Figure 3-62  Click on the model const blocks
 
 After the model construction program has finished running, the built model workpiece model will be displayed in the AIRLab 3D scene. Check whether the model is correct or not, the model is correct, the modelless construction is successfully constructed, and the model that has been successfully constructed can be directly imported in the next time, and there is no need to model the workpiece again for the modelless workpiece modeling.
 
@@ -523,11 +663,13 @@ After the model construction program has finished running, the built model workp
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-47  Model-free construct successfully
+.. centered:: Figure 3-63  Model-free construct successfully
 
 If the model is built incorrectly, you need to click the “Model Construction” module, click “Clear Model Data”, and then build the model again until the modelless artifact model is created correctly.
 
 By clicking on the No Model Build module, the user can select options such as Get Modeling Data, and the functions of each option are described below.
+
+- Supplementary shooting: After generating the workpiece model by running the model-free program, if there are incomplete parts in the workpiece model that need supplementary shooting, move the robot to the position where supplementary shooting is required and click "Supplementary Shooting". Then click "Acquire Modeling Data" to re-import the workpiece model after supplementary shooting.
 
 - Get Modeling Data: Click “Get Modeling Data”, after clearing the modeling data, click Get Modeling Data to get the modeled artifact model again.
 
@@ -550,7 +692,7 @@ Weld editing
 ~~~~~~~~~~~~~~~~~~~~~~~
 After importing the workpiece or successfully constructing the workpiece without a model, the workpiece model and weld seam data will be displayed in the 3D scene.
 
-Click the plus sign under weld seam editing to pop up a weld seam selection pop-up window. Select the weld seam number, AIRLab 3D scene will display the tool models of weld posture. click the "Confirm" button to add the weld seam until all welds are added.
+Click the plus sign under "Weld Seam Editing" to bring up the Weld Seam Selection pop-up window. Select a weld seam number; the weld seam type field will automatically display the type of the selected weld seam, including straight weld seams, arc weld seams, spline curve weld seams, and plug weld seams. Click the "Confirm" button to add the weld seam, and repeat this until all weld seams are added.
 
 The successfully added welds here do not indent, reverse, shift, or bind to any welding process, and the progression and retreat point strategies are set to a custom distance of 100mm.
 
@@ -558,7 +700,7 @@ The successfully added welds here do not indent, reverse, shift, or bind to any 
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-48  Choose weld seam to edit
+.. centered:: Figure 3-64  Choose weld seam to edit
 
 If the weld needs to be re-edited, select the weld, click the edit icon at the top of the module, and complete the parameter settings in the 'Seam edit' popup.
 
@@ -566,12 +708,20 @@ If the weld needs to be re-edited, select the weld, click the edit icon at the t
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-49  Adding Welds
+.. centered:: Figure 3-65  Adding Welds
 
 After all the weld seam editing is completed, click on the precise positioning module to obtain the automatic photo pose
 
+The meaning of each editing item in Weld Seam Editing is detailed in Section 3.6.9. Perform workpiece positioning or fine positioning operations only after all weld seams have been edited.
+
+.. important::
+    For the editing of plug workpieces, it is only necessary to bind the plug workpiece process.
+
+After completing the weld seam editing for plug workpieces, click the "Weld Seam Editing" module and then click the "Generate Welding Program" button. A plug welding program will be generated under the "Program" node. Subsequent operations such as generating trajectories for the created welding nodes or running the program can be performed; details are provided in Section 3.4.6.
+
 .. important::
     Attention: If AIRLab provides too many automatic photo poses (such as far more than the number of welds), some points should be deleted or manually taught again. The teaching points only need to capture the starting and ending points of the welds.
+
 
 
 Workpiece positioning
@@ -582,27 +732,41 @@ Workpiece positioning: After editing all the welds to be welded, workpiece posit
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-50  Adding a coarse positioning node
+.. centered:: Figure 3-66  Adding a coarse positioning node
 
 The workpiece positioning program consists of three node types:Capture Node,Move Node,Coarse Positioning Node.The Capture and Move nodes function identically to those in the Model-Free Construction module (see Section 4.5.2 for details).
 
-Adding a Coarse Positioning Node: After adding multiple sets of "move+photograph" nodes, add a coarse positioning node. Select the workpiece positioning algorithm and click confirm to generate a "coarse positioning" node under the workpiece positioning program.
+Add a rough positioning node: After adding multiple sets of "movement + photo" nodes, add a rough positioning node and select a workpiece positioning algorithm. The rough positioning algorithms include Model-based, Cylinder Positioning, Depth Model, Depth Model 2, and Plug Recognition. The applicable scenarios for each algorithm are as follows:
+
+- Model-based: Used for rough positioning of workpieces after model-free construction or workpiece import.
+  
+- Cylinder Positioning: Not yet available.
+  
+- Depth Model: Used for workpiece recognition in the automatic cycle operation of template programs.
+  
+- Depth Model 2: Applicable to the same scenarios as "Model-based", used for rough positioning of workpieces after model-free construction or workpiece import.
+  
+- Plug Recognition: Used for recognition and positioning of plug workpieces.
+  
+After selecting the workpiece positioning algorithm, click "Confirm", and a "Rough Positioning" node will be generated under the workpiece positioning program.
 
 .. figure:: analysis/4/51.png
     :align: center
     :width: 2.5in
 
-.. centered:: Figure 4-51  Workpiece positioning program
+.. centered:: Figure 3-67  Workpiece positioning program
 
 After adding these nodes, you can adjust the added nodes as needed. Once completed, the workpiece positioning program will be successfully created.The entire program functions as follows:The robot will move to multiple capture positions and take photos until the workpiece is fully captured. Then, the program will perform coarse positioning of the workpiece.The created workpiece positioning program is shown in the figure below.
 
-After creating the workpiece positioning program,click the "POS_WP" module. The options that appear, such as "Run Program", have the same functionality as those in the Model Construction module. For detailed descriptions, please refer to the Model Construction section.
+After creating the workpiece positioning program,click the "POS_WP" module. The options that appear,as shown in the figure.
 
 .. figure:: analysis/4/52.png
     :align: center
     :width: 2.5in
 
-.. centered:: Figure 4-52  Click on the pos_wp blocks
+.. centered:: Figure 3-68  Click on the pos_wp blocks
+
+Generate the workpiece positioning program directly: Click this button, and AIRLab will automatically generate a workpiece positioning program with reference to the points created through model-free construction.
 
 Click "Generate trajectory" to view the simulated trajectory of the workpiece positioning program. After confirming the trajectory is correct, click "Run Program" to execute the workpiece positioning program for coarse workpiece positioning.
 
@@ -617,23 +781,31 @@ After the workpiece positioning is completed, it is necessary to fine position t
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-53  Auto Photo Position List
+.. centered:: Figure 3-69  Auto Photo Position List
 
-Click on the “FinePos” module, there will be “get automatic capture pose”, “generate collision-free trajectory”, “Generate Trajectory” and so on.You need to click “Run program”.
+Click on the “FinePos” module, the function menu as shown in the figure.
 
 .. figure:: analysis/4/54.png
     :align: center
     :width: 2in
 
-.. centered:: Figure 4-54  Click on the FinePos Module
+.. centered:: Figure 3-70  Click on the FinePos Module
 
 Options such as “Run Program” and “Stop Program” function in the same way as the model-less build function, which can be described in the model-less build section. Other functions are described here:
 
 - Get automatic photo position: After the positioning of the workpiece, the program will get the recommended photo position corresponding to each weld seam, click “Get automatic photo position” to get the recommended photo position.
 
+- Refer to model-free construction for generating photo poses: The photo points taught during the model-free construction process will be automatically acquired as the photo points for fine positioning.  
+  
+- Obtain weld seam recognition data:Generate a welding program based on the results of fine positioning recognition, as well as the already edited weld seams and their attributes.
+
+- Refer to model-free acquisition of weld seam recognition data:Generate a welding program based on the results of model-free construction, as well as the already edited weld seams and their attributes.
+
+- Obstacle-free trajectory planning:Click "Obstacle-Free Trajectory Planning" to plan the welding program after collision detection.
+
 - Generate barrier-free trajectory: Click “Generate barrier-free trajectory”, the robot trajectory after collision detection will be generated in the 3D scene.
 
-- Run Accessibility Program: Click “Run Accessibility Program”, the robot will move according to the robot motion trajectory after collision detection.
+- Run collision-free Program: Click “Run collision-free Program”, the robot will move according to the robot motion trajectory after collision detection.
 
 The user chooses to run the program or run the accessibility program for weld identification after selecting the confirmation trajectory. After the fine position program is run, the final weld node is generated under the program module.
 
@@ -645,7 +817,7 @@ After running the fine position, the final weld node is generated under the prog
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-55  Click on the Program Module
+.. centered:: Figure 3-71  Click on the Program Module
 
 Clicking on “Generate Trajectory” generates a weld trajectory in the AIRLab 3D scene, and the user can choose to run a simulation on the trajectory.
 
@@ -653,7 +825,7 @@ Clicking on “Generate Trajectory” generates a weld trajectory in the AIRLab 
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-56  simulation trajectory
+.. centered:: Figure 3-72  simulation trajectory
 
 Click “Generate Tool”, the tool position of the key node will be displayed in the 3D scene, as shown in the following figure.
 
@@ -661,7 +833,7 @@ Click “Generate Tool”, the tool position of the key node will be displayed i
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-57  Generation Tools
+.. centered:: Figure 3-73  Generation Tools
 
 After the simulation and tool position are correct, click “Run Program” to start the actual welding.
 
@@ -675,7 +847,7 @@ Point Information Module: Click the point in the point list, you can delete or e
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-58  Modification of point information
+.. centered:: Figure 3-74  Modification of point information
 
 Move to target point: user clicks “Move to target point” button, the robot end will move to the current edited point.
    
@@ -692,7 +864,7 @@ Reference coordinate system: click the reference coordinate system icon in the m
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-59  Reference coordinate system page
+.. centered:: Figure 3-75  Reference coordinate system page
 
 Select which coordinate system is the reference coordinate system, then set the coordinates of the reference coordinate system, select “Show” and click the “Set” button, the reference coordinate system will be displayed in the AIRLab 3D scene. Select “Do not show” and click “Set”, the displayed coordinate system will be hidden.
 
@@ -708,22 +880,22 @@ When "About" is selected, clicking the button will display the current version a
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-60  AIRLab version information and release date display
+.. centered:: Figure 3-76  AIRLab version information and release date display
 
 
 Log
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Log is used to record the system's operation process and exception information, enabling quick issue identification. Clicking this button will bring up a "Log Level" popup window. There are four log levels: INFO, WARNING, ERROR, and DEBUG. After selecting a log level, the current log level will be set (default is INFO). As shown in Figure 4-61, the specific meanings are described in Table 4-2.
+Log is used to record the system's operation process and exception information, enabling quick issue identification. Clicking this button will bring up a "Log Level" popup window. There are four log levels: INFO, WARNING, ERROR, and DEBUG. After selecting a log level, the current log level will be set (default is INFO). As shown in the figure below, the specific meanings are described in Table 3-2.
 
 .. figure:: analysis/4/61.png
     :align: center
     :width: 2in
 
-.. centered:: Figure 4-61  AIRLab Menu Bar-Logs
+.. centered:: Figure 3-77  AIRLab Menu Bar-Logs
 
-.. centered:: Table 4-2  Log level information
+.. centered:: Table 3-2  Log level information
 
-.. image:: analysis/4/表4-2.png
+.. image:: analysis/4/表3-2.png
 	:align: center
 	:width: 6in
 
@@ -736,7 +908,7 @@ Click Window-Software Upgrade, and a software upgrade pop-up window will pop up.
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-62   Software upgrade pop-ups
+.. centered:: Figure 3-78   Software upgrade pop-ups
 
 Click “Select File” to bring up the file selection window, select the AIRLab.tar.gz upgrade file, please make sure the file name and format are correct.
 
@@ -744,13 +916,13 @@ Click “Select File” to bring up the file selection window, select the AIRLab
     :align: center
     :width: 4.5in
 
-.. centered:: Figure 4-63   Selecting an upgrade package
+.. centered:: Figure 3-79   Selecting an upgrade package
     
 .. figure:: analysis/4/64.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-64  Click on the "Upgrade" button
+.. centered:: Figure 3-80  Click on the "Upgrade" button
 
 Click “Upgrade” and wait for the upgrade package to finish unpacking, the upgrade progress will be shown in the progress bar. Click Exit to exit the software upgrade.
 
@@ -758,7 +930,7 @@ Click “Upgrade” and wait for the upgrade package to finish unpacking, the up
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-65  AIRLab software upgrade in progress
+.. centered:: Figure 3-81  AIRLab software upgrade in progress
 
 After the upgrade progress reaches 100%, click Confirm and restart the software, the upgrade is complete.
 
@@ -766,28 +938,46 @@ After the upgrade progress reaches 100%, click Confirm and restart the software,
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-66   AIRLab software upgrade completed
+.. centered:: Figure 3-82   AIRLab software upgrade completed
 
-When the upgrade package is corrupted or incomplete, the interface will show the upgrade failure feedback. You can choose to quit the upgrade or re-select the upgrade package to continue the upgrade.
+If the upgrade package is corrupted or incomplete, the interface will display an upgrade failure message, and the AIRLab version will be rolled back to its state prior to the upgrade. After the rollback is completed, click Confirm to restart the software, recheck the upgrade package, and perform the update again.
 
-.. figure:: analysis/4/67.png
+.. figure:: analysis/4/sw_update_rollback.png
     :align: center
-    :width: 3in
+    :width: 6in
 
-.. centered:: Figure 4-67   AIRLab Software Upgrade Failure Interface Feedback
+.. centered:: Figure 3-83   AIRLab Software Upgrade Failure Interface Feedback
+
+Version Verification
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click “Window” – “Version Verification” to open the version verification dialog. If all versions are displayed with a green check mark, it indicates that the verification is successful and the AIRLab software can run normally, as shown below.
+
+.. figure:: analysis/4/version_verification_ui.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-84   “Version Verification” dialog
+
+If any libraries are shown with a red cross mark, it is necessary to check whether the AIRLab environment version matches. For example, if the middleware library version is incorrect, the dialog will appear as shown below.
+
+.. figure:: analysis/4/version_verification_error.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-85   “Version Verification” error
 
 
 Virtual Camera
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Through the display of the virtual camera field of view, it is possible to observe whether the current camera shooting position is appropriate. At the same time, users can adjust the shooting position based on the display of the virtual camera field of view, and then adjust the camera to the optimal shooting position.
 
-Click on the menu bar - Virtual Camera, and a virtual camera pop-up window will appear in the 3D scene, displaying the camera's field of view at the current position, as shown in the Figure 4-68.
+Click on the menu bar - Virtual Camera, and a virtual camera pop-up window will appear in the 3D scene, displaying the camera's field of view at the current position, as shown in the figure below.
 
 .. figure:: analysis/4/68.png
     :align: center
     :width: 4in
 
-.. centered:: Figure 4-68   Virtual Camera Display Field of View
+.. centered:: Figure 3-86   Virtual Camera Display Field of View
 
 Adjust the camera position in the 3D scene, and the corresponding virtual camera field of view will also be synchronously transformed.
 
@@ -795,7 +985,7 @@ Adjust the camera position in the 3D scene, and the corresponding virtual camera
     :align: center
     :width: 4in
 
-.. centered:: Figure 4-69   Camera field of view transformation
+.. centered:: Figure 3-87   Camera field of view transformation
 
 
 Global Settings
@@ -806,7 +996,7 @@ In order to reduce the possibility of robot collision during welding movement, A
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-70  Setting popup content globally
+.. centered:: Figure 3-88  Setting popup content globally
 
 Currently, the only collision detection available to the user is for the null shift process. When self-collision detection is enabled, even if the user does not set the “DryRun Collision distance threshold (mm)” (i.e., using the default value of 0mm), AIRLab will detect the collision of the robot's null shift path, and plan a collision-free and safe path. When this parameter is set by the user, AIRLab will plan the robot's null path farther away from the obstacle based on the input threshold parameter on a collision-free basis.
 
@@ -821,7 +1011,7 @@ After completing the settings of the project tree and other related parameters, 
     :align: center
     :width: 3.3in
 
-.. centered:: Figure 4-71  Obstacle avoidance planning in progress
+.. centered:: Figure 3-89  Obstacle avoidance planning in progress
 
 If the obstacle avoidance planning fails, the pop-up window switches to the following figure, and the user needs to re-teach the exit point and convergence point, and click the “One Click Start” button again.
 
@@ -829,7 +1019,7 @@ If the obstacle avoidance planning fails, the pop-up window switches to the foll
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-72  Failure of obstacle avoidance planning
+.. centered:: Figure 3-90  Failure of obstacle avoidance planning
 
 If the planning is successful, the pop-up window will be switched to the following figure, users can click “View Trajectory” button to generate the simulation trajectory of the motion instruction under the ‘Program’ node; click “Clear Trajectory” button to clear the trajectory in the interface; click “Run Program” button to start running the lua program directly. Click “Clear Trajectory” button to clear the trajectory in the interface; click “Run Program” button to start running the lua program directly.
 
@@ -837,23 +1027,23 @@ If the planning is successful, the pop-up window will be switched to the followi
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-73  Progress bar alert popup
+.. centered:: Figure 3-91  Progress bar alert popup
 
 After successful obstacle avoidance planning, the relevant “MoveJ()” instruction in the ‘Program’ node of the project tree will be amended to “SplinePTP()”.
 
-The following simulation trajectory diagram as an example to show the actual effect of AIRLab collision detection, Figure 4-74 for the opening of the collision detection function, AIRLab automatic obstacle avoidance planning trajectory; Figure 4-75 for the opening of the collision detection is not open, the trajectory obtained by AIRLab through the motion planning, it can be seen clearly that the robot will be empty moving process and the collision of the workpiece.
+The following simulation trajectory diagram as an example to show the actual effect of AIRLab collision detection, Figure 3-76 for the opening of the collision detection function, AIRLab automatic obstacle avoidance planning trajectory; Figure 3-77 for the opening of the collision detection is not open, the trajectory obtained by AIRLab through the motion planning, it can be seen clearly that the robot will be empty moving process and the collision of the workpiece.
 
 .. figure:: analysis/4/74.png
     :align: center
     :width: 4.5in
 
-.. centered:: Figure 4-74  Turn on collision detection planning
+.. centered:: Figure 3-92  Turn on collision detection planning
 
 .. figure:: analysis/4/75.png
     :align: center
     :width: 4.5in
 
-.. centered:: Figure 4-75  No collision detection planning
+.. centered:: Figure 3-93  No collision detection planning
 
 In the case that the obstacle environment does not change, the user can not repeat the obstacle avoidance planning after successfully completing one obstacle avoidance planning, if you need to repeat the instructions under “Program” in the project tree, click “Run Program” in “Work Program” on the sub-page. If you need to run the commands under “Program” in the project tree repeatedly, click “Run Program” in “Work Program” on the subpage. If the obstacle environment changes, you have to click the “Run” button again to plan a new obstacle avoidance path.
 
@@ -866,7 +1056,7 @@ Click on Process - Welding Process in the menu bar, and the AIRLab software inte
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-76  Process Inquiry Popup
+.. centered:: Figure 3-94  Process Inquiry Popup
 
 The left side of the pop-up window is for welding process classification, including flat welding, flat angle welding, vertical upward welding and other 9 categories, click on the welding process under the welding process classification, the right side will display the specific information of the process.
 
@@ -876,7 +1066,7 @@ Add welding process: Select the category of welding process to be added, click o
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-77  Newly added welding process
+.. centered:: Figure 3-95  Newly added welding process
 
 Click on the newly added weld process and edit the weld process name, weld time interval (only used for multi-layer multi-pass welding) on the right side to add weld pass information. Click on the plus sign next to the list of weld passes to add new pass information. If the process is multi-layer multi-pass welding, add as many weld passes as necessary, otherwise add only one weld pass.
 
@@ -884,7 +1074,7 @@ Click on the newly added weld process and edit the weld process name, weld time 
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-78  Modify weld channel information
+.. centered:: Figure 3-96  Modify weld channel information
 
 Click the weld channel in the weld channel list, and the information of the currently clicked weld channel will be displayed in the weld channel editing section. Modify the weld channel information by selecting the reference coordinate system, safety point, offset, and binding the welding process and click Finish, and the information of the weld channel in the weld channel list will be modified.
 
@@ -892,7 +1082,7 @@ Click the weld channel in the weld channel list, and the information of the curr
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-79  Successful modification of weld channel information
+.. centered:: Figure 3-97  Successful modification of weld channel information
 
 After modifying all the welding channel information, click the “Finish” button under the welding channel list, and the terminal will show that the new multi-layer multi-channel welding process has been successful, and then a new welding process will be successfully added.
 
@@ -900,7 +1090,7 @@ After modifying all the welding channel information, click the “Finish” butt
     :align: center
     :width: 3.5in
 
-.. centered:: Figure 4-80  New Welding Processes Successful
+.. centered:: Figure 3-98  New Welding Processes Successful
 
 Modify welding process: Click on the welding process to be modified, modify the welding process data as needed, and you can add, modify or delete the list of weld passes.
 
@@ -916,20 +1106,20 @@ After all the modifications are completed, click the “Finish” button under t
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-81  Modifying Welding Process Tips
+.. centered:: Figure 3-99  Modifying Welding Process Tips
 
 Delete Welding Process: Select the welding process to be deleted and click on the delete icon next to the process type and the process will be deleted.
 
 
 Cylinder Filling Process Query Pop up Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The pop-up window for querying the cylindrical filling process is shown in Figure 4-82. The cylindrical filling process includes two parts: filling the bottom surface of the cylinder and secondary reinforcement.
+The pop-up window for querying the cylindrical filling process is shown in the figure below. The cylindrical filling process includes two parts: filling the bottom surface of the cylinder and secondary reinforcement.
 
 .. figure:: analysis/4/82.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-82  Cylinder Filling Process Query Pop up Window
+.. centered:: Figure 3-100  Cylinder Filling Process Query Pop up Window
 
 1. Fill the bottom surface of the cylinder
 
@@ -949,14 +1139,6 @@ Reinforcement interval refers to the vertical distance between adjacent reinforc
 
 The upward offset of secondary reinforcement refers to the vertical interval between the starting point of the second reinforcement and the starting point of the first reinforcement;
 
-The name of swing process and whether to swing refers to which swing process the user chooses and whether to swing according to their actual welding needs, as shown in Figure 4-83.
-
-.. figure:: analysis/4/83.png
-    :align: center
-    :width: 5in
-
-.. centered:: Figure 4-83  Swing process query pop-up window
-
 Users can add, modify, or delete cylindrical filling processes,
 
 New: Select "Add" as the change method, then set the process parameters and the name of the new filling process, and click the "Finish" button to add a new filling process;
@@ -964,6 +1146,64 @@ New: Select "Add" as the change method, then set the process parameters and the 
 Modification: Select "Modify", choose a cylindrical filling process name, then reset the process parameters, and click the "Finish" button to modify the parameters of the process;
 
 Delete: Select "Delete", choose a cylindrical filling process name, and then click the "Finish" button to delete the process.
+
+
+Welding seam edit pop-up window
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click the ”weld sem” module. After adding a weld seam, click the edit icon—this will bring up the Weld Seam Editing pop-up window in the 3D scene, as shown in the figure. Below is an introduction to all editing items:
+
+.. figure:: analysis/4/83.png
+    :align: center
+    :width: 3in
+
+.. centered:: Figure 3-101 weld seam edit pop-up window
+
+- Weld Seam Type: Automatically generated based on the selected weld seam. 
+
+- Weld Seam Number: Automatically generated based on the selected weld seam. 
+
+- Reverse Direction: Displays the welding direction of the weld seam in the 3D scene. Select whether to reverse the direction according to actual welding needs. If "Yes" is selected, the direction of the weld seam in the 3D scene will be reversed.
+
+Indentation Settings
+
+- Start Indentation: Set the indentation at the start of the weld seam. When welding this seam, the process will begin from the start point after the indentation. 
+
+- End Indentation: Set the indentation at the end of the weld seam. When welding this seam, the process will stop at the end point after the indentation.
+
+Point Offset and Angle Settings 
+
+If the position of the start point, end point, or intermediate point of the current weld seam is inaccurate, correction can be made through point offset and angle settings:
+
+- Select the point that needs to be offset, set "Offset" to "Yes", and then configure the position offset for the selected point. Offset can be performed in either the base coordinate system or the workpiece coordinate system. 
+
+Welding Posture Strategy
+
+Configure the tool posture for welding; you can either set the welding posture angle directly or use a custom posture: 
+
+- Welding Posture Angle: Adjust the tool posture by modifying the tool's pitch angle, push-pull angle, and rotation angle. 
+
+- Custom Posture: Adjust the tool posture by directly setting the posture of the tool tip. You can teach a suitable posture first, then click the "Acquire Current" button to capture the current posture. 
+
+Approach Point and Retract Point Settings
+
+Configure the approach point and retract point for the weld seam. During welding, the robot will first pass through the approach point before reaching the weld seam’s start point; after welding is completed, it will retract from the weld seam’s end point to the retract point: 
+
+- Approach Point Strategy: Includes custom distance or custom point:
+
+(1)Custom Distance: Refers to the distance along the normal direction of the start point. 
+
+(2)Custom Point: Refers to the approach point position taught manually.
+
+- Retract Point Strategy: Settings for the retract point are similar to those for the approach point: Custom Distance here refers to the distance along the normal direction of the end point. 
+
+Welding Process Settings
+
+For weld seams that require binding to a welding process: 
+
+(1)Set "Bind Welding Process?" to "Yes". 
+
+(2)Select the type of welding process to bind and the specific welding process (parameters, procedures, etc.).
+
 
 
 Welding data calculation and collection pop-up window
@@ -974,7 +1214,7 @@ Click on the window Welding Data Collection, and a pop-up window will appear dis
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-84   Welding data collection pop-up window
+.. centered:: Figure 3-102   Welding data collection pop-up window
 
 
 Torch Cleaning and Wire Cutting
@@ -985,7 +1225,7 @@ Click “Window”–“Torch Cleaning and Wire Cutting” to open the “Torch 
     :align: center
     :width: 2.5in
 
-.. centered:: Figure 4-85  Parameter setting for gun clearing and wire cutting
+.. centered:: Figure 3-103  Parameter setting for gun clearing and wire cutting
 
 This function supports both manual and automatic operation modes.The manual mode is intended for scenarios where the robot needs to perform torch cleaning or wire cutting immediately.The automatic mode is suitable for scenarios where the robot triggers torch cleaning and wire cutting operations automatically at fixed time intervals during its operation.
 
@@ -997,7 +1237,7 @@ For automatic torch cleaning and wire cutting, all the parameters on the page ne
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-86  Reach the clear gun shear cycle
+.. centered:: Figure 3-104  Reach the clear gun shear cycle
 
 .. important::
     If automatic torch cleaning and wire cutting is enabled, the cleaning and cutting cycle cannot be set to 0!
@@ -1006,7 +1246,7 @@ For automatic torch cleaning and wire cutting, all the parameters on the page ne
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-87  Popup for unset cycles in auto mode
+.. centered:: Figure 3-105  Popup for unset cycles in auto mode
 
 When using the torch cleaning and wire cutting function for the first time, the user needs to manually teach the Torch Cleaning Safety Point, Torch Cleaning Point, Wire Cutting Safety Point, and Wire Cutting Point.Teaching method: First, open the “Torch Cleaning and Wire Cutting” dialog. According to the point addition method and the torch cleaning and wire cutting station diagram in the dialog, add the four points mentioned above. After successfully adding the points, select the corresponding point names from the dialog, configure the other parameters, and click the confirm button. The parameters on the page, along with the joint values of the four points, will be saved into the configuration file for torch cleaning and wire cutting.
 
@@ -1019,7 +1259,7 @@ Automatic loop operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 AIRLab offers the function of automatically cycling through welding projects, allowing users to repeatedly execute welding processes on workpieces. The detailed steps are as follows:
 
-Step 1: Launch AIRLab, import the workpiece registration template project, and open the menu bar—select the automatic cycle operation pop-up window, as shown in the Figure 4-88.
+Step 1: Launch AIRLab, import the workpiece registration template project, and open the menu bar—select the automatic cycle operation pop-up window, as shown in the figure below.
 
 .. important::
     AIRLab has specific requirements for the path of the workpiece registration template project. It must be placed in /Data/Work_template under the AIRLab directory. No other USD files are allowed in this folder besides the workpiece registration template project. The project name can be arbitrary.
@@ -1028,7 +1268,7 @@ Step 1: Launch AIRLab, import the workpiece registration template project, and o
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-88   AIRLab menu bar - Window - Auto Loop Run
+.. centered:: Figure 3-106   AIRLab menu bar - Window - Auto Loop Run
 
 Set loop parameters according to actual needs, and the introduction of each parameter is as follows:   
 
@@ -1036,7 +1276,7 @@ Set loop parameters according to actual needs, and the introduction of each para
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-89   Automatic loop operation parameter settings
+.. centered:: Figure 3-107   Automatic loop operation parameter settings
 
 Enable Automatic Cycle Operation: If automatic cycle operation is required, click this button to activate the function.
 
@@ -1051,9 +1291,9 @@ Cycle Count: This parameter only needs to be set when the cycle mode is Fixed Cy
 
 Step 2: Click the "One-Click Run" icon button in the AIRLab menu bar to start executing the Workpiece Registration Template Project, initiating workpiece recognition. The recognition process is shown in the figure below.
 
-The progress of workpiece recognition is displayed as shown in Figure 4-90.Upon successful recognition, the matching score of the workpiece is shown Figure 4-91.
+The progress of workpiece recognition is displayed as shown in the figure below.Upon successful recognition, the matching score of the workpiece is shown Figure 3-93.
 
-AIRLab then automatically searches for the corresponding welding project of the recognized workpiece. If the project exists in the specified path, it will be imported automatically,and terminal will show the path,as shown in Figure 4-92.If recognition fails, AIRLab will display an error message and suggest corrective actions.
+AIRLab then automatically searches for the corresponding welding project of the recognized workpiece. If the project exists in the specified path, it will be imported automatically,and terminal will show the path,as shown in the figure below.If recognition fails, AIRLab will display an error message and suggest corrective actions.
 
 .. important::
     Welding projects must be placed in the /Data/Weld_template folder under the AIRLab directory.The welding project name must exactly match the workpiece name. For example, if the workpiece is named ZH-0-01-A, its corresponding welding project must be ZH-0-01-A.usd. If the welding project is not found in the specified path, AIRLab will fail to retrieve it and display a pop-up warning.
@@ -1062,19 +1302,19 @@ AIRLab then automatically searches for the corresponding welding project of the 
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-90   The workpiece is being identified
+.. centered:: Figure 3-108   The workpiece is being identified
 
 .. figure:: analysis/4/91.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-91   The workpiece recognition is successful
+.. centered:: Figure 3-109   The workpiece recognition is successful
     
 .. figure:: analysis/4/92.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-92  Automatically retrieve welding projects and import new projects
+.. centered:: Figure 3-110  Automatically retrieve welding projects and import new projects
 
 Step 3: After the welding project is automatically imported, AIRLab controls the robot to execute the project. Once the program completes, AIRLab and the robot enter the cycle interval wait state.
 
@@ -1083,7 +1323,7 @@ Step 3: After the welding project is automatically imported, AIRLab controls the
 
 Step 4: After the waiting period ends, the next cycle begins. AIRLab automatically clears the current project and re-imports the Workpiece Registration Template Project.Upon successful import, AIRLab controls the robot to restart workpiece recognition.f recognition succeeds, AIRLab searches for the corresponding welding project. If the project exists, Step 3 is repeated.
 
-Step 5:AIRLab automatically controls the robot to repeat Step 4 based on the configured Cycle Mode and Cycle Count until all automatic welding cycles are completed，as shown in Figure 4-93.
+Step 5:AIRLab automatically controls the robot to repeat Step 4 based on the configured Cycle Mode and Cycle Count until all automatic welding cycles are completed，as shown in the figure below.
 
 .. important::
     If a robot controller error or AIRLab error occurs during the cycle, the automatic operation stops immediately, requiring manual troubleshooting before resuming.
@@ -1092,7 +1332,7 @@ Step 5:AIRLab automatically controls the robot to repeat Step 4 based on the con
     :align: center
     :width: 4.5in
 
-.. centered:: Figure 4-93  Reaching the set number of cycles, ending the automatic loop operation
+.. centered:: Figure 3-111  Reaching the set number of cycles, ending the automatic loop operation
 
 The above outlines the usage method and steps for AIRLab's Automatic Cycle Operation function.
 
@@ -1100,17 +1340,25 @@ User data backup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If a user needs to transfer a pre-configured welding process, template programs, and built workpiece data from one device to another to replicate the environment, AIRLab provides a user data backup feature.  
 
-Click on the AIRLab menu bar - Window - User Data Backup, and a pop-up window titled "User Data Backup" will appear, as shown in Figure 4-94. Below is a detailed introduction to the usage of the user data package import and export functions. 
+Click on the AIRLab menu bar - Window - User Data Backup, and a pop-up window titled "User Data Backup" will appear, as shown in the figure below. Below is a detailed introduction to the usage of the user data package import and export functions. 
 
 .. figure:: analysis/4/94.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-94   Pop up window for user data backup function
+.. centered:: Figure 3-112   Pop up window for user data backup function
+
+First, you need to select the "Data Backup and Restoration Type", choosing between "Single Template Data" and "All Data" as shown in the figure. Once confirmed, you can proceed with the import and export operations.
+
+.. figure:: analysis/4/95.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-113  Data Backup and Restoration Type
 
 Export Function: 
 
-Click the "Export" button, and AIRLab will first write the version of the current software data package into the version.txt file for version matching verification during import. Then, AIRLab will proceed to copy the following data:  
+If the data backup and restoration type is "All Data,click the "Export" button, and AIRLab will first write the version of the current software data package into the version.txt file for version matching verification during import. Then, AIRLab will proceed to copy the following data:  
 
 Located in the Data folder under the executable file directory:
 
@@ -1129,22 +1377,24 @@ Located in the data folder under the main directory:
 - The register_model folder (for auto-saved model files)  
 
 - The weld_seam_database folder (for weld seam databases)  
- 
-During the export process, AIRLab will display a pop-up window indicating that the data package is being exported, as shown in Figure 4-95. If cancellation is needed, click the "Cancel Export" button in the pop-up.
 
-.. figure:: analysis/4/95.png
-    :align: center
-    :width: 6in
+If the data backup and restoration type is "Single Template Data", you need to first open the template project in AIRLab, then click the "Export" button. AIRLab will package and compress the template and its dependent files, and place the output compressed file in the /Downloads directory of the main folder. The file name is the workpiece name with the .tar.gz extension, such as ZH-401-01-A.tar.gz. Similarly, AIRLab will write the version of the current single template data package into the single_version.txt document within the package for version matching verification.
 
-.. centered:: Figure 4-95  User data is currently being packaged and exported
-
-Once completed, AIRLab will show another pop-up confirming the export and displaying the export path of the data package, as shown in Figure 4-96.
+During the export process, AIRLab will display a pop-up window indicating that the data package is being exported, as shown in the figure below. If cancellation is needed, click the "Cancel Export" button in the pop-up.
 
 .. figure:: analysis/4/96.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-96   User data export completed
+.. centered:: Figure 3-114  User Single Template Data is currently being packaged and exported
+
+Once completed, AIRLab will show another pop-up confirming the export and displaying the export path of the data package, as shown in the figure below.
+
+.. figure:: analysis/4/96-1.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-115   User Single Template Data export completed
 
 .. important::
     If a user initiates the export function but any of the folders listed above do not exist, AIRLab will display a pop-up notification indicating the names and paths of the missing folders. The user must create these missing files or folders before proceeding with the export.
@@ -1153,65 +1403,166 @@ Additionally, if the permissions for any of the specified folders or files are m
 
 The directory structure of the exported compressed package is shown in the figure below: 
 
+.. figure:: analysis/4/96-2.png
+    :align: center
+    :width: 2.5in
+
+.. centered:: Figure 3-116  the directory structure of single template data
+
 .. figure:: analysis/4/97.png
     :align: center
     :width: 2.5in
 
-.. centered:: Figure 4-97   The directory structure of the graph packet
+.. centered:: Figure 3-117   The directory structure of the complete data package
 
-Import Function:Click the "Select File" button to choose the data package to be imported (ensure the directory structure of the data package matches the one shown in Figure 4-97). Then, click the "Import" button.  
+Import Function:Click the "Select File" button to choose the data package to be imported (ensure the directory structure of the data package matches the one shown in the figure below). Then, click the "Import" button.  
 
 AIRLab will first verify the version number in the version.txt file within the imported data package. If the version numbers match, the system will proceed with importing the data package contents.  
 
-If the version numbers do not match, a pop-up message will appear, notifying the user of the version inconsistency and indicating that the data is incompatible and cannot be imported, as shown in Figure 4-101. 
+If the version numbers do not match, a pop-up message will appear, notifying the user of the version inconsistency and indicating that the data is incompatible and cannot be imported, as shown in the figure below. 
 
 .. figure:: analysis/4/98.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-98  Select the data package to be imported in the image
+.. centered:: Figure 3-118  Select the data package to be imported in the image
 
 .. figure:: analysis/4/99.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-99  The data package is currently being imported
+.. centered:: Figure 3-119  The data package is currently being imported
 
 .. figure:: analysis/4/100.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-100  Data package import completed
+.. centered:: Figure 3-120  Data package import completed
 
 .. figure:: analysis/4/101.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-101  The imported data package version is inconsistent with the current AIRLab data package version and cannot be imported
+.. centered:: Figure 3-121  The imported data package version is inconsistent with the current AIRLab data package version and cannot be imported
 
 .. important::
     The data package import function will first delete the original files and folders. If you still need to keep the files, please make sure to back them up before importing!
 
+3D File Parsing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If the user needs to perform welding on a model that has already been built in AIRLab, the software provides the “3D File Parsing” function, which replaces the previous “Model Construction” step and simplifies the workflow. The usage is as follows:
+
+Step 1: Click AIRLab Menu – “Window” – “3D File Parsing”. The 3D File Parsing dialog will appear, as shown below.
+
+.. figure:: analysis/4/3Dfile_prasing_dialog.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-122  “3D File Parsing” dialog
+
+Step 2: Click the “Open” button in the dialog. A file selection window will pop up. Choose the workpiece to be parsed, and then click “Open” again to confirm the selection, as shown below.
+
+.. figure:: analysis/4/3Dfile_prasing_selection.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-123  3D File selection
+
+Step 3: A parsing progress bar will appear. Please wait patiently until the parsing is completed. The process is shown below.
+
+.. figure:: analysis/4/3Dfile_prasing_progress_dialog.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-124  “3D File Parsing” progress dialog
+
+Step 4: After the progress is completed, the corresponding 3D model of the workpiece will be constructed in the scene, along with its associated weld seams, as shown below.
+
+.. figure:: analysis/4/3Dfile_prasing_res_display.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-125  “3D File Parsing” result display
+
+Step 5: For subsequent operations, please refer to Section 3.5.3 Weld Seam Editing, Section 3.5.4 Workpiece Positioning, and Section 3.5.5 Automatic Photo Pose, to complete the following welding process.
+
+Multi-Station Automatic Operation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AIRLab provides a Multi-Station Automatic Operation feature for multi-workpiece welding scenarios. If you have already recorded an AIRLab project file for a single workpiece, you can run multiple projects (i.e., multiple workpiece welding jobs) efficiently and automatically by specifying the required external-axis positions for each workpiece.
+
+The following first describes the case where Enable Auto Recognition is set to No:
+
+Step 1: Click AIRLab Menu → “Window” → “Multi-Station Automatic Operation.” The Multi-Station Automatic Operation dialog appears, as shown below.
+
+.. figure:: analysis/4/multi_station_ui.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-126  “Multi-Station Automatic Operation” dialog
+
+Step 2: Move the external axis to the position required to complete welding for a given workpiece. Click “Get Position” to record the current external-axis position, as shown below.
+
+.. figure:: analysis/4/multi_station_setting.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-127  External-axis position setting
+
+Step 3: Select the project file corresponding to the welding task you wish to run at this external-axis position. Click “Select” to open the file chooser, then click “Open” to confirm, as shown below.
+
+.. figure:: analysis/4/multi_station_usda_select.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-128  Project path selection and result
+
+Step 4: Choose the desired modification mode: Add, Modify, or Delete. After confirming your choice, click “OK” to apply. To modify, select the target entry and click “OK.” Deletion is similar. See below.
+
+.. figure:: analysis/4/multi_station_add_modify.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-129  Add and Modify
+
+Step 5: After completing all settings, click “Start Auto Run.” The welding job will begin.
+
+Next is the case where Enable Auto Recognition is set to Yes:
+
+Step 1: Similarly, after obtaining the external-axis position, enabling Auto Recognition will change the dialog as shown below. For details on Auto Recognition, refer to Section 3.6.11 Automatic Loop Operation.
+
+.. figure:: analysis/4/multi_station_auto.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-130  Auto Recognition options
+
+Step 2: After choosing the modification mode, click “Confirm.” An Inquiry dialog will appear—please read carefully before proceeding. Click “Confirm” to complete the setup.
+
+.. figure:: analysis/4/multi_station_inquiry_dialog.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-131  Inquiry dialog
 
 Extended axis synchronous motion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If an external axis is required during robotic welding, AIRLab provides external axis synchronization functionality.
 
-After selecting the external axis in the import module, click confirm to open the external axis setting pop-up window, as shown in Figure 4-102. After selecting the external axis, click confirm to import it. Click "Get" to obtain the current external axis coordinate system, and click "Save" to set the external axis coordinate system.
+After selecting the external axis in the import module, click confirm to open the external axis setting pop-up window, as shown in the figure below. After selecting the external axis, click confirm to import it. Click "Get" to obtain the current external axis coordinate system, and click "Save" to set the external axis coordinate system.
 
 .. figure:: analysis/4/102.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-102  Extension axis setting pop-up window
+.. centered:: Figure 3-132  Extension axis setting pop-up window
 
-When editing long straight welds that require axis linkage extension, set the external axis positions for the starting and ending points, as shown in Figure 4-103. After weld seam recognition, AIRLab will automatically generate a program based on the weld seam recognition results and the position of the external axis, achieving synchronous motion between the external axis and the robot.
+When editing long straight welds that require axis linkage extension, set the external axis positions for the starting and ending points, as shown in the figure below. After weld seam recognition, AIRLab will automatically generate a program based on the weld seam recognition results and the position of the external axis, achieving synchronous motion between the external axis and the robot.
 
 .. figure:: analysis/4/103.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-103  When editing long straight welds, it is necessary to set the position parameter of the extension axis
+.. centered:: Figure 3-133  When editing long straight welds, it is necessary to set the position parameter of the extension axis
 
 
 Other controls
@@ -1220,26 +1571,26 @@ Click the "Other Controls" button in the operation area to enter the IO setting 
 
 (1) IO control module
 
-As shown in Figure 4-104, the IO control module enables manual control of the digital outputs, analog outputs (0-10v) in the robot control box and the end tool digital outputs, analog outputs (0-10v) extended IO digital outputs, analog outputs (0-10v):
+As shown in Figure 3-116, the IO control module enables manual control of the digital outputs, analog outputs (0-10v) in the robot control box and the end tool digital outputs, analog outputs (0-10v) extended IO digital outputs, analog outputs (0-10v):
 
 .. figure:: analysis/4/104.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-104  IO Control Module
+.. centered:: Figure 3-134  IO Control Module
 
 - DO Setting: Select the port number, click the "On" button to set the corresponding DO high, and click the "Off" button to set the corresponding DO low.
 - AO Setting: Select the port number and enter the value (0-100) in the input box on the right, the value is a percentage, setting 100 means setting this AO port to 10v.
 
 (2) Exaxis control
 
-As shown in Figure 4-105, the External Axis Setup module enables control of the robot's external axis.
+As shown in Figure 3-117, the External Axis Setup module enables control of the robot's external axis.
 
 .. figure:: analysis/4/105.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-105  Exaxis Control
+.. centered:: Figure 3-135 exaxis Control
 
 - Select the extended axis numbe: click the "Load" button to load the external axis protocol according to the selected extended axis number. Set the running speed (%), acceleration (%) and the maximum distance of the extended axis (mm).
 - Remove Enable: Click on the "Remove Enable" button to remove enable from the external axis.
@@ -1252,42 +1603,52 @@ As shown in Figure 4-105, the External Axis Setup module enables control of the 
 
 Simulation
 ~~~~~~~~~~~~~~
-As shown in Figure 4-106, after generating the simulation trajectory of the program, open the operation area - simulation, set the simulation speed and simulation interval, click on the "Run" button to start the simulation of the template program, click on the "Stop" button to stop the template program simulation. Click "Stop" button to stop the template program simulation. At the same time, it will generate the simulation trajectory point table to record the simulation trajectory points. In the table, the type of simulation track endpoints is LINEND, and when you click a line in the table, the virtual simulation robot will move to the clicked simulation track point, and at the same time, it will synchronously display the TCP coordinates of the simulation track point.
+As shown in Figure 3-118, after generating the simulation trajectory of the program, open the operation area - simulation, set the simulation speed and simulation interval, click on the "Run" button to start the simulation of the template program, click on the "Stop" button to stop the template program simulation. Click "Stop" button to stop the template program simulation. At the same time, it will generate the simulation trajectory point table to record the simulation trajectory points. In the table, the type of simulation track endpoints is LINEND, and when you click a line in the table, the virtual simulation robot will move to the clicked simulation track point, and at the same time, it will synchronously display the TCP coordinates of the simulation track point.
 
 .. figure:: analysis/4/106.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-106  Simulation Page
+.. centered:: Figure 3-136  Simulation Page
 
 Program configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The program configuration page is used to configure the program before running it, including the program configuration section and the welding interrupt recovery configuration section, as shown in Figure 4-107.  
+The program configuration page is used to configure the program before running it, including the program configuration section and the welding interrupt recovery configuration section, as shown in the figure below.  
 
 .. figure:: analysis/4/107.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-107  Program Configuration Page
+.. centered:: Figure 3-137  Program Configuration Page
 
-The program configuration section includes program running configuration, program arc initiation configuration, no model construction settings, and welding machine number selection.
+The program configuration section includes program running configuration, program recognition configuration,program arc initiation configuration, no model construction settings, welding machine number selection and so on.
 
 .. figure:: analysis/4/108.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-108  Program Configuration
+.. centered:: Figure 3-138  Program Configuration
 
-The program running configuration can be selected from manual debugging mode, weld after all recognition and weld after single strip recognition, as detailed below.
+For program operation configuration, you can select either "Do Not Run Program After Recognition" or "Run Program After Recognition": 
 
-- Manual debugging mode: for single-step debugging.
+- Do Not Run Program After Recognition: The welding program will not run automatically after the fine positioning program is executed. 
 
-- Weld after all are recognized: Click Auto Run to recognize all the welds before welding.
+- Run Program After Recognition: The welding program will run automatically after the fine positioning program is executed.
 
-- Weld after single strip recognition: Clicking Auto Run, the robot will first recognize the first weld seam under the template program node. Upon successful recognition, it will proceed to weld the first seam. After completing the welding, it will continue to recognize the second seam, and this process will repeat until all the seams have been welded. The operation will end once all welds are completed.
+The program recognition configuration is divided into rough positioning first followed by fine positioning, with the option to run only fine positioning.  
 
-The program's arc start configuration can be set to arc start or no arc start. It is recommended to test whether there is a problem by setting no arc start before starting arc welding.
+- Rough Positioning Followed by Fine Positioning: After clicking the one-click run button, AIRLab will automatically execute the workpiece positioning program in the current project first, followed by the fine positioning program.  
+
+- Run Only Fine Positioning: After starting with one-click run, AIRLab will skip the workpiece positioning step and directly execute the fine positioning program.
+
+For arc ignition configuration, you can set it to "Arc Ignition" or "No Arc Ignition": 
+
+- Arc Ignition: If there is an arc ignition command in the program, arc ignition and welding will be performed during program operation. 
+
+- No Arc Ignition: No arc ignition will occur during program operation; the robot will only move along the welding trajectory for simulated welding. 
+
+You can set the simulated welding operation speed multiplier to increase the speed of the simulated welding process.
 
 No model building setup: Currently, there are two methods - rebuilding and not rebuilding.
 
@@ -1306,7 +1667,7 @@ Welding interruption recovery configuration refers to clearing the parameters th
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-109  Welding interruption recovery configuration
+.. centered:: Figure 3-139  Welding interruption recovery configuration
 
 The parameter configuration for detecting unexpected interruptions in welding arc tracking is aimed at configuring parameters for arc interruptions during the welding process, including selecting whether to detect and configuring the duration of arc interruption confirmation.
 
@@ -1334,82 +1695,82 @@ After the welding interruption recovery configuration is fully configured, run t
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-110  Welding interruption pop-up window
+.. centered:: Figure 3-140  Welding interruption pop-up window
 
 After checking the environment and troubleshooting, clicking the "Resume Welding" button will restore the interrupt according to the configured parameters.
 
 
 Multilingual settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-AIRLab software currently provides seven language options: Chinese (Simplified), Chinese (Traditional), English, Japanese, Korean, Russian, and French. The detailed multilingual settings page is shown in Figure 4-111. This page provides three operations: switching languages; Export existing languages in AIRLab software; Import a new language. In order to meet the needs of users to switch between multiple languages, set new languages for AIRLab software, and modify existing language content in AIRLab software.
+AIRLab software currently provides seven language options: Chinese (Simplified), Chinese (Traditional), English, Japanese, Korean, Russian, and French. The detailed multilingual settings page is shown in the figure below. This page provides three operations: switching languages; Export existing languages in AIRLab software; Import a new language. In order to meet the needs of users to switch between multiple languages, set new languages for AIRLab software, and modify existing language content in AIRLab software.
 
 .. figure:: analysis/4/111.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-111  "Multilingual Settings" Sub interface
+.. centered:: Figure 3-141  "Multilingual Settings" Sub interface
 
 The detailed operation introduction of the above functions is as follows:
 
 (1)Switch the language of AIRLab
 
-Click on the dropdown menu of "Multilingual" in Figure 4-111, select the desired language type, and click the "Confirm" button to immediately switch the AIRLab software language.
+Click on the dropdown menu of "Multilingual" in Figure 3-124, select the desired language type, and click the "Confirm" button to immediately switch the AIRLab software language.
 
 (2)User sets new language for AIRLab
 
-Firstly, click the "Export" button to export the language file currently used by AIRLab in CSV format. The exported file path is located in the local Downloads folder, as shown in Figure 4-112. 
+Firstly, click the "Export" button to export the language file currently used by AIRLab in CSV format. The exported file path is located in the local Downloads folder, as shown in the figure below. 
 
 .. figure:: analysis/4/112.png
     :align: center
     :width: 4in
 
-.. centered:: Figure 4-112  AIRLab Language File Export Path
+.. centered:: Figure 3-142  AIRLab Language File Export Path
 
-The content format of the CSV file is shown in Figure 4-113(if opened with a text editor), including four columns: language_id, location, source_text, translation_text. “language_id” represents the language type, “location” represents the position of the text in the source code, 'source_text' represents the text (Chinese) in the source code, and 'translation_text' represents the translation value corresponding to the source text.
+The content format of the CSV file is shown in the figure below(if opened with a text editor), including four columns: language_id, location, source_text, translation_text. “language_id” represents the language type, “location” represents the position of the text in the source code, 'source_text' represents the text (Chinese) in the source code, and 'translation_text' represents the translation value corresponding to the source text.
 
 .. figure:: analysis/4/113.png
     :align: center
     :width: 5in
 
-.. centered:: Figure 4-113   Content and format of AIRLab language CSV file
+.. centered:: Figure 3-143   Content and format of AIRLab language CSV file
 
-If you use LibreOfffice software to open it, as shown in Figure 4-114, please note that the opening format is shown in Figure 4-115.
+If you use LibreOfffice software to open it, as shown in Figure 3-126, please note that the opening format is shown in Figure 3-126.
 
 .. figure:: analysis/4/114.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-114   LibreOffice software
+.. centered:: Figure 3-144   LibreOffice software
 
 .. figure:: analysis/4/115.png
     :align: center
     :width: 5in
 
-.. centered:: Figure 4-115   Opening format of AIRLab multilingual files
+.. centered:: Figure 3-145   Opening format of AIRLab multilingual files
 
-Next is to write a CSV file for the user. When setting a new language, the user only needs to modify the contents of the first column language_id and the fourth column translation_text. Assuming the user has added French, replace all "English" in the first column of Figure 4-113 with "Français"; The content of the fourth column translation_text needs to be translated by the user based on the Chinese text of "source_text" to obtain the corresponding target language (for the same string appearing in the source text, please translate it into the same word).
+Next is to write a CSV file for the user. When setting a new language, the user only needs to modify the contents of the first column language_id and the fourth column translation_text. Assuming the user has added French, replace all "English" in the first column of Figure 3-128 with "Français"; The content of the fourth column translation_text needs to be translated by the user based on the Chinese text of "source_text" to obtain the corresponding target language (for the same string appearing in the source text, please translate it into the same word).
 
 .. important::
     Please do not modify any characters under the "source_text" column!
 
-After completing the translation work, the user needs to rename the CSV file to a file name that is the table name of the language data table in the AIRLab language database. For example, the file name "en_translations table" in Figure 4-115 is the table name of the language type "English" in the database.
+After completing the translation work, the user needs to rename the CSV file to a file name that is the table name of the language data table in the AIRLab language database. For example, the file name "en_translations table" in Figure 3-129 is the table name of the language type "English" in the database.
 
 .. important::
     It is recommended to preserve the language characteristics of the user CSV file naming to avoid duplication with the names of existing language data tables in the database, which may result in errors where the contents of other language data tables are replaced.
 
-Finally, import the CSV file into the AIRLab software, copy the file to the execution directory of the AIRLab software, click the "Import" button, and select the file to import, as shown in Figure 4-116. The AIRLab terminal displays “CSV file import successful”, indicating that the user's language file has been successfully imported, as shown in Figure 4-117. After restarting AIRLab, select the user's newly added language switch from the drop-down menu in "Language Selection".
+Finally, import the CSV file into the AIRLab software, copy the file to the execution directory of the AIRLab software, click the "Import" button, and select the file to import, as shown in Figure 3-129. The AIRLab terminal displays “CSV file import successful”, indicating that the user's language file has been successfully imported, as shown in Figure 3-128. After restarting AIRLab, select the user's newly added language switch from the drop-down menu in "Language Selection".
 
 .. figure:: analysis/4/116.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-116  Pop up window of the "Import" button
+.. centered:: Figure 3-146  Pop up window of the "Import" button
 
 .. figure:: analysis/4/117.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-117  Terminal display information when language file import is successful
+.. centered:: Figure 3-147  Terminal display information when language file import is successful
 
 If the terminal displays "CSV file import failed", you can check the error message in the log record, and carefully check whether the imported CSV file is inconsistent with the originally exported CSV file in terms of the number of rows, columns, and the Chinese delimiter "；" between columns.
 
@@ -1420,27 +1781,27 @@ If the terminal displays "CSV file import failed", you can check the error messa
 
 If the user needs to modify an existing language in AIRLab, they first need to click the "Export" button to export the CSV file of that language; After the modification is completed, copy the file to the execution directory of AIRLab software, click the "Import" button, select the modified file to import, and the terminal displays "CSV import successful". After restarting the software, the language modification is completed.
 
-Considering the different usage habits of AIRLab English users, AIRLab-V1.0.2 version has designed the unit of measurement switching as a configuration item for users to choose whether to switch millimeters to inches, as shown in Figure 4-118.
+Considering the different usage habits of AIRLab English users, AIRLab-V1.0.2 version has designed the unit of measurement switching as a configuration item for users to choose whether to switch millimeters to inches, as shown in Figure 3-130.
 
 .. figure:: analysis/4/118.png
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-118   UI interface for switching measurement units
+.. centered:: Figure 3-148   UI interface for switching measurement units
 
-After the user selects the measurement unit to switch, the input box labeled in millimeters on the AIRLab interface will be converted to inches, as shown in Figure 4-119 and Figure 4-120.
+After the user selects the measurement unit to switch, the input box labeled in millimeters on the AIRLab interface will be converted to inches, as shown in Figure 3-131 and Figure 3-131.
 
 .. figure:: analysis/4/119.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-119   Before switching units of measurement
+.. centered:: Figure 3-149   Before switching units of measurement
 
 .. figure:: analysis/4/120.png
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-120  After switching units of measurement
+.. centered:: Figure 3-150  After switching units of measurement
 
 Error prompt pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1450,7 +1811,7 @@ During the operation of AIRLab software, some errors may occur, and an error pro
     :align: center
     :width: 3in
 
-.. centered:: Figure 4-121  Error prompt
+.. centered:: Figure 3-151  Error prompt
 
 After fixing the error based on its type, click the "one-click clear" button, the pop-up window will disappear, and then continue running. 
 
@@ -1458,4 +1819,93 @@ After fixing the error based on its type, click the "one-click clear" button, th
     :align: center
     :width: 6in
 
-.. centered:: Figure 4-122   Clean the error prompt
+.. centered:: Figure 3-152   Clean the error prompt
+
+Extended Axis Coordinate System Calibration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AIRLab provides a calibration function for the Extended Axis Coordinate System. After normally importing the robot, tools, and external axes, click "Import Module" - "External Axes" on the main interface,open the extended axis settings interface (see Section 3.5.1). Then, select the extended axis coordinate system to calibrate and click “Modify” to enter the Extended Axis Coordinate System Calibration interface, as shown below.
+
+.. figure:: analysis/4/exaxis_calibration_ui.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-153   Extended Axis Coordinate System Calibration interface
+
+.. important::
+    Exaxis0 cannot be calibrated. If you select Exaxis0, an error dialog will appear as shown below.
+
+.. figure:: analysis/4/exaxis_calibration_crd0_error.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-154   Exaxis0 calibration error dialog
+
+A AIRLab provides a calibration method specifically for extended axes of the type “Single Degree-of-Freedom Linear Rail.” The detailed procedure is as follows:
+
+Step 1: First, open the "Extended Axis Coordinate System Calibration" interface mentioned earlier. Click the "Clear Coordinate System" button, and confirm the "Whether the currently applied tool coordinate system has been calibrated" option. The prerequisite for calibrating the external axis is that the tool coordinate system used in the current application has been correctly calibrated. After confirmation, an "Inquiry" pop-up window will appear. Once confirmed, the calibration setup will officially begin.
+
+.. figure:: analysis/4/exaxis_calibration_ui+dialog.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-155   Calibration interface (left) and Inquiry dialog (right)
+
+Step 2: Click “Servo Enable.” If successful, the button will turn green; otherwise, it will remain red and an error dialog will appear. After enabling successfully, click “Zero Point Setting” to complete the initial setup.
+
+.. figure:: analysis/4/exaxis_calibration_enable_disable.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-156   Servo enable and zero point setting
+
+Step 3: Keep the extended axis fixed. Change the robot tool’s pose so that the tool aligns with a fixed reference point on the extended axis. Click “Set Point 1.” Once the button changes to “Modify Point 1,” the point has been recorded. To modify, repeat the process. Similarly, adjust the pose to record Point 2.
+
+.. figure:: analysis/4/exaxis_calibration_P1+P2.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-157   Setting Point 1 and Point 2
+
+Step 4: Click “Forward Jog” to move the extended axis a certain distance (note the number of clicks—you will need to return to the original zero point later). Then adjust the robot tool pose again to align with the same fixed reference point. Click “Set Point 3.” Once the button changes to “Modify Point 3,” the point has been recorded. Modify if needed by repeating the operation.
+
+.. figure:: analysis/4/exaxis_calibration_P3.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-158   Setting Point 3
+
+Step 5: Click “Reverse Jog” to move the extended axis back to the zero point. Adjust the robot tool pose again to align with the same fixed reference point, then jog along the base coordinate system to move the tool slightly upward (vertically above the fixed point). Click “Set Point 4.” Once the button changes to “Modify Point 4,” the point has been recorded. Modify if needed by repeating the operation.
+
+.. figure:: analysis/4/exaxis_calibration_P4.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-159   Setting Point 4
+
+Step 6: After completing the above steps, click “Calculate” to compute the tool pose. The results will be displayed as shown below.
+
+.. figure:: analysis/4/exaxis_calibration_cal_res.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-160   Extended Axis Coordinate System Calculation Result
+
+Step 7: Once the calculation results are verified, click “Save.” The results will be stored in the local path:
+~/AIRLabExe/Data/import_config/Cleargun_cutwire_settings.config
+under [Exaxis_coord_value_list]. In this example, Exaxis1 was calibrated, so the result is saved as <1 = “calibration result”>. At the same time, the Extended Axis Settings will display Exaxis1 as successfully calibrated.
+
+If the calibrated external axis coordinate system is correct (with RX, RY, and RZ values close to 0), click the "Apply" button to send the calibrated external axis coordinate system to the robot controller for application.
+
+.. figure:: analysis/4/exaxis_calibration_save_res.png
+    :align: center
+    :width: 6in
+
+.. centered:: Figure 3-161   Saving Extended Axis Coordinate System Calibration Result
+
+If the selected extended axis coordinate system already exists (i.e., calibration data is already stored in the above path), an Inquiry dialog will appear asking whether to overwrite the previous result. Clicking “Confirm” will overwrite the existing calibration.
+
+.. figure:: analysis/4/exaxis_calibration_inquiry_dialog.png
+    :align: center
+    :width: 3.5in
+
+.. centered:: Figure 3-162   Extended Axis Coordinate System Inquiry Dialog

@@ -19,18 +19,18 @@ Click on the menu bar - File, select the file type as binpicking, then click "Ne
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 5-1 Create a new binpick project file
+.. centered:: Figure 4-1 Create a new binpick project file
 	
 
 UI interface introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Import the binpicking project, click on the menu bar plugin - binpicking, and a binpicking pop-up window will pop up, as shown in Figure 5-2. The binpicking pop-up window is divided into four parts: Initial setup, position binding, grasping position error compensation, and program execution.
+Import the binpicking project, click on the menu bar plugin - binpicking, and a binpicking pop-up window will pop up, as shown in Figure 4-2. The binpicking pop-up window is divided into four parts: Initial setup, position binding, grasping position error compensation, and program execution.
 
 .. figure:: plug/2.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-2  binpicking pop-up window
+.. centered:: Figure 4-2  binpicking pop-up window
 
 1. Initial Setup Procedure:
 
@@ -50,7 +50,7 @@ After completing all configurations, click "Confirm". A "Initial setup success
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-3  Initial setup
+.. centered:: Figure 4-3  Initial setup
 
 2. Perform position binding
 
@@ -65,13 +65,13 @@ Placement Mode Selection:
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-4  Fixed placement
+.. centered:: Figure 4-4  Fixed placement
 
 .. figure:: plug/5.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-5  Rule placement
+.. centered:: Figure 4-5  Rule placement
 
 3. Grasping position error compensation
 
@@ -81,7 +81,7 @@ This function is designed to eliminate systematic errors during the grasping pro
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-6  Grasping position error compensation
+.. centered:: Figure 4-6  Grasping position error compensation
 
 4. Program running
 
@@ -93,7 +93,7 @@ Manual run: Select manual run, and the robot will perform an automatic grasp;
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-7  Manual operation mode
+.. centered:: Figure 4-7  Manual operation mode
 
 First, click on Take Photos to take a photo of the object to be grasped; after the photo is taken successfully, the terminal will display a prompt "Photo taken successfully", and the 2D scene will display the RGB image of the real workpiece.
 
@@ -113,7 +113,7 @@ Reset: Click the "Reset" button to clear the grasp counter (set to 0),Ensur
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-8  Automatic operation mode
+.. centered:: Figure 4-8  Automatic operation mode
 
 
 Overall operation process
@@ -134,7 +134,7 @@ Secondary grasping teaching points:
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-9  Secondary capture position binding
+.. centered:: Figure 4-9  Secondary capture position binding
 
 First Capture Position:Teach the position directly above the target object Ensure the camera can fully capture the object within the frame.
 
@@ -148,7 +148,7 @@ Non secondary grasping teaching points:
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-10  Non-secondary capture position binding
+.. centered:: Figure 4-10  Non-secondary capture position binding
 
 Waiting for Grasp Position:Located near the actual grasping point,ensures ready access to target objects;
 
@@ -160,7 +160,7 @@ Fixed placement of teaching points:
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-11  Fixed placement location binding
+.. centered:: Figure 4-11  Fixed placement location binding
 
 Choose a fixed number of placement points, and if there are several placement points, teach them how many placement points to use;
 
@@ -170,7 +170,7 @@ Regular placement of teaching points:
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-12  Rule placement location binding
+.. centered:: Figure 4-12  Rule placement location binding
 
 The first, second, and third path points determine the placement matrix for regulatory placement; The first and second path points determine the rows of the placement matrix, while the second and third path points determine the columns of the placement matrix.
 
@@ -182,7 +182,7 @@ Open the terminal under the /zhenhua_lock_mp/ path, run server_start.sh, If the 
 	:align: center
 	:width: 6.5in
 
-.. centered:: Figure 5-13  Start AI Node
+.. centered:: Figure 4-13  Start AI Node
 
 4. Run AIRLab software
    
@@ -200,7 +200,7 @@ Click the menu bar plug-in-spray, and the spray pop-up window will pop up (pictu
 	:align: center
 	:width: 7.5in
 
-.. centered:: Figure 5-14  Spray plug-in pop-up
+.. centered:: Figure 4-14  Spray plug-in pop-up
 
 The spray parameter setting mainly sets the spray parameters, including spray direction, normal calculation radius, ellipse major semi-axis, ellipse minor semi-axis, etc. After the settings are completed, click Initialize AI, click AI Calculation, and the spray trajectory will be automatically calculated.
 
@@ -208,7 +208,7 @@ The spray parameter setting mainly sets the spray parameters, including spray di
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-15  Spraying parameter settings
+.. centered:: Figure 4-15  Spraying parameter settings
 
 The simulation setting is mainly to simulate the spraying trajectory. First, click on the trajectory generation to generate the simulation trajectory in the 3D scene. The generated simulation trajectory is correct, set the simulation speed, and click the run button to see the simulation effect. Click the stop button to stop the simulation.
 
@@ -216,7 +216,7 @@ The simulation setting is mainly to simulate the spraying trajectory. First, cli
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 5-16  Simulation Settings
+.. centered:: Figure 4-16  Simulation Settings
 
 The program running part is mainly used to save, transmit and load the trajectory of the spraying program.
 
@@ -224,7 +224,7 @@ The program running part is mainly used to save, transmit and load the trajector
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 5-17  Program running
+.. centered:: Figure 4-17  Program running
 
 - Save trajectory file: Click the "Save trajectory file" button to save the spray trajectory locally.
   
@@ -253,7 +253,7 @@ Step4：Click "Track Generation" in the spraying interface simulation setting UI
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 5-18   Spraying simulation trajectory
+.. centered:: Figure 4-18   Spraying simulation trajectory
 
 For workpieces whose spraying trajectory has been calculated and transmitted to the controller, there is no need to perform AI calculation again during the next spraying operation. The trajectory can be directly loaded and then simulated.
 
@@ -265,7 +265,7 @@ To provide a better user experience and improve user efficiency, AIRLab software
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 5-19  Conversational smart assistant pop-up window
+.. centered:: Figure 4-19  Conversational smart assistant pop-up window
 
 Enter the question or operation in the input box, click Send, and wait for the AI assistant to reply or make the corresponding operation. The main functions of the AI assistant include helping users import/export project files, bind welding processes, add new project tree nodes, etc.
 
@@ -273,7 +273,7 @@ Enter the question or operation in the input box, click Send, and wait for the A
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 5-20  AI assistant role
+.. centered:: Figure 4-20  AI assistant role
 
 Take importing a project as an example:
 
@@ -283,4 +283,4 @@ The user sends "Please help me import the project ZH-401-EN.json", the AI assist
 	:align: center
 	:width: 5.5in
 
-.. centered:: Figure 5-21  Import Project
+.. centered:: Figure 4-21  Import Project
