@@ -720,7 +720,7 @@ The meaning of each editing item in Weld Seam Editing is detailed in Section 3.6
 After completing the weld seam editing for plug workpieces, click the "Weld Seam Editing" module and then click the "Generate Welding Program" button. A plug welding program will be generated under the "Program" node. Subsequent operations such as generating trajectories for the created welding nodes or running the program can be performed; details are provided in Section 3.4.6.
 
 .. important::
-    Attention: If AIRLab provides too many automatic photo poses (such as far more than the number of welds), some points should be deleted or manually taught again. The teaching points only need to capture the starting and ending points of the welds.
+    If AIRLab provides too many automatic photo poses (such as far more than the number of welds), some points should be deleted or manually taught again. The teaching points only need to capture the starting and ending points of the welds.
 
 
 
@@ -752,7 +752,7 @@ After selecting the workpiece positioning algorithm, click "Confirm", and a "Rou
 
 .. figure:: analysis/4/51.png
     :align: center
-    :width: 2.5in
+    :width: 2in
 
 .. centered:: Figure 3-67  Workpiece positioning program
 
@@ -797,9 +797,9 @@ Options such as “Run Program” and “Stop Program” function in the same wa
 
 - Refer to model-free construction for generating photo poses: The photo points taught during the model-free construction process will be automatically acquired as the photo points for fine positioning.  
   
-- Obtain weld seam recognition data:Generate a welding program based on the results of fine positioning recognition, as well as the already edited weld seams and their attributes.
+- Obtain weld seam recognition data: Generate a welding program based on the results of fine positioning recognition, as well as the already edited weld seams and their attributes.
 
-- Refer to model-free acquisition of weld seam recognition data:Generate a welding program based on the results of model-free construction, as well as the already edited weld seams and their attributes.
+- Refer to model-free acquisition of weld seam recognition data: Generate a welding program based on the results of model-free construction, as well as the already edited weld seams and their attributes.
 
 - Obstacle-free trajectory planning:Click "Obstacle-Free Trajectory Planning" to plan the welding program after collision detection.
 
@@ -815,7 +815,7 @@ After running the fine position, the final weld node is generated under the prog
 
 .. figure:: analysis/4/55.png
     :align: center
-    :width: 3in
+    :width: 2in
 
 .. centered:: Figure 3-71  Click on the Program Module
 
@@ -1352,7 +1352,7 @@ First, you need to select the "Data Backup and Restoration Type", choosing betwe
 
 .. figure:: analysis/4/95.png
     :align: center
-    :width: 6in
+    :width: 3in
 
 .. centered:: Figure 3-113  Data Backup and Restoration Type
 
@@ -1836,7 +1836,7 @@ AIRLab provides a calibration function for the Extended Axis Coordinate System. 
 
 .. figure:: analysis/4/exaxis_calibration_crd0_error.png
     :align: center
-    :width: 3.5in
+    :width: 2.5in
 
 .. centered:: Figure 3-154   Exaxis0 calibration error dialog
 
@@ -1906,6 +1906,6 @@ If the selected extended axis coordinate system already exists (i.e., calibratio
 
 .. figure:: analysis/4/exaxis_calibration_inquiry_dialog.png
     :align: center
-    :width: 3.5in
+    :width: 3in
 
 .. centered:: Figure 3-162   Extended Axis Coordinate System Inquiry Dialog
