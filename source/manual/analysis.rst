@@ -958,7 +958,7 @@ Click “Window” – “Version Verification” to open the version verificati
 
 .. centered:: Figure 3-84   “Version Verification” dialog
 
-If any libraries are shown with a red cross mark, it is necessary to check whether the AIRLab environment version matches. For example, if the middleware library version is incorrect, the dialog will appear as shown below.
+If the library shows a red cross status in the version verification pop-up window, it indicates that the version of the library or function package does not match, as shown in the figure below. You can report this issue to the after-sales staff and obtain the latest upgrade package.
 
 .. figure:: analysis/4/version_verification_error.png
     :align: center
@@ -1156,7 +1156,7 @@ Click the ”weld sem” module. After adding a weld seam, click the edit icon
     :align: center
     :width: 3in
 
-.. centered:: Figure 3-101 weld seam edit pop-up window
+.. centered:: Figure 3-101a weld seam edit pop-up window
 
 - Weld Seam Type: Automatically generated based on the selected weld seam. 
 
@@ -1203,6 +1203,20 @@ For weld seams that require binding to a welding process:
 (1)Set "Bind Welding Process?" to "Yes". 
 
 (2)Select the type of welding process to bind and the specific welding process (parameters, procedures, etc.).
+
+For the editing of spline curve weld seams, when setting points and angles, you can choose the setting method as either overall setting or setting for a specific point:
+
+- If you select "Overall Setting", the configured point offset and welding posture will apply to all points of the weld seam. 
+
+- If you select "Setting for a Specific Point", the configured point offset and welding posture will only apply to the selected point.
+-  
+Other editing items are the same as those for straight + arc weld seams.
+
+.. figure:: analysis/4/yangtiao.png
+    :align: center
+    :width: 3in
+
+.. centered:: Figure 3-101b spline curve weld seams edit
 
 
 
