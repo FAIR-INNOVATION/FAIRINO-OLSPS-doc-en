@@ -338,78 +338,84 @@ Open the AIRLab software, as shown in the figure, click "New" or "Project" to qu
 
 Point Cloud Camera Hand-Eye Calibration
 -----------------------------------------------
-The purpose of this step is to calibrate the relative positions of the camera and the robot as follows:
+After the robot is powered on, start the AIRLab software to ensure all modules are correctly initialized.
 
-- Step1: Place the calibration plate; place the calibration plate right below the camera 50-80 cm away from the camera, as shown in Figure 2-24. Switch the AIRLab main display box to the camera display, as shown in Figure 2-25.
+- Step1: Camera connection
 
-.. figure:: quick_start/16.png
-	:align: center
-	:width: 3in
-
-.. centered:: Figure 2-24  Placement of the calibration board
-
-.. figure:: quick_start/17.png
-	:align: center
-	:width: 6in
-
-.. centered:: Figure 2-25  AIRLab Software-Camera Display
-
-- Step2: Connect camera.Click the "Import Module" on the right side, then select the camera. Upon entering the "Camera Settings" pop-up window, simply click the "Search Devices" button. AIRLab will automatically scan and connect to successfully linked camera devices, if the camera is successfully connected to AIRLab. If the connection fails, AIRLab will display "Not Connected." In such cases, please manually verify whether the camera is properly connected.
-
-.. important::
-	During the hand-eye calibration process, the camera must use the "Structured Light" mode!
-	
-.. figure:: quick_start/18.png
-	:align: center
-	:width: 6in
-
-.. centered:: Figure 2-26  Camera settings page
+1. Open the camera module in the import module, and a "Camera Settings" pop-up window is displayed in the 3D scene.
+2. Connect the camera: Click on "Import Module - Camera" to display the Camera Settings pop-up in the 3D scene. Then, click "Camera Configuration - Search for Devices" to initiate an automatic connection. Once the camera is successfully connected, proceed with the hand-eye calibration. If the connection fails, AIRLab will display "Not Connected." In this case, manually check whether the camera wiring is correct first.
+3. Camera configuration: Select the shooting mode as "structured light" and set appropriate parameters such as exposure time.
 
 .. figure:: quick_start/19.png
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 2-27  Camera connection successful
+.. centered:: Figure 2-24  Camera Configuration - Search for Devices
 
-Click "Device Debugging" in the pop-up window, then select the "Hand-Eye Calibration" button.
 
-.. figure:: quick_start/20.png
+- Step2: Hand-Eye Calibration
+
+1. Click on "Device Debugging" in the "Camera Settings" pop-up window. Then, click the "Hand-Eye Calibration" button, and a "Hand-Eye Calibration Pop-up" window will be displayed in the 3D scene, as shown in the figure.
+
+.. figure:: quick_start/Calibration_Window.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-28  Device Debugging - HEC
+.. centered:: Figure 2-25  Hand-Eye Calibration Pop-up
 
-The AIRLab interface will display the hand-eye calibration page as shown in the figure.
+2. Select the hand-eye calibration type and calibration algorithm, then click the "Calibration Start" button in the hand-eye calibration window to begin the calibration.
 
-.. figure:: quick_start/21.png
+.. figure:: quick_start/Start_Calibration.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-29  Hand-eye calibration page 
+.. centered:: Figure 2-26  Calibration Start
+	
+3. Place the calibration board directly under the camera. The robot should control the end effector to position the camera directly facing the calibration board in a suitable posture, with the camera positioned at an effective shooting distance of 400–600 mm from the calibration board, as shown in Figure 2-24. Switch the main display area of AIRLab to the camera view, as shown in Figure 2-25.
 
-After selecting the type of hand-eye calibration and the calibration algorithm, click the “Calibration Start” button to indicate that the hand-eye calibration is now started. Select the operation mode, including “automatic” and “manual” operation mode. The automatic operation mode is described below.
+.. figure:: quick_start/16.png
+	:align: center
+	:width: 3in
 
-1. After selecting the operation mode as “Auto” and clicking the “Auto Op” button, the software will start to calibrate the hand and eye automatically, and the camera will emit blue light during the process of taking pictures, which is normal shooting.
+.. centered:: Figure 2-27  Placement of the calibration board
+
+.. figure:: quick_start/17.png
+	:align: center
+	:width: 6in
+
+.. centered:: Figure 2-28  AIRLab Software-Camera Display
+
+4. After selecting the operation mode as "Automatic," click the "Auto Run" button. The software will then begin the hand-eye calibration automatically. During the image capture process, the camera will emit a blue light to indicate a successful shot. In automatic mode, the robot will autonomously capture images of the calibration board and change its pose accordingly. One complete cycle involves the robot altering its pose eight times and capturing eight images of the calibration board. If a calibration failure is prompted during the process, click the "Auto Run" button again to restart the current calibration cycle.
 
 .. figure:: quick_start/22.png
 	:align: center
 	:width: 3.5in
 
-.. centered:: Figure 2-30  Point cloud camera hand-eye calibration
+.. centered:: Figure 2-29  Point cloud camera hand-eye calibration
 
 .. figure:: quick_start/23.png
 	:align: center
 	:width: 5in
 
-.. centered:: Figure 2-31  Point cloud calibration results
+.. centered:: Figure 2-30  Point cloud calibration results
 
-2. The camera will automatically calibrate the process will take 8 photos, calibration will be prompted after the end of the calibration of the calibration success or failure, prompted by the calibration of the success of the next step, prompted by the calibration of the failure of the calibration need to click on the “Auto Op” to re-run the calibration.
+5. After the current round of camera calibration is completed, you can change the position of the calibration board and click the "Auto Run" button again to proceed with the next round of calibration. The purpose of this step is to improve system accuracy. You may choose to perform 3 to 5 rounds of calibration, and the system will automatically select the coordinate system with the highest accuracy for use.
+6. After 3 to 5 rounds of calibration are completed, click the "Calibration End" button to finalize the hand-eye calibration of the camera.
 
-3. After this round of camera calibration, you can change the position of the calibration board and click the “Auto Op” button again for the next round of calibration. The purpose of this step is to improve the accuracy of the system, you can choose to calibrate for 3~5 rounds, and the system will choose the coordinate system with the highest accuracy to use;
+- Step3: Precision Verification
 
-4. Click the “Calibration End” button to end the point cloud camera hand-eye calibration;
+After the hand-eye calibration is completed, perform precision verification on the calibration results.
 
-- Step3: Verify the accuracy; randomly select a location to place the calibration plate, click on the “Photography” button, keep the calibration plate position unchanged, move the robot three times to take three photos, click on the “Verify Result” button, a pop-up window will appear as shown in Figure 2-32. The four points in the pop-up window are the coordinates of the four fixed points on the calibration board. By clicking on the button “Move to point 1”, the robot is moved to the specified position on the calibration board, and then the integrated error is obtained.
+1. Manually drag the robot to position the camera directly facing the calibration board, ensuring the distance between the camera and the calibration board is between 400mm and 600mm. Click the "Re-verify" button to re-validate the hand-eye calibration results; then, click the "Capture" button under Precision Verification to take a photo. Upon successful capture, the software terminal will display a "Camera capture successful" message.
+2. Manually drag the robot to change its posture. It is recommended to use eight postures in total: four with the forward joint configuration and four with the end joint reversed, as shown in the figure below. Each set of four postures should, as much as possible, cover the robot's full range of joint motion. For each posture change, the interface difference must meet the following requirements: RX variation > 10°, RY variation > 10°, and RZ variation > 45°. Including the first photo taken for precision verification, a total of nine photos will be captured.
+
+.. figure:: quick_start/Verify_Pose.png
+	:align: center
+	:width: 6in
+
+.. centered:: Figure 2-31  Accuracy Validation Pose Transformation
+
+3. Verify the accuracy; randomly select a location to place the calibration plate, click on the “Photography” button, keep the calibration plate position unchanged, move the robot three times to take three photos, click on the “Verify Result” button, a pop-up window will appear as shown in Figure 2-32. The four points in the pop-up window are the coordinates of the four fixed points on the calibration board. By clicking on the button “Move to point 1”, the robot is moved to the specified position on the calibration board, and then the integrated error is obtained.
 
 .. figure:: quick_start/24.png
 	:align: center
@@ -417,7 +423,8 @@ After selecting the type of hand-eye calibration and the calibration algorithm, 
 
 .. centered:: Figure 2-32  Authentication Results-Pop-up Window
 
-If you need to re-verify, you need to click the “Revalidate” button to clear the error and then carry out the above verification process again. A combined error value in the range of 0.5 to 1.0 indicates a good hand-eye calibration result, while a value in the range of 1.0 to 1.5 indicates a lesser calibration result. Other results represent poor results for this calibration and require recalibration.
+4. If you need to re-verify, you need to click the “Revalidate” button to clear the error and then carry out the above verification process again. A combined error value in the range of 0.5 to 1.0 indicates a good hand-eye calibration result, while a value in the range of 1.0 to 1.5 indicates a lesser calibration result. Other results represent poor results for this calibration and require recalibration.
+
 
 Start Running
 -------------------
