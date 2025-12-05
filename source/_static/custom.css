@@ -125,3 +125,31 @@ div.container {
 div.container header {
     padding: 10px;
 }
+
+/* 取消 figcaption 斜体 */
+figcaption .caption-text {
+    font-style: normal !important;
+    font-size: smaller;
+}
+figcaption .caption-number {
+    font-style: normal !important;
+    font-size: smaller;
+}
+
+/* 让自动编号的图注与图片保持距离 */
+.rst-content figure figcaption,
+.rst-content .figure figcaption {
+    margin-top: 24px !important;   /* 图 → 图注 */
+    margin-bottom: 12px !important; /* 图注 → 下文 */
+    line-height: 1.4;
+    text-align: center !important;
+    padding: 10;
+}
+
+/* 方法A：将headerlink完全移出正常流 */
+section .align-center figcaption p .headerlink {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    margin-left: 5px;
+}

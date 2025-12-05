@@ -2,7 +2,7 @@ Quick Start
 =============
 
 .. toctree:: 
-    :maxdepth: 5
+	:maxdepth: 5
 
 
 This chapter will take an actual welding project as an example to introduce how to control the robot to start the welding work quickly. Figure 2-1 and Figure 2-2 shows the welding preparation, where Figure 2-1 shows the workpiece to be welded and Figure 2-2 shows the robot and the workpiece.
@@ -11,13 +11,13 @@ This chapter will take an actual welding project as an example to introduce how 
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-1  Workpiece to be Welded
+	Workpiece to be Welded
  
 .. figure:: quick_start/2.png
 	:align: center
 	:width: 3in
    
-.. centered:: Figure 2-2  Robot + Workpiece  
+	Robot + Workpiece  
 
 3D MVC Product Description
 ---------------------------------
@@ -27,13 +27,13 @@ This High-Precision 3D Camera utilizes grating-structured light projection and
 	:align: center
 	:width: 2in
 
-.. centered:: Figure 2-3  Standard version
+	Standard version
 
 .. figure:: quick_start/4.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-4  Version with protective cover
+	Version with protective cover
 
 Key Features：
 
@@ -87,7 +87,7 @@ Field of view measurement range
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 2-5  Field of view measurement range
+	Field of view measurement range
 
 
 Structural drawings
@@ -98,7 +98,7 @@ Standard version:
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-6  Standard version structural dimensions
+	Standard version structural dimensions
 
 Version with protective cover (optional):
 
@@ -106,7 +106,7 @@ Version with protective cover (optional):
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-7  Version with protective cover (optional) structural dimensions
+	Version with protective cover (optional) structural dimensions
 
 
 Communication interface
@@ -171,7 +171,7 @@ Protective cover installation:
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 2-8  Protective cover installation diagram 
+	Protective cover installation diagram 
 
 Camera installation instructions:
 
@@ -179,13 +179,13 @@ Camera installation instructions:
 	:align: center
 	:width: 5in
 
-.. centered:: Figure 2-9  Camera installation diagram
+	Camera installation diagram
 
 .. figure:: quick_start/10.png
 	:align: center
 	:width: 5in
 
-.. centered:: Figure 2-10  Recommended fixing plate size
+	Recommended fixing plate size
 
 Installation Requirements:
 
@@ -223,10 +223,10 @@ The camera and torch are mounted on the end of the robot via connectors as shown
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-11  Mounting the Camera and Torch
+	Mounting the Camera and Torch
 
 .. important:: 
-    Please make sure to install it firmly, otherwise the accuracy will be affected.
+	Please make sure to install it firmly, otherwise the accuracy will be affected.
 
 
 Tool Coordinate System Calibration
@@ -237,7 +237,7 @@ AIRLab software provides a manual calibration function for the tool coordinate s
 	:align: center
 	:width: 3.5in
 
-.. centered:: Figure 2-12  Manual Tool Coordinate System Calibration Interface
+	Manual Tool Coordinate System Calibration Interface
 
 AIRLab offers two calibration methods: the Four-Point Method and the Six-Point Method. This document will introduce the Six-Point Method as an example. The detailed steps are as follows:
 
@@ -250,7 +250,7 @@ Step 1: Open the “Manual Tool Coordinate System Calibration” interface as me
 	:align: center
 	:width: 3.5in
 
-.. centered:: Figure 2-13  Calibration Method Setting
+	Calibration Method Setting
 
 Step 2: Control the robot arm so that the tool at the end of the arm points to the tip of the calibration tool (fixed reference point) at a certain posture. After the robot arm moves into position, click the “Set Point 1” button. When the button changes to “Modify Point 1”, it means the point has been successfully set. To modify the point, click “Modify Point 1” and repeat the process. See the figure below.
 
@@ -258,7 +258,7 @@ Step 2: Control the robot arm so that the tool at the end of the arm points to t
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-14  Setting Point 1
+	Setting Point 1
 
 Step 3: Change the posture of the robot arm, again pointing the tool to the fixed reference point. After the robot arm moves into position, click the “Set Point 2” button. When the button changes to “Modify Point 2”, the point is successfully set. To change the point, click “Modify Point 2” and repeat the process. See the figure below.
 
@@ -266,7 +266,7 @@ Step 3: Change the posture of the robot arm, again pointing the tool to the fixe
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-15  Setting Point 2
+	Setting Point 2
 
 Step 4: Change the posture of the robot arm once again, pointing the tool to the fixed reference point. After the robot arm moves into position, click the “Set Point 3” button. When the button changes to “Modify Point 3”, the point is successfully set. To change the point, click “Modify Point 3” and repeat the process.After the setup of Point 3 is completed, the calibration point diagram on the page will switch to Point 4. Simply follow the diagram to start setting up Point 4. See the figure below.
 
@@ -274,7 +274,7 @@ Step 4: Change the posture of the robot arm once again, pointing the tool to the
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-16  Setting Point 3
+	Setting Point 3
 
 Step 5: Adjust the posture of the robot arm so that the tool end is vertically aligned with the fixed reference point, as shown in the left-side figure below. After the robot arm moves into position, click the “Set Point 4” button. When the button changes to “Modify Point 4”, the point is successfully set. To modify, click “Modify Point 4” and repeat the process. After the setup of Point 4 is completed, the calibration point diagram on the page will switch to Point 5. Simply follow the diagram to start setting up Point 5. See the figure below.
 
@@ -282,7 +282,7 @@ Step 5: Adjust the posture of the robot arm so that the tool end is vertically a
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-17  Setting Point 4
+	Setting Point 4
 
 Step 6: Keep the posture of the robot arm unchanged, and move horizontally along the base coordinate system. This direction defines the positive X-axis of the tool coordinate system. After the robot arm moves into position, click the “Set Point 5” button. When the button changes to “Modify Point 5”, the point is successfully set. To change, click “Modify Point 5” and repeat the process.After the setup of Point 5 is completed, the calibration point diagram on the page will switch to Point 6. Simply follow the diagram to start setting up Point 6. See the figure below.
 
@@ -290,7 +290,7 @@ Step 6: Keep the posture of the robot arm unchanged, and move horizontally along
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-18  Setting Point 5
+	Setting Point 5
 
 Step 7: Return to the fixed reference point and move vertically upward. This direction defines the positive Z-axis of the tool coordinate system. The positive Y-axis is determined according to the right-hand rule. After the robot arm moves into position, click the “Set Point 6” button. When the button changes to “Modify Point 6”, the point is successfully set. To modify, click “Modify Point 6” and repeat the process. See the figure below.
 
@@ -298,7 +298,7 @@ Step 7: Return to the fixed reference point and move vertically upward. This dir
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-19  Setting Point 6
+	Setting Point 6
 
 Step 8: After completing the above steps, click the “Calculate” button to compute the tool pose. The result is shown below.
 
@@ -306,7 +306,7 @@ Step 8: After completing the above steps, click the “Calculate” button to co
 	:align: center
 	:width: 3.5in
 
-.. centered:: Figure 2-20  Tool Coordinate System Calculation Result
+	Tool Coordinate System Calculation Result
 
 Step 9: After verifying the calculation result, click the “Save” button. The calibration result will be saved to the local path:
 ~/AIRLabExe/Data/import_config/Cleargun_cutwire_settings.config
@@ -316,7 +316,7 @@ under the section [Tool_coord_value_list]. In this example, tool3 is calibrated,
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-21  Saving Tool Coordinate System Result
+	Saving Tool Coordinate System Result
 
 If the selected tool coordinate system already exists (i.e., a value is already present under the above local path), a confirmation dialog will pop up asking whether to overwrite the previous result. If “Confirm” is selected, the previous result will be overwritten.
 
@@ -324,7 +324,7 @@ If the selected tool coordinate system already exists (i.e., a value is already 
 	:align: center
 	:width: 3.5in
 
-.. centered:: Figure 2-22  Tool Coordinate System Overwrite Confirmation Dialog
+	Tool Coordinate System Overwrite Confirmation Dialog
 
 Import Engineering
 ---------------------
@@ -334,7 +334,7 @@ Open the AIRLab software, as shown in the figure, click "New" or "Project" to qu
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-23  Select Project Import
+	Select Project Import
 
 Point Cloud Camera Hand-Eye Calibration
 -----------------------------------------------
@@ -350,7 +350,7 @@ After the robot is powered on, start the AIRLab software to ensure all modules a
 	:align: center
 	:width: 2.5in
 
-.. centered:: Figure 2-24  Camera Configuration - Search for Devices
+	Camera Configuration - Search for Devices
 
 
 - Step2: Hand-Eye Calibration
@@ -361,7 +361,7 @@ After the robot is powered on, start the AIRLab software to ensure all modules a
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-25  Hand-Eye Calibration Pop-up
+	Hand-Eye Calibration Pop-up
 
 2. Select the hand-eye calibration type and calibration algorithm, then click the "Calibration Start" button in the hand-eye calibration window to begin the calibration.
 
@@ -369,7 +369,7 @@ After the robot is powered on, start the AIRLab software to ensure all modules a
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-26  Calibration Start
+	Calibration Start
 	
 3. Place the calibration board directly under the camera. The robot should control the end effector to position the camera directly facing the calibration board in a suitable posture, with the camera positioned at an effective shooting distance of 400–600 mm from the calibration board, as shown in Figure 2-24. Switch the main display area of AIRLab to the camera view, as shown in Figure 2-25.
 
@@ -377,13 +377,13 @@ After the robot is powered on, start the AIRLab software to ensure all modules a
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-27  Placement of the calibration board
+	Placement of the calibration board
 
 .. figure:: quick_start/17.png
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-28  AIRLab Software-Camera Display
+	AIRLab Software-Camera Display
 
 4. After selecting the operation mode as "Automatic," click the "Auto Run" button. The software will then begin the hand-eye calibration automatically. During the image capture process, the camera will emit a blue light to indicate a successful shot. In automatic mode, the robot will autonomously capture images of the calibration board and change its pose accordingly. One complete cycle involves the robot altering its pose eight times and capturing eight images of the calibration board. If a calibration failure is prompted during the process, click the "Auto Run" button again to restart the current calibration cycle.
 
@@ -391,13 +391,13 @@ After the robot is powered on, start the AIRLab software to ensure all modules a
 	:align: center
 	:width: 3.5in
 
-.. centered:: Figure 2-29  Point cloud camera hand-eye calibration
+	Point cloud camera hand-eye calibration
 
 .. figure:: quick_start/23.png
 	:align: center
 	:width: 5in
 
-.. centered:: Figure 2-30  Point cloud calibration results
+	Point cloud calibration results
 
 5. After the current round of camera calibration is completed, you can change the position of the calibration board and click the "Auto Run" button again to proceed with the next round of calibration. The purpose of this step is to improve system accuracy. You may choose to perform 3 to 5 rounds of calibration, and the system will automatically select the coordinate system with the highest accuracy for use.
 6. After 3 to 5 rounds of calibration are completed, click the "Calibration End" button to finalize the hand-eye calibration of the camera.
@@ -413,7 +413,7 @@ After the hand-eye calibration is completed, perform precision verification on t
 	:align: center
 	:width: 6in
 
-.. centered:: Figure 2-31  Accuracy Validation Pose Transformation
+	Accuracy Validation Pose Transformation
 
 3. Verify the accuracy; randomly select a location to place the calibration plate, click on the “Photography” button, keep the calibration plate position unchanged, move the robot three times to take three photos, click on the “Verify Result” button, a pop-up window will appear as shown in Figure 2-32. The four points in the pop-up window are the coordinates of the four fixed points on the calibration board. By clicking on the button “Move to point 1”, the robot is moved to the specified position on the calibration board, and then the integrated error is obtained.
 
@@ -421,7 +421,7 @@ After the hand-eye calibration is completed, perform precision verification on t
 	:align: center
 	:width: 3.5in
 
-.. centered:: Figure 2-32  Authentication Results-Pop-up Window
+	Authentication Results-Pop-up Window
 
 4. If you need to re-verify, you need to click the “Revalidate” button to clear the error and then carry out the above verification process again. A combined error value in the range of 0.5 to 1.0 indicates a good hand-eye calibration result, while a value in the range of 1.0 to 1.5 indicates a lesser calibration result. Other results represent poor results for this calibration and require recalibration.
 
@@ -439,12 +439,12 @@ After completing the above steps, the robot can be controlled to start the weldi
 - Step3:  Set the program configuration mode, as in Figure 2-33. 
 
 .. important::
-    users need to set this parameter according to the actual need before running the program, the specific meaning of the parameter is shown in 3.6.9 Program Configuration.
+	users need to set this parameter according to the actual need before running the program, the specific meaning of the parameter is shown in 3.6.9 Program Configuration.
 
 .. figure:: quick_start/25.png
 	:align: center
 	:width: 3in
 
-.. centered:: Figure 2-33  Setup Program Configuration
+	Setup Program Configuration
 
 - Step4: After the configuration is completed, click one button to run, the program will start from the “workpiece positioning” until the welding is completed.

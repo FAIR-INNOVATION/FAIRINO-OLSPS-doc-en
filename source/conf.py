@@ -32,3 +32,13 @@ html_theme_options = {
     'logo_only': True,
     'display_version': False,
 }
+
+numfig = True
+numfig_secnum_depth = 1  
+numfig_format = {
+    'figure': 'Figure %s',
+}
+
+html_js_files = [
+    'caption-sep-fix.js',  # 点换成短横（仅在 HTML 中生效）
+]
