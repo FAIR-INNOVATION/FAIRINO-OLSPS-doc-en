@@ -5,7 +5,7 @@ Quick Start
 	:maxdepth: 5
 
 
-This chapter will take an actual welding project as an example to introduce how to control the robot to start the welding work quickly. Figure 2-1 and Figure 2-2 shows the welding preparation, where Figure 2-1 shows the workpiece to be welded and Figure 2-2 shows the robot and the workpiece.
+This chapter will introduce how to control the robot to quickly start welding work using an actual welding project as an example (it is necessary to first obtain authorization for the welding plugin). Figure 2-1 and Figure 2-2 illustrate the welding preparations, where Figure 2-1 shows the workpiece to be welded, and Figure 2-2 shows the robot and the workpiece.
 
 .. figure:: quick_start/1.png
 	:align: center
@@ -308,9 +308,7 @@ Step 8: After completing the above steps, click the “Calculate” button to co
 
 	Tool Coordinate System Calculation Result
 
-Step 9: After verifying the calculation result, click the “Save” button. The calibration result will be saved to the local path:
-~/AIRLabExe/Data/import_config/Cleargun_cutwire_settings.config
-under the section [Tool_coord_value_list]. In this example, tool3 is calibrated, so the saved entry will be:<3 = "calibration result">At the same time, the calibrated tool3 option will also appear in the Tool Settings. See the figure below.
+Step 9: After verifying the calculation result, click the “Save” button. The calibration result will be saved to the local path:~/AIRLabExe/Data/import_config/Cleargun_cutwire_settings.config under the section [Tool_coord_value_list]. In this example, tool3 is calibrated, so the saved entry will be:<3 = "calibration result">At the same time, the calibrated tool3 option will also appear in the Tool Settings. See the figure below.
 
 .. figure:: quick_start/tool_calibration_save_res.png
 	:align: center
@@ -329,6 +327,9 @@ If the selected tool coordinate system already exists (i.e., a value is already 
 Import Engineering
 ---------------------
 Open the AIRLab software, as shown in the figure, click "New" or "Project" to quickly create or open a new project file.
+
+.. important::
+	When importing a previously saved project that had external axes configured, the external axes will be imported automatically (the external axis coordinate system will be set to the one stored in the project).
 
 .. figure:: quick_start/15.png
 	:align: center
@@ -425,18 +426,43 @@ After the hand-eye calibration is completed, perform precision verification on t
 
 4. If you need to re-verify, you need to click the “Revalidate” button to clear the error and then carry out the above verification process again. A combined error value in the range of 0.5 to 1.0 indicates a good hand-eye calibration result, while a value in the range of 1.0 to 1.5 indicates a lesser calibration result. Other results represent poor results for this calibration and require recalibration.
 
+Ground Plane Acquisition and Verification
+---------------------------------------------------------
+Before performing operational tasks for the first time, it is necessary to define the operational ground plane (if the operational ground plane is changed, this process must be repeated for re-confirmation). The operational steps are as follows:
+
+Step 1: Open the "Camera Settings" interface and click the "Device Debugging" header. Adjust the camera position to point towards the operational ground plane, then click the "Capture Ground" button to complete ground plane acquisition.
+
+Step 2: After capturing the ground plane, click the "Obtain Ground Plane Equation" button.
+
+Step 3: The captured ground plane needs to be verified. Click the "Ground Effect Verification" button. The interface will display the currently used ground segmentation parameters and the point cloud result, as shown in the figure below.
+
+.. figure:: quick_start/Grd_Effect_UI_en.png
+	:align: center
+	:width: 3.5in
+
+	Ground Effect Verification Pop-up
+
+In this display:The red point cloud represents the part of the workpiece that has been segmented (cut away) by the ground plane.The green point cloud represents the retained part of the workpiece.The gray point cloud represents the original ground plane.The yellow point cloud represents the ground plane adjusted with the new parameters.
+
+If the verification result above does not meet expectations, you can adjust the ground segmentation parameters (by dragging the sliders or entering values in the text boxes). Click the "Ground Effect Verification" button at the bottom. The pop-up will then display the ground verification point cloud based on the new parameters, as shown below.
+
+.. figure:: quick_start/Grd_Effect_para_set_en.png
+	:align: center
+	:width: 3.5in
+
+	Ground Effect Verification Parameter Adjustment
+
+Check if the point cloud from this ground verification meets the requirements (the ground plane is approximately flush with the bottom of the workpiece, and the workpiece is fully retained). If it meets the requirements, the ground effect verification is complete. Simply close the "Ground Effect Verification" pop-up. If it does not meet the requirements, repeat the above parameter adjustment and re-verification steps until the requirements are satisfied.
 
 Start Running
 -------------------
 After completing the above steps, the robot can be controlled to start the welding task, which is divided into four main steps.
 
-- Step1: Get the ground equations as follows
+- Step1: Obtain the ground plane equation. For specific operations, please refer to section 2.6, "Ground Plane Acquisition and Verification."
 
-  Select "Camera Settings - Device Debugging", click "Capture Ground" button, and the photo will be taken successfully,then click “Get Ground Equation” ,then click “GrndEffVerif” button view the ground fitting effect; If the ground fitting effect is normal, proceed to the next step; Otherwise, it may need to be recalibrated.
+- Step2: Edit the weld seams and determine the list of weld seams, please refer to 3.5.4 Weld Seam Editing for detailed operation.
 
-- Step2: Edit the weld seams and determine the list of weld seams, please refer to 3.5.3 Weld Seam Editing for detailed operation.
-
-- Step3:  Set the program configuration mode, as in Figure 2-33. 
+- Step3:Set the program configuration mode, click on "Welding - Welding Program Configuration" to configure the weld program. See Figure below. Note: Users need to set this parameter according to actual needs before running the program. For the specific meaning of the parameters, refer to Section 3.6.10 Welding Program Configuration.
 
 .. important::
 	users need to set this parameter according to the actual need before running the program, the specific meaning of the parameter is shown in 3.6.9 Program Configuration.

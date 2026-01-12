@@ -13,7 +13,7 @@ The initial interface of the AIRLab software is shown in Figure 3-1 and is divid
 
 Menu Bar
 --------------------------
-The menu bar contains all the items shown in Figure 3-2, primarily including the following buttons: File, View, Window, Process, Simulation, Plug-in, and icon buttons (from left to right): Add Point, Add Coordinate System, Switch Mode, Pause Run, Start Run, Stop Run, Field of View Movement, Field of View Rotation.
+The content included in the menu bar is shown in Figure below, mainly consisting of the buttons: "File," "View," "Window," "Simulation," "Plugins," "Welding," "Process," as well as icon buttons (in order from left to right): Add Point, Add Coordinate System, Mode Switch, Pause Run, Start Run, Stop Run.
 
 .. figure:: analysis/4/2.png
 	:align: center
@@ -83,9 +83,9 @@ See Table 3-1 for a description of the specific functions of the view.
 
 Window
 ~~~~~~~~~~~~~~~~~~~
-The "Window" menu includes five secondary options: "Software Upgrade," "About," "Version Verification," "Logs," and "Virtual Camera." Clicking on different options will trigger different functional pop-up windows in AIRLab. For detailed functions and usage instructions, refer to the pop-up window introduction in Section 3.6.
+The "Window" menu contains six secondary options: "Software/Firmware Upgrade", "About", "Version Verification", "Log", "Virtual Camera", and "TCF and Camera Hand-Eye Calibration". Clicking on different options will trigger different functional pop-up windows in AIRLab. For detailed functions and usage instructions, refer to the pop-up window introduction in Section 3.6.
 
-.. figure:: analysis/4/en_windows.png
+.. figure:: analysis/4/windows_ui_en.png
 	:align: center
 	:width: 2.5in
 
@@ -493,7 +493,7 @@ Protective Shield:Welding protection cover prevents spark/spatter during welding
 
 Device Information:Click "Device Info" to view connected camera details (name, model, connection status, etc.) as shown in the follow figure.
 
-.. figure:: analysis/4/41.png
+.. figure:: analysis/4/camera_info_en.png
 	:align: center
 	:width: 3in
 
@@ -519,8 +519,13 @@ Save Point Cloud:After single capture,Click "Save Point Cloud",Select output pa
 
 Save Image:After single capture,Click "Save Image",Select output path to save 2D image.
 
-Camera Calibration:Include Calibration and verification.Refer to Section 3.5 "Point Cloud Camera Hand-Eye Calibration" for detailed procedures.
+Camera Calibration:Include Calibration and verification.Refer to Section 2.5 "Point Cloud Camera Hand-Eye Calibration" for detailed procedures.
 
+Capture Ground: Control the camera to align with the plane where the workpiece is located, then click the button to complete ground plane acquisition.
+
+Obtain Ground Plane Equation: After "Capture Ground", click to obtain the ground plane equation.
+
+Ground Effect Verification: Perform visual verification of the captured and calculated ground plane. For detailed operations, please refer to Section 2.6, "Ground Plane Acquisition and Verification".
 
 SLAM mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -729,7 +734,7 @@ For symmetrical workpieces with integrity judgment enabled, the software will as
 
 	Integrity Judgment Failed
 
-The interface will simultaneously display the current completeness assessment point cloud, as shown in the figure below. Among these, the blue and yellow portions represent two symmetrical parts of the point cloud; the red portion is asymmetrical, indicating points for which no corresponding match was found. It is necessary to perform supplementary photography of the symmetrical positions corresponding to the red points, or determine the areas requiring supplementary photography by assessing the stitched point cloud in the small window.
+At the same time, the current integrity judgment point cloud will be displayed on the interface, as shown in the following figure. Here, blue and yellow represent the two symmetrical parts of the point cloud, while red indicates asymmetrical sections where no corresponding points were found. It is necessary to recapture the symmetrical areas corresponding to the red points or use the stitched point cloud in the small window to determine the recapture positions.
 
 .. figure:: analysis/4/complete_cloud.png
 	:align: center
@@ -754,6 +759,8 @@ After the model construction program has finished running, the built model workp
 	Model-free construct successfully
 
 If the model is built incorrectly, you need to click the “Model Construction” module, click “Clear Model Data”, and then build the model again until the modelless artifact model is created correctly.
+
+When weld seam acquisition fails due to inappropriate model construction parameter settings, you can first edit and adjust the parameters, then issue the model-free modeling command, and subsequently acquire secondary recognition data. Afterward, click "Acquire Model Data" to reload the model data updated with the adjusted parameters.
 
 By clicking on the No Model Build module, the user can select options such as Get Modeling Data, and the functions of each option are described below.
 
@@ -1041,31 +1048,35 @@ Log is used to record the system's operation process and exception information, 
 	:width: 6in
 
 
-Software upgrade pop-ups
+Software/Firmware Upgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Click Window-Software Upgrade, and a software upgrade pop-up window will pop up.
+Click Window - Software/Firmware Upgrade to open the "Software/Firmware Upgrade" interface.
 
-.. figure:: analysis/4/62.png
+.. figure:: analysis/4/SF_UI_S_en.png
 	:align: center
-	:width: 3in
+	:width: 5in
 
-	Software upgrade pop-ups
+	Software/Firmware Upgrade Interface
 
-Click “Select File” to bring up the file selection window, select the AIRLab.tar.gz upgrade file, please make sure the file name and format are correct.
+- AIRLab Software Upgrade
 
-.. figure:: analysis/4/63.png
+Click "File Selection" to open the file selection window. Select the AIRLab.tar.gz upgrade file and click "Open". Please ensure the filename and format are correct.
+
+.. figure:: analysis/4/SF_choose_S_en.png
 	:align: center
-	:width: 4.5in
+	:width: 6in
 
-	Selecting an upgrade package
+	Selecting the AIRLab Software Upgrade Package
+
+After selecting the file, click "Open". Confirm that the upgrade package path is correct, then click the "Upgrade" button to begin the software upgrade.
 	
-.. figure:: analysis/4/64.png
+.. figure:: analysis/4/SF_chosen_S_en.png
 	:align: center
-	:width: 3in
+	:width: 5in
 
 	Click on the "Upgrade" button
 
-Click “Upgrade” and wait for the upgrade package to finish unpacking, the upgrade progress will be shown in the progress bar. Click Exit to exit the software upgrade.
+Click "Upgrade" and wait for the upgrade package to decompress. The upgrade progress will be displayed in the progress bar. Please wait patiently.
 
 .. figure:: analysis/4/65.png
 	:align: center
@@ -1089,6 +1100,56 @@ If the upgrade package is corrupted or incomplete, the interface will display an
 
 	AIRLab Software Upgrade Failure Interface Feedback
 
+- Camera Firmware Upgrade
+
+Click the "Camera Firmware Upgrade" header to open the corresponding window, as shown below.
+
+.. figure:: analysis/4/SF_UI_F_en.png
+	:align: center
+	:width: 5in
+
+	Camera Firmware Upgrade
+
+Click "File Selection" to open the file selection window. Select the upgrade file named FRSV_XXX_PRO.tar.gz and click "Open". Please ensure the filename and format are correct.
+
+.. figure:: analysis/4/SF_choose_F_en.png
+	:align: center
+	:width: 6in
+
+	Selecting the Camera Firmware Upgrade Package
+
+After selecting the file, click "Open". Confirm that the upgrade package path is correct, then click the "Upgrade" button to begin the camera firmware upgrade.
+
+.. figure:: analysis/4/SF_chosen_F_en.png
+	:align: center
+	:width: 5in
+
+	Clicking the "Upgrade" Button
+
+Click "Upgrade" and wait for the upgrade package to decompress. The upgrade progress will be displayed in the progress bar. Please wait patiently.
+
+.. figure:: analysis/4/SF_process_F_en.png
+	:align: center
+	:width: 3in
+
+	Camera Firmware Upgrading
+
+Once the upgrade progress reaches 100%, click "Confirm" and restart the camera to complete the upgrade. Afterwards, you can follow the operations described in the "Import Module" section, open the "Device Information" interface, and view the current camera firmware version.
+
+.. figure:: analysis/4/SF_success_F_en.png
+	:align: center
+	:width: 3in
+
+	Camera Firmware Upgrade Completed
+
+If the upgrade package is corrupted or incomplete, the interface will display upgrade failure feedback and will roll back the camera firmware version to its state before the upgrade. Re-check the upgrade package and try the update again.
+
+.. figure:: analysis/4/SF_fail_F_en.png
+	:align: center
+	:width: 3in
+
+	Camera Firmware Upgrade Failed
+
 Version Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click “Window” – “Version Verification” to open the version verification dialog. If all versions are displayed with a green check mark, it indicates that the verification is successful and the AIRLab software can run normally, as shown below.
@@ -1107,6 +1168,64 @@ If the library shows a red cross status in the version verification pop-up windo
 
 	“Version Verification” error
 
+TCF and Camera Hand-Eye Calibration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click "Window" - "TCF and Camera Hand-Eye Calibration". The corresponding pop-up window will be displayed on the page, as shown below.
+
+.. figure:: analysis/4/TCF_hand_UI_en.png
+	:align: center
+	:width: 3.5in
+
+	TCF and Camera Hand-Eye Calibration Pop-up
+
+First, configure the hand-eye calibration parameters. After setting the parameters, click "Confirm". The effects of each parameter are as follows:
+
+- End Joint Reachable Angle Range: The safe angular interval within its motion range where the robot's end joint can rotate without colliding with itself or the environment.
+
+- Number of Photo Points: During single-sided visual calibration, the number of poses to which the robot automatically moves and photographs the calibration board. The final number of calculated calibration poses is twice this value.
+
+- Photo Distance: During automatic calibration, the preset working distance between the robot end-effector (camera) and the calibration board.
+
+- Reverse Joint Configuration: An alternative joint state that allows the robot to reach the same point in space. Typically, this is called a reverse configuration when the robot's primary joints (e.g., arm, elbow) are oriented differently from the regular solution (e.g., elbow up or down). Check this option according to the actual robot posture to ensure correct motion planning.
+
+Next, proceed with the camera hand-eye calibration. Manually drag the robot to position the camera directly above the calibration board, at a distance of 400-600mm from the board. Then, click the "Start Calibration" button. After clicking, the following confirmation pop-up will appear. Confirm that the robot is at the start position, then click "OK" to begin calibration.
+
+.. figure:: analysis/4/TCF_hand_start_pop_en.png
+	:align: center
+	:width: 3.5in
+
+	Camera Hand-Eye Calibration Confirmation Pop-up
+
+After calibration is complete, the results need to be verified. Click the "Start Verification" button. After the program finishes running, the verification accuracy results will be updated in the corresponding fields, as shown below.
+
+.. figure:: analysis/4/TCF_hand_res_en.png
+	:align: center
+	:width: 3.5in
+
+	Camera Hand-Eye Calibration Verification Results
+
+.. important::
+	A camera error ≤ 0.5mm is a normal result; otherwise, camera calibration needs to be repeated. A combined error ≤ 1mm is a normal result; otherwise, accuracy verification needs to be repeated.
+
+After completing the hand-eye calibration, proceed to TCF calibration. Click the "TCF Calibration" header to switch to the corresponding interface, as shown below.
+
+.. figure:: analysis/4/TCF_calib_UI_en.png
+	:align: center
+	:width: 3.5in
+
+	TCF Calibration
+
+First, configure the TCF photoelectric calibration parameters. Among these, the X, Y, and Z direction offsets refer specifically to the tool's offset in the X, Y, and Z directions respectively. After completing the settings, click the "Confirm" button.
+
+Then, click the "Move to Start Point" button to move the robot arm to the TCP calibration start point obtained from the hand-eye calibration. Then, click the "Start Calibration" button to perform TCF calibration.
+
+Upon completion, the interface will display the corresponding calibration results, as shown below. After confirming they are correct, click the "Apply" button to apply the calibrated TCF results, completing this TCF calibration.
+
+.. figure:: analysis/4/TCF_calib_res_en.png
+	:align: center
+	:width: 3.5in
+
+	TCF Calibration Results
 
 Virtual Camera
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1537,7 +1656,7 @@ Wire Stick-out Length Compensation
 
 If the wire stick-out length was not accurately set during the welding torch tool calibration, resulting in it being too long or too short, the "Wire Stick-out Length Compensation" function can be used. When enabled, subsequent welding will proceed using the compensated stick-out length. The usage method is as follows:
 
-First, click "Window" -&gt; "Wire Stick-out Length Compensation". The "Wire Stick-out Length Correction" pop-up window shown in the figure below will appear.
+First, click "Window"-"Wire Stick-out Length Compensation". The "Wire Stick-out Length Correction" pop-up window shown in the figure below will appear.
 
 .. figure:: analysis/4/stickout_off_en.png
 	:align: center
