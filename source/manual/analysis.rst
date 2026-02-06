@@ -338,6 +338,26 @@ This section includes "exaxis+", "exaxis-" and the step setting box, as shown in
 
 Engineering Module Analysis
 -----------------------------------
+Click New Welding Project or Import Existing Welding Project. The AIRLab interface will prompt whether to use the configured welding features.
+
+- For a new project, the configured welding features displayed are those currently in use by AIRLab.
+
+- For an imported existing project, the configured welding features displayed are those recorded in the project.
+
+.. figure:: analysis/4/new.png
+	:align: center
+	:width: 6in
+
+	New Welding Project - Configured Features
+
+.. figure:: analysis/4/import.png
+	:align: center
+	:width: 6in
+
+	import Existing Welding Project - Configured Features
+
+The user needs to click the Confirm Use or Reselect Features button according to the actual workpiece characteristics. For detailed instructions on reselecting features, refer to Section 3.6.25.
+
 To weld a workpiece, you need to import a model of the robot, tool, workpiece, etc.; if there is no current model of the workpiece, you need to model it. Afterwards, the workpiece is positioned and the weld seam is edited, both of which are completed by editing the fine position and running the program to identify the weld seam and generate the weld program. In this chapter, each module of the engineering module will be described in detail.
 
 Import module
@@ -823,7 +843,7 @@ Workpiece positioning
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Workpiece positioning: After editing all the welds to be welded, workpiece positioning is required. Firstly, it is necessary to create a workpiece positioning program; Click on the workpiece positioning module, click on the plus sign under workpiece positioning, and the AIRLab interface will display the workpiece positioning page as shown in the figure.
 
-.. figure:: analysis/4/50.png
+.. figure:: analysis/4/regisiter_addnode.png
 	:align: center
 	:width: 6in
 
@@ -894,6 +914,60 @@ Click "Generate trajectory" to view the simulated trajectory of the workpiece 
 
 Upon successful completion of the workpiece positioning program, the workpiece will move to the actual relative position between the workpiece and the robot.
 
+If no error occurs during the execution of the workpiece positioning program, a colored point cloud of the workpiece will be displayed on the interface upon completion.The meaning of the point cloud colors is as follows:
+
+1.Green: Workpiece positioning angle error < 5°
+
+2.Yellow: 5° ≤ Workpiece positioning angle error ≤ 10°
+
+3.Red: Workpiece positioning angle error > 10°
+
+.. important::
+	The colors only represent the visualization of the angle error result and do not affect the actual registration result. The registration result depends only on the actually calculated registration accuracy and overlap rate.
+
+.. figure:: analysis/4/point_clound_green.png
+	:align: center
+	:width: 3in
+
+	Successful Workpiece Positioning – Green Workpiece Point Cloud
+
+.. figure:: analysis/4/point_clound_color.png
+	:align: center
+	:width: 3in
+
+	Successful Workpiece Positioning – Colored Workpiece Point Cloud
+
+If workpiece positioning fails, the interface will display a visualization result of the registration error, where blue represents the workpiece positioning point cloud and white represents the workpiece model point cloud, with a corresponding prompt popup window appearing at the same time.
+
+The specific workpiece positioning error types are divided into the following three categories:
+
+1) Low point cloud registration coverage but qualified accuracy, with misalignment.Message: Point cloud registration failed. Local registration accuracy is qualified, but the overall overlapping area is insufficient, and there is a risk of point cloud misalignment. Please compare with the model point cloud, adjust the shooting angle, and perform workpiece positioning again.As shown in the figure below.
+
+2) High point cloud registration coverage but low accuracy, with local roughness.Message: Point cloud registration failed. The overall overlapping area is qualified, but local registration accuracy is insufficient. Please compare with the model point cloud, check whether feature areas were overcaptured or undercaptured, and perform workpiece positioning again.As shown in the figure below.
+
+3) Both point cloud registration coverage and accuracy are low.Message: Point cloud registration failed. Both registration accuracy and overlapping area are unqualified. Please compare with the model point cloud, adjust the shooting angle, and perform workpiece positioning again.As shown in the figure below.
+
+.. figure:: analysis/4/error-1-en.png
+	:align: center
+	:width: 6in
+
+	Workpiece Positioning Error – Type 1
+
+.. figure:: analysis/4/error-1.png
+	:align: center
+	:width: 2.5in
+
+	Workpiece Positioning Error – Type 2
+
+.. figure:: analysis/4/error-3-en.png
+	:align: center
+	:width: 6in
+
+	Workpiece Positioning Error – Type 3
+
+If workpiece positioning fails and the above problems occur, please re-position according to the error message instructions.
+
+If the above problems persist and cannot be resolved, or if other issues arise, please contact after-sales personnel and retain the current data.
 
 Fine pose
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1033,13 +1107,23 @@ When "About" is selected, clicking the button will display the current version a
 
 Log
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Log is used to record the system's operation process and exception information, enabling quick issue identification. Clicking this button will bring up a "Log Level" popup window. There are four log levels: INFO, WARNING, ERROR, and DEBUG. After selecting a log level, the current log level will be set (default is INFO). As shown in the figure below, the specific meanings are described in Table 3-2.
+Logs are used to record the system running process and exception information, enabling quick problem location. Clicking this button opens a Log Management pop-up window.
 
-.. figure:: analysis/4/61.png
+Logs are divided into four levels: INFO, WARNING, ERROR, and DEBUG. After selecting a log level, set it as the current log level (default: INFO).
+
+As shown in the follow picture,, the specific meanings are listed in Table 3-2.
+
+.. figure:: analysis/4/log-en.png
 	:align: center
-	:width: 2in
+	:width: 3in
 
 	AIRLab Menu Bar-Logs
+
+File Size: Refers to the size of a single log file. When a log file exceeds this size, the software will automatically generate a new log file.
+
+Daily Retention Count: Refers to the maximum number of logs saved per day. When this limit is exceeded, the software will automatically delete the oldest log file generated on the same day.
+
+Retention Period: Refers to the number of days logs can be stored. When this period expires, the software will automatically delete all logs that have reached the expiration date.
 
 .. centered:: Table 3-2  Log level information
 
@@ -1054,7 +1138,7 @@ Click Window - Software/Firmware Upgrade to open the "Software/Firmware Upgrade"
 
 .. figure:: analysis/4/SF_UI_S_en.png
 	:align: center
-	:width: 5in
+	:width: 3in
 
 	Software/Firmware Upgrade Interface
 
@@ -2267,3 +2351,132 @@ If the selected extended axis coordinate system already exists (i.e., calibratio
 	:width: 3in
 
 	Extended Axis Coordinate System Inquiry Dialog
+
+
+Welding Feature Parameter Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+When creating a new welding project or importing an existing welding project, AIRLab will pop up the Welding Feature Parameter Settings dialog box. The user shall make selections according to the characteristics of the workpiece used and following the interactive guidance steps on the page. After completing the selection, proceed with the subsequent welding steps in the normal procedure.
+
+The operation method for welding feature configuration is described in detail below:
+
+When creating or importing a welding project, the software interface automatically pops up the Welding Feature Parameter Settings window, which displays the current feature configuration in use by the software or the feature configuration recorded in the project file.
+
+To modify or view the welding feature parameters during project operation, click the menu bar at the top of the page: Welding (W) → Welding Feature Parameter Configuration to reopen the dialog box for operation.
+
+As shown in the figure below:
+
+.. figure:: analysis/4/import.png
+	:align: center
+	:width: 6in
+
+	Import Existing Welding Project – Welding Feature Parameter Settings Pop-up
+
+.. figure:: analysis/4/new.png
+	:align: center
+	:width: 6in
+
+	New Welding Project – Welding Feature Parameter Settings Pop-up
+
+If you confirm to use the current feature configuration, click the Confirm Use button in above Figures.If you need to reselect features, click the Reselect Features button in the figure to enter the page shown in the following Figure.
+
+There are three workpiece model construction methods available: Camera Acquisition, 3D File Integration, and SLAM Mapping.Click the corresponding icon; a welding feature description pop-up window (shown in the follow picture) will appear, displaying a detailed description of the currently selected method/feature.Please make a matching selection based on this description and the actual workpiece.
+
+.. figure:: analysis/4/model_struct.png
+	:align: center
+	:width: 6in
+
+	Reselect Features – Model Construction Method Selection
+
+.. figure:: analysis/4/model_struct_camera.png
+	:align: center
+	:width: 6in
+
+	Model Construction Method – Camera Acquisition Description Pop-up Display
+
+.. important::
+	If SLAM Mapping is selected as the model construction method, the Next button on the page will switch to Finish. Click this button directly to complete the welding feature parameter configuration.
+
+If the model construction method selected is Camera Acquisition or 3D File Integration, continue to click Next to enter the planar feature selection page, as shown in the figure below.
+
+.. figure:: analysis/4/normal.png
+	:align: center
+	:width: 6in
+
+	Camera Acquisition – Planar Feature
+
+.. figure:: analysis/4/3D_plane_box.png
+	:align: center
+	:width: 6in
+
+	3D File Integration – Planar Feature
+
+For planar feature selection using camera acquisition, considering the priority characteristics of the four planar types, you need to click the Reselect Features button when selecting planar features.Select Yes or No according to the interactive prompts on the interface and the planar structure of the workpiece, as shown in the figure below.The selected features will appear in the list under Selected Features on the page.
+
+.. figure:: analysis/4/lap.png
+	:align: center
+	:width: 6in
+
+	Camera Acquisition – Lap Joint Planar Feature
+
+.. figure:: analysis/4/narrow.png
+	:align: center
+	:width: 6in
+
+	Camera Acquisition – Narrow Planar Feature
+
+.. figure:: analysis/4/box.png
+	:align: center
+	:width: 6in
+
+	Camera Acquisition – Box Girder Planar Feature
+
+.. figure:: analysis/4/normal.png
+	:align: center
+	:width: 6in
+
+	Camera Acquisition – General Planar Feature
+
+.. important::
+	The interaction of the icon buttons on this page is different from that of other features. Clicking them only opens the welding feature description pop-up window and does not perform a selection operation.Feature selection will only take effect after you click the Reselect Features button!
+
+For planar feature selection using 3D File Integration, there are currently two types: 3D General Plane and 3D Box Girder Plane.Clicking the icon button opens the welding feature description pop-up window, and the corresponding feature will be added to the Selected Features list at the bottom of the page, as shown in the figure below.
+
+.. figure:: analysis/4/3D_plane_box.png
+	:align: center
+	:width: 6in
+
+	3D File Integration – 3D Box Girder Planar Feature
+
+After completing planar feature selection, click the Next button in above Figures to enter the Cylinder and Cone Feature Selection page, as shown in the figure below.
+
+For the three features: Short Cylinder, Tall Cylinder, and Coexisting Short & Tall Cylinders, you need to actually measure the cylinder radius and enter the maximum radius and minimum radius values in the text boxes.
+
+If the current workpiece does not involve cylinder or cone features, click Deselect and then click Next.If no cylinder or cone features have been selected, you may click Next directly.
+
+.. figure:: analysis/4/short_cylinder.png
+	:align: center
+	:width: 6in
+
+	Cylinder & Cone Features – Select Short Cylinder Feature
+
+.. figure:: analysis/4/cancle_cylinder.png
+	:align: center
+	:width: 6in
+
+	Cylinder & Cone Features – Deselect Feature
+
+Following the cylinder and cone features is the planar relationship feature selection, as shown in the figure below.
+
+There are only two types of planar relationship features: small gap and large gap. After selecting according to the actual features of the workpiece, check whether the features listed under Selected Features on the page are correct. If correct, click Confirm Selection to complete the welding feature parameter configuration. The pop-up window will close automatically upon successful setup.
+
+.. figure:: analysis/4/small_gap.png
+	:align: center
+	:width: 6in
+
+	Planar Relationship Features – Small Gap
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Planar Relationship Features – Large Gap
