@@ -11,3 +11,9 @@ Welcome to the AIRLab Software Customer Manual
    :caption: User Manual
 
    manual/index.rst
+
+.. toctree::
+   :maxdepth: 5
+   :caption: Download
+
+   manual/download.rst
