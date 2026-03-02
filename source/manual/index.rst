@@ -10,3 +10,11 @@ AIRLab Software User Manual
     quick_start
     analysis
     plug
+
+Changelog
+==================
+
+.. toctree:: 
+    :maxdepth: 5
+
+    version
