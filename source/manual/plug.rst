@@ -59,7 +59,7 @@ Create a binpicking project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click on the menu bar - File, select the file type as binpicking, then click "New" or open a binpicking project file; afterward, import the required tool workpiece.
 
-.. figure:: plug/1.png
+.. figure:: plug/binpicking_new_project_en.png
 	:align: center
 	:width: 2.5in
 
@@ -68,7 +68,7 @@ Click on the menu bar - File, select the file type as binpicking, then click "Ne
 UI interface introduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-. figure:: plug/2.png
+.. figure:: plug/binpicking_init_target_screw_en.png
 	:align: center
 	:width: 3in
 
@@ -100,21 +100,21 @@ Grasping Speed: Used to set the speed of the robot when it is about to grasp the
 
 At the same time, all the above options have default values. If the target object type is switched, the plug-in will adjust according to the presets of the current object. The specific preset settings are as follows:
 
-.. figure:: plug/3.png
+.. figure:: plug/initial_setup.png
 	:align: center
-	:width: 3in
+	:width: 6in
 
 	Initial setup
 
 Screws and wooden blocks use the Electric Gripper by default, while locks use the Pneumatic Gripper. After completing all settings, click OK—the corresponding AI Node for the target will start, which requires a short waiting time. If the node starts successfully, the following pop-up window will be displayed; otherwise, a failure pop-up window will appear.
 
-.. figure:: plug/3.png
+.. figure:: plug/binpicking_ai_node_ok_en.png
 	:align: center
 	:width: 3in
 
 	AI Node Started Successfully
 
-.. figure:: plug/3.png
+.. figure:: plug/binpicking_ai_node_fail_en.png
 	:align: center
 	:width: 3in
 
@@ -142,7 +142,7 @@ Custom Placement Mode: The identified target types and their corresponding place
 
 The sub-interfaces of various specific modes are displayed as follows:
 
-.. figure:: plug/5.png
+.. figure:: plug/position_bind.png
 	:align: center
 	:width: 6in
 
@@ -158,9 +158,9 @@ Re-grasping Placement Point: Set the target point as the placement point for adj
 
 Its interface is displayed as follows:
 
-.. figure:: plug/5.png
+.. figure:: plug/binpicking_bind_fix_en.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Position Binding - Re-grasping
 
@@ -168,7 +168,7 @@ Its interface is displayed as follows:
 
 Grasping Position Error Compensation is configured to eliminate systematic errors during the grasping process. If the error is large during grasping, set the error compensation coefficient (based on the tool coordinate system) and click OK after configuration. The instruction feedback area displays "Error Compensation Coefficient Set Successfully", indicating that the error compensation coefficient has been set successfully.
 
-.. figure:: plug/6.png
+.. figure:: plug/binpicking_grasp_comp_en.png
 	:align: center
 	:width: 3in
 
@@ -180,7 +180,7 @@ After the grasping posture is generated successfully and the position is bound s
 
 Manual run: Select manual run, and the robot will perform an automatic grasp;
 
-.. figure:: plug/7.png
+.. figure:: plug/binpicking_run_manual_en.png
 	:align: center
 	:width: 3in
 
@@ -194,7 +194,7 @@ Wait for the calculation to complete, then click Run LUA—the robot will perfor
 
 If the target type is Lock, three additional buttons will appear on the manual interface: Initial Grasping, Pose Adjustment, and Re-grasping, corresponding to the AI Calculation process of the three stages in re-grasping. This allows manual operation of each stage. The interface is as follows:
 
-.. figure:: plug/8.png
+.. figure:: plug/binpicking_run_manual_lock_en.png
 	:align: center
 	:width: 3in
 
@@ -208,7 +208,7 @@ Stop: Click the Stop button, and the automatic grasping will stop.
 
 Reset: Click the Reset button—the grasping counter will be set to 0. The next run will start grasping from the beginning and place the object at the first placement position. If the target type is Screw, the tray dumping action will be executed first.
 
-.. figure:: plug/8.png
+.. figure:: plug/binpicking_run_auto_en.png
 	:align: center
 	:width: 3in
 
@@ -274,19 +274,19 @@ The first, second, and third path points determine the placement matrix for regu
 
 5) Custom Placement Teaching Points
 
-.. figure:: plug/13.png
+.. figure:: plug/binpicking_bind_custum_en.png
 	:align: center
-	:width: 6.5in
+	:width: 3in
 
-	Regular Placement Position Binding
+	Custom Placement Position Binding
 
 Similar to fixed placement, first determine the target types for the current task and add corresponding placement points in sequence. If multiple placement points are required for the same target, change the placement point and continue adding while keeping the target model unchanged.
 
-.. figure:: plug/13.png
+.. figure:: plug/binpicking_bind_custum_add2_en.png
 	:align: center
-	:width: 6.5in
+	:width: 3in
 
-	Custom Placement Position Binding
+	Custom Placement Position Binding-Result
 
 3. Run AIRLab software
    

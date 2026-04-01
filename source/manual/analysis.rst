@@ -755,7 +755,7 @@ For the capture positions that failed the filter in the previous step, perform m
 
 .. figure:: analysis/4/slam11.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Fine Positioning Pop-up Window
 
@@ -846,7 +846,7 @@ Add photo node:Click the Confirm button under Add Capture Node to create a n
 
 .. figure:: analysis/4/model_less1.png
 	:align: center
-	:width: 3.5in
+	:width: 6in
 
 	Add Photo Node
 
@@ -1118,11 +1118,11 @@ If workpiece positioning fails, the interface will display a visualization resul
 
 The specific workpiece positioning error types are divided into the following three categories:
 
-1) Low point cloud registration coverage but qualified accuracy, with misalignment.Message: Point cloud registration failed. Local registration accuracy is qualified, but the overall overlapping area is insufficient, and there is a risk of point cloud misalignment. Please compare with the model point cloud, adjust the shooting angle, and perform workpiece positioning again.As shown in the figure below.
+1. Low point cloud registration coverage but qualified accuracy, with misalignment.Message: Point cloud registration failed. Local registration accuracy is qualified, but the overall overlapping area is insufficient, and there is a risk of point cloud misalignment. Please compare with the model point cloud, adjust the shooting angle, and perform workpiece positioning again.As shown in the figure below.
 
-2) High point cloud registration coverage but low accuracy, with local roughness.Message: Point cloud registration failed. The overall overlapping area is qualified, but local registration accuracy is insufficient. Please compare with the model point cloud, check whether feature areas were overcaptured or undercaptured, and perform workpiece positioning again.As shown in the figure below.
+2. High point cloud registration coverage but low accuracy, with local roughness.Message: Point cloud registration failed. The overall overlapping area is qualified, but local registration accuracy is insufficient. Please compare with the model point cloud, check whether feature areas were over captured or under captured, and perform workpiece positioning again.As shown in the figure below.
 
-3) Both point cloud registration coverage and accuracy are low.Message: Point cloud registration failed. Both registration accuracy and overlapping area are unqualified. Please compare with the model point cloud, adjust the shooting angle, and perform workpiece positioning again.As shown in the figure below.
+3. Both point cloud registration coverage and accuracy are low.Message: Point cloud registration failed. Both registration accuracy and overlapping area are unqualified. Please compare with the model point cloud, adjust the shooting angle, and perform workpiece positioning again.As shown in the figure below.
 
 .. figure:: analysis/4/error-1-en.png
 	:align: center
@@ -1204,7 +1204,7 @@ If precise positioning parameters need to be set, a precise positioning paramete
 
 .. figure:: analysis/4/slam11.png
 	:align: center
-	:width: 4in
+	:width: 3in
 
 	Fine Positioning Pop-up Window
 
@@ -1361,7 +1361,7 @@ Click "File Selection" to open the file selection window. Select the AIRLab.tar.
 
 .. figure:: analysis/4/SF_choose_S_en.png
 	:align: center
-	:width: 6in
+	:width: 4in
 
 	Selecting the AIRLab Software Upgrade Package
 
@@ -1369,7 +1369,7 @@ After selecting the file, click "Open". Confirm that the upgrade package path is
 	
 .. figure:: analysis/4/SF_chosen_S_en.png
 	:align: center
-	:width: 5in
+	:width: 3in
 
 	Click on the "Upgrade" button
 
@@ -1403,7 +1403,7 @@ Click the "Camera Firmware Upgrade" header to open the corresponding window, as 
 
 .. figure:: analysis/4/SF_UI_F_en.png
 	:align: center
-	:width: 5in
+	:width: 3in
 
 	Camera Firmware Upgrade
 
@@ -1411,7 +1411,7 @@ Click "File Selection" to open the file selection window. Select the upgrade fil
 
 .. figure:: analysis/4/SF_choose_F_en.png
 	:align: center
-	:width: 6in
+	:width: 4in
 
 	Selecting the Camera Firmware Upgrade Package
 
@@ -1419,7 +1419,7 @@ After selecting the file, click "Open". Confirm that the upgrade package path is
 
 .. figure:: analysis/4/SF_chosen_F_en.png
 	:align: center
-	:width: 5in
+	:width: 3in
 
 	Clicking the "Upgrade" Button
 
@@ -1552,13 +1552,13 @@ Open the Data Source Export pop-up window and click the Select Export Path butto
 
 .. figure:: analysis/4/source_data_export1.png
 	:align: center
-	:width: 4in
+	:width: 6in
 
 	Select Export Path
 
 .. figure:: analysis/4/source_data_export2.png
 	:align: center
-	:width: 4in
+	:width: 6in
 
 	Click Export after Confirming the Export Path
 
@@ -1566,13 +1566,13 @@ Once the export starts, a progress prompt pop-up window will appear, displaying 
 
 .. figure:: analysis/4/source_data_export3.png
 	:align: center
-	:width: 4in
+	:width: 6in
 
 	Export in Progress...
 
 .. figure:: analysis/4/source_data_export4.png
 	:align: center
-	:width: 4in
+	:width: 6in
 
 	Data Source Export Completed
 
@@ -2265,7 +2265,7 @@ After selecting the external axis in the import module, click confirm to open th
 
 .. figure:: analysis/4/38.png
 	:align: center
-	:width: 3in
+	:width: 6in
 
 	Extension axis setting pop-up window
 
@@ -2325,7 +2325,7 @@ The program configuration section includes program running configuration, progra
 
 .. figure:: analysis/4/108.png
 	:align: center
-	:width: 3in
+	:width: 6in
 
 	Program Configuration
 
@@ -2907,7 +2907,7 @@ After an interruption occurs during the robot's welding process, the operator ca
 
 .. figure:: analysis/4/110.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Welding Interruption Pop-up Window
 
@@ -2915,7 +2915,7 @@ III. Digital Communication Protocol (Modbus TCP)
 
 - Step 1:In the open protocol configuration, click the Upload button to upload the compiled open protocol LUA program file to the controller. Select an open protocol ID and an open protocol name, and click the Configure button (the selected protocol ID must be consistent with the ID compiled in the open protocol file) to assign an ID to each open protocol. Upload the welder open protocol CtrlDev_WELDING.lua (the protocol file name must start with "CtrlDev_" and have a suffix of .lua).
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder10_en.png
 	:align: center
 	:width: 6in
 
@@ -2923,13 +2923,13 @@ III. Digital Communication Protocol (Modbus TCP)
 
 - Step 2:The configured welder open protocol is displayed in the list in Device Operation and Status. Select the configured protocol and click the Load button. A green icon for the connection status indicates successful loading; a red icon indicates loading failure.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder11_en.png
 	:align: center
 	:width: 6in
 
 	Successful Open Protocol Loading
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder12_en.png
 	:align: center
 	:width: 6in
 
@@ -2937,7 +2937,7 @@ III. Digital Communication Protocol (Modbus TCP)
 
 - Step 3:Before conducting welder debugging, ensure that the welder open protocol has been loaded normally and the relevant register address configuration is correct. Click buttons such as Arc Striking, Arc Extinguishing, Gas Feeding, and Stop Gas Feeding to observe whether the actual welder actions are consistent with the settings. If the welder does not perform the set actions, check whether the register configuration in the welder open protocol is incorrect and conduct further debugging.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder14.png
 	:align: center
 	:width: 6in
 
@@ -2945,7 +2945,7 @@ III. Digital Communication Protocol (Modbus TCP)
 
 - Step 4:Unload the welder open protocol. Click the Unload button in Device Operation and Status, and the protocol running status will be disconnected at this time. Click the Delete button to remove the protocol from the protocol list.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder13_en.png
 	:align: center
 	:width: 6in
 
@@ -2955,7 +2955,7 @@ Extended Axis Communication Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click the icon button in Communication Mode in the Extended Axis Settings pop-up window to enter the corresponding communication configuration mode page.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/38.png
 	:align: center
 	:width: 6in
 
@@ -2965,7 +2965,7 @@ Click the icon button in Communication Mode in the Extended Axis Settings pop-up
 
 Before using the extended axis UDP communication mode, it is necessary to first establish the corresponding extended axis coordinate system, configure the corresponding extended axis scheme under the corresponding extended axis coordinate system, and apply the established tool coordinate system after the extended axis is imported. The extended axis function is mainly used in conjunction with the welder function and the laser tracking sensor function.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/UDP1.png
 	:align: center
 	:width: 6in
 
@@ -3029,19 +3029,19 @@ Model: The model list is automatically matched according to the manufacturer;
 
 Mode: Incremental system and absolute position system.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/exaxis_1.png
 	:align: center
 	:width: 6in
 
 	Configured Extended Axis Settings Page
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/exaxis_2.png
 	:align: center
 	:width: 6in
 
 	Extended Axis Configuration Information Edit Page 1 (Slide the mouse up and down to view the complete information)
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/exaxis_3.png
 	:align: center
 	:width: 6in
 
@@ -3049,7 +3049,7 @@ Mode: Incremental system and absolute position system.
 
 - Step 4:After the extended axis parameters are configured, click the Disable button to enable the corresponding extended axis number. After successful enabling, the zero return mode and extended axis test can be set. The zero return mode setting and extended axis test cannot be performed when the extended axis is not enabled.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/exaxis_4.png
 	:align: center
 	:width: 6in
 
@@ -3063,7 +3063,7 @@ Zero Seeking Speed: 0~2000mm/s;
 
 Zero Point Clamping Speed: 0~2000mm/s.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/exaxis_5.png
 	:align: center
 	:width: 6in
 
@@ -3071,7 +3071,7 @@ Zero Point Clamping Speed: 0~2000mm/s.
 
 - Step 6:The function setting cannot be performed if the extended axis is not enabled successfully; after the extended axis is enabled successfully and the zero return mode is set, click the Test button to enter the extended axis test interface. Set the running speed, acceleration, and maximum distance, perform forward and reverse rotation tests on the extended axis, and click the Stop button during rotation to test whether the extended axis can stop normally.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/exaxis_6.png
 	:align: center
 	:width: 6in
 
@@ -3079,7 +3079,7 @@ Zero Point Clamping Speed: 0~2000mm/s.
 
 - Step 7 (Optional Setting):Set the positioning completion time, which is used to monitor the stop time of the extended axis movement. After the extended axis establishes UDP communication, enter the time and click the Configure button to complete the setting.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/exaxis_7.png
 	:align: center
 	:width: 6in
 
@@ -3089,7 +3089,7 @@ II. Controller + Servo Drive (485 Communication)
 
 Before using RS485 communication to control the servo extended axis, it is necessary to first connect the RS485 communication interface of the servo drive to the RS485 communication interface on the robot control box. The schematic diagram of the electrical interface of the FAU robot easy manufacturing control box is as follows:
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485-en.png
 	:align: center
 	:width: 6in
 
@@ -3097,13 +3097,13 @@ Before using RS485 communication to control the servo extended axis, it is neces
 
 Taking the Danatek servo drive model FD100-750C as an example, referring to the schematic diagram of the drive panel terminals and the X3A-IN terminal definition of FD100-750C, when the robot is configured to communicate with the FD100-750C servo extended axis, it is necessary to connect the 485-A0 terminal and 485-B0 terminal on the control box to the 4th and 5th pins of the drive X3A-IN terminal respectively. (Note: You can see a wiring terminal marked with "485" on the servo drive panel, which is not open to users for the time being. Do not connect your RS485 communication cable to this terminal.) At the same time, if multiple servo drives are connected and the drive is the last one in the link, it is necessary to turn on the RS485 communication termination resistor DIP switch (No. 2 DIP switch) on the panel.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/FD100-750C-en.png
 	:align: center
 	:width: 6in
 
 	FD100-750C Drive Panel
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/FD100-750C_port-en.png
 	:align: center
 	:width: 6in
 
@@ -3115,7 +3115,7 @@ In the servo drive configuration, select the number as 1 (Note: When connecting 
 
 If there is no error returned on the main page after clicking the Configure button, the 485 communication configuration between the robot and the servo drive has been completed so far. Users can also view the real-time status information of the servo through the Servo Status Bar on the right side of the web terminal.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485_1.png
 	:align: center
 	:width: 6in
 
@@ -3125,7 +3125,7 @@ After the servo is successful, it is necessary to enable the extended axis devic
 
 - Step 1:In Configured Servo Drives, select the control mode as Position Mode and select the corresponding servo number. The five icon buttons on the page are, from left to right:
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485_2.png
 	:align: center
 	:width: 6in
 
@@ -3141,7 +3141,7 @@ Test Button: Test the servo drive.
 
 Servo Error Clear Button: Click to clear when the servo drive prompts an error.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485_4.png
 	:align: center
 	:width: 6in
 
@@ -3149,7 +3149,7 @@ Servo Error Clear Button: Click to clear when the servo drive prompts an error.
 
 - Step 2:Click the Disable button, the servo drive number will be set first at this time. After the setting is successful, the control mode is set. After the control mode is set successfully, the servo drive is enabled. After the servo is enabled successfully, you can observe that the Servo Enable status light is on in Servo in various robot status bars, indicating that the servo drive has been enabled. Click the Enable status button to disable the servo drive, and the Servo Enable status light goes out.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485_3.png
 	:align: center
 	:width: 6in
 
@@ -3160,7 +3160,7 @@ Servo Error Clear Button: Click to clear when the servo drive prompts an error.
 
 - Step 3:After the servo drive is enabled successfully, click the Zero Return button, select the zero return mode as Zero Return from Current Position, set the zero return speed to 5mm/s and the zero point clamping speed to 1mm/s; click the Set button to complete the servo zero return operation from the current position. Users can observe that the current Servo Position is 0 in Servo in various robot status bars; (Please read this manual completely before selecting Zero Return from Negative Limit or Zero Return from Positive Limit for the zero return mode to perform the zero return test).
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485_5.png
 	:align: center
 	:width: 6in
 
@@ -3174,13 +3174,13 @@ Position Mode: You can input certain motion speed and target position parameters
 
 Speed Mode: You can input a certain target speed, the servo will keep moving at the set target speed until you set the target speed to 0 or disable the servo motor.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485_6.png
 	:align: center
 	:width: 6in
 
 	Position Mode Content
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485_7.png
 	:align: center
 	:width: 6in
 
@@ -3192,7 +3192,7 @@ Change the control mode of the servo to Speed Mode, click the Enable status butt
 
 - Step 5:In emergency situations such as robot collision and emergency stop being pressed, the extended axis can trigger an emergency stop and stop moving according to the set emergency stop deceleration. After the collision alarm is restored, instructions can be issued again to resume the operation of the extended axis. It is necessary to set the servo acceleration/deceleration and servo emergency stop acceleration/deceleration in the advanced settings, as shown in the figure below:
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/485_8.png
 	:align: center
 	:width: 6in
 
