@@ -13,13 +13,16 @@ Date：2026-04-01
 
 - Added function to migrate web-based operations to AIRLab;
     Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Welding Machine Configuration
+
     Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Expansion Axis Communication Configuration
 
    Description: Remove expansion axis communication configuration and welding machine configuration operations from the web interface at the user interaction level.
 
 - Added recognition function for intersecting line weld seams on pipes
     Path: AIRLab Software Analysis -> Project Module Analysis -> Weld Seam Editing
+
     Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Weld Seam Editing Popup
+    
     Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Welding Feature Parameter Settings
 
     Description: Solve the problem of missing feature points in the tangential region between two cylindrical surfaces on pipe workpieces, and merge the spline plugin into the main version of AIRLab.
