@@ -3,7 +3,7 @@ AIRLab Software Analysis
 .. toctree:: 
 	:maxdepth: 5
 
-The initial interface of the AIRLab software is shown in Figure 3-1 and is divided into five main sections. In the middle of the interface is the main display box (divided into scene display and camera display), on the top is the menu bar, on the leftmost side is the engineering module area, on the rightmost side is the operation area, and at the bottom of the interface is the command feedback area. This section will provide a detailed description of the functions and usage of the above areas, the pop-up windows and other pages that appear in the AIRLab software, and the sub-page functions.
+The initial interface of the AIRLab software is shown in Figure below and is divided into five main sections. In the middle of the interface is the main display box (divided into scene display and camera display), on the top is the menu bar, on the leftmost side is the engineering module area, on the rightmost side is the operation area, and at the bottom of the interface is the command feedback area. This section will provide a detailed description of the functions and usage of the above areas, the pop-up windows and other pages that appear in the AIRLab software, and the sub-page functions.
 
 .. figure:: analysis/4/1.png
 	:align: center
@@ -65,7 +65,7 @@ If exported when there is currently no project present, AIRLab will provide a po
 
 View
 ~~~~~~~~~~~~~~~~~~~
-View contains 12 functions, as shown in Figure 3-8, the main function is to adjust the viewing angle of the robot in the main display frame. They are: Zoom, Pan, Rotate, Reset, Fit all, Front view, Back view, Top view, Bottom view, Left view, Right view, and Full view.
+View contains 12 functions, as shown in Figure below, the main function is to adjust the viewing angle of the robot in the main display frame. They are: Zoom, Pan, Rotate, Reset, Fit all, Front view, Back view, Top view, Bottom view, Left view, Right view, and Full view.
 
 .. figure:: analysis/4/8.png
 	:align: center
@@ -93,7 +93,7 @@ The "Window" menu contains six secondary options: "Software/Firmware Upgrade", "
 
 Simulation
 ~~~~~~~~~~~~~~~~~~~
-This button is used to switch between the simulation robot and the real robot. Before using this button, you need to successfully import or create a project and successfully establish Ros2 communication connection with the real robot. Clicking this button after completing the above prerequisites will enable switching between the virtual robot and the physical robot both. After switching the real robot, the robot pose displayed in the AIRLab scene will be synchronized with the actual robot, as shown in Figure 3-11.
+This button is used to switch between the simulation robot and the real robot. Before using this button, you need to successfully import or create a project and successfully establish Ros2 communication connection with the real robot. Clicking this button after completing the above prerequisites will enable switching between the virtual robot and the physical robot both. After switching the real robot, the robot pose displayed in the AIRLab scene will be synchronized with the actual robot, as shown in Figure below.
 
 .. figure:: analysis/4/11.png
 	:align: center
@@ -145,7 +145,7 @@ After the AIRLab software establishes Ros2 communication with the physical robot
 
 Points added
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-This function is used to quickly record the current position of the robot. After clicking this button, a new position targetX will be added under the position information section of the engineering module on the left side of AIRLab. The function of X is to prevent duplicate names of newly added positions, as shown in Figure 3-13. The j1, j2, j3, j4, j5, j6, x, y, z, rx, ry, and rz information of this point are the current joint coordinates and Cartesian coordinates of the robot.
+This function is used to quickly record the current position of the robot. After clicking this button, a new position targetX will be added under the position information section of the engineering module on the left side of AIRLab. The function of X is to prevent duplicate names of newly added positions, as shown in Figure below. The j1, j2, j3, j4, j5, j6, x, y, z, rx, ry, and rz information of this point are the current joint coordinates and Cartesian coordinates of the robot.
 
 .. figure:: analysis/4/13.png
 	:align: center
@@ -174,7 +174,7 @@ Click the Delete button above to remove the selected reference coordinate system
 
 	AIRLab - Reference Coordinate System
 
-Figure 3-16 shows the coordinate system displayed, and Figure 3-17 shows the coordinate system not displayed.
+Figure below shows the coordinate system displayed, and Figure below shows the coordinate system not displayed.
 
 .. figure:: analysis/4/16.png
 	:align: center
@@ -249,7 +249,7 @@ Clicking the button immediately stops the robot that is running the program. The
 
 Main Frame
 --------------------------
-The main display box is divided into scene display and camera display, where the scene mainly displays the robot, tool, workpiece, extended axis model, etc., as in Figure 3-20. the camera mainly displays the obtained point cloud map, as in Figure 3-21.
+The main display box is divided into scene display and camera display, where the scene mainly displays the robot, tool, workpiece, extended axis model, etc., as in Figure below. the camera mainly displays the obtained point cloud map, as in Figure below.
 
 .. figure:: analysis/4/20.png
 	:align: center
@@ -265,7 +265,7 @@ The main display box is divided into scene display and camera display, where the
 
 Command Feedback Area
 --------------------------
-The instruction feedback area displays the execution results of program instructions, as shown in Figure 3-22.
+The instruction feedback area displays the execution results of program instructions, as shown in Figure below.
 
 .. figure:: analysis/4/22.png
 	:align: center
@@ -278,7 +278,7 @@ Operating Area
 
 Cartesian space movement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This area includes two parts: tool coordinate system relative to the reference coordinate system, and long press tap trigger, move step and rotate step settings, as shown in Figure 3-23.
+This area includes two parts: tool coordinate system relative to the reference coordinate system, and long press tap trigger, move step and rotate step settings, as shown in Figure below.
 
 .. figure:: analysis/4/23.png
 	:align: center
@@ -288,7 +288,7 @@ This area includes two parts: tool coordinate system relative to the reference c
 
 - The Tool Coordinate System Relative to Reference Coordinate System section, which shows the value of the tool coordinate system relative to the reference coordinate system.
 
-- Long press tap trigger, move step and rotate step setting section. As shown in Figure 3-24, if the currently imported robot model is a solid robot, long press the X+ button, the solid robot will execute the X+ tap command; if the currently imported robot model is not a solid robot, long press the X+ button, the simulation robot will execute the X+ tap command.
+- Long press tap trigger, move step and rotate step setting section. As shown in Figure below, if the currently imported robot model is a solid robot, long press the X+ button, the solid robot will execute the X+ tap command; if the currently imported robot model is not a solid robot, long press the X+ button, the simulation robot will execute the X+ tap command.
 
 .. important::
 	To control the robot's JOG pointing by long-pressing the buttons, if the buttons are released while the robot is running, the robot will stop moving immediately; if the buttons are held down all the way and not released, the robot will run the value of the set rotation step and then stop moving. the X-, Y+, Y-, Z+, Z- buttons operate in the same way. If the Rx+, Rx-, Ry+, Ry-, Rz+, Rz- buttons are pressed and held down, the robot will otherwise remain unchanged, except that it will move according to the set value of the rotation step.
@@ -301,7 +301,7 @@ This area includes two parts: tool coordinate system relative to the reference c
 
 Joint space space movement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This area includes 12 joint coordinate long press trigger buttons for joints J1-J6, 6 joint coordinate change text boxes and 6 joint sliders in three parts, as shown in Figure 3-25.
+This area includes 12 joint coordinate long press trigger buttons for joints J1-J6, 6 joint coordinate change text boxes and 6 joint sliders in three parts, as shown in Figure below.
 
 .. figure:: analysis/4/25.png
 	:align: center
@@ -320,7 +320,7 @@ This area includes 12 joint coordinate long press trigger buttons for joints J1-
 
 Moving extended axis settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This section includes "exaxis+", "exaxis-" and the step setting box, as shown in Figure 3-26. "exaxis+", "exaxis-" functions are similar to the pointing X+ and X- under the tool coordinate system, and the motion of the extended axis can be controlled by the above two buttons. Long press the button to control the extended axis running, if you release the button during the extended axis running, the extended axis will stop moving immediately; if you keep pressing the button and do not release it, the extended axis will run the value set in the Step Setting box and then stop moving.
+This section includes "exaxis+", "exaxis-" and the step setting box, as shown in Figure below. "exaxis+", "exaxis-" functions are similar to the pointing X+ and X- under the tool coordinate system, and the motion of the extended axis can be controlled by the above two buttons. Long press the button to control the extended axis running, if you release the button during the extended axis running, the extended axis will stop moving immediately; if you keep pressing the button and do not release it, the extended axis will run the value set in the Step Setting box and then stop moving.
 
 .. figure:: analysis/4/26.png
 	:align: center
@@ -494,7 +494,7 @@ Delete Extended Axis: Click “Delete Extended Axis” in the Extended Axis Sett
 
 - Connect Camera: Click the Camera button, and a "Camera Settings" pop-up window will appear in the 3D scene. The camera settings pop-up is divided into three sections: Camera Configuration, Device Information, and Device Debugging.
 
-Click the “Search Devices”, AIRLab will search for connected cameras and automatically connect them. If the connection is successful, the interface will be as shown in the figure Figure 3-40; If the connection fails, it will be displayed as not connected in the connection status column, and there will be no camera related parameters.
+Click the “Search Devices”, AIRLab will search for connected cameras and automatically connect them. If the connection is successful, the interface will be as shown in the figure Figure below; If the connection fails, it will be displayed as not connected in the connection status column, and there will be no camera related parameters.
 
 .. figure:: analysis/4/40.png
 	:align: center
@@ -1629,7 +1629,7 @@ If the planning is successful, the pop-up window will be switched to the followi
 
 After successful obstacle avoidance planning, the relevant “MoveJ()” instruction in the ‘Program’ node of the project tree will be amended to “SplinePTP()”.
 
-The following simulation trajectory diagram as an example to show the actual effect of AIRLab collision detection, Figure 3-76 for the opening of the collision detection function, AIRLab automatic obstacle avoidance planning trajectory; Figure 3-77 for the opening of the collision detection is not open, the trajectory obtained by AIRLab through the motion planning, it can be seen clearly that the robot will be empty moving process and the collision of the workpiece.
+The following simulation trajectory diagram as an example to show the actual effect of AIRLab collision detection, Figure below for the opening of the collision detection function, AIRLab automatic obstacle avoidance planning trajectory; Figure below for the opening of the collision detection is not open, the trajectory obtained by AIRLab through the motion planning, it can be seen clearly that the robot will be empty moving process and the collision of the workpiece.
 
 .. figure:: analysis/4/74.png
 	:align: center
@@ -1793,8 +1793,13 @@ Click the ”weld sem” module. After adding a weld seam, click the edit icon
 	:align: center
 	:width: 3in
 
-	weld seam edit pop-up window
+	Weld Seam Selection Pop-up--Workpiece with Non-spline Features
 
+.. figure:: analysis/4/83.png
+	:align: center
+	:width: 3in
+	Weld Seam Selection Pop-up--Workpiece with Spline Features
+	
 - Weld Seam Type: Automatically generated based on the selected weld seam. 
 
 - Weld Seam Number: Automatically generated based on the selected weld seam. 
@@ -1942,7 +1947,7 @@ Cycle Count: This parameter only needs to be set when the cycle mode is Fixed Cy
 
 Step 2: Click the "One-Click Run" icon button in the AIRLab menu bar to start executing the Workpiece Registration Template Project, initiating workpiece recognition. The recognition process is shown in the figure below.
 
-The progress of workpiece recognition is displayed as shown in the figure below.Upon successful recognition, the matching score of the workpiece is shown Figure 3-93.
+The progress of workpiece recognition is displayed as shown in the figure below.Upon successful recognition, the matching score of the workpiece is shown Figure below.
 
 AIRLab then automatically searches for the corresponding welding project of the recognized workpiece. If the project exists in the specified path, it will be imported automatically,and terminal will show the path,as shown in the figure below.If recognition fails, AIRLab will display an error message and suggest corrective actions.
 
@@ -1989,7 +1994,6 @@ The above outlines the usage method and steps for AIRLab's Automatic Cycle Opera
 
 Wire Stick-out Length Compensation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 If the wire stick-out length was not accurately set during the welding torch tool calibration, resulting in it being too long or too short, the "Wire Stick-out Length Compensation" function can be used. When enabled, subsequent welding will proceed using the compensated stick-out length. The usage method is as follows:
 
 First, click "Window"-"Wire Stick-out Length Compensation". The "Wire Stick-out Length Correction" pop-up window shown in the figure below will appear.
@@ -2244,20 +2248,14 @@ If an external axis is required during robotic welding, AIRLab provides external
 
 After selecting the external axis in the import module, click confirm to open the external axis setting pop-up window, as shown in the figure below. After selecting the external axis, click confirm to import it. Click "Get" to obtain the current external axis coordinate system, and click "Save" to set the external axis coordinate system.
 
-.. figure:: analysis/4/102.png
+.. important::
+	If the robot system version in use is 3.8.2.11 or higher, enable the Acceleration Smoothing Mode on the web terminal first as shown in the figure. Otherwise, the extended axis synchronous motion failure issue will occur in subsequent operations.
+
+.. figure:: analysis/4/38.png
 	:align: center
 	:width: 3in
 
 	Extension axis setting pop-up window
-
-When editing long straight welds that require axis linkage extension, set the external axis positions for the starting and ending points, as shown in the figure below. After weld seam recognition, AIRLab will automatically generate a program based on the weld seam recognition results and the position of the external axis, achieving synchronous motion between the external axis and the robot.
-
-.. figure:: analysis/4/103.png
-	:align: center
-	:width: 6in
-
-	When editing long straight welds, it is necessary to set the position parameter of the extension axis
-
 
 Other controls
 ~~~~~~~~~~~~~~~~~~~
@@ -2265,7 +2263,9 @@ Click the "Other Controls" button in the operation area to enter the IO setting 
 
 (1) IO control module
 
-As shown in Figure 3-116, the IO control module enables manual control of the digital outputs, analog outputs (0-10v) in the robot control box and the end tool digital outputs, analog outputs (0-10v) extended IO digital outputs, analog outputs (0-10v):
+As shown in Figure below, the IO Control Module enables manual control of the digital output and analog output (0-10V) of the robot control box (CtrlBox), the digital output and analog output (0-10V) of the end tool, as well as the digital output and analog output (0-10V) of the extended IO (Aux).
+
+The circle next to each port represents the indicator light for that port. First, switch to the corresponding port (e.g., DO5): the indicator light will turn green if the port DO5 is at a high level at this time, and remain white if the port DO5 is at a low level.
 
 .. figure:: analysis/4/104.png
 	:align: center
@@ -2278,7 +2278,7 @@ As shown in Figure 3-116, the IO control module enables manual control of the di
 
 (2) Exaxis control
 
-As shown in Figure 3-117, the External Axis Setup module enables control of the robot's external axis.
+As shown in Figure below, the External Axis Setup module enables control of the robot's external axis.
 
 .. figure:: analysis/4/105.png
 	:align: center
@@ -2297,7 +2297,7 @@ As shown in Figure 3-117, the External Axis Setup module enables control of the 
 
 Simulation
 ~~~~~~~~~~~~~~
-As shown in Figure 3-118, after generating the simulation trajectory of the program, open the operation area - simulation, set the simulation speed and simulation interval, click on the "Run" button to start the simulation of the template program, click on the "Stop" button to stop the template program simulation. Click "Stop" button to stop the template program simulation. At the same time, it will generate the simulation trajectory point table to record the simulation trajectory points. In the table, the type of simulation track endpoints is LINEND, and when you click a line in the table, the virtual simulation robot will move to the clicked simulation track point, and at the same time, it will synchronously display the TCP coordinates of the simulation track point.
+As shown in Figure below, after generating the simulation trajectory of the program, open the operation area - simulation, set the simulation speed and simulation interval, click on the "Run" button to start the simulation of the template program, click on the "Stop" button to stop the template program simulation. Click "Stop" button to stop the template program simulation. At the same time, it will generate the simulation trajectory point table to record the simulation trajectory points. In the table, the type of simulation track endpoints is LINEND, and when you click a line in the table, the virtual simulation robot will move to the clicked simulation track point, and at the same time, it will synchronously display the TCP coordinates of the simulation track point.
 
 .. figure:: analysis/4/106.png
 	:align: center
@@ -2307,14 +2307,7 @@ As shown in Figure 3-118, after generating the simulation trajectory of the prog
 
 Program configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The program configuration page is used to configure the program before running it, including the program configuration section and the welding interrupt recovery configuration section, as shown in the figure below.  
-
-.. figure:: analysis/4/107.png
-	:align: center
-	:width: 3in
-
-	Program Configuration Page
+The program configuration page is used to configure the program before running it, including the program configuration section and the welding interrupt recovery configuration section, as shown in below.
 
 The program configuration section includes program running configuration, program recognition configuration,program arc initiation configuration, no model construction settings, welding machine number selection and so on.
 
@@ -2355,45 +2348,6 @@ No model building setup: Currently, there are two methods - rebuilding and not r
 
 After configuring everything, click the "Confirm" button to complete the program configuration.
 
-Welding interruption recovery configuration refers to clearing the parameters that need to be configured to continue welding when the program is interrupted during the welding process; Including the configuration of parameters for detecting unexpected interruptions in welding arc tracking and weld interruption detection.
-
-.. figure:: analysis/4/109.png
-	:align: center
-	:width: 3in
-
-	Welding interruption recovery configuration
-
-The parameter configuration for detecting unexpected interruptions in welding arc tracking is aimed at configuring parameters for arc interruptions during the welding process, including selecting whether to detect and configuring the duration of arc interruption confirmation.
-
-- Whether to detect: Indicates whether to detect accidental interruption of welding arc tracking.
-
-- Confirmation duration of arc interruption: Define how many milliseconds arc interruption belongs to arc interruption and needs to be restored.
-
-After configuration, click the "Confirm" button to complete the parameter configuration for detecting accidental interruption of welding arc tracking.
-
-The configuration of welding interruption detection parameters is the parameters required to restore the interrupted robot motion after the program interruption during the welding process, including selecting whether to restore the welding interruption, configuring the overlap distance of the weld seam, configuring the speed of the robot returning to the arc starting point, and configuring the robot motion.
-
-- Whether to restore welding interruption: Select restore. After the welding interruption, a pop-up window will pop up indicating the welding interruption. Clear the error before restoring the interruption, otherwise the interruption will not be restored.
-
-- Overlap distance of weld seam: the overlap distance between the interrupted position and the previous interrupted position after resuming welding.
-
-- Robot returning to arc starting point speed: The speed at which the robot returns to the set arc starting point after the interruption is restored.
-
-- Robot movement to arc starting point mode: After restoring the interrupt, the robot returns to the set arc starting point mode, which can be selected as LIN or PTP mode.
-
-After configuration, click the "Confirm" button to complete the configuration of welding interruption detection parameters.
-
-After the welding interruption recovery configuration is fully configured, run the program. When a welding interruption signal is detected, the following pop-up window will pop up.
-
-.. figure:: analysis/4/110.png
-	:align: center
-	:width: 3in
-
-	Welding interruption pop-up window
-
-After checking the environment and troubleshooting, clicking the "Resume Welding" button will restore the interrupt according to the configured parameters.
-
-
 Multilingual settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 AIRLab software currently provides seven language options: Chinese (Simplified), Chinese (Traditional), English, Japanese, Korean, Russian, and French. The detailed multilingual settings page is shown in the figure below. This page provides three operations: switching languages; Export existing languages in AIRLab software; Import a new language. In order to meet the needs of users to switch between multiple languages, set new languages for AIRLab software, and modify existing language content in AIRLab software.
@@ -2408,7 +2362,7 @@ The detailed operation introduction of the above functions is as follows:
 
 (1)Switch the language of AIRLab
 
-Click on the dropdown menu of "Multilingual" in Figure 3-124, select the desired language type, and click the "Confirm" button to immediately switch the AIRLab software language.
+Click on the dropdown menu of "Multilingual" in Figure below, select the desired language type, and click the "Confirm" button to immediately switch the AIRLab software language.
 
 (2)User sets new language for AIRLab
 
@@ -2428,7 +2382,7 @@ The content format of the CSV file is shown in the figure below(if opened with a
 
 	Content and format of AIRLab language CSV file
 
-If you use LibreOfffice software to open it, as shown in Figure 3-126, please note that the opening format is shown in Figure 3-126.
+If you use LibreOfffice software to open it, as shown in Figure below, please note that the opening format is shown in Figure below.
 
 .. figure:: analysis/4/114.png
 	:align: center
@@ -2442,17 +2396,17 @@ If you use LibreOfffice software to open it, as shown in Figure 3-126, please no
 
 	Opening format of AIRLab multilingual files
 
-Next is to write a CSV file for the user. When setting a new language, the user only needs to modify the contents of the first column language_id and the fourth column translation_text. Assuming the user has added French, replace all "English" in the first column of Figure 3-128 with "Français"; The content of the fourth column translation_text needs to be translated by the user based on the Chinese text of "source_text" to obtain the corresponding target language (for the same string appearing in the source text, please translate it into the same word).
+Next is to write a CSV file for the user. When setting a new language, the user only needs to modify the contents of the first column language_id and the fourth column translation_text. Assuming the user has added French, replace all "English" in the first column of Figure below with "Français"; The content of the fourth column translation_text needs to be translated by the user based on the Chinese text of "source_text" to obtain the corresponding target language (for the same string appearing in the source text, please translate it into the same word).
 
 .. important::
 	Please do not modify any characters under the "source_text" column!
 
-After completing the translation work, the user needs to rename the CSV file to a file name that is the table name of the language data table in the AIRLab language database. For example, the file name "en_translations table" in Figure 3-129 is the table name of the language type "English" in the database.
+After completing the translation work, the user needs to rename the CSV file to a file name that is the table name of the language data table in the AIRLab language database. For example, the file name "en_translations table" in Figure below is the table name of the language type "English" in the database.
 
 .. important::
 	It is recommended to preserve the language characteristics of the user CSV file naming to avoid duplication with the names of existing language data tables in the database, which may result in errors where the contents of other language data tables are replaced.
 
-Finally, import the CSV file into the AIRLab software, copy the file to the execution directory of the AIRLab software, click the "Import" button, and select the file to import, as shown in Figure 3-129. The AIRLab terminal displays “CSV file import successful”, indicating that the user's language file has been successfully imported, as shown in Figure 3-128. After restarting AIRLab, select the user's newly added language switch from the drop-down menu in "Language Selection".
+Finally, import the CSV file into the AIRLab software, copy the file to the execution directory of the AIRLab software, click the "Import" button, and select the file to import, as shown in Figure below. The AIRLab terminal displays “CSV file import successful”, indicating that the user's language file has been successfully imported, as shown in Figure below. After restarting AIRLab, select the user's newly added language switch from the drop-down menu in "Language Selection".
 
 .. figure:: analysis/4/116.png
 	:align: center
@@ -2475,7 +2429,7 @@ If the terminal displays "CSV file import failed", you can check the error messa
 
 If the user needs to modify an existing language in AIRLab, they first need to click the "Export" button to export the CSV file of that language; After the modification is completed, copy the file to the execution directory of AIRLab software, click the "Import" button, select the modified file to import, and the terminal displays "CSV import successful". After restarting the software, the language modification is completed.
 
-Considering the different usage habits of AIRLab English users, AIRLab-V1.0.2 version has designed the unit of measurement switching as a configuration item for users to choose whether to switch millimeters to inches, as shown in Figure 3-130.
+Considering the different usage habits of AIRLab English users, AIRLab-V1.0.2 version has designed the unit of measurement switching as a configuration item for users to choose whether to switch millimeters to inches, as shown in Figure below.
 
 .. figure:: analysis/4/118.png
 	:align: center
@@ -2483,7 +2437,7 @@ Considering the different usage habits of AIRLab English users, AIRLab-V1.0.2 ve
 
 	UI interface for switching measurement units
 
-After the user selects the measurement unit to switch, the input box labeled in millimeters on the AIRLab interface will be converted to inches, as shown in Figure 3-131 and Figure 3-131.
+After the user selects the measurement unit to switch, the input box labeled in millimeters on the AIRLab interface will be converted to inches, as shown in Figure below and Figure below.
 
 .. figure:: analysis/4/119.png
 	:align: center
@@ -2621,13 +2575,13 @@ As shown in the figure below:
 	:align: center
 	:width: 6in
 
-	Import Existing Welding Project – Welding Feature Parameter Settings Pop-up
+	New Welding Project – Welding Feature Parameter Settings Pop-up
 
 .. figure:: analysis/4/new.png
 	:align: center
 	:width: 6in
 
-	New Welding Project – Welding Feature Parameter Settings Pop-up
+	Import Existing Welding Project – Welding Feature Parameter Settings Pop-up
 
 If you confirm to use the current feature configuration, click the Confirm Use button in above Figures.If you need to reselect features, click the Reselect Features button in the figure to enter the page shown in the following Figure.
 
@@ -2648,56 +2602,75 @@ There are three workpiece model construction methods available: Camera Acquisiti
 .. important::
 	If SLAM Mapping is selected as the model construction method, the Next button on the page will switch to Finish. Click this button directly to complete the welding feature parameter configuration.
 
-If the model construction method selected is Camera Acquisition or 3D File Integration, continue to click Next to enter the planar feature selection page, as shown in the figure below.
-
-.. figure:: analysis/4/normal.png
-	:align: center
-	:width: 6in
-
-	Camera Acquisition – Planar Feature
-
-.. figure:: analysis/4/3D_plane_box.png
-	:align: center
-	:width: 6in
-
-	3D File Integration – Planar Feature
-
-For planar feature selection using camera acquisition, considering the priority characteristics of the four planar types, you need to click the Reselect Features button when selecting planar features.Select Yes or No according to the interactive prompts on the interface and the planar structure of the workpiece, as shown in the figure below.The selected features will appear in the list under Selected Features on the page.
-
-.. figure:: analysis/4/lap.png
-	:align: center
-	:width: 6in
-
-	Camera Acquisition – Lap Joint Planar Feature
-
-.. figure:: analysis/4/narrow.png
-	:align: center
-	:width: 6in
-
-	Camera Acquisition – Narrow Planar Feature
-
-.. figure:: analysis/4/box.png
-	:align: center
-	:width: 6in
-
-	Camera Acquisition – Box Girder Planar Feature
-
-.. figure:: analysis/4/normal.png
-	:align: center
-	:width: 6in
-
-	Camera Acquisition – General Planar Feature
-
-.. important::
-	The interaction of the icon buttons on this page is different from that of other features. Clicking them only opens the welding feature description pop-up window and does not perform a selection operation.Feature selection will only take effect after you click the Reselect Features button!
-
-For planar feature selection using 3D File Integration, there are currently two types: 3D General Plane and 3D Box Girder Plane.Clicking the icon button opens the welding feature description pop-up window, and the corresponding feature will be added to the Selected Features list at the bottom of the page, as shown in the figure below.
+If 3D File Inheritance is selected as the model construction method, click Next to proceed to the Planar Feature Selection page, as shown in the figure below.
 
 .. figure:: analysis/4/3D_plane_box.png
 	:align: center
 	:width: 6in
 
 	3D File Integration – 3D Box Girder Planar Feature
+
+If Camera Acquisition is selected as the model construction method, click Next to proceed to the Vision Feature Selection page, as shown in the figure below. Determine whether the current workpiece is a Non-spline Feature or Spline Feature according to the welding feature description, then click Next to enter the subsequent feature selection page.
+
+
+.. figure:: analysis/4/3D_plane_box.png
+	:align: center
+	:width: 6in
+
+	Vision Feature Selection Page--Non-spline Feature
+
+
+.. figure:: analysis/4/3D_plane_box.png
+	:align: center
+	:width: 6in
+
+	Vision Feature Selection Page--Spline Feature
+
+For workpieces with spline features, it is necessary to determine whether the current workpiece uses a General Spline or an Intersecting Line Spline. Select the correct feature according to the welding feature description, as shown in the figures below.
+
+After selecting the spline feature, click the Finish button directly to complete the welding feature parameter configuration. You can then close the pop-up window and start processes such as model construction.
+
+.. figure:: analysis/4/3D_plane_box.png
+	:align: center
+	:width: 6in
+
+	General Spline
+
+.. figure:: analysis/4/3D_plane_box.png
+	:align: center
+	:width: 6in
+
+	Intersecting Line Spline
+
+For workpieces with non-spline features, it is necessary to select planar features further. Considering the priority characteristics of the four current planar features, click the Next button when making a selection, and choose Yes or No according to the planar structure of the workpiece and the interactive prompts on the interface, as shown in the figures below. The selected features will be displayed in the list under Selected Features on the page.
+	 
+
+.. figure:: analysis/4/narrow.png
+	:align: center
+	:width: 6in
+
+	Non-spline Feature--Lap Joint Planar Feature
+
+.. figure:: analysis/4/box.png
+	:align: center
+	:width: 6in
+
+	Non-spline Feature--Narrow Planar Feature
+
+.. figure:: analysis/4/normal.png
+	:align: center
+	:width: 6in
+
+	Non-spline Feature--Box Girder Planar Feature
+
+.. figure:: analysis/4/normal.png
+	:align: center
+	:width: 6in
+
+	Non-spline Feature-- General Planar Feature
+
+.. important::
+	The interaction mode of the icon buttons on this page is different from that of other features. Clicking an icon button only opens the welding feature description pop-up window and does not perform a selection operation. Feature selection only takes effect when you click the Next button!
 
 After completing planar feature selection, click the Next button in above Figures to enter the Cylinder and Cone Feature Selection page, as shown in the figure below.
 
@@ -2732,3 +2705,484 @@ There are only two types of planar relationship features: small gap and large ga
 	:width: 6in
 
 	Planar Relationship Features – Large Gap
+
+Welder Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Collaborative robots carrying welding torches for welding operations can significantly improve welding efficiency and welding quality. FAU collaborative robots can implement welding control through three methods: Controller IO, Digital Communication Protocol (UDP), and Digital Communication Protocol (Modbus TCP).
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Three Control Types for Welder Configuration
+
+- Controller IO: The robot controls the welding current and voltage by setting the analog output (0-10V) of the control box, controls welding arc striking, wire feeding, and gas feeding through the digital output of the control box, and collects signal inputs such as welder ready and arc striking success through the digital input of the control box.
+
+- Digital Communication Protocol (UDP): The robot communicates with the PLC via UDP, and the PLC further communicates with the welder through the CANOpen bus or other protocols to control welding voltage, current, and welder operations such as arc striking, wire feeding, and gas feeding. (Please contact FAU after-sales personnel to obtain the robot UDP communication protocol content.)
+
+- Digital Communication Protocol (Modbus TCP): Also known as the controller peripheral open protocol, it is usually a runnable LUA program that includes communication creation instructions, and instructions for cyclically writing control data to slave devices and reading real-time status data. When the LUA program is executed, the robot establishes communication with the device and performs data interaction. Communication parameters such as IP address, port number, and cycle can be customized in the controller peripheral open protocol LUA program, and users need to modify the protocol content according to actual device conditions. Devices supported by the controller peripheral open protocol include grinding heads, laser sensors, CNC machines, welders, etc. The file name of the controller peripheral open protocol must start with 'CtrlDev_', such as "CtrlDev_Welding.lua", and a maximum of 4 open protocols can run simultaneously.
+
+Welding control via Controller IO or Digital Communication Protocol (UDP) mainly includes the following steps:
+
+1. Welding torch installation and signal wiring, see the introduction in Section 2.2 Equipment Installation of this manual. Please contact FAU marketing and technical personnel for signal wiring;
+
+2. Welder parameter configuration;
+
+3. Generate welding control program.
+
+Collaborative robots can control the welding process through Controller IO signals or Digital Communication Protocol. The configuration operations of the two methods mainly have the following two differences:
+
+1. When using Controller IO, it is necessary to set the corresponding relationship between the actual control welding current and voltage and the analog output value of the control box;
+
+2. When using the Digital Communication Protocol, it is necessary to configure communication parameters.
+
+I. Controller I/O
+
+- Step 1:As shown in the figure below, select the welder status signal DI input port and the welder control signal DO output port, and click the Configure button. The meaning of each signal is as follows:
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Welding Function I/O Configuration
+
+Welder Ready: When the welder is ready for welding operations, the welder outputs this signal to the robot. If the welder is not ready due to faults or other reasons, the welder does not input this signal to the robot, and the AIRLab main page prompts "Welder Not Ready". If your welder does not have a welder ready signal, you can set the port of this item to None.
+
+Arc Striking Success: The welder has successfully struck the arc. After the robot outputs the arc striking signal to the welder, it waits for the welder to feed back the arc striking success signal. If the robot does not detect the welder's arc striking success signal within the set timeout period, the robot reports an "Arc Striking Timeout" error. Welding can still be performed if the arc striking success signal is not configured when using the robot welding function, but the robot will report a "Arc Striking Success DI Not Configured" warning; if your welder has an arc striking success signal output, we recommend that you configure this signal for safer welding.
+
+Welding Interruption Recovery: A welding interruption will be triggered when the arc is accidentally interrupted during the robot's welding process or the operator actively pauses the welding. When the external input of this signal to the robot changes from invalid to valid after the welding interruption, the robot automatically resumes welding from the original interruption position.
+
+Welding Interruption Exit: A welding interruption will be triggered when the arc is accidentally interrupted during the robot's welding process or the operator actively pauses the welding. When the external input of this signal to the robot changes from invalid to valid after the welding interruption, the robot terminates the welding, and welding cannot be resumed again after termination.
+
+Welder Arc Striking: The DO output port for the robot to control welder arc striking. When the robot program executes the arc striking command, the DO output port corresponding to welder arc striking automatically outputs valid.
+
+Gas Detection: The DO output port for the robot to control welder gas feeding. When the robot executes the welding gas feeding command, the DO output port corresponding to gas feeding automatically outputs valid.
+
+Forward Wire Feeding: The DO output port for the robot to control welder forward wire feeding. When the robot executes the forward wire feeding command, the DO output port corresponding to forward wire feeding automatically outputs valid.
+
+Reverse Wire Feeding: The DO output port for the robot to control welder reverse wire feeding. When the robot executes the reverse wire feeding command, the DO output port corresponding to reverse wire feeding automatically outputs valid.
+
+- Step 2: Setting of the relationship diagram between welding current/voltage and analog outputWhen the collaborative robot welding control type is selected as Controller IO, the welding current and voltage values are controlled by the analog output of the control box (the analog output voltage range of the control box is 0 ~ 10V). At this time, it is necessary to configure the linear corresponding relationship between the analog output value of the control box and the actual welding current and voltage values.
+
+As shown in the figure, find the Analog Current-Voltage Relationship Diagram on the welder configuration page, where A-V represents the corresponding relationship between welding current and the analog output voltage of the control box, and V-V represents the corresponding relationship between welding voltage and the analog output voltage of the control box.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	A-V Current-Voltage Relationship Diagram
+
+Select A-V, input the welding current range of 0-1000A, analog output voltage of 0-10V, set the output AO to Ctrl-AO0 (the analog output port for welding current control is AO0), and click the Configure button.
+
+As shown in the figure, click V-V to set the corresponding relationship between welding voltage and the analog output voltage of the control box, input the welding voltage range of 0-100V, analog output voltage value of 0-10V, set the output AO to Ctrl-AO1 (the analog output port for welding voltage control is AO1), and click the Configure button.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	V-V Current-Voltage Relationship Diagram
+
+- Step 3: Welder debugging.Find Welder Debugging on the welder configuration page, input the timeout time as 1000ms, click Gas Feeding, and the robot will control the welder to start delivering protective gas. Click the Stop Gas Feeding button, and the robot will control the welder to stop delivering protective gas. The operation methods of other buttons such as Arc Striking, Forward Wire Feeding, and Reverse Wire Feeding are the same and will not be repeated here.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Welder Debugging
+
+II. Digital Communication Protocol (UDP)
+
+Essentially, the robot implements welding control through the Digital Communication Protocol by conducting UDP communication with the PLC. The robot transmits control data such as arc striking, wire feeding, gas feeding, current, and voltage to the PLC via UDP communication, and the PLC further controls the welder through the CANOpen bus (or other methods). At the same time, the PLC collects the actual welding current and voltage, and the arc striking success signal and feeds them back to the robot. (Please contact FAU after-sales personnel to obtain the robot UDP communication protocol content.)
+
+- Step 1: UDP communication configuration.Since the robot communicates with the PLC via UDP, it is necessary to configure UDP communication parameters. The meaning of each parameter is as follows:
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	UDP Communication Configuration
+
+IP Address: The IP address of the PLC side for UDP communication;
+
+Port Number: The UDP communication port number of the PLC side;
+
+Communication Cycle: The cycle of UDP communication between the robot and the PLC, the default is 2ms;
+
+Packet Loss Detection Cycle, Packet Loss Count: If the number of packet losses within the packet loss detection cycle exceeds the set value, the robot reports a "UDP Communication Packet Loss Abnormality" error, and the communication is automatically disconnected at the same time;
+
+Communication Interruption Confirmation Duration: If the robot does not receive a complete PLC feedback data frame within this duration, it reports a "UDP Communication Interruption" error and cuts off the UDP communication at the same time;
+
+Automatic Reconnection after Power-off Restart: Whether the robot automatically performs reconnection and recovery after detecting a power-off restart;
+
+Automatic Reconnection after Communication Interruption: Whether the robot automatically performs reconnection and recovery after detecting a UDP communication interruption;
+
+Reconnection Cycle, Reconnection Count: When the UDP communication interruption automatic reconnection is enabled and a UDP communication interruption is detected, the robot performs reconnection at the set cycle. If the reconnection is still unsuccessful when the reconnection count reaches the maximum set value, the robot reports a "UDP Communication Interruption" error and cuts off the UDP communication at the same time.
+
+After configuring the above parameters, click the Configure button. After successful configuration, click the Load button.
+
+- Step 2:Select the welder status signal DI input port and the welder control signal DO output port, and click the Configure button. The meaning of each signal is as follows:
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Welding Function I/O Configuration
+
+Welder Ready: When the welder is ready for welding operations, the welder outputs this signal to the robot. If the welder is not ready due to faults or other reasons, the welder does not input this signal to the robot, and the robot WebApp prompts "Welder Not Ready" in the upper right corner. If your welder does not have a welder ready signal, you can set the port of this item to -1.
+
+Arc Striking Success: The welder has successfully struck the arc. After the robot outputs the arc striking signal to the welder, it waits for the welder to feed back the arc striking success signal. If the robot does not detect the welder's arc striking success signal within the set timeout period, the robot reports an "Arc Striking Timeout" error. Welding can still be performed if the arc striking success signal is not configured when using the robot welding function, but the robot will report a "Arc Striking Success DI Not Configured" warning; if your welder has an arc striking success signal output, we recommend that you configure this signal for safer welding.
+
+Welding Interruption Recovery: A welding interruption will be triggered when the arc is accidentally interrupted during the robot's welding process or the operator actively pauses the welding. When the external input of this signal to the robot changes from invalid to valid after the welding interruption, the robot automatically resumes welding from the original interruption position.
+
+Welding Interruption Exit: A welding interruption will be triggered when the arc is accidentally interrupted during the robot's welding process or the operator actively pauses the welding. When the external input of this signal to the robot changes from invalid to valid after the welding interruption, the robot terminates the welding, and welding cannot be resumed again after termination.
+
+Welder Arc Striking: The DO output port for the robot to control welder arc striking. When the robot program executes the arc striking command, the DO output port corresponding to welder arc striking automatically outputs valid.
+
+Gas Detection: The DO output port for the robot to control welder gas feeding. When the robot executes the welding gas feeding command, the DO output port corresponding to gas feeding automatically outputs valid.
+
+Forward Wire Feeding: The DO output port for the robot to control welder forward wire feeding. When the robot executes the forward wire feeding command, the DO output port corresponding to forward wire feeding automatically outputs valid.
+
+Reverse Wire Feeding: The DO output port for the robot to control welder reverse wire feeding. When the robot executes the reverse wire feeding command, the DO output port corresponding to reverse wire feeding automatically outputs valid.
+
+- Step 3: Welder debugging.Find Welder Debugging on the welder configuration page, input the timeout time as 1000ms, click Gas Feeding, and the robot will control the welder to start delivering protective gas. Click the Stop Gas Feeding button, and the robot will control the welder to stop delivering protective gas. The operation methods of other buttons such as Arc Striking, Forward Wire Feeding, and Reverse Wire Feeding are the same and will not be repeated here.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Welder Debugging Page
+
+- Step 4: Welding interruption recovery configuration
+
+Welding interruption recovery configuration refers to the parameters that need to be configured for resuming welding after a program interruption occurs during the welding process; it includes the configuration of welding arc tracking accidental interruption detection parameters and weld seam interruption detection parameters.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Welding Interruption Recovery Configuration
+
+The configuration of welding arc tracking accidental interruption detection parameters is for the parameters that need to be configured for arc interruption during the welding process, including selecting whether to detect and configuring the arc interruption confirmation duration.
+
+Whether to Detect: Indicates whether to detect the accidental interruption of welding arc tracking.
+
+Arc Interruption Confirmation Duration: Defines how many milliseconds of arc interruption is considered an arc interruption that requires interruption recovery.
+
+After the configuration is completed, click the OK button to finish the configuration of welding arc tracking accidental interruption detection parameters.
+
+The configuration of weld seam interruption detection parameters is for the parameters that need to be configured for the robot to move to resume the interruption after a program interruption during the welding process, including selecting whether to resume the welding interruption, configuring the weld seam overlap distance, configuring the robot's speed to return to the arc striking point, and configuring the robot's movement mode to the arc striking point.
+
+Whether to Resume Welding Interruption: Selecting to resume will pop up a welding interruption pop-up window after the welding interruption, and the interruption will be resumed after clearing the error; otherwise, the interruption will not be resumed.
+
+Weld Seam Overlap Distance: To ensure the continuity of the weld seam after recovery with the weld seam before interruption during welding recovery, there needs to be a certain overlap distance between the arc striking point of recovery welding and the original weld seam.
+
+Robot Speed to Return to Arc Striking Point: The speed at which the robot returns to the set arc striking point after resuming the interruption.
+
+Speed: After a welding interruption, it is often necessary to move the robot to a safe position and process the weld seam. When welding recovery is performed after processing, the robot will move from the current position to the welding re-arc striking point. This Speed refers to the speed at which the robot moves to the re-arc striking point.
+
+Robot Movement Mode to Arc Striking Point: After a welding interruption, it is often necessary to move the robot to a safe position and process the weld seam. When welding recovery is performed after processing, the robot will move from the current position to the welding re-arc striking point. This Movement Mode refers to the movement mode of the robot to the re-arc striking point, with two options available: LIN and PTP.
+
+After the configuration is completed, click the OK button to finish the configuration of weld seam interruption detection parameters.
+
+After the welding interruption recovery configuration is fully completed, run the program. The robot may experience an interruption during the welding process under the following circumstances:
+
+1. The operator actively pauses the welding to observe the actual welding situation or clean the nozzle and other operations;
+
+2. Accidental interruption of the welding arc;
+
+3. The robot collides, causing the welding to pause.
+
+After an interruption occurs during the robot's welding process, the operator can switch the robot to manual mode, drag the robot to a safe position, and handle the cause of the interruption. After checking the environment and troubleshooting the problem, click the Resume Welding button in the following pop-up window, and the program will resume the interruption according to the configured parameters.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Welding Interruption Pop-up Window
+
+III. Digital Communication Protocol (Modbus TCP)
+
+- Step 1:In the open protocol configuration, click the Upload button to upload the compiled open protocol LUA program file to the controller. Select an open protocol ID and an open protocol name, and click the Configure button (the selected protocol ID must be consistent with the ID compiled in the open protocol file) to assign an ID to each open protocol. Upload the welder open protocol CtrlDev_WELDING.lua (the protocol file name must start with "CtrlDev_" and have a suffix of .lua).
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Open Protocol Settings
+
+- Step 2:The configured welder open protocol is displayed in the list in Device Operation and Status. Select the configured protocol and click the Load button. A green icon for the connection status indicates successful loading; a red icon indicates loading failure.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Successful Open Protocol Loading
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Unload Open Protocol
+
+- Step 3:Before conducting welder debugging, ensure that the welder open protocol has been loaded normally and the relevant register address configuration is correct. Click buttons such as Arc Striking, Arc Extinguishing, Gas Feeding, and Stop Gas Feeding to observe whether the actual welder actions are consistent with the settings. If the welder does not perform the set actions, check whether the register configuration in the welder open protocol is incorrect and conduct further debugging.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Welder Debugging
+
+- Step 4:Unload the welder open protocol. Click the Unload button in Device Operation and Status, and the protocol running status will be disconnected at this time. Click the Delete button to remove the protocol from the protocol list.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Delete Open Protocol
+
+Extended Axis Communication Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click the icon button in Communication Mode in the Extended Axis Settings pop-up window to enter the corresponding communication configuration mode page.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Extended Axis Communication Mode Selection
+
+1. Controller + PLC (UDP Communication)
+
+Before using the extended axis UDP communication mode, it is necessary to first establish the corresponding extended axis coordinate system, configure the corresponding extended axis scheme under the corresponding extended axis coordinate system, and apply the established tool coordinate system after the extended axis is imported. The extended axis function is mainly used in conjunction with the welder function and the laser tracking sensor function.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	UDP Communication
+
+- Step 1: Configure extended axis UDP communication parameters
+
+Set parameters such as IP address, port number, communication cycle, packet loss detection cycle, and packet loss count. The reconnection cycle and reconnection count can only be configured after the automatic reconnection switch after communication interruption is enabled.
+
+IP Address: Custom IP address;
+
+Port Number: Defined according to actual conditions;
+
+Communication Cycle: Defined according to actual conditions, unit: ms;
+
+Packet Loss Detection Communication Cycle: 10 ~ 1000 ms;
+
+Packet Loss Count: 1 ~ 100;
+
+Communication Interruption Confirmation Duration: 0 ~ 500 ms;
+
+Automatic Reconnection after Power-off Restart: On/Off;
+
+Automatic Reconnection after Communication Interruption: On/Off;
+
+Reconnection Cycle: 1 ~ 1000 ms;
+
+Reconnection Count: 1 ~ 100.
+
+.. important::
+	After setting the communication disconnection confirmation duration, the communication disconnection will only be confirmed and an error reported when the communication abnormality exceeds this duration; after the UDP communication is disconnected, a UDP disconnection error (resettable) will be triggered, and you can click the clear warning information button to re-establish the UDP communication.
+
+- Step 2:After the communication parameters are configured successfully, click the Set button to establish UDP communication. If there is no error prompt on the page after clicking the button, the UDP communication connection is successful. You can also confirm whether the extended axis communication setting is successful by viewing the UDO communication configuration status and the extended axis servo in-position status on the web terminal.
+
+.. important:: 
+	If the UDP communication is not established, the UDP extended axis number information cannot be configured and viewed; be sure to configure and apply the extended axis coordinate system except for serial number 0 before loading the extended axis UDP communication.
+
+- Step 3:Select the currently applied extended axis number (only numbers 1, 2, 3, 4 are available at present), and click the Edit button behind the extended axis number to enter the detailed configuration interface. Set the axis type, axis direction, running speed, acceleration, positive limit, negative limit, lead, encoder resolution, starting point offset, manufacturer, model, and mode, and click Configure to complete the configuration.
+
+Axis Type: Linear guide, rotary axis, and infinite rotary axis;
+
+Axis Direction: Positive/Negative;
+
+Running Speed: 0~2000mm/s;
+
+Acceleration: 0 ~ 2000 mm/s²;
+
+Positive Limit: 0 ~ 50000;
+
+Negative Limit: -50000 ~ 0;
+
+Lead: 0~1000;
+
+Encoder Resolution: 0 ~ 10000000;
+
+Starting Point Offset: 0 ~ 10000mm;
+
+Manufacturer: Hichuan, Inovance, and Panasonic;
+
+Model: The model list is automatically matched according to the manufacturer;
+
+Mode: Incremental system and absolute position system.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Configured Extended Axis Settings Page
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Extended Axis Configuration Information Edit Page 1 (Slide the mouse up and down to view the complete information)
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Extended Axis Configuration Information Edit Page 2 (Slide the mouse up and down to view the complete information)
+
+- Step 4:After the extended axis parameters are configured, click the Disable button to enable the corresponding extended axis number. After successful enabling, the zero return mode and extended axis test can be set. The zero return mode setting and extended axis test cannot be performed when the extended axis is not enabled.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Successful Extended Axis Enabling
+
+- Step 5:The zero return mode setting and extended axis test cannot be performed if the extended axis is not enabled successfully; after the extended axis is enabled successfully, click the Zero Return button to enter the zero return mode setting interface. Set the zero return mode, zero seeking speed, and zero point clamping speed, and click the Set button. The extended axis starts to return to zero. After successful zero return, the exaxis position in Extended Axis Settings on the right side of the AIRLab main interface is 0.
+
+Zero Return Mode: Zero return from current position, zero return from negative limit, and zero return from positive limit;
+
+Zero Seeking Speed: 0~2000mm/s;
+
+Zero Point Clamping Speed: 0~2000mm/s.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Zero Return Mode Setting
+
+- Step 6:The function setting cannot be performed if the extended axis is not enabled successfully; after the extended axis is enabled successfully and the zero return mode is set, click the Test button to enter the extended axis test interface. Set the running speed, acceleration, and maximum distance, perform forward and reverse rotation tests on the extended axis, and click the Stop button during rotation to test whether the extended axis can stop normally.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Extended Axis Test Interface
+
+- Step 7 (Optional Setting):Set the positioning completion time, which is used to monitor the stop time of the extended axis movement. After the extended axis establishes UDP communication, enter the time and click the Configure button to complete the setting.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Positioning Completion Time Setting Interface
+
+II. Controller + Servo Drive (485 Communication)
+
+Before using RS485 communication to control the servo extended axis, it is necessary to first connect the RS485 communication interface of the servo drive to the RS485 communication interface on the robot control box. The schematic diagram of the electrical interface of the FAU robot easy manufacturing control box is as follows:
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Schematic Diagram of the Electrical Interface of FAU Robot Mini Control Box
+
+Taking the Danatek servo drive model FD100-750C as an example, referring to the schematic diagram of the drive panel terminals and the X3A-IN terminal definition of FD100-750C, when the robot is configured to communicate with the FD100-750C servo extended axis, it is necessary to connect the 485-A0 terminal and 485-B0 terminal on the control box to the 4th and 5th pins of the drive X3A-IN terminal respectively. (Note: You can see a wiring terminal marked with "485" on the servo drive panel, which is not open to users for the time being. Do not connect your RS485 communication cable to this terminal.) At the same time, if multiple servo drives are connected and the drive is the last one in the link, it is necessary to turn on the RS485 communication termination resistor DIP switch (No. 2 DIP switch) on the panel.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	FD100-750C Drive Panel
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	X3A-IN Terminal Definition of FD100-750C
+
+After ensuring that your RS485 communication cable is connected correctly and both the robot and the servo extended axis are powered on normally, open the AIRLab extended axis 485 communication configuration.
+
+In the servo drive configuration, select the number as 1 (Note: When connecting multiple servos, this number is used to distinguish different servos, which we will mention many times later), the manufacturer as Danatek, select the corresponding servo drive model (the model here is FD00-750C), the software version as V1.0, fill in the corresponding resolution of the servo drive (131072 here), fill in the mechanical transmission ratio according to your mechanism model (15.45 here), and click the Configure button.
+
+If there is no error returned on the main page after clicking the Configure button, the 485 communication configuration between the robot and the servo drive has been completed so far. Users can also view the real-time status information of the servo through the Servo Status Bar on the right side of the web terminal.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Servo Drive Configuration Interface
+
+After the servo is successful, it is necessary to enable the extended axis device and set the zero return mode in order. After completion, certain motion tests can be performed. Please follow the test operations in this manual under the premise of ensuring safety.
+
+- Step 1:In Configured Servo Drives, select the control mode as Position Mode and select the corresponding servo number. The five icon buttons on the page are, from left to right:
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Configured Servo Drives
+
+View Button: Click to view the servo drive configuration information.
+
+Disable Button: The servo drive is in the disabled state, click the button to enable the servo drive (the button becomes the Enable button).
+
+Zero Return Button: Set the zero return mode of the servo drive.
+
+Test Button: Test the servo drive.
+
+Servo Error Clear Button: Click to clear when the servo drive prompts an error.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Servo Drive Configuration Information
+
+- Step 2:Click the Disable button, the servo drive number will be set first at this time. After the setting is successful, the control mode is set. After the control mode is set successfully, the servo drive is enabled. After the servo is enabled successfully, you can observe that the Servo Enable status light is on in Servo in various robot status bars, indicating that the servo drive has been enabled. Click the Enable status button to disable the servo drive, and the Servo Enable status light goes out.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Successful Servo Drive Enabling
+
+.. important:: 
+	After switching the control mode, it is necessary to first disable the servo drive and then enable the servo drive for the servo's control mode switch to take effect. The control mode switch will be disabled after the servo is enabled successfully.
+
+- Step 3:After the servo drive is enabled successfully, click the Zero Return button, select the zero return mode as Zero Return from Current Position, set the zero return speed to 5mm/s and the zero point clamping speed to 1mm/s; click the Set button to complete the servo zero return operation from the current position. Users can observe that the current Servo Position is 0 in Servo in various robot status bars; (Please read this manual completely before selecting Zero Return from Negative Limit or Zero Return from Positive Limit for the zero return mode to perform the zero return test).
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Servo Drive Zero Return Setting Page
+
+- Step 4: Servo motion
+
+Before actually controlling the servo motor to move, please first understand the Position Mode and Speed Mode of the servo motor.
+
+Position Mode: You can input certain motion speed and target position parameters, the servo will move to the target position at the set speed, and stop moving after reaching the target position.
+
+Speed Mode: You can input a certain target speed, the servo will keep moving at the set target speed until you set the target speed to 0 or disable the servo motor.
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Position Mode Content
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Speed Mode Content
+
+When switching the control mode, the Current Control Mode display will switch automatically (Note: After switching the control mode, it is necessary to first disable the servo and then enable the servo for the servo's control mode switch to take effect). If your servo is not in Position Mode at present, please switch your servo to Position Mode. Input the Target Position as 50mm and the running speed as 5mm/s, and click the Set button under the premise of confirming safety. At this time, the servo motor will move according to the parameters you set, and you can observe the real-time position and speed of the servo in Servo in various robot status bars on the web terminal.
+
+Change the control mode of the servo to Speed Mode, click the Enable status button to disable the servo drive, and then click the Disable status button. At this time, the servo is switched to Speed Mode (Note: After the servo motor moves, it can only be stopped by setting the target speed to 0). Input the target speed as 5mm/s and click the Set button, the servo motor will keep moving at a speed of 5mm/s. Similarly, you can observe the real-time position and speed of the servo in Servo in various robot status bars on the web terminal.
+
+- Step 5:In emergency situations such as robot collision and emergency stop being pressed, the extended axis can trigger an emergency stop and stop moving according to the set emergency stop deceleration. After the collision alarm is restored, instructions can be issued again to resume the operation of the extended axis. It is necessary to set the servo acceleration/deceleration and servo emergency stop acceleration/deceleration in the advanced settings, as shown in the figure below:
+
+.. figure:: analysis/4/large_gap.png
+	:align: center
+	:width: 6in
+
+	Servo Stop and Emergency Stop Speed Setting
