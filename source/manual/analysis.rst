@@ -613,7 +613,8 @@ Direction: Divided into Positive and Negative—select according to the actual w
 
 Expansion Thickness: If the edge of the thin surface formed by the four points is inconsistent with the actual workpiece structure, set the expansion thickness—the thin surface will expand outward with the center point of the surface as the reference.
 
-Important Note:The modeling of solids will affect the effect of the obstacle avoidance function in subsequent steps. Ensure that the solids are as consistent as possible with the actual workpiece structure.
+.. important::
+	The modeling of solids will affect the effect of the obstacle avoidance function in subsequent steps. Ensure that the solids are as consistent as possible with the actual workpiece structure.
 
 Step 5: SLAM Mapping Result Accuracy Verification
 
@@ -858,7 +859,7 @@ Add Modeless construction node: After adding several groups of “Move+Photo” 
 	Adding Modeless cons nodes
 
 .. important::
-	Note: If the workpiece has symmetrical features, integrity judgment must be enabled when adding model construction nodes, as shown in the figure. Additionally, the entire workpiece must be completely captured during the model building process.
+	If the workpiece has symmetrical features, integrity judgment must be enabled when adding model construction nodes, as shown in the figure. Additionally, the entire workpiece must be completely captured during the model building process.
 
 .. figure:: analysis/4/model_less4.png
 	:align: center
@@ -977,7 +978,10 @@ First, set the Start Point and End Point, ensuring they fall within the range of
 
 	Add Segmented Weld Seam
 
-If additional segments need to be added to the current weld seam, reset the Start Point and End Point and follow the same steps as above, as shown in the figure below. Note: Segmentation must be complete, and the end point of one segment must coincide with the start point of the next segment.
+If additional segments need to be added to the current weld seam, reset the Start Point and End Point and follow the same steps as above, as shown in the figure below. 
+
+.. important::
+	Segmentation must be complete, and the end point of one segment must coincide with the start point of the next segment.
 
 .. figure:: analysis/4/seamedit14.png
 	:align: center
@@ -1705,9 +1709,9 @@ Click the newly added welding process and edit the welding process name and oper
 
 Click the weld channel in the weld channel list, and the information of the currently clicked weld channel will be displayed in the weld channel editing section. Modify the weld channel information by selecting the reference coordinate system, safety point, offset, and binding the welding process and click Finish, and the information of the weld channel in the weld channel list will be modified.
 
-.. figure:: analysis/4/78.png
+.. figure:: analysis/4/multiweld_en.png
 	:align: center
-	:width: 3.5in
+	:width: 6in
 
 	Editing of Multi-layer and Multi-pass Welding
 
@@ -1795,18 +1799,21 @@ Click the ”weld sem” module. After adding a weld seam, click the edit icon
 
 	Weld Seam Selection Pop-up--Workpiece with Non-spline Features
 
-.. figure:: analysis/4/83.png
+.. figure:: analysis/4/seamedit15.png
 	:align: center
-	:width: 3in
+	:width: 6in
+
 	Weld Seam Selection Pop-up--Workpiece with Spline Features
-	
+
+Descriptions of Each Editable Item:
+
 - Weld Seam Type: Automatically generated based on the selected weld seam. 
 
 - Weld Seam Number: Automatically generated based on the selected weld seam. 
 
 - Reverse Direction: Displays the welding direction of the weld seam in the 3D scene. Select whether to reverse the direction according to actual welding needs. If "Yes" is selected, the direction of the weld seam in the 3D scene will be reversed.
 
-Indentation Settings
+Indent Settings (Applicable Only to Non-spline Weld Seams)
 
 - Start Indentation: Set the indentation at the start of the weld seam. When welding this seam, the process will begin from the start point after the indentation. 
 
@@ -1814,9 +1821,11 @@ Indentation Settings
 
 Point Offset and Angle Settings 
 
-If the position of the start point, end point, or intermediate point of the current weld seam is inaccurate, correction can be made through point offset and angle settings:
+Calibration can be performed via point offset and angle settings if the position of the start point, end point or intermediate point of the current weld seam is inaccurate.
 
-- Select the point that needs to be offset, set "Offset" to "Yes", and then configure the position offset for the selected point. Offset can be performed in either the base coordinate system or the workpiece coordinate system. 
+Point Type (Non-spline Weld Seams): Select the point to be offset, set Offset for Whether to Offset, and then configure the position offset of the selected point. Offset can be set in either the base coordinate system or the workpiece coordinate system.
+
+Setting Method (Spline Weld Seams): Select Global Setting to offset the entire weld seam; select the corresponding point to offset a specific point on the weld seam.
 
 Welding Posture Strategy
 
@@ -1940,7 +1949,10 @@ Cycle Interval: The waiting time between cycles. For example, after the robot co
 
 Cycle Mode: There are two types,Continuous Cycle: Runs indefinitely. Fixed Cycle: The robot automatically stops after completing the set number of cycles.
 
-Cycle Count: This parameter only needs to be set when the cycle mode is Fixed Cycle. (Note: The cycle count cannot be set to 0.)
+Cycle Count: This parameter only needs to be set when the cycle mode is Fixed Cycle. 
+
+.. important::
+	The cycle count cannot be set to 0.
 
 .. important::
 	Once the automatic cycle operation parameters are configured, they are automatically saved and loaded. If no changes are needed, simply import the workpiece registration template—the system will use the last saved settings without requiring repeated configuration.
@@ -2613,14 +2625,14 @@ If 3D File Inheritance is selected as the model construction method, click Next 
 If Camera Acquisition is selected as the model construction method, click Next to proceed to the Vision Feature Selection page, as shown in the figure below. Determine whether the current workpiece is a Non-spline Feature or Spline Feature according to the welding feature description, then click Next to enter the subsequent feature selection page.
 
 
-.. figure:: analysis/4/3D_plane_box.png
+.. figure:: analysis/4/feature5.png
 	:align: center
 	:width: 6in
 
 	Vision Feature Selection Page--Non-spline Feature
 
 
-.. figure:: analysis/4/3D_plane_box.png
+.. figure:: analysis/4/feature6.png
 	:align: center
 	:width: 6in
 
@@ -2630,40 +2642,39 @@ For workpieces with spline features, it is necessary to determine whether the cu
 
 After selecting the spline feature, click the Finish button directly to complete the welding feature parameter configuration. You can then close the pop-up window and start processes such as model construction.
 
-.. figure:: analysis/4/3D_plane_box.png
+.. figure:: analysis/4/feature7.png
 	:align: center
 	:width: 6in
 
 	General Spline
 
-.. figure:: analysis/4/3D_plane_box.png
+.. figure:: analysis/4/feature8.png
 	:align: center
 	:width: 6in
 
 	Intersecting Line Spline
 
 For workpieces with non-spline features, it is necessary to select planar features further. Considering the priority characteristics of the four current planar features, click the Next button when making a selection, and choose Yes or No according to the planar structure of the workpiece and the interactive prompts on the interface, as shown in the figures below. The selected features will be displayed in the list under Selected Features on the page.
-	 
 
-.. figure:: analysis/4/narrow.png
+.. figure:: analysis/4/feature2.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Lap Joint Planar Feature
 
-.. figure:: analysis/4/box.png
+.. figure:: analysis/4/feature3.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Narrow Planar Feature
 
-.. figure:: analysis/4/normal.png
+.. figure:: analysis/4/feature4.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Box Girder Planar Feature
 
-.. figure:: analysis/4/normal.png
+.. figure:: analysis/4/feature1.png
 	:align: center
 	:width: 6in
 
@@ -2710,7 +2721,7 @@ Welder Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Collaborative robots carrying welding torches for welding operations can significantly improve welding efficiency and welding quality. FAU collaborative robots can implement welding control through three methods: Controller IO, Digital Communication Protocol (UDP), and Digital Communication Protocol (Modbus TCP).
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder1.png
 	:align: center
 	:width: 6in
 
@@ -2740,7 +2751,7 @@ I. Controller I/O
 
 - Step 1:As shown in the figure below, select the welder status signal DI input port and the welder control signal DO output port, and click the Configure button. The meaning of each signal is as follows:
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder2.png
 	:align: center
 	:width: 6in
 
@@ -2766,7 +2777,7 @@ Reverse Wire Feeding: The DO output port for the robot to control welder reverse
 
 As shown in the figure, find the Analog Current-Voltage Relationship Diagram on the welder configuration page, where A-V represents the corresponding relationship between welding current and the analog output voltage of the control box, and V-V represents the corresponding relationship between welding voltage and the analog output voltage of the control box.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder3.png
 	:align: center
 	:width: 6in
 
@@ -2776,7 +2787,7 @@ Select A-V, input the welding current range of 0-1000A, analog output voltage of
 
 As shown in the figure, click V-V to set the corresponding relationship between welding voltage and the analog output voltage of the control box, input the welding voltage range of 0-100V, analog output voltage value of 0-10V, set the output AO to Ctrl-AO1 (the analog output port for welding voltage control is AO1), and click the Configure button.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder4.png
 	:align: center
 	:width: 6in
 
@@ -2784,7 +2795,7 @@ As shown in the figure, click V-V to set the corresponding relationship between 
 
 - Step 3: Welder debugging.Find Welder Debugging on the welder configuration page, input the timeout time as 1000ms, click Gas Feeding, and the robot will control the welder to start delivering protective gas. Click the Stop Gas Feeding button, and the robot will control the welder to stop delivering protective gas. The operation methods of other buttons such as Arc Striking, Forward Wire Feeding, and Reverse Wire Feeding are the same and will not be repeated here.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder5.png
 	:align: center
 	:width: 6in
 
@@ -2796,7 +2807,7 @@ Essentially, the robot implements welding control through the Digital Communicat
 
 - Step 1: UDP communication configuration.Since the robot communicates with the PLC via UDP, it is necessary to configure UDP communication parameters. The meaning of each parameter is as follows:
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder6.png
 	:align: center
 	:width: 6in
 
@@ -2822,7 +2833,7 @@ After configuring the above parameters, click the Configure button. After succes
 
 - Step 2:Select the welder status signal DI input port and the welder control signal DO output port, and click the Configure button. The meaning of each signal is as follows:
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder7.png
 	:align: center
 	:width: 6in
 
@@ -2846,7 +2857,7 @@ Reverse Wire Feeding: The DO output port for the robot to control welder reverse
 
 - Step 3: Welder debugging.Find Welder Debugging on the welder configuration page, input the timeout time as 1000ms, click Gas Feeding, and the robot will control the welder to start delivering protective gas. Click the Stop Gas Feeding button, and the robot will control the welder to stop delivering protective gas. The operation methods of other buttons such as Arc Striking, Forward Wire Feeding, and Reverse Wire Feeding are the same and will not be repeated here.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder8.png
 	:align: center
 	:width: 6in
 
@@ -2856,7 +2867,7 @@ Reverse Wire Feeding: The DO output port for the robot to control welder reverse
 
 Welding interruption recovery configuration refers to the parameters that need to be configured for resuming welding after a program interruption occurs during the welding process; it includes the configuration of welding arc tracking accidental interruption detection parameters and weld seam interruption detection parameters.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/welder9.png
 	:align: center
 	:width: 6in
 
@@ -2894,7 +2905,7 @@ After the welding interruption recovery configuration is fully completed, run th
 
 After an interruption occurs during the robot's welding process, the operator can switch the robot to manual mode, drag the robot to a safe position, and handle the cause of the interruption. After checking the environment and troubleshooting the problem, click the Resume Welding button in the following pop-up window, and the program will resume the interruption according to the configured parameters.
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/4/110.png
 	:align: center
 	:width: 6in
 
