@@ -87,7 +87,7 @@ The "Window" menu contains six secondary options: "Software/Firmware Upgrade", "
 
 .. figure:: analysis/4/window.png
 	:align: center
-	:width: 2.5in
+	:width: 3.5in
 
 	AIRLab Menu Bar-Window
 
@@ -267,7 +267,7 @@ Command Feedback Area
 --------------------------
 The instruction feedback area displays the execution results of program instructions, as shown in Figure below.
 
-.. figure:: analysis/4/22.png
+.. figure:: analysis/4/14.png
 	:align: center
 	:width: 6.5in
 
@@ -1303,6 +1303,123 @@ Reference coordinate system: click the reference coordinate system icon in the m
 
 Select which coordinate system is the reference coordinate system, then set the coordinates of the reference coordinate system, select “Show” and click the “Set” button, the reference coordinate system will be displayed in the AIRLab 3D scene. Select “Do not show” and click “Set”, the displayed coordinate system will be hidden.
 
+AIRlab Gantry Welding System
+----------------------------------
+For welding scenarios involving a mix of small workpieces of various types as well as large workpieces, the AIRLab Gantry Welding System is added. Through arbitrary combinations of multiple cameras or laser sensors, it enables rapid mapping of large workpieces or large working spaces, as well as collaborative welding by multiple robots.
+
+The AIRLab Gantry Welding System mainly consists of two parts: 1. The master station performs global map construction; 2. The slave stations carry out welding operations. Before constructing the map, the master station must first complete the calibration of the laser radar and the calibration of the gantry frame.
+
+Calibration of LiDAR and Gantry Frame
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Start AIRLab and create a new welding project. Then, open the pop-up window by selecting "Welding" — "Software Mode Settings" from the menu bar, choose "Master Station", and click the "OK" button, as shown in the figure below.
+
+.. figure:: analysis/4/gantry1.png
+	:align: center
+	:width: 6in
+
+	Software Mode Settings
+
+First, calibrate the LiDAR. The calibration steps are as follows:
+
+Step 1: Click the "LiDAR" section on the left side of the software interface. In the pop-up "LiDAR Settings" window, click "Search for Devices" to ensure that the LiDAR is successfully connected, as shown in the figure below.
+
+.. figure:: analysis/4/gantry2.png
+	:align: center
+	:width: 3in
+
+	LiDAR connected successfully
+
+Step 2: Click the "Calibrate" button in the "LiDAR Debugging" section to open the "LiDAR Calibration" pop-up window, as shown in the figure below. Follow the instructions in the pop-up window, place the checkerboard in the correct position, and then click the "Calibrate" button to complete the LiDAR calibration.
+
+.. figure:: analysis/4/gantry3.png
+	:align: center
+	:width: 3in
+
+	LiDAR calibration
+
+After successful LiDAR calibration, proceed with the calibration of the gantry frame. The calibration steps are as follows:
+
+Step 1: Click the "Extended Axis" section on the left side of the software interface. For extended axis import, select "Gantry", and then click the "Import" button, as shown in the figure.
+
+.. figure:: analysis/4/gantry4.png
+	:align: center
+	:width: 6in
+
+	Gantry Extended Axis Calibration 
+
+Step 2: After successfully importing the gantry extended axis, first enable it. Click the "Servo Enable" button in the "Gantry Control" section on the right side of AIRLab, and observe whether the "Enable Status" in the gantry status changes to "Enabled". When the status switches to "Enabled", the gantry can be controlled. Click "Disable" to disable the gantry.
+
+Motion Speed: Set the speed at which the gantry moves.
+
+Target Position: The target position to which the gantry will move. You can refer to the current position in the "Gantry Status" for setting.
+
+Start Motion: Click to start the gantry movement.
+
+Stop Motion: Click to stop the gantry movement.
+
+Return to Zero: Click to set the current position as the zero point of the gantry.
+
+Clear Fault: If a fault occurs in the gantry, the fault monitoring in the "Gantry Status" will switch to "Abnormal". In this case, click this button. After the fault is cleared, normal use can resume.
+
+Step 3: After successful import, click the "Calibrate" button to enter the "Gantry Extended Axis Calibration" pop-up window. Place the checkerboard according to the instructions in the pop-up window, and take calibration photos as guided by the prompts at the bottom. After all calibration photos have been taken, click the "Calculate" button to complete the gantry calibration, as shown in the figure below.
+
+.. figure:: analysis/4/gantry5.png
+	:align: center
+	:width: 6in
+
+	Gantry Extended Axis Calibration
+
+Master Station Builds Global Map
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After successful calibration of the LiDAR and gantry frame, open "Welding" → "Welding Feature Parameter Configuration" from the menu bar, and select "SLAM Mapping". For detailed operation steps, please refer to section 3.7.26 of this manual.
+
+After the welding features are successfully sent, start creating the model construction program. The method is the same as that for creating a model construction program in stand-alone mode, except that the teaching robot points are replaced by teaching gantry extended axis points.
+
+After the program is successfully created, click "Run Program" in the model construction menu bar. Once the program runs successfully, the globally constructed map and weld seam data will be obtained, as shown in the figure below.
+
+.. important::
+	The master station cannot edit weld seams; it can only view the weld seam editing status. All weld seams can only be edited in the slave stations.
+
+.. figure:: analysis/4/gantry6.png
+	:align: center
+	:width: 6in
+
+	Global map and weld seam data
+
+Slave Station Performs Welding
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Start AIRLab on the slave station and create a new welding project. Open the "Software Mode Settings" pop-up window, set it to "Slave Station", and then import the robot, tool, and extended axis (if any).
+
+.. important::
+	When creating a new welding project on the slave station, no welding feature parameters need to be selected or used.
+
+Enter the "Model Building" module and click "Get Global Map" in the menu bar options to retrieve the global map and weld seam data constructed by the master station, as shown in the figure below.
+
+.. figure:: analysis/4/gantry7.png
+	:align: center
+	:width: 3.5in
+
+	Slave station acquires global map
+
+Enter the "Weld Seam Editing" module and click "Get Global Weld Seams" in the menu bar to retrieve the weld seam data constructed by the master station's model. Click "Local Station" below the weld seam list to return to the weld seam editing list, or click "Global" to view the editing status of all weld seams, as shown in the figure below.
+
+.. figure:: analysis/4/gantry8.png
+	:align: center
+	:width: 3.5in
+
+	Get global weld seams
+
+.. figure:: analysis/4/gantry9.png
+	:align: center
+	:width: 6in
+
+	Global weld seams acquired by the slave station
+
+.. important:: 
+	Weld seams edited by the local station will be marked with a green circle, unedited weld seams will be marked with a blue circle, and weld seams edited by other slave stations will be marked with a purple circle.
+
+When a slave station performs weld seam editing, the method is the same as in stand-alone mode: first add the weld seam, then edit the weld seam parameters. After completing weld seam editing on the slave station, click "Upload Local Station Weld Seams" to push the latest weld seam editing status to the master station. Afterwards, follow the same process as in stand-alone mode to perform workpiece positioning, fine positioning, and program execution.
+
 Pop-Ups and Other Pages
 --------------------------
 This section describes the AIRLab software pop-ups and other pages, pop-ups including about pop-ups, log pop-ups, software upgrade pop-ups, virtual camera pop-ups, global settings pop-ups, weld process query pop-ups, clearing the gun shear pop-ups, weld data calculation and collection of pop-ups and so on; Other pages including other control, simulation, debugging page, program configuration and multi-language settings.
@@ -1316,7 +1433,6 @@ When "About" is selected, clicking the button will display the current version a
 	:width: 3in
 
 	AIRLab version information and release date display
-
 
 Log
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1791,7 +1907,7 @@ Delete: Select "Delete", choose a cylindrical filling process name, and then cli
 
 Welding seam edit pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click the ”weld sem” module. After adding a weld seam, click the edit icon—this will bring up the Weld Seam Editing pop-up window in the 3D scene, as shown in the figure. Below is an introduction to all editing items:
+Click the "weld seme" module. After adding a weld seam, click the edit icon—this will bring up the Weld Seam Editing pop-up window in the 3D scene, as shown in the figure. Below is an introduction to all editing items:
 
 .. figure:: analysis/4/83.png
 	:align: center
@@ -1855,6 +1971,32 @@ For weld seams that require binding to a welding process:
 
 (2)Select the type of welding process to bind and the specific welding process (parameters, procedures, etc.).
 
+Weld Seam Inference Function
+
+Use Cases:1. The camera interferes with the workpiece, fixture, or environment, resulting in incomplete point cloud data.2. The weld seam features of the workpiece are not obvious or local features are missing, making some weld seams unable to be effectively recognized.
+
+Usage Method:When editing the weld seam, turn on this function button. During fine positioning, there is no need to take photos of the weld seam again.
+
+Precautions:
+
+1. It must be ensured that there are more than two non-collinear straight weld seams in the weld seam editing list that have been recognized.
+
+2. If the number of inferred weld seams exceeds half of the total number of edited weld seams (i.e., the inference ratio is too large), welding accuracy may be affected.
+
+3. The Lua trajectory of an inferred weld seam is purple, while that of a recognized weld seam is red. In addition, in the generated Lua program nodes and points, all inferred weld seams will contain the "_Inference" identifier, as shown in the figure below.
+
+.. figure:: analysis/4/Inferen1.png
+	:align: center
+	:width: 6in
+
+	Enable Weld Seam Inference Function
+
+.. figure:: analysis/4/Inferen2.png
+	:align: center
+	:width: 6in
+
+	Recognized weld seam (red) and inferred weld seam (purple) Lua program and trajectory
+
 For the editing of spline curve weld seams, when setting points and angles, you can choose the setting method as either overall setting or setting for a specific point:
 
 - If you select "Overall Setting", the configured point offset and welding posture will apply to all points of the weld seam. 
@@ -1868,8 +2010,6 @@ Other editing items are the same as those for straight + arc weld seams.
 	:width: 6in
 
 	spline curve weld seams edit
-
-
 
 Welding data calculation and collection pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3197,3 +3337,13 @@ Change the control mode of the servo to Speed Mode, click the Enable status butt
 	:width: 6in
 
 	Servo Stop and Emergency Stop Speed Setting
+
+Software Mode Settings
+~~~~~~~~~~~~~~~~~~~~~~~~
+Currently, AIRLab provides three modes: Standalone, Master Station, and Slave Station. Standalone is the default mode, while Master Station and Slave Station are used for gantry welding. In the AIRLab menu bar, click "Welding (W)" → "Software Mode Settings", as shown in the figure below.
+
+.. figure:: analysis/4/software_model.png
+	:align: center
+	:width: 3in
+
+	Software Mode Settings

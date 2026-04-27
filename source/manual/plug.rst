@@ -12,7 +12,7 @@ Click on Plugins → Plugin Authorization to view the unique identifier of AIRLa
 
 .. figure:: analysis/4/plugin_authr_en.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
 	Plugin Authorization Page
 
@@ -215,7 +215,7 @@ Reset: Click the Reset button—the grasping counter will be set to 0. The next 
 	Automatic operation mode
 
 Overall operation process
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 1. Camera calibration
 
 Prior to performing grasping operations, camera calibration must be completed. Select the appropriate calibration mode based on your system configuration:
@@ -291,3 +291,130 @@ Similar to fixed placement, first determine the target types for the current tas
 3. Run AIRLab software
    
 Start AIRLab software with one click (make sure the robot arm is connected and the visual node is successfully started), open the binpicking plug-in, Perform initial setup first, and after successful initial setup, perform location binding,and then run the program.
+
+Palletizing Plugin
+---------------------
+The palletizing plugin enables automatic object recognition and grasping, as well as automatic placement according to a preset stacking pattern. Click "Plugins - Open Palletizing Plugin" in the menu bar. The main scene will then be divided into two display areas: 3D and 2D, and the Palletizing window will pop up simultaneously. The 3D scene is used to display the robot's motion process, motion trajectories, and simulation models, while the 2D scene is used to display the RGB image of the workpiece and the bounding boxes identified.
+
+.. figure:: plug/palletizing1.png
+	:align: center
+	:width: 6in
+
+	Opening the Palletizing Plugin
+
+AI Node Connection
+~~~~~~~~~~~~~~~~~~~~~~
+Before starting the cyclic palletizing process, ensure that the AI node is turned on and initialized successfully, as shown in the figure:
+
+.. figure:: plug/palletizing3.png
+	:align: center
+	:width: 5in
+
+	Opening the Palletizing Plugin
+
+Pallet Identification and Positioning
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In the AIRLab software, first import the robot and tool models. Then, paste a QR code at the position of the first item to be palletized on the pallet to determine the pallet coordinate system and its initial position. Next, teach the robot the photographing point for the pallet (this point must be located directly above the QR code to ensure a clear image for AI recognition).
+
+After that, click "Palletizing - Pallet Position Settings," select the taught photographing point, and click the "Photograph" button. The robot will automatically move to that point to take a photo and perform AI recognition. Once recognition is complete, the 3D scene will display the identified pallet coordinates, and the pallet workpiece will be automatically imported into the 3D scene.
+
+.. important::
+	There is an error in the recognized pallet coordinates. Please confirm whether the RX, RY, and RZ values of the coordinate system are normal to ensure that the pallet is parallel to the ground.
+
+.. figure:: plug/palletizing2.png
+	:align: center
+	:width: 6in
+
+	Pallet Identification and Positioning
+
+After successful pallet recognition and positioning, set the pallet dimensions and shelf dimensions, and click the confirm button to confirm.
+
+Pallet Stacking Pattern Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Open "Palletizing - Palletized Item Dimensions and Arrangement Settings," set the dimensions of the palletized items and the stacking spacing, and click the "Confirm" button. The software will then automatically calculate the stacking pattern parameters (maximum number of rows and columns on the pallet) based on the pallet dimensions and the dimensions of the palletized items.
+
+.. figure:: plug/palletizing4.png
+	:align: center
+	:width: 6in
+
+	Palletized Item Dimension Settings
+
+The stacking pattern parameters can be modified. If a value greater than the maximum number of rows or columns is set, the software will display an error message. Click the "Confirm" button to finalize the stacking pattern parameters.
+
+Program Operation Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After presetting the stacking pattern parameters, configure the automatic palletizing operation settings, including end-effector settings, speed settings, and photographing point settings.
+
+1. End-Effector Settings
+
+Select the end-effector and bind the port (only pneumatic grippers are currently supported), then click "Confirm."
+
+.. figure:: plug/palletizing5.png
+	:align: center
+	:width: 4in
+
+	End-Effector Settings
+
+2. Speed Settings
+
+Set the program's idle movement speed and grasping speed, where:
+
+Idle movement speed: Used to set the speed during transition points and when moving to the pre-grasp position during palletizing tasks.
+
+Grasping speed: The speed from the pre-grasp position to the grasp position.
+
+.. figure:: plug/palletizing6.png
+	:align: center
+	:width: 4in
+
+	Speed Settings
+
+After completing the settings, click the "Confirm" button.
+
+3. Photographing Point Settings
+
+It is necessary to bind the photographing points for the divider, the palletized object, and the waiting placement point, where:
+
+- Divider photographing point: Used to photograph and recognize the divider. It is recommended to set this point above the lower-left corner of the divider to ensure a clear image for recognition.
+
+- Palletized object photographing point: Used to photograph and recognize the palletized object. It is recommended to set this point above the grasp position to ensure the object to be grasped is fully captured.
+
+- Waiting placement point: Serves as a transition point between the grasp position and the placement position. It is recommended to set this point midway between the grasp and placement positions, with minimal changes in posture compared to the grasp and placement points.
+
+.. figure:: plug/palletizing7.png
+	:align: center
+	:width: 4in
+
+	Photographing Point Settings
+
+After completing the settings, click the "Confirm" button.
+
+Palletizing Program Execution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. After completing pallet identification, stacking pattern configuration, and operation settings, proceed to execute the palletizing program.
+
+Open "Palletizing - Palletizing Program Execution" and click the "Start Palletizing" button.
+
+.. figure:: plug/palletizing8.png
+	:align: center
+	:width: 4in
+
+	Palletizing Program Execution Settings
+
+The program will automatically run according to the preset stacking pattern. The robot will first move to a transition point, then from the transition point to the palletized object photographing point for recognition. After successful recognition, the robot's grasping trajectory will be generated in the 3D scene, and the robot will follow the trajectory to complete the grasping and placement.
+
+.. figure:: plug/palletizing9.png
+	:align: center
+	:width: 6in
+
+	Generating the Palletizing Trajectory
+
+After completing one layer of stacking, the robot will move to the divider photographing point to photograph and recognize the divider, then place the divider on top of the palletized items of that layer. It will then proceed to the next cycle of recognition and stacking until all layers are completed according to the preset stacking pattern.
+
+.. figure:: plug/palletizing10.png
+	:align: center
+	:width: 4in
+
+	Palletizing Completed
+
+2. Click the "Stop" button to terminate the currently executing palletizing task.
