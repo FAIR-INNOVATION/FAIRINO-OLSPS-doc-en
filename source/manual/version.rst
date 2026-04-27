@@ -5,6 +5,8 @@ Date：2026-04-27
 .. toctree:: 
     :maxdepth: 5
 
+.. important::
+    When updating to AIRLab V1.4.0, please first update the prerequisite update package for V1.4.0 available in the download link. The update method for the prerequisite package is the same as a standard software upgrade. After the prerequisite update package has been successfully upgraded, please proceed to update the official V1.4.0 package.
 
 - Added AIRLab Gantry Welding System Functionality;
     Path: AIRLab Software Analysis -> AIRLab Gantry Welding System
@@ -31,3 +33,8 @@ Date：2026-04-27
     Path: Preamble -> Environmental Requirements
     
     Description: Compatible with the latest version 3.9.5 of the controller software.
+
+- Optimized Automatic loop operation
+    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Automatic loop operation
+    
+    Description: This update optimizes the node content image of the workpiece positioning program in the automatic cycle operation function, making the node structure clearer and easier for users to understand and debug.
