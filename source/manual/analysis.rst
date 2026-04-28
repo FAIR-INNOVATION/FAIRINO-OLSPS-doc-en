@@ -2222,11 +2222,7 @@ Located in the Data folder under the executable file directory:
 
 Located in the data folder under the main directory:
 
-- The output folder (for models)  
-
-- The register_model folder (for auto-saved model files)  
-
-- The weld_seam_database folder (for weld seam databases)  
+- The output folder (for models)   
 
 If the data backup and restoration type is "Single Template Data", you need to first open the template project in AIRLab, then click the "Export" button. AIRLab will package and compress the template and its dependent files, and place the output compressed file in the /Downloads directory of the main folder. The file name is the workpiece name with the .tar.gz extension, such as ZH-401-01-A.tar.gz. Similarly, AIRLab will write the version of the current single template data package into the single_version.txt document within the package for version matching verification.
 
