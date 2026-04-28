@@ -109,7 +109,7 @@ Plugin
 ~~~~~~~~~~~~~~~~~~~
 To enhance the scalability and user experience of the AIRLab software, AIRLab provides a plug-in module that allows users to develop customized plug-ins according to their requirements. These plug-ins can be loaded into AIRLab via dynamic library files (.so) to extend and enhance the software functions.
 
-The existing plug-ins consist of five functional modules: the welding plug-in, bin picking plug-in.Users can enable or disable each plug-in as needed. Meanwhile, Plug-in Authorization enables users to check the authorization status of all plug-ins and complete authorization activation. For detailed introductions and specific operating procedures of each plug-in, refer to the plug-in section in Chapter 4.
+The existing plug-ins consist of five functional modules: the welding plug-in, bin-picking plug-in.Users can enable or disable each plug-in as needed. Meanwhile, Plug-in Authorization enables users to check the authorization status of all plug-ins and complete authorization activation. For detailed introductions and specific operating procedures of each plug-in, refer to the plug-in section in Chapter 4.
 
 .. figure:: analysis/4/plugin_menu_en.png
 	:align: center
@@ -121,7 +121,7 @@ Weld
 ~~~~~~~~~~~~~~~~~~~
 Under the main Welding function, the secondary options include:Welding Program Configuration, Welding Data Acquisition, Global Settings, Torch Cleaning & Wire Cutting, Automatic Cycle Operation, User Data Backup, 3D File Parsing, MultiStation Automatic Operation, Wire Stickout Compensation, Welding Feature Parameter Configuration, and Welder Configuration.
 
-Click any option, and AIRLab will pop up the corresponding welding function setting window.For detailed descriptions and operating procedures of each function, refer to the popup introduction in Section 3.6.
+Click any option, and AIRLab will pop up the corresponding welding function setting window.For detailed descriptions and operating procedures of each function, refer to the pop-up introduction in Section 3.6.
 
 .. figure:: analysis/4/weld.png
 	:align: center
@@ -2825,15 +2825,13 @@ For workpieces with non-spline features, it is necessary to select planar featur
 
 After completing planar feature selection, click the Next button in above Figures to enter the Cylinder and Cone Feature Selection page, as shown in the figure below.
 
-For the three features: Short Cylinder, Tall Cylinder, and Coexisting Short & Tall Cylinders, you need to actually measure the cylinder radius and enter the maximum radius and minimum radius values in the text boxes.
-
 If the current workpiece does not involve cylinder or cone features, click Deselect and then click Next.If no cylinder or cone features have been selected, you may click Next directly.
 
-.. figure:: analysis/4/short_cylinder.png
+.. figure:: analysis/4/tall_cylinder.png
 	:align: center
 	:width: 6in
 
-	Cylinder & Cone Features – Select Short Cylinder Feature
+	Cylinder & Cone Features – Select tall Cylinder Feature
 
 .. figure:: analysis/4/cancle_cylinder.png
 	:align: center

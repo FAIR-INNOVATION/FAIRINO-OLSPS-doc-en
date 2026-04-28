@@ -6,7 +6,7 @@ Plug-in
 
 This chapter mainly introduces plugin authorization and the functionalities as well as specific operational procedures of each plugin.
 
-binpicking  Plugin Authorization
+bin-picking  Plugin Authorization
 --------------------------------------
 Click on Plugins → Plugin Authorization to view the unique identifier of AIRLab and the authorization status of each plugin.
 
@@ -50,14 +50,14 @@ If an error occurs during the authorization process, the procedure will automati
 
 	Authorization Failed
 
-binpicking
+bin-picking
 -------------------
 
-The bin Picking plug-in module realizes the function of automatic object grasping. Click Plugin - Bin Picking in the menu bar; the main scene will be divided into a 3D scene and a 2D display scene, and a Bin Picking pop-up window will appear. The 3D scene displays the robot movement process, while the 2D display scene shows the RGB image of the workpiece and the bounding box of the identified workpiece.
+The bin-picking plug-in module realizes the function of automatic object grasping. Click Plugin - bin-picking in the menu bar; the main scene will be divided into a 3D scene and a 2D display scene, and a bin-picking pop-up window will appear. The 3D scene displays the robot movement process, while the 2D display scene shows the RGB image of the workpiece and the bounding box of the identified workpiece.
 
-Create a binpicking project
+Create a bin-picking project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click on the menu bar - File, select the file type as binpicking, then click "New" or open a binpicking project file; afterward, import the required tool workpiece.
+Click on the menu bar - File, select the file type as bin-picking, then click "New" or open a bin-picking project file; afterward, import the required tool workpiece.
 
 .. figure:: plug/binpicking_new_project_en.png
 	:align: center
@@ -72,9 +72,9 @@ UI interface introduction
 	:align: center
 	:width: 3in
 
-	binpicking pop-up window
+	bin-picking pop-up window
 
-After importing the Bin Picking project, click Plugin - Bin Picking in the menu bar to open the Bin Picking pop-up window, as shown in Figure 4-7. The pop-up window is divided into four parts: Initial Settings, Position Binding, Grasping Position Error Compensation, and Program Operation. The overall interface usage process is as follows:
+After importing the bin-picking project, click Plugin - bin-picking in the menu bar to open the bin-picking pop-up window, as shown in Figure 4-7. The pop-up window is divided into four parts: Initial Settings, Position Binding, Grasping Position Error Compensation, and Program Operation. The overall interface usage process is as follows:
 
 1. Perform Initial Settings First
 
@@ -290,7 +290,7 @@ Similar to fixed placement, first determine the target types for the current tas
 
 3. Run AIRLab software
    
-Start AIRLab software with one click (make sure the robot arm is connected and the visual node is successfully started), open the binpicking plug-in, Perform initial setup first, and after successful initial setup, perform location binding,and then run the program.
+Start AIRLab software with one click (make sure the robot arm is connected and the visual node is successfully started), open the bin-picking plug-in, Perform initial setup first, and after successful initial setup, perform location binding,and then run the program.
 
 Palletizing Plugin
 ---------------------
