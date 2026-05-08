@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'AIRLab Software Customer Manual'
-copyright = '2024, FAIR Innovation (Suzhou) Robotic System Co.,Ltd.. Revision'
-author = 'FAIR Innovation (Suzhou) Robotic System Co.,Ltd.. Revision'
-release = '1.0'
+copyright = '2024-2026, Fairino (Suzhou) Robot Technology Co.,Ltd.'
+author = 'Fairino (Suzhou) Robot Technology Co.,Ltd.'
+release = '1.4.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
