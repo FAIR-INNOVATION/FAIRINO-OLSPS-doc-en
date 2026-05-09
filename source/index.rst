@@ -6,6 +6,10 @@
 Welcome to the AIRLab Software Customer Manual
 ===============================================
 
+Language Switching
+
+   \ `简体中文 <https://fairino-olsps.readthedocs.io/zh-cn/latest/>`__\
+
 .. toctree::
    :maxdepth: 5
    :caption: User Manual
