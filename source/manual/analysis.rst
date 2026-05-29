@@ -109,7 +109,7 @@ Plugin
 ~~~~~~~~~~~~~~~~~~~
 To enhance the scalability and user experience of the AIRLab software, AIRLab provides a plug-in module that allows users to develop customized plug-ins according to their requirements. These plug-ins can be loaded into AIRLab via dynamic library files (.so) to extend and enhance the software functions.
 
-The existing plug-ins consist of five functional modules: the welding plug-in, bin-picking plug-in.Users can enable or disable each plug-in as needed. Meanwhile, Plug-in Authorization enables users to check the authorization status of all plug-ins and complete authorization activation. For detailed introductions and specific operating procedures of each plug-in, refer to the plug-in section in Chapter 4.
+The existing plugins include the Welding plugin, Bin-picking plugin, Smart Assistant plugin, and Palletizing plugin. You can choose to enable or disable plugins. Additionally, you can view the authorization status of each plugin and perform authorization via "Plugin Authorization". For detailed introductions and specific operations of each plugin, please refer to Chapter 4, Plugin Section.
 
 .. figure:: analysis/4/plugin_menu_en.png
 	:align: center
@@ -119,15 +119,13 @@ The existing plug-ins consist of five functional modules: the welding plug-in, b
 
 Weld
 ~~~~~~~~~~~~~~~~~~~
-Under the main Welding function, the secondary options include:Welding Program Configuration, Welding Data Acquisition, Global Settings, Torch Cleaning & Wire Cutting, Automatic Cycle Operation, User Data Backup, 3D File Parsing, MultiStation Automatic Operation, Wire Stickout Compensation, Welding Feature Parameter Configuration, and Welder Configuration.
-
-Click any option, and AIRLab will pop up the corresponding welding function setting window.For detailed descriptions and operating procedures of each function, refer to the pop-up introduction in Section 3.6.
+Under the main "Welding" function, there are secondary options for implementing different functions. After selecting and clicking an option, AIRLab will pop up the corresponding welding function settings window. For detailed descriptions and operation methods of each function, please refer to the pop-up window introductions in Section 3.6.
 
 .. figure:: analysis/4/weld.png
 	:align: center
 	:width: 3in
 
-	AIRLab-Plugin
+	AILRab-Weld
 
 Process
 ~~~~~~~~~~~~~~~~~~~
@@ -492,63 +490,57 @@ The usage methods and detailed descriptions of the configuration for both method
 
 Delete Extended Axis: Click “Delete Extended Axis” in the Extended Axis Settings page to delete the extended axis imported in the current 3D scene.
 
-- Connect Camera: Click the Camera button, and a "Camera Settings" pop-up window will appear in the 3D scene. The camera settings pop-up is divided into three sections: Camera Configuration, Device Information, and Device Debugging.
+- Import Camera: Select the camera, and the AIRLab interface will display the camera settings page. The camera settings page is divided into three sections: Device Information, Parameter Configuration, and Device Debugging.
 
-Click the “Search Devices”, AIRLab will search for connected cameras and automatically connect them. If the connection is successful, the interface will be as shown in the figure Figure below; If the connection fails, it will be displayed as not connected in the connection status column, and there will be no camera related parameters.
-
-.. figure:: analysis/4/40.png
+.. figure:: analysis/4/cameta_info.png
 	:align: center
 	:width: 3in
 
-	Camera settings page
+	Camera Device Information Page
+	
+- Device Information: Go to Camera Settings -&gt; Device Information. The page displays the camera name, IP address, connection status, and camera model of the connected camera. Under normal usage, the connection status shows "Connected". If the connection status shows "Disconnected", please click the "Connect" button to reconnect.
 
-After successful camera connection:Click "Get Parameters" to retrieve the current camera configuration settings. If need to modify the desired parameters, click "Set Parameters" will successfully update them.The follow descriptions are parameter descriptions:
 
-Structured Light Exposure Time:Increase when images are too dark in structured light mode;Decrease when images are overexposed.
+After the camera is successfully connected, if you need to view the camera's current parameter configuration, click "Parameter Configuration" to open the parameter configuration page. By default, only two general parameters, Shooting Mode and Exposure Time, are displayed. The parameter values shown on the page are the parameters currently used by the camera.
 
-Line Scan Time:Increase when reflective workpieces cause hollow artifacts in imaging.
+- Shooting Mode: Divided into two modes: Structured Light and Line Scan. If the workpiece is highly reflective, Line Scan mode is recommended.
+- Exposure Time: When the image is too dark, increase the exposure time; when the image is too bright, decrease the exposure time.
 
-Line Scan Exposure Time:Increase when images are too dark in line scan mode; Decrease when images are overexposed.
+For special scenarios, such as highly reflective workpieces, the parameter configuration page provides advanced parameter settings for adjustment. Click the "Open Advanced Parameters" button to expand the list of advanced parameters, as shown in the figure. The adjustable range for each parameter is displayed after the parameter name; please follow the prompts to set them.
 
-Brightness Level:Increase when images are too dark to see details;Decrease when images appear washed out.
+After setting the parameters, click the "Set Parameters" button below to complete the advanced parameter settings. If you need to restore the default parameters, click the "Restore Default Parameters" button. The meanings of each parameter are as follows:
 
-Protective Shield:Welding protection cover prevents spark/spatter during welding; Enabled by default during imaging.
+- High Reflection Suppression – Exposure Gain: The stronger the workpiece reflection, the lower the gain value should be set.
+- High Reflection Suppression – Brightness Threshold: Controls the effective image area used for calculation. The larger the value, the fewer effective points and the faster the calculation; the smaller the value, the more effective points and the richer the details. (Used only in Line Scan mode)
+- Noise Filtering – Speckle Filter Threshold: Used to filter out isolated noise point areas with minimal area. The larger the value, the stronger the noise removal and the cleaner the data; the smaller the value, the richer the details, but noise increases accordingly. (Used only in Line Scan mode)
+- Noise Filtering – Filter Parameter: Controls the number of times edge noise filtering is performed. The larger the value, the less noise, but the sparser the data; the smaller the value, the more details are retained. (Used only in Line Scan mode)
+- Surface Quality – Smoothing Coefficient: Removes false data at edges. The larger the coefficient, the more false data is removed, but edge loss becomes more severe. It is recommended to use the default value; modify with caution. (Used only in Line Scan mode)
+- Surface Quality – Connectivity Threshold: Used to determine whether adjacent points belong to the same continuous region. The larger the value, the easier it is to form continuous regions; the smaller the value, the stricter the connectivity judgment and the more prone to discontinuities. (Used only in Line Scan mode)
+- Edge Quality – Edge Filter Threshold: Used to filter depth image regions (edges or outliers). The larger the value, the stronger the edge removal and the fewer details retained; the smaller the value, the weaker the edge removal and the more details retained. (Used only in Line Scan mode)
 
-Device Information:Click "Device Info" to view connected camera details (name, model, connection status, etc.) as shown in the follow figure.
+Parameter Tuning Suggestions:
+
+- Excessive point cloud noise: Increase the Speckle Filter Threshold, increase the Edge Parameter, decrease the Connectivity Threshold, decrease the Edge Filter Threshold.
+- Sparse data: Increase the Connectivity Threshold, decrease the Speckle Filter Threshold, decrease the Brightness Threshold.
+- Missing or broken edges: Increase the Edge Filter Threshold, decrease the Filter Parameter.
 
 .. figure:: analysis/4/camera_info_en.png
 	:align: center
 	:width: 3in
 
-	Camera Infomation
+	Camera Parameter Configuration Page
 
-Device Debugging:Click "Device Debugging" to access camera calibration functions, including:Aging Debug,Single Capture,Save Point Cloud.
+If you need to use the "Camera Calibration" and "Ground Segmentation" functions, click "Device Debugging" to enter the device debugging page. The functions of each button are described as follows:
 
-.. figure:: analysis/4/42.png
+- Hand-Eye Calibration: Perform eye-in-hand or eye-to-hand calibration for the camera, and calculate the hand-eye calibration matrix. For detailed operations, see Section 2.5, "Point Cloud Camera Hand-Eye Calibration."
+- Capture Ground: Control the camera to aim at the plane where the workpiece is located, then click the button to complete ground capture.
+- Ground Effect Verification: Perform visual verification of the captured and calculated ground plane. For detailed operations, see Section 2.6, "Ground Plane Acquisition and Verification."
+
+.. figure:: analysis/4/camera_debug.png
 	:align: center
 	:width: 3in
 
-	Camera Debugging
-
-Filter distance threshold:When the image contains excessive noise, increase the threshold; when preserving fine edges is required, decrease the threshold.
-
-Below are detailed function descriptions:
-
-Aging Debug:Click the "Aging Debug" button to initiate continuous camera testing - the camera will automatically capture images at regular intervals. Click again to stop. Results display in the Main Display Panel - Camera View.
-
-Single Capture:Takes one image at the current position. Results show in the Main Display Panel - Camera View with two display modes.And the raw Point Cloud is the direct camera output;Base Coordinate Point Cloud is the point cloud converted to robot base coordinates.Toggle between views as needed.
-
-Save Point Cloud:After single capture,Click "Save Point Cloud",Select output path to save point cloud data.
-
-Save Image:After single capture,Click "Save Image",Select output path to save 2D image.
-
-Camera Calibration:Include Calibration and verification.Refer to Section 2.5 "Point Cloud Camera Hand-Eye Calibration" for detailed procedures.
-
-Capture Ground: Control the camera to align with the plane where the workpiece is located, then click the button to complete ground plane acquisition.
-
-Obtain Ground Plane Equation: After "Capture Ground", click to obtain the ground plane equation.
-
-Ground Effect Verification: Perform visual verification of the captured and calculated ground plane. For detailed operations, please refer to Section 2.6, "Ground Plane Acquisition and Verification".
+	Camera Device Debugging
 
 SLAM mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -572,7 +564,7 @@ Fixed Scan: The camera moves to the central position and remains stationary; rea
 
 Step 2: Start SLAM Mapping
 
-Click the SLAM Mapping Supplementary Image Capture tab. You can either manually move the robot to the first position and click the First Capture button, or select a pre-recorded position and click Move to This Position (Note: No collision will occur during the robot s position movement), then click First Capture after the robot reaches the position.
+Start SLAM mapping. Click the "SLAM Mapping Scan" header, then directly drag the robot to the first point, and click the "First Scan" button.
 
 After the first capture, continue moving the robot to the next position and click the Scan button. The button will be hidden until the scan is completed and reappear automatically after the scan ends. Repeat the robot movement + scan operation until the SLAM mapping scan of the workpiece is finished. After all scans are completed, click the Rebuild SLAM Map button—the generated model will be displayed in the 3D scene on the main AIRLab interface.
 
@@ -586,36 +578,16 @@ Step 3: Perform Supplementary Scanning
 
 If the obtained SLAM map is incomplete, supplementary scanning and reconstruction are required. Click the Supplementary Scan Initialization button under the SLAM Mapping Supplementary Image Capture tab (there is no need to click the First Capture button again). Move the robot to the incomplete area of the model and click the Scan button. After all supplementary scans are completed, click Rebuild SLAM Map to obtain the reconstructed model.
 
-Step 4: SLAM Parametric Modeling (Model Completion)
+Step 4: SLAM Parametric Modeling to complete the model. 
 
-Click the SLAM Parametric Modeling tab, as shown in Figure below.. Click the Start Point Selection button to enable the selectable attribute of points on the model. You can set the point size in the Weld Seam Endpoint Scaling Factor field, then select four points as prompted.
-
-The four selected points will form a thin surface—set the Thickness, Direction, and Expansion Thickness according to the actual workpiece structure. After completing the settings, click Set Attributes, then click Model to finish modeling the solid. Repeat the above steps to model other solids. After all modeling is completed, click End Point Selection to restore the points on the model to the non-selectable attribute.
-
-.. important::
-	Selected points will turn yellow. Before all four points are selected, re-clicking a selected point will deselect it. If the generated solid is incorrect after selecting the four points, click Delete to clear the selected solid and reselect the points.
+Click "Welding (W)" -&gt; "Collision Model Parametric Completion". For detailed steps, please follow the instructions in Section 3.7.30 of this manual..
 
 .. figure:: analysis/4/slam3.png
 	:align: center
 	:width: 6in
 
-	SLAM Parametric Modeling
-
-Key Parameter Explanations:
-
-Show All Solids: Displays all modeled solids in the 3D scene of the interface.
-
-Hide All Solids: Hides all modeled solids from the 3D scene.
-
-Thickness: The thickness of the thin surface formed by the four points; the thin surface will be thickened along the Z-axis after setting.
-
-Direction: Divided into Positive and Negative—select according to the actual workpiece structure and the thickening direction of the model in the 3D scene.
-
-Expansion Thickness: If the edge of the thin surface formed by the four points is inconsistent with the actual workpiece structure, set the expansion thickness—the thin surface will expand outward with the center point of the surface as the reference.
-
-.. important::
-	The modeling of solids will affect the effect of the obstacle avoidance function in subsequent steps. Ensure that the solids are as consistent as possible with the actual workpiece structure.
-
+	Parametric Completion
+	
 Step 5: SLAM Mapping Result Accuracy Verification
 
 Verify whether the accuracy of the SLAM mapping result meets the requirements, as shown in the figure. After the SLAM map is successfully obtained, click Start Verification. Move the robot to a diagonal position of the workpiece and click Verification Capture to take a photo of a three-surface structure on the workpiece.
@@ -628,39 +600,17 @@ After the first photo is taken successfully, move the robot to the opposite diag
 
 	SLAM Mapping Result Accuracy Verification
 
-Step 6: Calculation Rule Configuration Parameter Settings
+Step 6: Step 6: Parameter Settings for Calculation Rule Configuration.
 
-Open the Global Settings pop-up window to set the following parameters:
+Open the "Welding (W)" -> "Pose Calculation Strategy Settings" pop-up window. Set the parameters in "Collision Detection and Obstacle Avoidance Planning Rule Configuration", the parameters in the Welding Torch Pose Calculation Rule Configuration, and the camera parameters in the Camera Pose Calculation Rule Configuration. As shown in the figure below. For detailed introduction, please read the detailed content in the "Pose Calculation Strategy Settings" section of this manual.
 
-1. The Idle Movement Threshold (recommended value: 5 mm) in Self-Collision Detection;
+.. figure:: analysis/4/slam_pose_str.png
+	:align: center
+	:width: 6in
 
-2. Parameters in Welding Torch Pose Calculation Rule Configuration;
-
-3. Camera parameters in Image Capture Pose Calculation Rule Configuration.
-
-As shown in Figures below. For detailed descriptions, refer to Section 3.6.8 Global Settings in this manual.
-
+	Pose Calculation Strategy Settings
+	
 If an extended axis is imported, it is also necessary to set the Distance between Extended Axis Zero Point and Actual Zero Point on the right interface of AIRLab.
-
-Setting Method: Move the robot to the set extended axis zero point, then move the robot to the outermost position of the extended axis as far as possible, and set the moving distance (absolute value) as the Distance between Extended Axis Zero Point and Actual Zero Point.
-
-.. figure:: analysis/4/slam5.png
-	:align: center
-	:width: 6in
-
-	Welding Self-Collision Detection Rule Configuration
-
-.. figure:: analysis/4/slam6.png
-	:align: center
-	:width: 6in
-
-	Welding Torch Pose Calculation Rule Configuration
-
-.. figure:: analysis/4/slam7.png
-	:align: center
-	:width: 6in
-
-	Image Capture Pose Calculation Rule Configuration
 
 Step 7: Weld Seam Selection
 
@@ -673,6 +623,8 @@ Filter Parameter Explanations:
 
 Enable Filtering: When enabled, AIRLab will further filter the algorithm-recommended welding poses and output the optimal result; when disabled, AIRLab will directly output the first algorithm-recommended welding pose without filtering. It is recommended to enable this function.
 
+Segment Type: Only applicable for arc weld seams, divided into three types: No Segmentation, First Half, and Second Half.
+
 Reference Weld Seam Number for Calculation: Includes Reference Current Position and Reference Added Weld Seams. Reference Current Position means the robot s current joints will be referenced for welding pose filtering; Reference Added Weld Seams means AIRLab will reference the safety points of the specified weld seams for filtering the current weld seam s welding pose.
 
 Enable Reachability Filtering: Filters the reachability of the robot s Move L motion from the start point to the end point of the weld seam. It is recommended to enable this function.
@@ -683,6 +635,8 @@ Enable Joint Pose Filtering: Prevents collisions or inaccessibility caused by la
 	After the joint filter parameters for the first weld seam are determined, the remaining weld seams must use the same parameters as the first one.
 
 Enable Collision Detection Filtering: Prevents collisions between the recommended welding pose and the workpiece or the robot itself. It is recommended to enable this function.
+
+If external axes are used, it is necessary to set the external axis positions for the start point, end point, and safe point/intermediate point.
 
 Extended Axis Position at Start Point: The position of the robot on the extended axis when it reaches the start point of the weld seam.
 
@@ -698,7 +652,7 @@ Extended Axis Position at Safety Point: The position of the robot on the extende
 
 Step 8: Set SLAM Image Capture Pose Filter Conditions
 
-After completing the weld seam addition, enter the Fine Positioning module and click the Fine Positioning tab to display the menu as shown in the figure. Select and click Set SLAM Image Capture Pose Filter Conditions to open the Image Capture Pose Filter Settings pop-up window, as shown in Figures below.. Click Confirm after completing the parameter settings.
+After completing the addition of weld seams, enter the "Fine Positioning" module, click the "Fine Positioning" header, and the menu shown in the figure below will appear. Select and click "Set Automatic Camera Pose Screening Strategy". A pop-up window titled "Shooting Pose Screening Settings" will appear, as shown in the figure below. After setting the parameters, click the "Confirm" button.
 
 Filter Parameter Explanations:
 
@@ -759,13 +713,9 @@ For the capture positions that failed the filter in the previous step, perform m
 
 	Fine Positioning Pop-up Window
 
-Step 11: Collision-Free Trajectory Planning for Fine Positioning Positions
+Step 11: Perform obstacle-free trajectory planning for the fine positioning points.
 
-Click the Fine Positioning tab, select and click Collision-Free Trajectory Planning in the menu, and wait for the AIRLab planning result.
-
-If the planning is successful, open the menu and click Generate Collision-Free Trajectory to display the planned trajectory;
-
-If the planning fails, AIRLab will display the name of the failed position—you can modify the position or add a transition point.
+Click the "Fine Positioning" header, then in the menu that appears, select and click "Obstacle Avoidance Planning". Wait for the AIRLab obstacle-free trajectory planning result. If planning succeeds, open the menu and click "Generate Trajectory" to display the successfully planned trajectory. If planning fails, AIRLab will display the name of the point where planning failed. You can modify that point or add transition points.
 
 Modification Methods:
 
@@ -777,13 +727,9 @@ Step 12: Run the Fine Positioning Program
 
 Click the Fine Positioning tab, select and click Run Program in the menu to execute the fine positioning program.
 
-Step 13: Run the Welding Program
+Step 13: After the fine positioning program runs successfully, enter the "Program" module and click the "Program" header, as shown in the figure below.
 
-After the fine positioning program runs successfully, enter the Program module and click the Program tab, as shown in Figures below..
-
-If collision-free trajectory planning is required: First click Generate Collision-Free Trajectory in the menu, then click Run Collision-Free Trajectory after successful planning;
-
-If collision-free trajectory planning is not required: First click Generate Trajectory in the menu to check whether the trajectory is normal, then click Run Program to start welding if there is no error.
+If obstacle-free trajectory planning is required, you can first click "Obstacle Avoidance Planning" in the menu. After successful planning, click "Generate Trajectory" to first check whether the trajectory is normal. Once confirmed, click "Run Program" to start welding.
 
 .. important::
 	After the program is generated, do not modify the program nodes; do not modify the list information of weld seam editing unless necessary. If the weld seam order in the weld seam list is modified or weld seams are added/deleted, return to Step 8 and reconfigure the relevant settings.
@@ -918,6 +864,12 @@ After the model construction program has finished running, the built model workp
 If the model is built incorrectly, you need to click the “Model Construction” module, click “Clear Model Data”, and then build the model again until the modelless artifact model is created correctly.
 
 When weld seam acquisition fails due to inappropriate model construction parameter settings, you can first edit and adjust the parameters, then issue the model-free modeling command, and subsequently acquire secondary recognition data. Afterward, click "Acquire Model Data" to reload the model data updated with the adjusted parameters.
+
+.. figure:: analysis/4/model_cons_para_menu.png
+	:align: center
+	:width: 6in
+
+	Model Reconstruction Parameter Node Function
 
 By clicking on the No Model Build module, the user can select options such as Get Modeling Data, and the functions of each option are described below.
 
@@ -1226,7 +1178,7 @@ After completing the fine positioning program, click the "Automatic Camera Poses
 
 - Options such as “Run Program” and “Stop Program” function in the same way as the model-less build function, which can be described in the model-less build section. Other functions are described here:
 
-- Get automaticcapture pose: After the positioning of the workpiece, the program will get the recommended photo position corresponding to each weld seam, click "Get automatic photo position" to get the recommended photo position.
+- Get automaticcapture pose: Click to obtain the recommended fine positioning camera points for all weld seams that have been added to the weld seam list.
 
 - Generate Photo Pose with Reference to Model-Free Construction: The photo points taught during the model-free construction process will be automatically acquired as the photo points for fine positioning.  
 
@@ -1422,7 +1374,7 @@ When a slave station performs weld seam editing, the method is the same as in st
 
 Pop-Ups and Other Pages
 --------------------------
-This section describes the AIRLab software pop-ups and other pages, pop-ups including about pop-ups, log pop-ups, software upgrade pop-ups, virtual camera pop-ups, global settings pop-ups, weld process query pop-ups, clearing the gun shear pop-ups, weld data calculation and collection of pop-ups and so on; Other pages including other control, simulation, debugging page, program configuration and multi-language settings.
+This section introduces the pop-up windows and other pages that appear in the AIRLab software, mainly covering the functional descriptions and usage methods of the pop-up windows.
 
 About
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1694,106 +1646,52 @@ Once the export starts, a progress prompt pop-up window will appear, displaying 
 
 If the Data Source Export function is used when the available disk space is less than 5GB, AIRLab will prompt the user to free up disk space before exporting.
 
-Global Settings
-~~~~~~~~~~~~~~~~~~~~
-The "Global Settings" option under the "Window" menu bar in AIRLab provides configurations for Robot Self-Collision Detection, Torch Pose Calculation Rules, and Photo Pose Calculation Rules. These three settings are described below.
+Pose Calculation Strategy Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AIRLab provides configuration for robot collision detection and obstacle avoidance planning rules, welding torch pose calculation rules, and camera pose calculation rules under the "Welding (W)" -> "Pose Calculation Strategy Settings" menu item. These three settings are described below.
 
-1.Self-Collision Detection
+1. Collision Detection and Obstacle Avoidance Planning Rule Configuration
 
-The Self-Collision Detection interface is shown below.
+The collision detection and obstacle avoidance planning rule configuration interface includes four parameter settings, aimed at reducing the possibility of collisions during the robot's welding movement. After setting the parameters on the page, click the "OK" button to complete the configuration.
 
 .. figure:: analysis/4/global_set_collision_en.png
 	:align: center
 	:width: 3.5in
 
-	Self-Collision Detection
+	Collision Detection and Obstacle Avoidance Planning Configuration
 
-The Self-Collision Detection interface includes four types of collision thresholds, aimed at reducing the possibility of collisions during the robot's welding movement. Currently, only the "Collision Detection Distance Threshold for the Free-Moving Process" is available. This threshold refers to the collision distance for the robot's free-moving path between the retraction point of the previous weld and the approach point of the next weld.
+- Enable Collision Detection: This function needs to be enabled if obstacle avoidance planning for the running trajectory or collision detection for newly added points is required.
+- Collision Detection Distance Threshold: Refers to the safe distance between the robot's tool end and other objects in the environment. When this threshold is exceeded, a collision is considered to occur during collision detection. If the environment is open, a recommended value is 20mm; if the environment is relatively narrow, a recommended value is 5-10mm.
+- Enable Obstacle Avoidance Planning for Fine Positioning: After enabling this function, clicking "Obstacle Avoidance Planning" in the fine positioning function menu will plan a collision-free trajectory for all camera points in the fine positioning program. After successful obstacle avoidance planning, clicking "Run Program" will execute the planned obstacle-free path.
+- Enable Obstacle Avoidance Planning for Welding Program: After enabling this function, in the Program module, clicking "Obstacle Avoidance Planning" will perform obstacle-free trajectory planning for all nodes in the program. After successful planning, clicking "Run Program" will execute the planned Lua program's obstacle-free path.
 
-When Self-Collision Detection is enabled, even if the user does not set a specific "Collision Detection Distance Threshold for the Free-Moving Process (mm)" (i.e., using the default value of 0 mm), AIRLab will still perform collision detection on the robot's free-moving path and plan a collision-free safe path. When the user sets this parameter, AIRLab will plan a free-moving path that maintains a greater distance from obstacles, based on the input threshold value, while still ensuring no collision.
+2. Welding Torch Pose Calculation Rule Configuration
+
+The welding torch pose calculation rule configuration interface is shown below.
 
 .. figure:: analysis/4/global_set_collision_para_en.png
 	:align: center
 	:width: 3in
 
-	Self-Collision Detection Parameter Setting
+	Welding Torch Pose Calculation Rule Configuration
 
-After setting the parameters of collision detection, click “confirm” button to complete the parameter setting and close the “Global Settings” pop-up window. 
-
-.. important::
-	After the collision detection is enabled, users need to teach the withdrawal and convergence points for each weld when creating the weld template program.
-
-After completing the settings of the project tree and other related parameters, the user clicks on the “One Click Start” button in the toolbar of AIRLab, and when the program runs into the obstacle avoidance planning section, AIRLab will show a “Progress Alert” pop-up window to display the current progress of the planning. AIRLab will show the progress of the current planning as shown in the figure.    
-
-.. figure:: analysis/4/71.png
-	:align: center
-	:width: 3.3in
-
-	Obstacle avoidance planning in progress
-
-If the obstacle avoidance planning fails, the pop-up window switches to the following figure, and the user needs to re-teach the exit point and convergence point, and click the “One Click Start” button again.
-
-.. figure:: analysis/4/72.png
-	:align: center
-	:width: 3.5in
-
-	Failure of obstacle avoidance planning
-
-If the planning is successful, the pop-up window will be switched to the following figure, users can click “View Trajectory” button to generate the simulation trajectory of the motion instruction under the ‘Program’ node; click “Clear Trajectory” button to clear the trajectory in the interface; click “Run Program” button to start running the lua program directly. Click “Clear Trajectory” button to clear the trajectory in the interface; click “Run Program” button to start running the lua program directly.
-
-.. figure:: analysis/4/73.png
-	:align: center
-	:width: 3.5in
-
-	Progress bar alert popup
-
-After successful obstacle avoidance planning, the relevant “MoveJ()” instruction in the ‘Program’ node of the project tree will be amended to “SplinePTP()”.
-
-The following simulation trajectory diagram as an example to show the actual effect of AIRLab collision detection, Figure below for the opening of the collision detection function, AIRLab automatic obstacle avoidance planning trajectory; Figure below for the opening of the collision detection is not open, the trajectory obtained by AIRLab through the motion planning, it can be seen clearly that the robot will be empty moving process and the collision of the workpiece.
-
-.. figure:: analysis/4/74.png
-	:align: center
-	:width: 4.5in
-
-	Turn on collision detection planning
-
-.. figure:: analysis/4/75.png
-	:align: center
-	:width: 4.5in
-
-	No collision detection planning
-
-In the case that the obstacle environment does not change, the user can not repeat the obstacle avoidance planning after successfully completing one obstacle avoidance planning, if you need to repeat the instructions under “Program” in the project tree, click “Run Program” in “Work Program” on the sub-page. If you need to run the commands under “Program” in the project tree repeatedly, click “Run Program” in “Work Program” on the subpage. If the obstacle environment changes, you have to click the “Run” button again to plan a new obstacle avoidance path.
-
-2.Torch Pose Calculation Rule Configuration
-
-The Torch Pose Calculation Rule configuration interface is shown below.
-
-.. figure:: analysis/4/global_set_weld_gun_en.png
-	:align: center
-	:width: 4in
-
-	Torch Pose Calculation Rule Configuration
-
-If the recommended welding torch pose for a weld seam does not meet the actual welding requirements, you can enter this page to configure the calculation rules. If this rule is not set, the parameters from the last setup or the system default parameters will be used.
+If the recommended welding torch pose for a weld seam does not meet actual welding requirements, you can enter this page to configure the calculation rules. If this rule is not set, the parameters from the last setup or the system default parameters will be used.
 
 These parameters primarily affect the recommended welding torch pose for weld seams. Among them, the recommended angle (default angle) between the torch and a linear weld seam is 60°, with the current allowable min-max angle setting range between 40° and 80°. The recommended angle (default angle) between the torch and an arc weld seam is 30°, with the allowable angle setting range between 0° and 90°. The torch tip length, torch body length, angle between the tip and body, and body radius need to be set according to the measured data of the actual torch used. After setting the parameters, click "Get Recommended Weld Pose" to complete the parameter update.
 
-After the parameters are set, click the "Add Weld" button in "Weld Editing", and after selecting a weld seam, the AIRLab 3D scene will display the recommended welding torch pose. If changes to the aforementioned pose are needed, please refer to the operations in the "Weld Editing" page (see Section 3.5.4).
+After parameter settings are completed, click the "Add Weld" button in "Weld Editing". After selecting a weld seam, the AIRLab 3D scene will display the recommended welding torch pose. If changes to the aforementioned pose are needed, please refer to the operations in the "Weld Editing" page.
 
-3.Photo Pose Calculation Rule Configuration
+3. Camera Pose Calculation Rule Configuration
 
-The Photo Pose Calculation Rule configuration interface is shown below.
+The camera pose calculation rule configuration interface is shown below.
 
 .. figure:: analysis/4/global_set_auto_photo_en.png
 	:align: center
 	:width: 4in
 
-	Photo Pose Calculation Rule Configuration
+	Camera Pose Calculation Rule Configuration
 
-These parameters mainly affect the camera pose automatically obtained in the "Fine Positioning" module. Currently, the camera pose calculation rules expose parameters for the camera's length, width, height, maximum shooting distance, minimum shooting distance, and the robot's 6th axis maximum and minimum joint angles. Among them, the camera's length, width, and height parameters affect collision detection and should be set according to the actual camera dimensions. The shooting distance refers to the linear distance between the camera and the weld seam; the default shooting range is between 300mm and 600mm. The maximum and minimum joint angle parameters for the robot's 6th axis are used to set soft limits for the robot's 6th joint, considering that the welding torch protrudes significantly and is prone to collision with other parts of the robot body; thus, they can be set according to the actual end-effector situation.
-
-After successful configuration, click the menu item "Generate Camera Poses with Reference to SLAM" in the "Fine Positioning" module. The software will acquire the camera poses corresponding to the weld seam numbers edited by the user in the previous step.
+These parameters mainly affect the camera poses automatically obtained in the "Fine Positioning" module. Currently, the camera pose calculation rules expose parameters for the camera's length, width, height, maximum shooting distance, minimum shooting distance, and the robot's 6th axis maximum and minimum joint angles. Among them, the camera's length, width, and height parameters affect collision detection and should be set according to the actual camera dimensions. The shooting distance refers to the linear distance between the camera and the weld seam; the default camera shooting range is between 300mm and 600mm. The maximum and minimum joint angle parameters for the robot's 6th axis are used to set soft limits for the robot's 6th joint, considering that the welding torch protrudes significantly and is prone to collision with other parts of the robot body; thus, they can be set according to the actual end-effector situation.
 
 Welding process query pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1841,13 +1739,13 @@ Offset (Relative to Reference Coordinate System): The offset position relative t
 
 Bind Welding Process: Set the selected weld pass to be bound or unbound to a welding process. Click the Welding Process Query button to enter the detailed parameter query and setting interface of the process.
 
-After modifying all the welding channel information, click the “Finish” button under the welding channel list, and the terminal will show that the new multi-layer multi-channel welding process has been successful, and then a new welding process will be successfully added.
-
 .. figure:: analysis/4/80.png
 	:align: center
 	:width: 3.5in
 
 	New Welding Processes Successful
+	
+After modifying all the welding channel information, click the “Finish” button under the welding channel list, and the terminal will show that the new multi-layer multi-channel welding process has been successful, and then a new welding process will be successfully added.
 
 Modify welding process: Click on the welding process to be modified, modify the welding process data as needed, and you can add, modify or delete the list of weld passes.
 
@@ -1931,9 +1829,9 @@ Descriptions of Each Editable Item:
 
 Indent Settings (Applicable Only to Non-spline Weld Seams)
 
-- Start Indentation: Set the indentation at the start of the weld seam. When welding this seam, the process will begin from the start point after the indentation. 
+- Start Point Indent: Set the indent for the start point; welding of the weld seam will commence from the start point after the indent.
 
-- End Indentation: Set the indentation at the end of the weld seam. When welding this seam, the process will stop at the end point after the indentation.
+- End Point Indent: Set the indent for the end point; welding of the weld seam will stop at the end point after the indent.
 
 Point Offset and Angle Settings 
 
@@ -2089,7 +1987,7 @@ Cycle Interval: The waiting time between cycles. For example, after the robot co
 
 Cycle Mode: There are two types,Continuous Cycle: Runs indefinitely. Fixed Cycle: The robot automatically stops after completing the set number of cycles.
 
-Cycle Count: This parameter only needs to be set when the cycle mode is Fixed Cycle. 
+Cycle Count: This parameter only needs to be set when the cycle mode is Fixed Cycle. (Note: The cycle count cannot be set to 0.)
 
 .. important::
 	The cycle count cannot be set to 0.
@@ -2433,7 +2331,10 @@ As shown in Figure below, the External Axis Setup module enables control of the 
 	:width: 3in
 
 	exaxis Control
-
+	
+- Current external axis enable status: Indicates the current servo enable status of the external axis. If enabled successfully, the indicator light is green; if not servo enabled, the indicator light is white.
+- Current external axis position: Refers to the current position of the external axis relative to the set zero point.
+- Current external axis enable status: Indicates the current servo enable status of the external axis. If enabled successfully, the indicator light is green; if not servo enabled, the indicator light is white.
 - Select the extended axis numbe: click the "Load" button to load the external axis protocol according to the selected extended axis number. Set the running speed (%), acceleration (%) and the maximum distance of the extended axis (mm).
 - Remove Enable: Click on the "Remove Enable" button to remove enable from the external axis.
 - Servo Enable: Click the "Servo Enable" button to enable the external axis.
@@ -2577,7 +2478,7 @@ If the terminal displays "CSV file import failed", you can check the error messa
 
 If the user needs to modify an existing language in AIRLab, they first need to click the "Export" button to export the CSV file of that language; After the modification is completed, copy the file to the execution directory of AIRLab software, click the "Import" button, select the modified file to import, and the terminal displays "CSV import successful". After restarting the software, the language modification is completed.
 
-Considering the different usage habits of AIRLab English users, AIRLab-V1.0.2 version has designed the unit of measurement switching as a configuration item for users to choose whether to switch millimeters to inches, as shown in Figure below.
+Considering the different usage habits of AIRLab English users, AIRLab has designed the unit of measurement switching as a configuration item for users to choose whether to switch millimeters to inches, as shown in Figure 3-205.
 
 .. figure:: analysis/4/118.png
 	:align: center
@@ -2865,7 +2766,7 @@ Collaborative robots carrying welding torches for welding operations can signifi
 
 - Digital Communication Protocol (UDP): The robot communicates with the PLC via UDP, and the PLC further communicates with the welder through the CANOpen bus or other protocols to control welding voltage, current, and welder operations such as arc striking, wire feeding, and gas feeding. (Please contact FAU after-sales personnel to obtain the robot UDP communication protocol content.)
 
-- Digital Communication Protocol (Modbus TCP): Also known as the controller peripheral open protocol, it is usually a runnable LUA program that includes communication creation instructions, and instructions for cyclically writing control data to slave devices and reading real-time status data. When the LUA program is executed, the robot establishes communication with the device and performs data interaction. Communication parameters such as IP address, port number, and cycle can be customized in the controller peripheral open protocol LUA program, and users need to modify the protocol content according to actual device conditions. Devices supported by the controller peripheral open protocol include grinding heads, laser sensors, CNC machines, welders, etc. The file name of the controller peripheral open protocol must start with 'CtrlDev_', such as "CtrlDev_Welding.lua", and a maximum of 4 open protocols can run simultaneously.
+- Digital Communication Protocol (Modbus TCP): Also known as the controller peripheral open protocol, it is usually a runnable LUA program that includes communication creation instructions, and instructions for cyclically writing control data to slave devices and reading real-time status data. When the LUA program is executed, the robot establishes communication with the device and performs data interaction. Communication parameters such as IP address, port number, and cycle can be customized in the controller peripheral open protocol LUA program, and users need to modify the protocol content according to actual device conditions. Devices supported by the controller peripheral open protocol include grinding heads, laser sensors, CNC machines, welders, etc. The file name of the controller peripheral open protocol must start with `CtrlDev_`, such as "CtrlDev_Welding.lua", and a maximum of 4 open protocols can run simultaneously.
 
 Welding control via Controller IO or Digital Communication Protocol (UDP) mainly includes the following steps:
 
@@ -3047,7 +2948,7 @@ After an interruption occurs during the robot's welding process, the operator ca
 
 III. Digital Communication Protocol (Modbus TCP)
 
-- Step 1:In the open protocol configuration, click the Upload button to upload the compiled open protocol LUA program file to the controller. Select an open protocol ID and an open protocol name, and click the Configure button (the selected protocol ID must be consistent with the ID compiled in the open protocol file) to assign an ID to each open protocol. Upload the welder open protocol CtrlDev_WELDING.lua (the protocol file name must start with "CtrlDev_" and have a suffix of .lua).
+- Step 1:In the open protocol configuration, click the Upload button to upload the compiled open protocol LUA program file to the controller. Select an open protocol ID and an open protocol name, and click the Configure button (the selected protocol ID must be consistent with the ID compiled in the open protocol file) to assign an ID to each open protocol. Upload the welder open protocol CtrlDev_WELDING.lua (the protocol file name must start with `CtrlDev_` and have a suffix of .lua).
 
 .. figure:: analysis/4/welder10_en.png
 	:align: center
@@ -3341,3 +3242,29 @@ Currently, AIRLab provides three modes: Standalone, Master Station, and Slave St
 	:width: 3in
 
 	Software Mode Settings
+
+Collision Model Parametric Completion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Collision Model Parametric Completion function is primarily aimed at modeling collision models for relatively complex large workpieces. The operation steps are as follows:
+
+Click the "Start Point Selection" button, then the points on the model become selectable. You can set the size of the points in "Weld Endpoint Zoom Factor". Please complete the selection of four points according to the instructions. Once the four points are determined, a thin surface will be formed. Based on the actual workpiece structure, set the Thickness, Direction, and Expansion Thickness.
+
+After setting the parameters, click the "Set Properties" button, then click the "Model" button to complete the modeling of this model body. Repeat the above steps to model other model bodies. After all are completed, click the "End Point Selection" button to make the points on the model non-selectable again.
+
+.. important::
+	After a point is selected, it turns yellow. Before all four points have been selected, clicking a selected point again will cancel the selection. If you find an error in the generated model body after selecting the four points, click "Delete" to clear the selected model body and re-select.
+
+.. figure:: analysis/4/collision_comple.png
+	:align: center
+	:width: 6in
+
+	Collision Model Parametric Completion Pop-up
+
+- Show All Model Bodies: Displays all modeled model bodies in the 3D scene of the interface.
+- Hide All Model Bodies: Hides all modeled model bodies so they are no longer displayed.
+- Thickness: The thickness of the thin surface formed by the four points. After setting, the thin surface will be thickened along the Z-axis direction.
+- Direction: Divided into Forward and Reverse. Determine the selection based on the actual workpiece structure and the direction of model thickening shown in the 3D scene.
+- Expansion Thickness: If the thin surface formed by the four points is inconsistent with the actual workpiece structure at the edges, you can set the expansion thickness. The thin surface will expand outward based on its center point.
+
+.. important::
+	The modeling of model bodies will affect the effectiveness of the obstacle avoidance function in subsequent steps. Please ensure that the model bodies are as consistent as possible with the actual workpiece structure.

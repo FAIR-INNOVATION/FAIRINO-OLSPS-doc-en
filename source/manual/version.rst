@@ -1,40 +1,31 @@
-Version V1.4.0
+Version V2.0.0
 ===================
-Date：2026-04-27
+Date：2026-05-29
 
 .. toctree:: 
     :maxdepth: 5
 
-.. important::
-    When updating to AIRLab V1.4.0, please first update the prerequisite update package for V1.4.0 available in the download link. The update method for the prerequisite package is the same as a standard software upgrade. After the prerequisite update package has been successfully upgraded, please proceed to update the official V1.4.0 package.
+- Added AI Smart Assistant Interaction Plugin V1.0 Functionality;
+    Path: Plug-in -> AI Smart Assistant
 
-- Added AIRLab Gantry Welding System Functionality;
-    Path: AIRLab Software Analysis -> AIRLab Gantry Welding System
+    Description: Locally deploy the OpenClaw framework to implement simple bin-picking and welding scenario functions through voice interaction.
 
-    Description: For welding scenarios involving a mix of small workpieces of various types as well as large workpieces, the AIRLab Gantry Welding System is added. Through arbitrary combinations of multiple cameras or laser sensors, it enables rapid mapping of large workpieces or large working spaces, as well as collaborative welding by multiple robots.
+- Added Bin-Picking Plugin V2.0 Functionality;
+    Path: Plug-in -> bin-picking
 
-- Added Weld Seam Inference Function;
-    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Welding seam edit pop-up window
-
-    Description: In practical welding applications, the weld seam inference function can be used to automatically complete missing weld seam information in the following scenarios:
-
-                1.The camera interferes with the workpiece, fixture, or environment, resulting in incomplete point cloud data;
-
-                2.The weld seam features of the workpiece are not obvious or local features are missing, making some weld seams unable to be effectively recognized.
-
-                This function intelligently infers missing weld seam trajectories based on existing weld seam data and geometric relationships, thereby improving the adaptability and robustness of the welding system.
-
-- Added Palletizing Plugin V1.0 Functionality;
-    Path: Plug-in -> Palletizing Plugin
-
-    Description: The palletizing plugin enables automatic object recognition and gripping, as well as automatic placement according to a preset stacking pattern.
+    Description: Enhances the standardization and ease of use of bin-picking functions. ① Integrates AI model data collection, annotation, and training modules; ② Optimizes UI display, adding tool grasping pose visualization; ③ Adds display of target object model configuration.
 
 - Optimized Environmental Requirements
     Path: Preamble -> Environmental Requirements
     
-    Description: Compatible with the latest version 3.9.5 of the controller software.
+    Description: Compatible with the latest version 3.9.6 of the controller software.
 
-- Optimized Automatic loop operation
-    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Automatic loop operation
+- Optimized AIRLab Welding Functionality (Usability Improvement);
+    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Pose Calculation Strategy Settings
+
+    Description: Incorporates welding and shooting pose recommendation filtering, collision detection, and obstacle avoidance planning into general functions, optimizing path planning point data.
+
+- Optimized AIRLab Camera Settings Interface Interaction;
+    Path: AIRLab Software Analysis -> Engineering Module Analysis -> Import module
     
-    Description: This update optimizes the node content image of the workpiece positioning program in the automatic cycle operation function, making the node structure clearer and easier for users to understand and debug.
+    Description: For high-reflection scenarios, restructured the camera settings interface module layout, optimized parameter sending logic, and reduced user operation complexity.

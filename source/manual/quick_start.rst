@@ -219,6 +219,9 @@ Equipment Installation
 ------------------------
 The camera and torch are mounted on the end of the robot via connectors as shown in Figure 2-11.
 
+.. important::
+	Using the robot's drag button as the reference point, the connecting piece is mounted directly behind it (passing radially through the center of the end flange to the opposite side).
+
 .. figure:: quick_start/11.png
 	:align: center
 	:width: 3in
@@ -252,7 +255,7 @@ Step 1: Open the “Manual Tool Coordinate System Calibration” interface as me
 
 	Calibration Method Setting
 
-Step 2: Control the robot arm so that the tool at the end of the arm points to the tip of the calibration tool (fixed reference point) at a certain posture. After the robot arm moves into position, click the “Set Point 1” button. When the button changes to “Modify Point 1”, it means the point has been successfully set. To modify the point, click “Modify Point 1” and repeat the process. See the figure below.
+Step 2: Control the robot arm to align the end tool with the tip of the calibration tool (fixed reference point) in a certain posture. After the robot arm moves into position, click the "Set Point 1" button on the interface. When the button changes to "Modify Point 1", the point is set successfully. To modify the set point, click "Modify Point 1" and repeat the steps. The process is shown in the figure below.
 
 .. figure:: quick_start/tool_calibration_P1.png
 	:align: center
@@ -278,13 +281,16 @@ Step 4: Change the posture of the robot arm once again, pointing the tool to the
 
 Step 5: Adjust the posture of the robot arm so that the tool end is vertically aligned with the fixed reference point, as shown in the left-side figure below. After the robot arm moves into position, click the “Set Point 4” button. When the button changes to “Modify Point 4”, the point is successfully set. To modify, click “Modify Point 4” and repeat the process. After the setup of Point 4 is completed, the calibration point diagram on the page will switch to Point 5. Simply follow the diagram to start setting up Point 5. See the figure below.
 
+.. important::
+	When adjusting the posture of Point 4, the bent direction of the welding torch must be aligned with the X or Y axis direction of the robot base coordinate system! In this way, in Step 6, a single movement in the X or Y axis direction will yield Point 5.
+
 .. figure:: quick_start/tool_calibration_P4.png
 	:align: center
 	:width: 6in
 
 	Setting Point 4
 
-Step 6: Keep the posture of the robot arm unchanged, and move horizontally along the base coordinate system. This direction defines the positive X-axis of the tool coordinate system. After the robot arm moves into position, click the “Set Point 5” button. When the button changes to “Modify Point 5”, the point is successfully set. To change, click “Modify Point 5” and repeat the process.After the setup of Point 5 is completed, the calibration point diagram on the page will switch to Point 6. Simply follow the diagram to start setting up Point 6. See the figure below.
+Step 6: Keep the robot arm's posture unchanged, use base coordinate system movement to move a certain distance horizontally in the direction of the welding torch's bend. This direction is the positive X-axis direction of the set tool coordinate system.. After the robot arm moves into position, click the “Set Point 5” button. When the button changes to “Modify Point 5”, the point is successfully set. To change, click “Modify Point 5” and repeat the process.After the setup of Point 5 is completed, the calibration point diagram on the page will switch to Point 6. Simply follow the diagram to start setting up Point 6. See the figure below.
 
 .. figure:: quick_start/tool_calibration_P5.png
 	:align: center
@@ -324,19 +330,6 @@ If the selected tool coordinate system already exists (i.e., a value is already 
 
 	Tool Coordinate System Overwrite Confirmation Dialog
 
-Import Engineering
----------------------
-Open the AIRLab software, as shown in the figure, click "New" or "Project" to quickly create or open a new project file.
-
-.. important::
-	When importing a previously saved project that had external axes configured, the external axes will be imported automatically (the external axis coordinate system will be set to the one stored in the project).
-
-.. figure:: quick_start/15.png
-	:align: center
-	:width: 6in
-
-	Select Project Import
-
 Point Cloud Camera Hand-Eye Calibration
 -----------------------------------------------
 After the robot is powered on, start the AIRLab software to ensure all modules are correctly initialized.
@@ -344,8 +337,7 @@ After the robot is powered on, start the AIRLab software to ensure all modules a
 - Step1: Camera connection
 
 1. Open the camera module in the import module, and a "Camera Settings" pop-up window is displayed in the 3D scene.
-2. Connect the camera: Click on "Import Module - Camera" to display the Camera Settings pop-up in the 3D scene. Then, click "Camera Configuration - Search for Devices" to initiate an automatic connection. Once the camera is successfully connected, proceed with the hand-eye calibration. If the connection fails, AIRLab will display "Not Connected." In this case, manually check whether the camera wiring is correct first.
-3. Camera configuration: Select the shooting mode as "structured light" and set appropriate parameters such as exposure time.
+2. Connect the camera; click Import Module -> Camera. The 3D scene displays the camera settings pop-up window, and the camera connects automatically. Upon successful connection, "Connection Status" in the pop-up window will display "Connected", as shown in the figure below. If the connection fails, "Connection Status" will display "Disconnected". In this case, please manually check whether the camera cable is connected correctly.
 
 .. figure:: quick_start/19.png
 	:align: center
@@ -353,6 +345,13 @@ After the robot is powered on, start the AIRLab software to ensure all modules a
 
 	Camera Configuration - Search for Devices
 
+Parameter configuration: Select the shooting mode as "Structured Light", and set appropriate exposure time and other parameters as needed.
+
+.. figure:: quick_start/camera_info_struct.png
+	:align: center
+	:width: 2.5in
+
+	Set the shooting mode to "Structured Light"
 
 - Step2: Hand-Eye Calibration
 
@@ -416,7 +415,7 @@ After the hand-eye calibration is completed, perform precision verification on t
 
 	Accuracy Validation Pose Transformation
 
-3. Verify the accuracy; randomly select a location to place the calibration plate, click on the “Photography” button, keep the calibration plate position unchanged, move the robot three times to take three photos, click on the “Verify Result” button, a pop-up window will appear as shown in Figure 2-32. The four points in the pop-up window are the coordinates of the four fixed points on the calibration board. By clicking on the button “Move to point 1”, the robot is moved to the specified position on the calibration board, and then the integrated error is obtained.
+3. After successful accuracy verification shooting, click the "Verification Result" button. A pop-up window will appear showing "Error! Unrecognized switch parameter." A comprehensive error value between 0.5mm and 1.0mm indicates that the hand-eye calibration result is good; a value between 1.0mm and 1.5mm indicates acceptable calibration results. Other results represent poor calibration, and recalibration is required.
 
 .. figure:: quick_start/24.png
 	:align: center
@@ -430,11 +429,9 @@ Ground Plane Acquisition and Verification
 ---------------------------------------------------------
 Before performing operational tasks for the first time, it is necessary to define the operational ground plane (if the operational ground plane is changed, this process must be repeated for re-confirmation). The operational steps are as follows:
 
-Step 1: Open the "Camera Settings" interface and click the "Device Debugging" header. Adjust the camera position to point towards the operational ground plane, then click the "Capture Ground" button to complete ground plane acquisition.
+Step 1: Open the "Camera Settings" interface, select "Structured Light" as the shooting mode, and click the "Device Debugging" header. Adjust the camera position to aim at the operational ground plane, then click the "Capture Ground" button to start ground capture.
 
-Step 2: After capturing the ground plane, click the "Obtain Ground Plane Equation" button.
-
-Step 3: The captured ground plane needs to be verified. Click the "Ground Effect Verification" button. The interface will display the currently used ground segmentation parameters and the point cloud result, as shown in the figure below.
+Step 2: After completing ground capture, adjust the camera position to aim at the workpiece. Click the "Ground Effect Verification" button. The interface is shown in the figure below. Aim the camera at the workpiece and click the "Capture" button. After capturing, click the "View Segmented Point Cloud" button. The pop-up window will display the ground effect verification point cloud, as shown in the figure below.
 
 .. figure:: quick_start/Grd_Effect_UI_en.png
 	:align: center
@@ -446,26 +443,39 @@ In this display:The red point cloud represents the part of the workpiece that ha
 
 If the verification result above does not meet expectations, you can adjust the ground segmentation parameters (by dragging the sliders or entering values in the text boxes). Click the "Ground Effect Verification" button at the bottom. The pop-up will then display the ground verification point cloud based on the new parameters, as shown below.
 
-.. figure:: quick_start/Grd_Effect_para_set_en.png
+Check whether the point cloud from this ground verification meets the requirements (the ground plane is approximately flush with the bottom of the workpiece, and the workpiece is fully retained). If it meets the requirements, the ground effect verification is complete. Simply close the "Ground Effect Verification" pop-up window. If it does not meet the requirements, repeat the above steps of adjusting parameters, capturing, and viewing the segmented point cloud until the requirements are satisfied.
+
+Model Reconstruction
+-------------------------------
+Move the robot to teach the shooting points (the shooting range of the points should cover the workpiece model), and create a model reconstruction program, as shown in the figure below.
+
+.. figure:: quick_start/model_const_prg.png
 	:align: center
 	:width: 3.5in
 
-	Ground Effect Verification Parameter Adjustment
+	Model Reconstruction Program
 
-Check if the point cloud from this ground verification meets the requirements (the ground plane is approximately flush with the bottom of the workpiece, and the workpiece is fully retained). If it meets the requirements, the ground effect verification is complete. Simply close the "Ground Effect Verification" pop-up. If it does not meet the requirements, repeat the above parameter adjustment and re-verification steps until the requirements are satisfied.
+Click "Run Program" as shown in the figure below. The robot will start moving, taking photos, and performing model reconstruction.
+
+.. figure:: quick_start/model_const_start_run.png
+	:align: center
+	:width: 3.5in
+
+	Model Reconstruction – Start Running
+
+Upon successful reconstruction, the point cloud model of the workpiece will appear in the interface, as shown below.
+
+.. figure:: quick_start/model_const_pc_res.png
+	:align: center
+	:width: 3.5in
+
+	Successfully Reconstructed Workpiece Point Cloud Model
 
 Start Running
 -------------------
-After completing the above steps, the robot can be controlled to start the welding task, which is divided into four main steps.
+After the model is successfully reconstructed, please complete the following steps in order: Weld Editing, Workpiece Positioning, and Fine Positioning Recognition. For detailed operation instructions, please refer to the Engineering Module analysis in Chapter 3 of this manual.
 
-- Step1: Obtain the ground plane equation. For specific operations, please refer to section 2.6, "Ground Plane Acquisition and Verification."
-
-- Step2: Edit the weld seams and determine the list of weld seams, please refer to 3.5.4 Weld Seam Editing for detailed operation.
-
-- Step3:Set the program configuration mode, click on "Welding - Welding Program Configuration" to configure the weld program. See Figure below. Note: Users need to set this parameter according to actual needs before running the program. For the specific meaning of the parameters, refer to Section 3.6.10 Welding Program Configuration.
-
-.. important::
-	users need to set this parameter according to the actual need before running the program, the specific meaning of the parameter is shown in 3.6.9 Program Configuration.
+After the Lua program is successfully generated, please first set the parameters in the "Program Configuration" pop-up window, as shown in the figure below. For detailed parameter descriptions, please refer to the "Welding Program Configuration" section in Chapter 3 of this manual.
 
 .. figure:: quick_start/25.png
 	:align: center
@@ -473,4 +483,4 @@ After completing the above steps, the robot can be controlled to start the weldi
 
 	Setup Program Configuration
 
-- Step4: After the configuration is completed, click one button to run, the program will start from the “workpiece positioning” until the welding is completed.
+After configuration is complete, click "One-Click Run". The program will start running from "Workpiece Positioning" until welding is completed.

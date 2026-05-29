@@ -13,5 +13,5 @@ First of all, thank you very much for using our company's AIRLab software. Pleas
 Environmental Requirements
 --------------------------------
 
-- Robot version: FR3/FR3-WMS/FR3-WML/FR5/FR5-WML/FR10/FR16/FR20..
-- Controller software version: V3.8.2.11&V3.9.0&V3.9.4&V3.9.5
+- Robot version: FR3/FR3-WMS/FR3-WML/FR5/FR5-WML/FR10/FR16/FR20.
+- Controller software version: V3.8.2.11&V3.9.0&V3.9.4&V3.9.5&3.9.6.

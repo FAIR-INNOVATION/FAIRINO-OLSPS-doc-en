@@ -57,104 +57,217 @@ The bin-picking plug-in module realizes the function of automatic object graspin
 
 Create a bin-picking project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click on the menu bar - File, select the file type as bin-picking, then click "New" or open a bin-picking project file; afterward, import the required tool workpiece.
+Click File in the menu bar, select the file type as bin-picking, and click New. Then import the required robot, tool, and workpiece, or directly open an existing bin-picking project file.
 
 .. figure:: plug/binpicking_new_project_en.png
 	:align: center
-	:width: 2.5in
+	:width: 4in
 
-	Create a new binpick project file
+	Create a new bin-picking project file
 	
-UI interface introduction
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After opening the plug-in, three new options appear in the menu bar: Model, Settings, and Debug, as shown in the figure below.
 
-.. figure:: plug/binpicking_init_target_screw_en.png
+.. figure:: plug/binpicking_menu_bar.png
 	:align: center
-	:width: 3in
+	:width: 6in
+
+	bin-picking menu bar
+	
+bin-picking Model Pop-up Window
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click Model in the menu bar to open the model training pop-up window, as shown below.
+
+.. figure:: plug/binpicking_model_ui.png
+	:align: center
+	:width: 4in
+
+	bin-picking model training – data collection pop-up window
+
+This pop-up window allows you to build datasets, annotate, and train models autonomously. The specific steps are as follows:
+
+Step 1: First click the Data Collection title to open the sub-interface. This interface provides three configurable parameters:
+
+- Data collection interval: The interval between automatic captures, in seconds.
+- Dataset size: The total number of images to be collected automatically.
+- Dataset save path: The directory where the captured dataset images will be stored. Click the Select Path button on the right to open the path selection dialog.
+
+.. figure:: plug/binpicking_model_path_choose.png
+	:align: center
+	:width: 4in
+
+	bin-picking path selection pop-up window
+
+After completing the parameter settings, click Start to begin capturing images. After each capture, reposition the target object; the next automatic capture will occur after the set interval, eliminating the need for frequent manual clicks. Click Stop at any time to end the data collection process. The Single Capture button triggers a single shot, useful for testing.
+
+Step 2: After obtaining the raw dataset, click the Data Annotation title to open its sub-interface, as shown below.
+
+.. figure:: plug/binpicking_model_data_annotation.png
+	:align: center
+	:width: 4in
+
+	bin-picking model training – data annotation pop-up window
+
+The annotation data path automatically adopts the previous raw dataset path. Simply click Start Annotation to launch the Labelme annotation software, as shown below.
+
+.. figure:: plug/binpicking_model_labelme.png
+	:align: center
+	:width: 4in
+
+	bin-picking model training – Labelme software
+
+After opening, use the rectangle tool to outline the target object, assign the desired ID, and save. Repeat this for all images in the raw dataset, then proceed to the next step.  
+
+Step 3: After annotating the entire raw dataset, click the Model Training title to open its sub-interface and prepare for the final model training step. The interface is shown below.  
+
+.. figure:: plug/binpicking_model_training_popup.png
+	:align: center
+	:width: 4in
+
+	bin-picking model training – model training pop-up window
+
+The parameters in this interface are explained as follows:  
+
+- Training epochs: Total number of training epochs.  
+- Training batch size: Amount of input data per training step.  
+- Class ID: Fill in the same class IDs used during annotation.  
+- Class name: The name used for the target object during training; simply using the same value as the ID is practical. After configuration, click the Add icon to insert the entry into the table, as shown below.  
+
+.. figure:: plug/binpicking_model_training_target.png
+	:align: center
+	:width: 4in
+
+	bin-picking model training – target label list
+
+- Training dataset path: Also related to the raw dataset path; it will be automatically filled as the `yolo_data` folder under the raw dataset path.  
+- Model output path: The output path for the final model file after training is complete.  
+
+After setting all parameters, click the Start Training button to begin the model training process automatically. When training is finished, a pop-up notification will appear, as shown below.  
+
+.. figure:: plug/binpicking_model_training_finish.png
+	:align: center
+	:width: 4in
+
+	bin-picking model training – training completion pop-up
+
+The generated model file ends with the `.pt` extension and can be found under `train/weights` within the specified model output path. Generally, `best.pt` is selected, as shown below.  
+
+.. figure:: plug/binpicking_model_pt_path.png
+	:align: center
+	:width: 4in
+
+	bin-picking model training – .pt file path
+
+After completing the entire workflow, the required model (.pt) file for subsequent use is generated successfully.  
+
+bin-picking Settings Pop-up Window 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click Settings in the menu bar to open the bin-picking settings pop-up window, as shown below. The bin-picking pop-up consists of five sections: Project Configuration, Initial Settings, Position Binding, Grasp Position Error Compensation, and Program Execution. The workflow of the whole interface is as follows:  
+
+.. figure:: plug/binpicking_project_ui.png
+	:align: center
+	:width: 6in
 
 	bin-picking pop-up window
 
-After importing the bin-picking project, click Plugin - bin-picking in the menu bar to open the bin-picking pop-up window, as shown in Figure 4-7. The pop-up window is divided into four parts: Initial Settings, Position Binding, Grasping Position Error Compensation, and Program Operation. The overall interface usage process is as follows:
+Step 1: Project Configuration  
 
-1. Perform Initial Settings First
+This involves many parameter settings, explained as follows:  
 
-The Target Object in the initial settings is the object to be grasped. The current plug-in provides three object types for selection: Screw, Lock, and Wooden Block, with a reserved Custom type for future updates. When the target object type is selected, the subsequent parameters will change accordingly.
+- Project name: Three pre-configured scenarios are reserved in the plug-in: wooden block, screw, and lock, plus an Add New option for custom projects. If Add New is selected, the interface changes as shown below. Enter the new project name and click OK; the new project name will be added to the dropdown list for selection and editing.  
 
-Meanwhile, the explanations of all other parameters on this interface are as follows:
-
-End Effector: Two options are available: Electric Gripper and Pneumatic Gripper. Select according to the actual control mode of the gripper used—use the former if configured via a protocol, and the latter if controlled via IO.
-
-Opening and Closing Percentage: Used to control the opening and closing size of the Electric Gripper for close and open commands.
-
-Gripper Speed: Used to control the percentage of the opening and closing speed of the Electric Gripper.
-
-Gripping Force: Used to control the percentage of the gripping force of the Electric Gripper.
-
-Hand-Eye Configuration: Configure according to the actual hand-eye setup, divided into Eye-in-Hand and Eye-to-Hand.
-
-Binding Port: Set according to the port bound between the End Effector and the controller, ensuring consistency with the actual configuration.
-
-Idle Movement Speed: Used to set the speed of the robot when moving between transition points during the grasping task.
-
-Grasping Speed: Used to set the speed of the robot when it is about to grasp the object (the next target point is the target grasping point) during the grasping task.
-
-At the same time, all the above options have default values. If the target object type is switched, the plug-in will adjust according to the presets of the current object. The specific preset settings are as follows:
-
-.. figure:: plug/initial_setup.png
+.. figure:: plug/binpicking_project_add.png
 	:align: center
 	:width: 6in
 
-	Initial setup
+	bin-picking settings pop-up – adding a new project
 
-Screws and wooden blocks use the Electric Gripper by default, while locks use the Pneumatic Gripper. After completing all settings, click OK—the corresponding AI Node for the target will start, which requires a short waiting time. If the node starts successfully, the following pop-up window will be displayed; otherwise, a failure pop-up window will appear.
+- Object detection model path: Select the `.pt` file generated during model training.  
+- Camera mounting method: Choose Eye-in-hand or Eye-to-hand according to the actual setup.  
+- Object detection confidence: Confidence threshold for object detection; results below this threshold are discarded.  
+- Instance segmentation model: Two model options are provided: `fastsam` and `vit_l`.  
+- Pose estimation model: Two options are provided: `fpose` and `fast_fpose`.  
+- Class ID: Must match the class ID designed during model training.  
+- Target CAD model path: The CAD model path for that class ID.  
+- Grasp pose candidate path: The grasp pose candidate path for that class ID.  
 
-.. figure:: plug/binpicking_ai_node_ok_en.png
+After setting the above three parameters (class ID, CAD path, candidate path), click the Add icon to populate the target grasp setting list. Repeat until all entries match the actual requirements.  
+
+- Pre-grasp offset distance: The transition point before reaching the grasp point, expressed as the distance from the grasp point, in meters.  
+- Robot reference pose: The reference pose for the robot’s grasping posture during motion, usually the pose at the photo-taking point. This can be set by moving to the photo-taking point and clicking Get Current Pose.  
+- Save field data: When enabled, images captured during the grasping process are saved and can be exported for later review.  
+- Single / Multiple target grasping: Select the number of grasp poses to be recognized in the scene per recognition. Single means only one pose in the scene is recognized each time, while Multiple means as many grasp poses as possible are recognized at once.  
+
+After completing all parameter settings, click the Confirm button to finalize the project configuration. At the same time, the corresponding AI nodes will start. Wait a moment; if the nodes start successfully, a pop-up as shown below will appear. Otherwise, a failure pop-up will be shown.  
+
+.. figure:: plug/binpicking_ai_node_success.png
 	:align: center
-	:width: 3in
+	:width: 4in
 
 	AI Node Started Successfully
 
-.. figure:: plug/binpicking_ai_node_fail_en.png
+.. figure:: plug/binpicking_ai_node_fail.png
 	:align: center
-	:width: 3in
+	:width: 4in
 
 	AI Node Startup Failed
 
-The instruction feedback area displays "Initial Settings Successful", indicating that the initial settings are completed.
+Step 2: Initial Settings
 
-2. Perform Position Binding Afterwards
+The initial settings interface is shown below:  
+
+.. figure:: plug/binpicking_set_init.png
+	:align: center
+	:width: 4in
+
+	bin-picking settings pop-up – initial settings
+
+Parameter descriptions:  
+
+- End effector: Two options: Electric gripper and Pneumatic gripper. Choose according to the actual control method of the gripper. If control is via a configured protocol, use the former; if controlled by IO, use the latter.  
+- Opening/closing percentage: Controls the opening and closing size of the electric gripper for close and open commands.  
+- Gripper speed: Controls the speed percentage of the electric gripper when opening/closing.  
+- Gripping force: Controls the gripping force percentage of the electric gripper.  
+- Binding port: Set according to the port to which the end effector is bound on the controller; keep it consistent with the actual connection.  
+- Travel speed: Sets the robot’s speed when moving between transition points during a grasping task.
+- Grasping speed: Sets the robot’s speed when it is about to grasp an object (the next target point is the grasp point).
+
+Step 3: Position Binding
 
 This subpage is mainly used for point binding for subsequent placement tasks. The specific settings and parameter explanations are as follows:
 
-Camera Capture Position: Set the target point as the robot's image capture point.
-
-Waiting for Grasping Position: Set the target point as the taught point to move to before grasping.
-
-Waiting for Placement Position: Set the target point as the transition taught point before the placement point.
-
-Placement Mode: Three options are available: Fixed Placement, Regular Placement, and Custom Placement Mode.
-
-Fixed Placement Mode: By setting the number of fixed placement points, the grasping process can be controlled to place objects sequentially at the set fixed placement points.
-
-Regular Placement Mode: Placement rules such as the number of rows, columns, layers, and layer height can be set as needed.
-
-Custom Placement Mode: The identified target types and their corresponding placement points can be set; the software will then place the identified objects at the configured placement points according to the actual recognized target model.
+- Camera Capture Position: Set the target point as the robot's image capture point.
+- Waiting for Grasping Position: Set the target point as the taught point to move to before grasping.
+- Waiting for Placement Position: Set the target point as the transition taught point before the placement point.
+- Placement Mode: Three options are available: Fixed Placement, Regular Placement, and Custom Placement Mode.
+- Fixed Placement Mode: By setting the number of fixed placement points, the grasping process can be controlled to place objects sequentially at the set fixed placement points.
+- Regular Placement Mode: Placement rules such as the number of rows, columns, layers, and layer height can be set as needed.
+- Custom Placement Mode: The identified target types and their corresponding placement points can be set; the software will then place the identified objects at the configured placement points according to the actual recognized target model.
 
 The sub-interfaces of various specific modes are displayed as follows:
 
-.. figure:: plug/position_bind.png
+.. figure:: plug/position_bind_fix.png
 	:align: center
 	:width: 6in
 
-	Position Binding
+	Position Binding-Fix
+
+.. figure:: plug/position_bind_regular.png
+	:align: center
+	:width: 6in
+
+	Position Binding-Regular
+
+.. figure:: plug/position_bind_custum.png
+	:align: center
+	:width: 6in
+
+	Position Binding-Custom
 
 If the previously selected target object is Lock, due to its special placement rule (Re-grasping), the original Camera Capture Position, Waiting for Grasping Position, and Waiting for Placement Position will be changed to First Capture Point, Second Capture Point, and Re-grasping Placement Point accordingly. Their specific meanings are as follows:
 
-First Capture Point: Set the target point as the image capture point in the initial grasping stage.
-
-Second Capture Point: Set the target point as the image capture point in the re-grasping stage.
-
-Re-grasping Placement Point: Set the target point as the placement point for adjusting the object's pose during re-grasping.
+- First Capture Point: Set the target point as the image capture point in the initial grasping stage.
+- Second Capture Point: Set the target point as the image capture point in the re-grasping stage.
+- Re-grasping Placement Point: Set the target point as the placement point for adjusting the object's pose during re-grasping.
 
 Its interface is displayed as follows:
 
@@ -164,7 +277,7 @@ Its interface is displayed as follows:
 
 	Position Binding - Re-grasping
 
-3. Grasping position error compensation
+Step 4: Grasp Position Error Compensation
 
 Grasping Position Error Compensation is configured to eliminate systematic errors during the grasping process. If the error is large during grasping, set the error compensation coefficient (based on the tool coordinate system) and click OK after configuration. The instruction feedback area displays "Error Compensation Coefficient Set Successfully", indicating that the error compensation coefficient has been set successfully.
 
@@ -200,19 +313,36 @@ If the target type is Lock, three additional buttons will appear on the manual i
 
 	Manual Operation Mode - Lock
 
-Automatic operation: Automatic operation includes running, stopping, and resetting;
-
-Run: Click the Run button, and the robot will automatically perform image recognition and grasping operations.
-
-Stop: Click the Stop button, and the automatic grasping will stop.
-
-Reset: Click the Reset button—the grasping counter will be set to 0. The next run will start grasping from the beginning and place the object at the first placement position. If the target type is Screw, the tray dumping action will be executed first.
+- Automatic operation: Automatic operation includes running, stopping, and resetting;
+- Run: Click the Run button, and the robot will automatically perform image recognition and grasping operations.
+- Stop: Click the Stop button, and the automatic grasping will stop.
+- Reset: Click the Reset button—the grasping counter will be set to 0. The next run will start grasping from the beginning and place the object at the first placement position. If the target type is Screw, the tray dumping action will be executed first.
+- Pause: Pause the current program execution.
+- Resume: Resume the action from the paused action cycle.
 
 .. figure:: plug/binpicking_run_auto_en.png
 	:align: center
 	:width: 3in
 
 	Automatic operation mode
+
+bin-picking Debug File Export Pop-up Window
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click Debug in the menu bar to open the debug file export pop-up window, as shown below.
+
+.. figure:: plug/binpicking_data_export.png
+	:align: center
+	:width: 3in
+
+	bin-picking file export pop-up window
+
+Select the export path for the debug files and click the Export button. The export process begins, the progress bar moves, and upon completion, the following pop-up appears.
+
+.. figure:: plug/binpicking_data_export_success.png
+	:align: center
+	:width: 3in
+
+	bin-picking file export – completion pop-up
 
 Overall operation process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -234,11 +364,9 @@ Eye-to-Hand Calibration (for fixed external cameras)
 
 	Secondary capture position binding
 
-First Capture Position:Teach the position directly above the target object Ensure the camera can fully capture the object within the frame.
-
-Second Capture Position:Teach the position directly above the intermediate placement location.
-
-Secondary Grasping Placement Position:Teach the adjustment position where objects will be placed for reorientation.
+- First Capture Position:Teach the position directly above the target object Ensure the camera can fully capture the object within the frame.
+- Second Capture Position:Teach the position directly above the intermediate placement location.
+- Secondary Grasping Placement Position:Teach the adjustment position where objects will be placed for reorientation.
 
 2) Non secondary grasping teaching points:
  
@@ -248,9 +376,8 @@ Secondary Grasping Placement Position:Teach the adjustment position where object
 
 	Non-secondary capture position binding
 
-Waiting for Grasp Position:Located near the actual grasping point,ensures ready access to target objects;
-
-Waiting for Place Position: Positioned adjacent to the drop location (Recommended drectly above the intended placement point for optimal operation).
+- Waiting for Grasp Position:Located near the actual grasping point,ensures ready access to target objects;
+- Waiting for Place Position: Positioned adjacent to the drop location (Recommended drectly above the intended placement point for optimal operation).
 
 3) Fixed placement of teaching points:
 
@@ -418,3 +545,36 @@ After completing one layer of stacking, the robot will move to the divider photo
 	Palletizing Completed
 
 2. Click the "Stop" button to terminate the currently executing palletizing task.
+
+AI Smart Assistant
+---------------------
+The AI Smart Assistant plug-in module implements some welding and bin-picking functions through text-based conversations with an AI large model.
+
+Smart Assistant Pop-up Window
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click Plug-in → AI Smart Ass3`istant in the menu bar to open the Smart Assistant plug-in. Its interface is shown below.
+
+.. figure:: plug/ai_assitant_ui.png
+	:align: center
+	:width: 4in
+
+	AI Smart Assistant interface
+
+This UI is mainly divided into two parts: the right half is the interactive content area, which provides a dialogue input box and a send button; the left half is the actionable area, which mainly provides the Start New Conversation button and the History and Parameter Summary sub-areas. Each part is described as follows:
+
+- Start New Conversation button: Starts a new conversation while saving the current conversation content into the History information.
+
+.. figure:: plug/ai_assitant_history.png
+	:align: center
+	:width: 4in
+
+	AI Smart Assistant – History interface
+
+- History interface: Records the content of previous conversations. Click the corresponding conversation title to switch between conversations, ensuring that historical messages are not lost. Switching back to the original conversation allows you to continue the previous dialogue.
+- Parameter Summary page: During the conversation with the AI large model, if any internal program parameters are changed or set, this page will summarize the parameters involved in the current change, making it convenient to view parameter modifications, as shown in the figure below.
+
+.. figure:: plug/ai_assitant_para.png
+	:align: center
+	:width: 4in
+
+	AI Smart Assistant – Parameter Summary interface
