@@ -6,7 +6,7 @@ Plug-in
 
 This chapter mainly introduces plugin authorization and the functionalities as well as specific operational procedures of each plugin.
 
-bin-picking  Plugin Authorization
+Plugin Authorization
 --------------------------------------
 Click on Plugins → Plugin Authorization to view the unique identifier of AIRLab and the authorization status of each plugin.
 
