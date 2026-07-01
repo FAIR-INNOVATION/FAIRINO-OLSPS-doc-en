@@ -165,7 +165,7 @@ Click Settings in the menu bar to open the bin-picking settings pop-up window, a
 
 .. figure:: plug/binpicking_project_ui.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
 	bin-picking pop-up window
 
@@ -177,7 +177,7 @@ This involves many parameter settings, explained as follows:
 
 .. figure:: plug/binpicking_project_add.png
 	:align: center
-	:width: 6in
+	:width: 4in
 
 	bin-picking settings pop-up – adding a new project
 
@@ -247,13 +247,13 @@ The sub-interfaces of various specific modes are displayed as follows:
 
 .. figure:: plug/position_bind_fix.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Position Binding-Fix
 
 .. figure:: plug/position_bind_regular.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Position Binding-Regular
 

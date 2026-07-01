@@ -1,31 +1,32 @@
-Version V2.0.0
+Version V2.1.0
 ===================
-Date：2026-05-29
+Date：2026-06-30
 
 .. toctree:: 
     :maxdepth: 5
 
-- Added AI Smart Assistant Interaction Plugin V1.0 Functionality;
-    Path: Plug-in -> AI Smart Assistant
 
-    Description: Locally deploy the OpenClaw framework to implement simple bin-picking and welding scenario functions through voice interaction.
+- Added visual feature types for lap joint and vertical lap joint;
+    Path: AIRLab Software Analysis -> Pop-ups & Other Pages -> Welding Feature Parameter Settings
 
-- Added Bin-Picking Plugin V2.0 Functionality;
-    Path: Plug-in -> bin-picking
+    Description: The software now includes visual feature configurations for two new weld seam types: lap joint and vertical lap joint, with corresponding UI interaction updates completed. The software overall now supports workpieces with these two visual features, enabling the complete welding process through visual recognition.
 
-    Description: Enhances the standardization and ease of use of bin-picking functions. ① Integrates AI model data collection, annotation, and training modules; ② Optimizes UI display, adding tool grasping pose visualization; ③ Adds display of target object model configuration.
+- Optimized Palletizing Plugin V2.0 functionality;
+    Path: Plugins -> Palletizing
 
-- Optimized Environmental Requirements
-    Path: Preamble -> Environmental Requirements
-    
-    Description: Compatible with the latest version 3.9.6 of the controller software.
+    Description: Resolved defects identified during field testing of Palletizing V1.0, and improved usability and ease of use. The robot, in coordination with the camera, can now accurately locate and identify paper boxes, pallets, and spacers for material picking. Under regular stacking scenarios, palletizing accuracy reaches within 3mm, with strong versatility and scalability to accommodate various palletizing tasks.
 
-- Optimized AIRLab Welding Functionality (Usability Improvement);
-    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Pose Calculation Strategy Settings
+- Optimized environment requirements;
+    Path: Preface -> Environment Requirements
 
-    Description: Incorporates welding and shooting pose recommendation filtering, collision detection, and obstacle avoidance planning into general functions, optimizing path planning point data.
+    Description: Compatible with the latest controller software version 3.9.7.
 
-- Optimized AIRLab Camera Settings Interface Interaction;
-    Path: AIRLab Software Analysis -> Engineering Module Analysis -> Import module
-    
-    Description: For high-reflection scenarios, restructured the camera settings interface module layout, optimized parameter sending logic, and reduced user operation complexity.
+- Optimized AIRLab welding functionality (usability improvements);
+    Path: AIRLab Software Analysis -> Engineering Module Analysis -> Fine Positioning
+
+    Description: Resolved the issue of prolonged fine positioning time in AIRLab welding usability. Added resume functionality for fine positioning interrupted during obstacle avoidance planning, and optimized the obstacle avoidance logic in welding programs.
+
+- Optimized AIRLab Gantry Welding System functionality;
+    Path: AIRLab Software Analysis -> AIRLab Gantry Welding System
+
+    Description: Added an extended-axis + end-of-arm camera line-scan mapping method; resolved outstanding issues from Phase 1; achieved full-process business logic closure for gantry welding workstations at the interaction level.

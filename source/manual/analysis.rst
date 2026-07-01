@@ -558,7 +558,7 @@ Fixed Scan: The camera moves to the central position and remains stationary; rea
 
 .. figure:: analysis/4/slam1.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
 	SLAM Mapping Scanning
 
@@ -584,7 +584,7 @@ Click "Welding (W)" -&gt; "Collision Model Parametric Completion". For detailed 
 
 .. figure:: analysis/4/slam3.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
 	Parametric Completion
 	
@@ -606,7 +606,7 @@ Open the "Welding (W)" -> "Pose Calculation Strategy Settings" pop-up window. Se
 
 .. figure:: analysis/4/slam_pose_str.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
 	Pose Calculation Strategy Settings
 	
@@ -744,7 +744,7 @@ Model Construction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If the workpiece to be welded does not have a model file, you need to perform a model-less build of the workpiece first, otherwise, you can directly import the workpiece model to perform the 3.5.4 weld editing operation.
 
-Click the Model Construction icon button on the far right to enter the module, then select the Add icon at the top. A "Modeless Construct" pop-up window will appear in the AIRLab interface.
+First, create a modelfree construction program.
 
 .. figure:: analysis/4/model_less2.png
 	:align: center
@@ -752,11 +752,11 @@ Click the Model Construction icon button on the far right to enter the module,
 
 	Model-Free Construction Pop-up--Workpiece
 
-If a non-spline feature is selected in the Welding Feature Parameter Configuration module, the Model-Free Construction pop-up window will appear as shown in the first figure below; if a spline feature is selected, the pop-up window will appear as shown in the second figure below.
+Click Project Module → Model Construction; then click the plus sign, and the modelfree construction popup will appear as shown in the figure. If the nonspline feature is selected in the welding feature parameter configuration module, the modelfree construction popup is shown in the first figure below; if the spline feature is selected, it is shown in the second figure below.
 
 .. figure:: analysis/4/model_struct_non_spline.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
 	Model-Free Construction Pop-up--Workpiece with Non-spline Features
 
@@ -766,15 +766,18 @@ If a non-spline feature is selected in the Welding Feature Parameter Configurati
 
 	Model-Free Construction Pop-up--Workpiece with Spline Features
 
-You can select to add a new Model-Free Construction parameter node, add a new image capture node, add a new movement node, or add a new model construction node.Spline and non-spline features are identical in terms of node addition and meaning, with no differences.
+You can choose to add a new model‑free construction parameter node, add a photo node, add a movement node, or add a model construction node. There is no difference between spline and non‑spline features in terms of node addition and meaning. The following uses the non‑spline feature as an example to explain the meaning and addition method of each node type.
 
-The meanings and addition methods of various nodes are described below using non-spline features as an example.
+Add Movement Node: This includes two types: Real‑time Pose and Point Library. Real‑time Pose refers to the robot's current position, while Point Library allows you to select an existing point. As shown in the figure below, if no image capture is required for the current node, simply uncheck "Capture Image at Current Point".
+ 
 
-Add moving node: select the photo target point to be moved, click the “Confirm” button, and “Move(target)” will appear under the Model Construction module, that is, it is added successfully.
+.. figure:: analysis/4/model_less1.png
+	:align: center
+	:width: 6in
 
-Alternatively, click “Add Current Position” to create a new waypoint at the current location, which will automatically generate a Move(target) node under Model Construction.
+	Adding Move nodes
 
-.. figure:: analysis/4/model_struct_non_spline.png
+.. figure:: analysis/4/add_point2.png
 	:align: center
 	:width: 6in
 
@@ -787,16 +790,7 @@ The principle of the model-less photo point of demonstration is that the camera 
 	:width: 3.5in
 
 	Photographic points of the workpiece at different angles    
-
-Add photo node:Click the Confirm button under Add Capture Node to create a new image capture node in Model Construction.
-
-.. figure:: analysis/4/model_less1.png
-	:align: center
-	:width: 6in
-
-	Add Photo Node
-
-Add Modeless construction node: After adding several groups of “Move+Photo” nodes,enter the model construction name,and click “Confirm” button of model construction part.“Model Const” node appears under the Model Const module, that is to say, adding successful.
+Add Model Construction Node: After adding multiple movement nodes, add the model construction node. The model construction methods include two options: Line + Arc and Spline. If Spline is selected, you need to set the sampling interval. After selecting the model construction method, edit the modelfree workpiece name. Click the &quot;OK&quot; button, and the &quot;Model Construction&quot; node will appear under the modelfree module, indicating that the modelfree construction node has been successfully added.
 
 .. figure:: analysis/4/model_less3.png
 	:align: center
@@ -821,11 +815,21 @@ Delete Nodes: Remove unnecessary nodes.
 
 The model-free construction program will be completed.
 
+If you need to configure the modelfree construction parameters before running the program, click the first icon button to open the modelfree construction settings dialog. Modify the parameters in the "Advanced Parameters" section, and then click "Set Parameters"; to apply the new settings.
+
+When weld acquisition fails due to unreasonable model construction parameters, after setting the parameters, click &quot;Rebuild Model&quot; to reacquire the model data with the updated parameters.
+
+.. figure:: analysis/4/modelParaNode.png
+	:align: center
+	:width: 3in
+
+	Add Model Construction Parameter Node
+
 After the model construction program is completed, click the “Model Const” module, click “Generate Trajectory” to view the simulation trajectory of the model construction program, and after confirming that the trajectory of the model construction program is correct, click Run program to start running the model construction program.
 
 .. figure:: analysis/4/46.png
 	:align: center
-	:width: 2.5in
+	:width: 3in
 
 	Click on the model const blocks
 
@@ -974,7 +978,7 @@ Workpiece positioning: After editing all the welds to be welded, workpiece posit
 
 .. figure:: analysis/4/regisiter_addnode.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Adding a coarse positioning node
 
@@ -1136,73 +1140,135 @@ Step 6: After confirming that the trajectory is correct, proceed with simulatio
 
 Fine pose
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-After workpiece positioning is completed, fine positioning of the workpiece weld seams is required to obtain weld seam data. After the model-free reconstruction is finished, or after importing a pre-built workpiece model, click the "Fine Positioning" module in the Project Module to create a fine positioning program. Click the "Fine Positioning" module, then click the "Get Automatic Camera Poses" button. The recommended camera poses for the weld seams will then be generated in the pose list.
+After weld editing or workpiece positioning is completed, it is necessary to perform fine positioning on the workpiece welds to obtain weld data. Enter the "Fine Positioning" module and open the fine positioning function menu, as shown in the figure below.
 
-.. figure:: analysis/4/53.png
+.. figure:: analysis/4/finePose1.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
-	Auto Photo Position List
+	Fine Positioning Menu
 
-Due to the potentially large number of recommended camera poses, users can improve efficiency by manually reducing some of these camera points and re-teaching others. The principle for teaching camera points is to ensure the start and end points of all weld seams are completely within the camera's field of view. If modifying a point is necessary, open the point information page, make the changes, and click "Save MP" to confirm.
+Step 1: First, click &quot;Set Automatic Photo Pose Filtering Strategy&quot; to enter the &quot;Photo Pose Filtering Settings&quot; page, as shown in the figure below. The meanings of the parameters are introduced as follows:
 
-.. figure:: analysis/4/fine_locate_point_set_en.png
-	:align: center
-	:width: 6in
-
-	Camera Pose Point Modification
-	
-If precise positioning parameters need to be set, a precise positioning parameter node can be added. Click the plus sign, and the interface will display the precise positioning pop-up window, as shown in the figure.
-
-.. figure:: analysis/4/slam11.png
+.. figure:: analysis/4/finePose2.png
 	:align: center
 	:width: 3in
 
-	Fine Positioning Pop-up Window
+	Photo Pose Filtering Settings
 
-Retrieve the current parameters, modify them as needed, and then click "Confirm." The precise positioning parameter node will be inserted before the first node by default.
+Whether to enable filtering: After filtering is enabled, AIRLab will perform further rational screening on the algorithmrecommended finepositioning photo poses. It is recommended to keep this enabled.
 
-.. figure:: analysis/4/fine_pose_add_en.png
+Whether to enable joint-angle filtering: This serves the same purpose as the "Enable joint-angle filtering" option in the weld selection popup – it prevents the robot from experiencing large pose changes during the finepositioning photo capture process, which could lead to collisions or unreachable states. Method: Move the robot to a position near the first weld, adjust the robot joints to the photocapture pose, and check the current joint values of J3 and J5 displayed on the right-side interface of AIRLab. Based on these values, determine the selections for "J3 Joint Angle" and "J5 Joint Angle" in the figure.
+
+Whether to enable collisiondetection filtering: To avoid the recommended photo poses from actually colliding with the workpiece or the robot itself, it is recommended to enable this filtering.
+
+Whether to enable pathplanning filtering: When this filtering is enabled, AIRLab will reference the previous photo point to filter the current photo point, ensuring that a collisionfree path exists between the two points. It is recommended to enable this.
+
+Step 2: After the filtering parameters are configured, click the "Get Automatic Photo Poses" button. AIRLab will compute and provide the fine-positioning photo points that meet the filtering criteria. The successfully filtered photo points will be automatically added to the finepositioning list. For the points that fail the filtering, the interface will display the failure reason along with the corresponding weld number (solutions are explained in Step 3), as shown in the figure below.
+
+.. figure:: analysis/4/finePose3.png
 	:align: center
-	:width: 3in
+	:width: 6in
+
+	Auto‑Acquired Photo Poses
+
+Step 3: After the automatic photo pose acquisition is completed, click the "+" icon button to bring up the fine positioning popup window, as shown in the figure below. If you need to configure fine positioning parameter nodes, enter the parameters and click the "OK" button.
+
+.. figure:: analysis/4/finePose4.png
+	:align: center
+	:width: 3.5in
 
 	Add Fine Positioning Parameter Node
 
+For the photo points that failed filtering in the previous step, please manually teach them here. The teaching method is as follows:
+
+1. Turn on the "Enable Intelligent Point Insertion" button. The "Weld Endpoint Type for Capture" dropdown box will display the points that failed recommendation in the automatic photo pose acquisition results, such as "Start point of Weld 1" shown in the figure below. After selecting the endpoint type, click the "Add Photo Point" button. The new point will be automatically inserted into the current fine positioning list based on the principle of minimizing the sum of robot joint changes.
+
+
+.. figure:: analysis/4/finePose5.png
+	:align: center
+	:width: 6in
+
+	Adding Missing Recommended Auto Photo Points
+
+1. If there are no failed recommendation points in the automatic photo pose acquisition results, and the user wishes to add custom points with intelligent point insertion, as shown in the figure below, first select the "Custom Point" option from the "Weld Endpoint Type for Capture" dropdown box. Then select the "Point Name Selection" option. For custom point naming, the page provides two naming methods: "Default Name" and "Custom Name" in the "Point Name Selection" dropdown box. After confirming the point name, click the "Add Photo Point" button.
+
+.. figure:: analysis/4/finePose6.png
+	:align: center
+	:width: 3.5in
+
+	Custom Point — Using Default Name
+
+1. If you are teaching a transition point that only needs to be added at the end of the fine positioning list without using the intelligent insertion function, please turn off the "Enable Intelligent Point Insertion" button and click "Add Photo Point." As shown in the figure below, the robot's current point will be added to the last position in the fine positioning list.
+
+.. figure:: analysis/4/finePose7.png
+	:align: center
+	:width: 3.5in
+
+	Custom Point — Using Custom Name
+
+
+Note: Please manually add several transition points at the end of the fine positioning point list to ensure that the robot can safely return from the capture endpoint of the last weld to the capture start point of the first weld.
+
+If you wish to modify or view a point in the fine positioning list, select the point in the list and click the "Edit" icon button, as shown in the figure below.
+
+Step 4: Perform obstacle-free trajectory planning for the fine positioning points. If fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, click the title "Fine Positioning," select and click "ObstacleAvoidance Planning" from the menu that appears, and wait for the AIRLab obstacl-free trajectory planning result. If planning succeeds, open the menu and click "Generate Trajectory" to display the successfully planned trajectory. If planning fails, AIRLab will display the name of the failed point, and you can either modify that point or add transition points.
+
+Method for modifying a point: Go to the Point Information module, locate and select the point that failed planning, open the point information modification popup, modify it, and save.
+
+Method for adding a transition point: Select the point, click "Add Transition Point Before Current Point" in the small menu that appears, and the "Add Waypoint" popup will open, as shown in the figure below.
+
+Step 5: Run the fine positioning program. Click the title "Fine Positioning," and in the menu that appears, select and click "Run Program."
+
+After completing the fine positioning program, if fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, please first click "ObstacleAvoidance Planning" in the fine positioning function menu. If the obstacleavoidance planning succeeds, click "Run Program" in the menu bar (which has already been enabled).
+
 After completing the fine positioning program, click the "Automatic Camera Poses" module. Options such as "Get Automatic Camera Poses", "Generate Collision-Free Trajectory", and "Generate Trajectory" will appear.
 
-.. figure:: analysis/4/fine_locate_operate_ui_en.png
+.. figure:: analysis/4/finePose8.png
 	:align: center
-	:width: 5in
+	:width: 3.5in
 
-	Click on the FinePos Module
+	Clicking the Auto Photo Pose Module
 
-- Options such as “Run Program” and “Stop Program” function in the same way as the model-less build function, which can be described in the model-less build section. Other functions are described here:
+The following is an introduction to the functions of each option:
 
-- Get automaticcapture pose: Click to obtain the recommended fine positioning camera points for all weld seams that have been added to the weld seam list.
+Get Automatic Photo Poses: Click to obtain the recommended finepositioning photo points for all welds that have been added to the weld list.
 
-- Generate Photo Pose with Reference to Model-Free Construction: The photo points taught during the model-free construction process will be automatically acquired as the photo points for fine positioning.  
+Generate Photo Poses from ModelFree Construction Reference: Automatically retrieves the photo points taught during modelfree construction and uses them as the finepositioning photo points.
 
-- Reference SLAM Generated Photo Pose: Automatically generates camera poses corresponding to the existing weld seams in "Weld Editing". To check the camera view for a specific pose, switch AIRLab to simulation mode, enable the "Virtual Camera", and click on the desired point to view it. If obstacle avoidance operation is required later, click "	Barrier-free path planning", "Generate collision-free trajectory ", and then "Run Collision-Free Program" in sequence. Otherwise, click "Run Program" directly to proceed with fine positioning.
+Set Automatic Photo Pose Filtering Strategy: Click to open the &quot;Photo Pose Filtering Settings&quot; page, where you can configure the filtering criteria for photo poses.
 
-- Acquire Weld Seam Recognition Data: Generate a welding program based on the results of fine positioning recognition, as well as the already edited weld seams and their attributes.
+Get Weld Recognition Data: Generates the welding program based on the finepositioning recognition results and the edited welds and their attributes.
 
-- Reference model-free acquisition of weld seam recognition data: Generate a welding program based on the results of model-free construction, as well as the already edited weld seams and their attributes.
+ObstacleAvoidance Planning: Click &quot;ObstacleFree Trajectory Planning&quot; to plan the welding program after collision detection.
 
-- Barrier-free path planning:Click " Barrier-free path planning " to plan the welding program after collision detection.
+Generate ObstacleFree Trajectory: Click &quot;Generate ObstacleFree Trajectory&quot; to generate the robot motion trajectory after collision detection in the 3D scene.
 
-- Generate collision-free trajectory: Click " Generate collision-free trajectory ", the robot trajectory after collision detection will be generated in the 3D scene.
+Run ObstacleFree Program: Click &quot;Run ObstacleFree Program&quot; to make the robot move according to the collisiondetected motion trajectory.
 
-- Run Collision-Free Program: Click " Run Collision-Free Program ", the robot will move according to the robot motion trajectory after collision detection.
+Run Program: Click &quot;Run Program&quot; to make the robot execute the finepositioning program to perform fine positioning on the welds. After the program runs successfully, the final welding program will be generated in the &quot;Program&quot; module.
 
-The user chooses to run the program or run the accessibility program for weld identification after selecting the confirmation trajectory. After the fine position program is run, the final weld node is generated under the program module.
+Stop Running: Click &quot;Stop Running&quot; to immediately halt the execution of the finepositioning program.
 
+After the user confirms the trajectory, they can choose to run the program or run the obstaclefree program to perform weld recognition. Once the automatic photo pose program has finished running, the final welding nodes will be generated under the Program module.
+ 
 Program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-After running the fine position, the final weld node is generated under the program module, and by clicking on the “Program” module, the user can choose to “run the program”, “stop the program”, “generate the trajectory” and other options, The user can select options such as “Run Program”, “Stop Program”, “Generate Trajectory”, etc. by clicking on the “Program” module. These options function in the same way as the “Run Program” option for model-less builds described above.
+After the fine positioning program has finished running, the final welding program will be automatically generated under the Program module.
 
-.. figure:: analysis/4/55.png
+Click the "Program" module, and the user can select options such as "Run Program," "Stop Program," and "Generate Trajectory." The functions of these options are the same as those described above for the model-free construction "Run Program" and related options.
+
+If collision detection for the welding program is enabled in the "Pose Calculation Strategy Settings," the first step is to click "Obstacle-Avoidance Planning" to complete the obstacle-avoidance planning for the Lua program, as shown in the figure below.
+
+After the obstacle-avoidance planning is completed, if no obstacle-avoidance-related errors are reported on the interface and no nodes in the Lua program list turn red, it indicates that the obstacle-avoidance path planning was successful. You can click "Generate Trajectory" to view it, and after confirming the trajectory is correct, click "Run Program.".
+
+If during the obstacle-avoidance planning process, the interface displays error messages indicating collision detection or path planning failures, note that there may be slight threshold deviations between collision detection and the actual environment. Please analyze based on the prompt information whether the problematic points need to be re-taught.
+
+If after inspection, the reported point or path does not actually collide, click on that node in the Lua program, and the option "Set This Trajectory to Skip Collision Detection" will appear. After clicking it, the node color will change to yellow. You can then generate the trajectory and run the program.
+
+.. figure:: analysis/4/program1.png
 	:align: center
-	:width: 2in
+	:width: 3.5in
 
 	Click on the Program Module
 
@@ -1261,6 +1327,9 @@ For welding scenarios involving a mix of small workpieces of various types as we
 
 The AIRLab Gantry Welding System mainly consists of two parts: 1. The master station performs global map construction; 2. The slave stations carry out welding operations. Before constructing the map, the master station must first complete the calibration of the laser radar and the calibration of the gantry frame.
 
+.. important::
+	When deploying the gantry system for the first time, please open AIRLab_exe/Data/import_config/Domain_id.config and set the Domain_id (domain ID). Set the master station to 10, and for slave stations, set them according to their slave station numbers (range: 1–9, and they must not be identical).
+
 Calibration of LiDAR and Gantry Frame
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Start AIRLab and create a new welding project. Then, open the pop-up window by selecting "Welding" — "Software Mode Settings" from the menu bar, choose "Master Station", and click the "OK" button, as shown in the figure below.
@@ -1273,7 +1342,7 @@ Start AIRLab and create a new welding project. Then, open the pop-up window by s
 
 First, calibrate the LiDAR. The calibration steps are as follows:
 
-Step 1: Click the "LiDAR" section on the left side of the software interface. In the pop-up "LiDAR Settings" window, click "Search for Devices" to ensure that the LiDAR is successfully connected, as shown in the figure below.
+Step 1: Click the "Camera" tab on the left side of the software interface. In the "Camera Settings" popup that appears, select the LiDAR section and click "Search Devices" to ensure that the LiDAR is successfully connected, as shown in the figure below.
 
 .. figure:: analysis/4/gantry2.png
 	:align: center
@@ -1281,7 +1350,13 @@ Step 1: Click the "LiDAR" section on the left side of the software interface. In
 
 	LiDAR connected successfully
 
-Step 2: Click the "Calibrate" button in the "LiDAR Debugging" section to open the "LiDAR Calibration" pop-up window, as shown in the figure below. Follow the instructions in the pop-up window, place the checkerboard in the correct position, and then click the "Calibrate" button to complete the LiDAR calibration.
+Step 2: Click the "Multi-Sensor Calibration" button in "Device Debugging" to enter the "LiDAR Calibration" popup, as shown in the figure below. Follow the prompts in the popup to place the checkerboard in the correct position, then click the "Calibrate" button to complete the LiDAR calibration.
+
+.. figure:: analysis/4/gantry10.png
+	:align: center
+	:width: 3in
+
+	LiDAR calibration
 
 .. figure:: analysis/4/gantry3.png
 	:align: center
@@ -1325,14 +1400,71 @@ Master Station Builds Global Map
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After successful calibration of the LiDAR and gantry frame, open "Welding" → "Welding Feature Parameter Configuration" from the menu bar, and select "SLAM Mapping". For detailed operation steps, please refer to section 3.7.26 of this manual.
 
-After the welding features are successfully sent, start creating the model construction program. The method is the same as that for creating a model construction program in stand-alone mode, except that the teaching robot points are replaced by teaching gantry extended axis points.
-
-After the program is successfully created, click "Run Program" in the model construction menu bar. Once the program runs successfully, the globally constructed map and weld seam data will be obtained, as shown in the figure below.
-
-.. important::
-	The master station cannot edit weld seams; it can only view the weld seam editing status. All weld seams can only be edited in the slave stations.
+After the welding features are successfully delivered, start creating the model construction program. First, open the modelfree construction settings page, as shown in the figure below, and select the acquisition device type according to the actual sensor type.
 
 .. figure:: analysis/4/gantry6.png
+	:align: center
+	:width: 3in
+
+	Model‑Free Construction Settings Page
+
+Next, open the modelfree construction node page, as shown in the figure below. The page is divided into three sections: &quot;Gantry Movement Node,&quot; &quot;Extension Axis Movement Node,&quot; and &quot;Modeling Node.&quot; The method for adding nodes is introduced as follows:
+
+.. figure:: analysis/4/gantry11.png
+	:align: center
+	:width: 3in
+
+	Model‑Free Construction Node Page
+
+Gantry Movement Node: If the model construction process requires the gantry to move, enter the target position of the gantry and click the &quot;Add&quot; button. A gantry movement node will then be added to the model construction program, as shown in the figure below.
+
+.. figure:: analysis/4/gantry13.png
+	:align: center
+	:width: 6in
+
+	Add Gantry Movement Node
+
+Extension Axis Movement Node: This node is used to set the robot's scanning angle and path. The interface provides five fixed scanning poses as well as a custom scanning pose option, as shown in the figure below.
+
+.. important::
+	The five fixed scanning poses are essentially custom poses as well; they can be understood as five commonly used scanning poses that have been preset for convenience.
+
+.. figure:: analysis/4/gantry14.png
+	:align: center
+	:width: 3in
+
+	Extension Axis Scanning Strategy
+
+If you choose the custom scanning pose, turn on the &quot;Custom Scanning Pose&quot; button and teach the robot the desired scanning pose.
+
+Finally, set the start and end positions of the extension axis and click the &quot;Add&quot; button, as shown in the figure below.
+
+.. figure:: analysis/4/gantry15.png
+	:align: center
+	:width: 3in
+
+	Extension Axis Scanning Strategy — Custom Scanning Pose
+
+Modeling Node: Enter the model name for the modeling node and click the &quot;Add&quot; button, as shown in the figure below.
+
+.. figure:: analysis/4/gantry16.png
+	:align: center
+	:width: 3in
+
+	Add Model Construction Node
+
+After the program is successfully created, click &quot;Run Program&quot; in the model construction menu bar. Once the program runs successfully, the global construction map and weld data will be acquired, as shown in the figure below.
+
+.. figure:: analysis/4/gantry17.png
+	:align: center
+	:width: 6in
+
+	Model‑Free Construction — Add Node
+
+.. important::
+	The master station cannot perform weld editing; it can only view the weld editing status. All welds can only be edited at the slave station.
+
+.. figure:: analysis/4/gantry18.png
 	:align: center
 	:width: 6in
 
@@ -2297,6 +2429,12 @@ After selecting the external axis in the import module, click confirm to open th
 .. important::
 	If the robot system version in use is 3.8.2.11 or higher, enable the Acceleration Smoothing Mode on the web terminal first as shown in the figure. Otherwise, the extended axis synchronous motion failure issue will occur in subsequent operations.
 
+.. figure:: analysis/4/axis1.png
+	:align: center
+	:width: 6in
+
+	Extension axis setting pop-up window
+
 .. figure:: analysis/4/38.png
 	:align: center
 	:width: 6in
@@ -2620,13 +2758,13 @@ To modify or view the welding feature parameters during project operation, click
 
 As shown in the figure below:
 
-.. figure:: analysis/4/import.png
+.. figure:: analysis/4/feature1.png
 	:align: center
 	:width: 6in
 
 	New Welding Project – Welding Feature Parameter Settings Pop-up
 
-.. figure:: analysis/4/new.png
+.. figure:: analysis/4/feature2.png
 	:align: center
 	:width: 6in
 
@@ -2636,13 +2774,13 @@ If you confirm to use the current feature configuration, click the Confirm Use b
 
 There are three workpiece model construction methods available: Camera Acquisition, 3D File Integration, and SLAM Mapping.Click the corresponding icon; a welding feature description pop-up window (shown in the follow picture) will appear, displaying a detailed description of the currently selected method/feature.Please make a matching selection based on this description and the actual workpiece.
 
-.. figure:: analysis/4/model_struct.png
+.. figure:: analysis/4/feature3.png
 	:align: center
 	:width: 6in
 
 	Reselect Features – Model Construction Method Selection
 
-.. figure:: analysis/4/model_struct_camera.png
+.. figure:: analysis/4/feature4.png
 	:align: center
 	:width: 6in
 
@@ -2653,7 +2791,7 @@ There are three workpiece model construction methods available: Camera Acquisiti
 
 If 3D File Inheritance is selected as the model construction method, click Next to proceed to the Planar Feature Selection page, as shown in the figure below.
 
-.. figure:: analysis/4/3D_plane_box.png
+.. figure:: analysis/4/feature5.png
 	:align: center
 	:width: 6in
 
@@ -2662,14 +2800,14 @@ If 3D File Inheritance is selected as the model construction method, click Next 
 If Camera Acquisition is selected as the model construction method, click Next to proceed to the Vision Feature Selection page, as shown in the figure below. Determine whether the current workpiece is a Non-spline Feature or Spline Feature according to the welding feature description, then click Next to enter the subsequent feature selection page.
 
 
-.. figure:: analysis/4/feature5.png
+.. figure:: analysis/4/feature6.png
 	:align: center
 	:width: 6in
 
 	Vision Feature Selection Page--Non-spline Feature
 
 
-.. figure:: analysis/4/feature6.png
+.. figure:: analysis/4/feature7.png
 	:align: center
 	:width: 6in
 
@@ -2679,39 +2817,47 @@ For workpieces with spline features, it is necessary to determine whether the cu
 
 After selecting the spline feature, click the Finish button directly to complete the welding feature parameter configuration. You can then close the pop-up window and start processes such as model construction.
 
-.. figure:: analysis/4/feature7.png
+.. figure:: analysis/4/feature8.png
 	:align: center
 	:width: 6in
 
 	General Spline
 
-.. figure:: analysis/4/feature8.png
+.. figure:: analysis/4/feature9.png
 	:align: center
 	:width: 6in
 
 	Intersecting Line Spline
 
-For workpieces with non-spline features, it is necessary to select planar features further. Considering the priority characteristics of the four current planar features, click the Next button when making a selection, and choose Yes or No according to the planar structure of the workpiece and the interactive prompts on the interface, as shown in the figures below. The selected features will be displayed in the list under Selected Features on the page.
+For non-spline feature workpieces, further selection of plane features is required. When selecting a lap joint plane, the software will pop up a lap joint plane selection window, in which three types of lap joint planes are available: staggered-layer lap joint, flat-plate lap joint, and vertical-plate lap joint. You can make your selection based on the plane feature descriptions.
 
-.. figure:: analysis/4/feature2.png
+.. figure:: analysis/4/feature10.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Lap Joint Planar Feature
 
-.. figure:: analysis/4/feature3.png
+Considering that the four plane features currently have a priority order, when selecting other plane features, the interface will sequentially prompt whether the workpiece contains a higher-priority feature. Based on the actual features of the workpiece, you can select "Yes" or "No," as shown in the figure below. The selected features will appear in the list under "Selected Features" on the page.
+
+.. figure:: analysis/4/feature11.png
+	:align: center
+	:width: 6in
+
+	Non-spline Feature--Lap Joint Planar Feature
+
+.. figure:: analysis/4/feature12.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Narrow Planar Feature
 
-.. figure:: analysis/4/feature4.png
+.. figure:: analysis/4/feature13.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Box Girder Planar Feature
 
-.. figure:: analysis/4/feature1.png
+.. figure:: analysis/4/feature14.png
 	:align: center
 	:width: 6in
 
@@ -3256,7 +3402,7 @@ After setting the parameters, click the "Set Properties" button, then click the 
 
 .. figure:: analysis/4/collision_comple.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
 	Collision Model Parametric Completion Pop-up
 
