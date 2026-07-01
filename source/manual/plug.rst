@@ -44,7 +44,7 @@ Reinsert the encryption dongle and wait approximately 30 seconds. Once the plugi
 
 If an error occurs during the authorization process, the procedure will automatically terminate, and an error prompt will pop up as shown in the figure. In such cases, please contact the after-sales personnel for assistance.
 
-.. figure::analysis/4/plugin_authr_fail_en.png
+.. figure:: analysis/4/plugin_authr_fail_en.png
 	:align: center
 	:width: 6in
 
@@ -165,7 +165,7 @@ Click Settings in the menu bar to open the bin-picking settings pop-up window, a
 
 .. figure:: plug/binpicking_project_ui.png
 	:align: center
-	:width: 6in
+	:width: 3.5in
 
 	bin-picking pop-up window
 
@@ -177,7 +177,7 @@ This involves many parameter settings, explained as follows:
 
 .. figure:: plug/binpicking_project_add.png
 	:align: center
-	:width: 6in
+	:width: 4in
 
 	bin-picking settings pop-up – adding a new project
 
@@ -247,19 +247,19 @@ The sub-interfaces of various specific modes are displayed as follows:
 
 .. figure:: plug/position_bind_fix.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Position Binding-Fix
 
 .. figure:: plug/position_bind_regular.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Position Binding-Regular
 
 .. figure:: plug/position_bind_custum.png
 	:align: center
-	:width: 6in
+	:width: 3in
 
 	Position Binding-Custom
 
@@ -287,7 +287,7 @@ Grasping Position Error Compensation is configured to eliminate systematic error
 
 	Grasping position error compensation
 
-4. Program running
+1. Program running
 
 After the grasping posture is generated successfully and the position is bound successfully, the program can be run. There are two running modes: manual and automatic.
 
@@ -421,23 +421,40 @@ Start AIRLab software with one click (make sure the robot arm is connected and t
 
 Palletizing Plugin
 ---------------------
-The palletizing plugin enables automatic object recognition and grasping, as well as automatic placement according to a preset stacking pattern. Click "Plugins - Open Palletizing Plugin" in the menu bar. The main scene will then be divided into two display areas: 3D and 2D, and the Palletizing window will pop up simultaneously. The 3D scene is used to display the robot's motion process, motion trajectories, and simulation models, while the 2D scene is used to display the RGB image of the workpiece and the bounding boxes identified.
+The palletizing plugin enables automatic recognition and grasping of objects and automatically places them according to a pre-set stacking pattern. Click "Plugins -> Open Palletizing Plugin" in the menu bar. The main scene will be divided into two display areas: a 3D scene and a 2D scene. The 3D scene is used to display the robot's motion process, running trajectory, and simulation model; the 2D scene is used to display the RGB image of the workpiece and its recognized bounding boxes.
+
+At the same time, the following three options will be added to the menu bar: "Model", "Settings", and "Debug", as shown in the figure below.
 
 .. figure:: plug/palletizing1.png
 	:align: center
-	:width: 6in
+	:width: 4in
 
-	Opening the Palletizing Plugin
+	Palletizing Menu Bar
 
-AI Node Connection
-~~~~~~~~~~~~~~~~~~~~~~
-Before starting the cyclic palletizing process, ensure that the AI node is turned on and initialized successfully, as shown in the figure:
+Click the "Settings" button to open the pop-up window of the palletizing plugin, as shown in the figure below.
+
+.. figure:: plug/palletizing2.png
+	:align: center
+	:width: 3.5in
+
+	Palletizing Plugin Opened
+
+Palletizing Project Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The palletizing plugin also supports the training and customization process for the entire palletizing project, which is similar to the bin-picking plugin. For specific operations in the model preparation stage, refer to Section 4.2.2 "Bin-picking Model Pop-up", which includes model dataset construction, data annotation, and model training. For the project configuration stage, refer to the project settings section in Section 4.2.3 "Bin-picking Settings Pop-up". Most parameters are similar to those in the bin-picking plugin. The parameters unique to palletizing are described below. The entire pop-up window interface is shown in the figure below.
 
 .. figure:: plug/palletizing3.png
 	:align: center
-	:width: 5in
+	:width: 3in
 
-	Opening the Palletizing Plugin
+	Palletizing Project Parameter Configuration
+
+
+- QR Code Side Length: The side length of the QR code attached to the pallet to be recognized, in millimeters.
+- Position of the Shelf in the Image: Select the position of the shelf in the image according to the actual situation. Four options are available: Top Left, Bottom Left, Top Right, Bottom Right.
+- Relative Pose Between Tool Coordinate System and Shelf: The pose of the tool coordinate system relative to the shelf when the robot grips the shelf (in the gripping posture).
+
+After completing the palletizing "Project Configuration", click the "OK" button. At the same time, the AI node will be opened accordingly (consistent with the process described in Section 4.2.3), and subsequent operations can be performed.
 
 Pallet Identification and Positioning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -446,21 +463,30 @@ In the AIRLab software, first import the robot and tool models. Then, paste a QR
 After that, click "Palletizing - Pallet Position Settings," select the taught photographing point, and click the "Photograph" button. The robot will automatically move to that point to take a photo and perform AI recognition. Once recognition is complete, the 3D scene will display the identified pallet coordinates, and the pallet workpiece will be automatically imported into the 3D scene.
 
 .. important::
-	There is an error in the recognized pallet coordinates. Please confirm whether the RX, RY, and RZ values of the coordinate system are normal to ensure that the pallet is parallel to the ground.
+	The recognized pallet coordinates may have pose errors. Please check the RX and RY angles in the "Pallet Coordinates" column in the figure below. The acceptable ranges are -180° to -175°, 175° to 180°, and -5° to 5°. If the deviation is too large, it is recommended to re-take the photo for recognition.
 
-.. figure:: plug/palletizing2.png
+
+.. figure:: plug/palletizing4.png
 	:align: center
 	:width: 6in
 
 	Pallet Identification and Positioning
 
-After successful pallet recognition and positioning, set the pallet dimensions and shelf dimensions, and click the confirm button to confirm.
+After successful pallet recognition and positioning, set the pallet dimensions and click the OK button to confirm.
+
+.. figure:: plug/palletizing5.png
+	:align: center
+	:width: 3in
+
+	Shelf Placement Settings
+
+If it is necessary to intersperse shelf placement during the palletizing process, confirm the "Place Shelf" setting, fill in the shelf dimensions, and click the OK button.
 
 Pallet Stacking Pattern Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Open "Palletizing - Palletized Item Dimensions and Arrangement Settings," set the dimensions of the palletized items and the stacking spacing, and click the "Confirm" button. The software will then automatically calculate the stacking pattern parameters (maximum number of rows and columns on the pallet) based on the pallet dimensions and the dimensions of the palletized items.
 
-.. figure:: plug/palletizing4.png
+.. figure:: plug/palletizing6.png
 	:align: center
 	:width: 6in
 
@@ -468,53 +494,48 @@ Open "Palletizing - Palletized Item Dimensions and Arrangement Settings," set th
 
 The stacking pattern parameters can be modified. If a value greater than the maximum number of rows or columns is set, the software will display an error message. Click the "Confirm" button to finalize the stacking pattern parameters.
 
-Program Operation Settings
+Palletizing Parameter Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-After presetting the stacking pattern parameters, configure the automatic palletizing operation settings, including end-effector settings, speed settings, and photographing point settings.
+1. Initial Settings
 
-1. End-Effector Settings
-
-Select the end-effector and bind the port (only pneumatic grippers are currently supported), then click "Confirm."
-
-.. figure:: plug/palletizing5.png
-	:align: center
-	:width: 4in
-
-	End-Effector Settings
-
-2. Speed Settings
-
-Set the program's idle movement speed and grasping speed, where:
-
-Idle movement speed: Used to set the speed during transition points and when moving to the pre-grasp position during palletizing tasks.
-
-Grasping speed: The speed from the pre-grasp position to the grasp position.
-
-.. figure:: plug/palletizing6.png
-	:align: center
-	:width: 4in
-
-	Speed Settings
-
-After completing the settings, click the "Confirm" button.
-
-3. Photographing Point Settings
-
-It is necessary to bind the photographing points for the divider, the palletized object, and the waiting placement point, where:
-
-- Divider photographing point: Used to photograph and recognize the divider. It is recommended to set this point above the lower-left corner of the divider to ensure a clear image for recognition.
-
-- Palletized object photographing point: Used to photograph and recognize the palletized object. It is recommended to set this point above the grasp position to ensure the object to be grasped is fully captured.
-
-- Waiting placement point: Serves as a transition point between the grasp position and the placement position. It is recommended to set this point midway between the grasp and placement positions, with minimal changes in posture compared to the grasp and placement points.
+Initial settings for automatic palletizing operation, including end effector settings, speed settings, etc. The interface is shown below.
 
 .. figure:: plug/palletizing7.png
 	:align: center
 	:width: 4in
 
-	Photographing Point Settings
+	Palletizing Initial Settings
+
+The specific definitions of each parameter are as follows:
+
+- End Effector: The robot's end tool. Currently only pneumatic grippers are supported.
+- Binding Port: The binding port number corresponding to the end effector. The two buttons below can be used to manually open/close the gripper.
+- Incoming Material Signal Port: The port bound for the robot to read the incoming material signal during palletizing tasks.
+- Vacuum Signal Port: The port bound for the robot to read the gripper vacuum signal during palletizing tasks.
+- Free Movement Speed: The speed of the robot between transition points and during movement to the pre-grasp position during palletizing tasks.
+- Grasping Speed: The speed from the pre-grasp position to the grasp position.
 
 After completing the settings, click the "Confirm" button.
+
+2. Camera Pose Settings
+
+It is necessary to bind the shelf camera pose, the palletizing object camera pose, and the waiting placement pose. The interface is shown below.
+
+.. figure:: plug/palletizing8.png
+	:align: center
+	:width: 4in
+
+	Camera Pose Settings
+
+The specific meanings are as follows:
+
+- Shelf Camera Pose: The camera pose used to photograph and recognize the shelf. It is recommended to set this pose above the lower left corner of the shelf to ensure a clear capture of the lower left corner for recognition. You can click the "Photo Recognition" button on the right to perform manual recognition debugging and observe the photo effect.
+- Palletizing Object Camera Pose: The camera pose used to photograph and recognize the palletizing object. It is recommended to set this pose above the grasp position of the palletizing object to ensure a complete capture of the object to be grasped. You can click the "Photo Recognition" button on the right to perform manual recognition debugging and observe the photo effect.
+- Number of Transition Points: The number of transition points that the robot passes through during palletizing operation between the grasp pose and the placement pose.
+- Transition Points: The transition points between the grasp pose and the placement pose. According to the set order of transition points, after grasping the object, the robot sequentially passes through the camera pose, Transition Point 1, Transition Point 2, etc., and finally returns to the placement pose. It is recommended to set these points in the middle position between the grasp pose and the placement pose, and the change in posture from the placement pose and the grasp pose should not be too large.
+
+After completing the settings, click the "OK" button.
+
 
 Palletizing Program Execution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -522,7 +543,7 @@ Palletizing Program Execution
 
 Open "Palletizing - Palletizing Program Execution" and click the "Start Palletizing" button.
 
-.. figure:: plug/palletizing8.png
+.. figure:: plug/palletizing9.png
 	:align: center
 	:width: 4in
 
@@ -530,7 +551,7 @@ Open "Palletizing - Palletizing Program Execution" and click the "Start Palletiz
 
 The program will automatically run according to the preset stacking pattern. The robot will first move to a transition point, then from the transition point to the palletized object photographing point for recognition. After successful recognition, the robot's grasping trajectory will be generated in the 3D scene, and the robot will follow the trajectory to complete the grasping and placement.
 
-.. figure:: plug/palletizing9.png
+.. figure:: plug/palletizing10.png
 	:align: center
 	:width: 6in
 
@@ -538,13 +559,15 @@ The program will automatically run according to the preset stacking pattern. The
 
 After completing one layer of stacking, the robot will move to the divider photographing point to photograph and recognize the divider, then place the divider on top of the palletized items of that layer. It will then proceed to the next cycle of recognition and stacking until all layers are completed according to the preset stacking pattern.
 
-.. figure:: plug/palletizing10.png
+.. figure:: plug/palletizing11.png
 	:align: center
 	:width: 4in
 
 	Palletizing Completed
 
 2. Click the "Stop" button to terminate the currently executing palletizing task.
+3. Click the "Pause" button to pause the currently executing palletizing task.
+4. Click the "Resume" button to resume the palletizing sequence from where it was paused and continue the palletizing task.
 
 AI Smart Assistant
 ---------------------
