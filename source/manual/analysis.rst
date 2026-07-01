@@ -790,6 +790,7 @@ The principle of the model-less photo point of demonstration is that the camera 
 	:width: 3.5in
 
 	Photographic points of the workpiece at different angles    
+
 Add Model Construction Node: After adding multiple movement nodes, add the model construction node. The model construction methods include two options: Line + Arc and Spline. If Spline is selected, you need to set the sampling interval. After selecting the model construction method, edit the modelfree workpiece name. Click the &quot;OK&quot; button, and the &quot;Model Construction&quot; node will appear under the modelfree module, indicating that the modelfree construction node has been successfully added.
 
 .. figure:: analysis/4/model_less3.png
