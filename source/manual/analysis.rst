@@ -1209,7 +1209,8 @@ For the photo points that failed filtering in the previous step, please manually
 	Custom Point — Using Custom Name
 
 
-Note: Please manually add several transition points at the end of the fine positioning point list to ensure that the robot can safely return from the capture endpoint of the last weld to the capture start point of the first weld.
+.. important::
+	lease manually add several transition points at the end of the fine positioning point list to ensure that the robot can safely return from the capture endpoint of the last weld to the capture start point of the first weld.
 
 If you wish to modify or view a point in the fine positioning list, select the point in the list and click the "Edit" icon button, as shown in the figure below.
 
