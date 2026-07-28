@@ -9,7 +9,7 @@
 project = 'AIRLab Software Customer Manual'
 copyright = '2024-2026, Fairino (Suzhou) Robot Technology Co.,Ltd.'
 author = 'Fairino (Suzhou) Robot Technology Co.,Ltd.'
-release = '1.4.0'
+release = '2.2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -37,6 +37,7 @@ numfig = True
 numfig_secnum_depth = 1  
 numfig_format = {
     'figure': 'Figure %s',
+    'table': 'Table %s',
 }
 
 html_js_files = [

@@ -5,7 +5,7 @@ AIRLab Software Analysis
 
 The initial interface of the AIRLab software is shown in Figure below and is divided into five main sections. In the middle of the interface is the main display box (divided into scene display and camera display), on the top is the menu bar, on the leftmost side is the engineering module area, on the rightmost side is the operation area, and at the bottom of the interface is the command feedback area. This section will provide a detailed description of the functions and usage of the above areas, the pop-up windows and other pages that appear in the AIRLab software, and the sub-page functions.
 
-.. figure:: analysis/4/1.png
+.. figure:: analysis/1.png
 	:align: center
 	:width: 7.5in
 
@@ -15,7 +15,7 @@ Menu Bar
 --------------------------
 The content included in the menu bar is shown in Figure below, mainly consisting of the buttons: "File," "View," "Window," "Simulation," "Plugins," "Welding," "Process," as well as icon buttons (in order from left to right): Add Point, Add Coordinate System, Mode Switch, Pause Run, Start Run, Stop Run.
 
-.. figure:: analysis/4/2.png
+.. figure:: analysis/2.png
 	:align: center
 	:width: 7.5in
 
@@ -25,7 +25,7 @@ File
 ~~~~~~~~~~~~~~~~~~~
 Click the“File”button, the menu shown below will appear:“New”,“Open”, “Export”. How to use it is described below:
 
-.. figure:: analysis/4/3.png
+.. figure:: analysis/3.png
 	:align: center
 	:width: 2in
 
@@ -33,7 +33,7 @@ Click the“File”button, the menu shown below will appear:“New”,“Open”
 
 Select “New” click, “New Project” pop-up window will show, select the type of weld project in the pop-up window, then click “Confirm” button to complete the project new.
 
-.. figure:: analysis/4/4.png
+.. figure:: analysis/4.png
 	:align: center
 	:width: 2in
 
@@ -41,7 +41,7 @@ Select “New” click, “New Project” pop-up window will show, select the ty
 
 Select “Open” click, the “Select Project” pop-up window appears, find the path of your project, select the double-click or click on the pop-up window after clicking the “Open” button, that is, import the project successfully.
 
-.. figure:: analysis/4/5.png
+.. figure:: analysis/5.png
 	:align: center
 	:width: 4in
 
@@ -49,25 +49,17 @@ Select “Open” click, the “Select Project” pop-up window appears, find th
 
 Select “Export” click, “Save Project” pop-up window appears, this function will save AIRLab's current project under user-defined path. After naming the project in the “File name” column of the popup window, click “Save” to complete the export of the current project.
 
-.. figure:: analysis/4/6.png
+.. figure:: analysis/6.png
 	:align: center
 	:width: 4in
 
 	AIRLab Menu Bar - File - Export
 
-If exported when there is currently no project present, AIRLab will provide a pop-up message prompt, as shown in the following figure.
-
-.. figure:: analysis/4/7.png
-	:align: center
-	:width: 2.5in
-
-	AIRLab export failed
-
 View
 ~~~~~~~~~~~~~~~~~~~
 View contains 12 functions, as shown in Figure below, the main function is to adjust the viewing angle of the robot in the main display frame. They are: Zoom, Pan, Rotate, Reset, Fit all, Front view, Back view, Top view, Bottom view, Left view, Right view, and Full view.
 
-.. figure:: analysis/4/8.png
+.. figure:: analysis/7.png
 	:align: center
 	:width: 2in
 
@@ -75,17 +67,45 @@ View contains 12 functions, as shown in Figure below, the main function is to ad
 
 See Table 3-1 for a description of the specific functions of the view.
 
-.. centered:: Table 3-1  View Function Description Table
+.. table:: View Function Description
+   :align: center
 
-.. image:: analysis/4/表3-1.png
-	:align: center
-	:width: 6in
+   +---------------+--------------------------------------------------------------+
+   | Function Name | Functional Description                                       |
+   +===============+==============================================================+
+   | Zoom          | Zoom in or out of the 3D scene with the mouse wheel          |
+   +---------------+--------------------------------------------------------------+
+   | Pan           | Press and hold the mouse wheel while moving it to pan the    |
+   |               | 3D scene                                                     |
+   +---------------+--------------------------------------------------------------+
+   | Rotate        | Press and hold the mouse wheel while moving it to rotate the |
+   |               | 3D scene                                                     |
+   +---------------+--------------------------------------------------------------+
+   | Reset         | Restore the 3D scene to its initial state                    |
+   +---------------+--------------------------------------------------------------+
+   | Fit all       | Automatically adjust the size and position of the viewing    |
+   |               | area                                                         |
+   +---------------+--------------------------------------------------------------+
+   | Front view    | Switch to the front view                                     |
+   +---------------+--------------------------------------------------------------+
+   | Back view     | Switch to the back view                                      |
+   +---------------+--------------------------------------------------------------+
+   | Top view      | Switch to the top view                                       |
+   +---------------+--------------------------------------------------------------+
+   | Bottom view   | Switch to the bottom view                                    |
+   +---------------+--------------------------------------------------------------+
+   | Left view     | Switch to the left view                                      |
+   +---------------+--------------------------------------------------------------+
+   | Right view    | Switch to the right view                                     |
+   +---------------+--------------------------------------------------------------+
+   | Full view     | Switch to the full view                                      |
+   +---------------+--------------------------------------------------------------+
 
 Window
 ~~~~~~~~~~~~~~~~~~~
 The "Window" menu contains six secondary options: "Software/Firmware Upgrade", "About", "Version Verification", "Log", "Virtual Camera", and "TCF and Camera Hand-Eye Calibration",and "Data source export". Clicking on different options will trigger different functional pop-up windows in AIRLab. For detailed functions and usage instructions, refer to the pop-up window introduction in Section 3.6.
 
-.. figure:: analysis/4/window.png
+.. figure:: analysis/8.png
 	:align: center
 	:width: 3.5in
 
@@ -95,7 +115,7 @@ Simulation
 ~~~~~~~~~~~~~~~~~~~
 This button is used to switch between the simulation robot and the real robot. Before using this button, you need to successfully import or create a project and successfully establish Ros2 communication connection with the real robot. Clicking this button after completing the above prerequisites will enable switching between the virtual robot and the physical robot both. After switching the real robot, the robot pose displayed in the AIRLab scene will be synchronized with the actual robot, as shown in Figure below.
 
-.. figure:: analysis/4/11.png
+.. figure:: analysis/10.png
 	:align: center
 	:width: 3in
 
@@ -111,7 +131,7 @@ To enhance the scalability and user experience of the AIRLab software, AIRLab pr
 
 The existing plugins include the Welding plugin, Bin-picking plugin, Smart Assistant plugin, and Palletizing plugin. You can choose to enable or disable plugins. Additionally, you can view the authorization status of each plugin and perform authorization via "Plugin Authorization". For detailed introductions and specific operations of each plugin, please refer to Chapter 4, Plugin Section.
 
-.. figure:: analysis/4/plugin_menu_en.png
+.. figure:: analysis/plugin_menu.png
 	:align: center
 	:width: 3in
 
@@ -121,7 +141,7 @@ Weld
 ~~~~~~~~~~~~~~~~~~~
 Under the main "Welding" function, there are secondary options for implementing different functions. After selecting and clicking an option, AIRLab will pop up the corresponding welding function settings window. For detailed descriptions and operation methods of each function, please refer to the pop-up window introductions in Section 3.6.
 
-.. figure:: analysis/4/weld.png
+.. figure:: analysis/weld_dialog.png
 	:align: center
 	:width: 3in
 
@@ -131,7 +151,7 @@ Process
 ~~~~~~~~~~~~~~~~~~~
 The “Process” includes “Welding Process” and “Cylindrical Filling”, according to the process need to select different processes, click the option to appear corresponding function pop-up window.For a detailed introduction,please refer to section 4.6 on the analysis of engineering modules.
 
-.. figure:: analysis/4/10.png
+.. figure:: analysis/9.png
 	:align: center
 	:width: 3in
 
@@ -145,13 +165,13 @@ Points added
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 This function is used to quickly record the current position of the robot. After clicking this button, a new position targetX will be added under the position information section of the engineering module on the left side of AIRLab. The function of X is to prevent duplicate names of newly added positions, as shown in Figure below. The j1, j2, j3, j4, j5, j6, x, y, z, rx, ry, and rz information of this point are the current joint coordinates and Cartesian coordinates of the robot.
 
-.. figure:: analysis/4/13.png
+.. figure:: analysis/12.png
 	:align: center
 	:width: 2in
 
 	AIRLab Menu Bar - Point Additions
 
-.. figure:: analysis/4/14.png
+.. figure:: analysis/airlab_terminal_point_add_success.png
 	:align: center
 	:width: 4.5in
 
@@ -166,7 +186,13 @@ Click the reference coordinate system icon on the far left to enter the referenc
 
 Click the Delete button above to remove the selected reference coordinate system.
 
-.. figure:: analysis/4/15.png
+.. figure:: analysis/14.png
+	:align: center
+	:width: 3in
+
+	AIRLab Reference Coordinate System Menu
+
+.. figure:: analysis/15.png
 	:align: center
 	:width: 6in
 
@@ -174,13 +200,13 @@ Click the Delete button above to remove the selected reference coordinate system
 
 Figure below shows the coordinate system displayed, and Figure below shows the coordinate system not displayed.
 
-.. figure:: analysis/4/16.png
+.. figure:: analysis/16.png
 	:align: center
 	:width: 3in
 
 	AIRLab Menu Bar-RCS-Display CS
 
-.. figure:: analysis/4/17.png
+.. figure:: analysis/17.png
 	:align: center
 	:width: 3in
 
@@ -192,43 +218,35 @@ Offline Simulation
 
 To enable intelligent recommendation of offline welding postures and improve simulation efficiency, AIRLab has added an "Offline Simulation" function. As shown in the figure, click the "Offline Simulation" icon button in the toolbar to enter the simulation state, and the icon color will turn yellow and highlighted.Click the icon again,exit the simulation state.
 
-.. figure:: analysis/4/open-Offline-Simulation-state.png
+.. figure:: analysis/offline_imulation1.png
 	:align: center
 	:width: 6in
 
 	open "Offline Simulation" state 
 
+.. figure:: analysis/offline_imulation2.png
+	:align: center
+	:width: 6in
+
+	Close "Offline Simulation" state
+
 After importing the robot, tool, and workpiece, click "Weld Seam Editing". Select a weld seam for editing, and after completion, click the "Offline Simulation" button in the pop-up window. AIRLab will dynamically simulate the path trajectory of the current weld seam from the approach point to the exit point in the 3D scene, showing whether the welding torch posture and robot position of the weld seam are reasonable, as shown in the figure.
 
-.. figure:: analysis/4/offlin-simulation2.png
+.. figure:: analysis/offline_imulation3.png
 	:align: center
 	:width: 6in
 
 	Offline Simulate one weld seam
 
-After editing all the weld seams to be welded, click the "Weld Seam Editing" icon button, and click "Weld Seams Edited in Offline Simulation " in the triggered menu, as shown in the figure. 
-
-.. figure:: analysis/4/offlin-simulation3.png
-	:align: center
-	:width: 3in
-
-	the menu content
+After editing all the weld seams to be welded, click the "Weld Seam Editing" icon button, and then click "Weld Seams Edited in Offline Simulation" in the menu.
 
 AIRLab will automatically generate a Lua program under the program module, and display the offline simulated welding torch posture, weld seam position, welding process, trajectory planning and other contents in the 3D scene.
 
-.. figure:: analysis/4/offlin-simulation4.png
+.. figure:: analysis/offline_imulation4.png
 	:align: center
 	:width: 6in
 
 	Offline Simulation of Edited Weld Seams
-
-To prevent users from mistakenly running programs in the offline simulation state, AIRLab has added a running prompt when in the offline simulation state, as shown in the figure.
-
-.. figure:: analysis/4/offlin-simulation5.png
-	:align: center
-	:width: 3in
-
-	running prompt in offline simulation state
 
 
 
@@ -249,13 +267,13 @@ Main Frame
 --------------------------
 The main display box is divided into scene display and camera display, where the scene mainly displays the robot, tool, workpiece, extended axis model, etc., as in Figure below. the camera mainly displays the obtained point cloud map, as in Figure below.
 
-.. figure:: analysis/4/20.png
+.. figure:: analysis/20.png
 	:align: center
 	:width: 5.5in
 
 	AIRLab Main Display Box - Scene Display
 
-.. figure:: analysis/4/21.png
+.. figure:: analysis/21.png
 	:align: center
 	:width: 5.5in
 
@@ -265,7 +283,7 @@ Command Feedback Area
 --------------------------
 The instruction feedback area displays the execution results of program instructions, as shown in Figure below.
 
-.. figure:: analysis/4/14.png
+.. figure:: analysis/airlab_command_feedback.png
 	:align: center
 	:width: 6.5in
 
@@ -278,7 +296,7 @@ Cartesian space movement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This area includes two parts: tool coordinate system relative to the reference coordinate system, and long press tap trigger, move step and rotate step settings, as shown in Figure below.
 
-.. figure:: analysis/4/23.png
+.. figure:: analysis/23.png
 	:align: center
 	:width: 3in
 
@@ -291,7 +309,7 @@ This area includes two parts: tool coordinate system relative to the reference c
 .. important::
 	To control the robot's JOG pointing by long-pressing the buttons, if the buttons are released while the robot is running, the robot will stop moving immediately; if the buttons are held down all the way and not released, the robot will run the value of the set rotation step and then stop moving. the X-, Y+, Y-, Z+, Z- buttons operate in the same way. If the Rx+, Rx-, Ry+, Ry-, Rz+, Rz- buttons are pressed and held down, the robot will otherwise remain unchanged, except that it will move according to the set value of the rotation step.
 
-.. figure:: analysis/4/24.png
+.. figure:: analysis/24.png
 	:align: center
 	:width: 3in
 
@@ -301,7 +319,7 @@ Joint space space movement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This area includes 12 joint coordinate long press trigger buttons for joints J1-J6, 6 joint coordinate change text boxes and 6 joint sliders in three parts, as shown in Figure below.
 
-.. figure:: analysis/4/25.png
+.. figure:: analysis/25.png
 	:align: center
 	:width: 3in
 
@@ -320,7 +338,7 @@ Moving extended axis settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This section includes "exaxis+", "exaxis-" and the step setting box, as shown in Figure below. "exaxis+", "exaxis-" functions are similar to the pointing X+ and X- under the tool coordinate system, and the motion of the extended axis can be controlled by the above two buttons. Long press the button to control the extended axis running, if you release the button during the extended axis running, the extended axis will stop moving immediately; if you keep pressing the button and do not release it, the extended axis will run the value set in the Step Setting box and then stop moving.
 
-.. figure:: analysis/4/26.png
+.. figure:: analysis/26.png
 	:align: center
 	:width: 3in
 
@@ -334,13 +352,13 @@ Click New Welding Project or Import Existing Welding Project. The AIRLab interfa
 
 - For an imported existing project, the configured welding features displayed are those recorded in the project.
 
-.. figure:: analysis/4/new.png
+.. figure:: analysis/new.png
 	:align: center
 	:width: 6in
 
 	New Welding Project - Configured Features
 
-.. figure:: analysis/4/import.png
+.. figure:: analysis/import.png
 	:align: center
 	:width: 6in
 
@@ -358,7 +376,7 @@ Import module
 ~~~~~~~~~~~~~~~~~~~
 Click the Import icon on the far left to enter the import module, where users can import robots, tools, workpieces, extension axes, or connect cameras.
 
-.. figure:: analysis/4/27.png
+.. figure:: analysis/27.png
 	:align: center
 	:width: 6in
 
@@ -366,7 +384,7 @@ Click the Import icon on the far left to enter the import module, where users ca
 
 - Import Robot: Select the robot, and the interface will display the robot settings page. Switching the robot model will show a schematic diagram and basic information of the selected robot on the page, as illustrated in the figure.
 
-.. figure:: analysis/4/28.png
+.. figure:: analysis/28.png
 	:align: center
 	:width: 6in
 
@@ -374,7 +392,7 @@ Click the Import icon on the far left to enter the import module, where users ca
 
 If the selected robot is not currently compatible with AIRLab software, a prompt interface will pop up, as shown in the figure.
 
-.. figure:: analysis/4/Robot_Imp_Tip.png
+.. figure:: analysis/Robot_Imp_Tip.png
 	:align: center
 	:width: 2.5in
 
@@ -382,7 +400,7 @@ If the selected robot is not currently compatible with AIRLab software, a prompt
 
 Taking the FR5 as an example, select the FR5 model robot and its version number (currently only V6.0 is supported), then click "Import". The FR5 robot model will be imported into the 3D scene, and a "Robot imported successfully" message displayed in the terminal confirms the successful import of the robot model.
 
-.. figure:: analysis/4/29.png
+.. figure:: analysis/29.png
 	:align: center
 	:width: 6in
 
@@ -390,7 +408,7 @@ Taking the FR5 as an example, select the FR5 model robot and its version number 
 
 Considering more flexible and rich robot deployment scenarios, we provide a free installation function. The user setting module sets the tilt angle and rotation angle in the page, and the robot model in the 3D scene or shows the corresponding installation effect. After modification, click Set to complete the robot installation method settings.
 
-.. figure:: analysis/4/30.png
+.. figure:: analysis/30.png
 	:align: center
 	:width: 6in
 
@@ -403,7 +421,7 @@ You can delete the currently imported robot model by clicking the “Delete” b
 
 - Import tool: Select the tool button, AIRLab interface will display the tool setting page.
 
-.. figure:: analysis/4/31.png
+.. figure:: analysis/31.png
 	:align: center
 	:width: 6in
 
@@ -411,7 +429,7 @@ You can delete the currently imported robot model by clicking the “Delete” b
 
 Click Open, select the tool model you want to import under the corresponding path, and click “Open”.
 
-.. figure:: analysis/4/32.png
+.. figure:: analysis/32.png
 	:align: center
 	:width: 3in
 
@@ -419,7 +437,7 @@ Click Open, select the tool model you want to import under the corresponding pat
 
 The imported tool model is displayed in the 3D scene, and the terminal displays “Successful tool import”, which means that the tool model has been successfully imported.
 
-.. figure:: analysis/4/33.png
+.. figure:: analysis/33.png
 	:align: center
 	:width: 6in
 
@@ -429,7 +447,7 @@ After importing a tool, you can set the current coordinate system of the tool an
 
 Click the “Get Current” button under the tool coordinate system on the tool setting page to get the current coordinate system of the tool, and then click “Save” to modify the tool coordinate system.
 
-.. figure:: analysis/4/34.png
+.. figure:: analysis/34.png
 	:align: center
 	:width: 6in
 
@@ -437,7 +455,7 @@ Click the “Get Current” button under the tool coordinate system on the tool 
 
 If you need to modify the appearance position of the tool, modify the coordinates under Appearance Position on the Tool Settings page, and then click the “Set Tool Appearance” button to finish setting the appearance position of the tool.
 
-.. figure:: analysis/4/35.png
+.. figure:: analysis/35.png
 	:align: center
 	:width: 6in
 
@@ -447,7 +465,7 @@ You can delete the currently imported tool model by clicking the “Delete” bu
 
 - Import artifacts: Select the artifact,AIRLab interface will display the artifact setup page.
 
-.. figure:: analysis/4/36.png
+.. figure:: analysis/36.png
 	:align: center
 	:width: 6in
 
@@ -459,7 +477,7 @@ Set workpiece coordinate system: After setting workpiece coordinate system in th
 
 Delete workpiece: Click “Delete Workpiece” button in the workpiece setting page to delete the imported workpiece in the current 3D scene.
 
-.. figure:: analysis/4/37.png
+.. figure:: analysis/37.png
 	:align: center
 	:width: 6in
 
@@ -467,7 +485,7 @@ Delete workpiece: Click “Delete Workpiece” button in the workpiece setting p
 
 - Import Extended Axis: Select the Extended Axis.The AIRLab interface displays the Extended Axis Settings page, select the Extended Axis and click Import.
 
-.. figure:: analysis/4/38.png
+.. figure:: analysis/38.png
 	:align: center
 	:width: 6in
 
@@ -478,7 +496,7 @@ The imported extended axis model is displayed in the 3D scene of AIRLab software
 .. important::
 	If the robot system version in use is **3.8.2.11 or higher**, enable the acceleration smoothing mode on the web platform first, as shown in the figure. Otherwise, synchronization failure of the extended axis motion will occur subsequently.
 
-.. figure:: analysis/4/39.png
+.. figure:: analysis/39.png
 	:align: center
 	:width: 6in
 
@@ -492,7 +510,7 @@ Delete Extended Axis: Click “Delete Extended Axis” in the Extended Axis Sett
 
 - Import Camera: Select the camera, and the AIRLab interface will display the camera settings page. The camera settings page is divided into three sections: Device Information, Parameter Configuration, and Device Debugging.
 
-.. figure:: analysis/4/cameta_info.png
+.. figure:: analysis/40.png
 	:align: center
 	:width: 3in
 
@@ -524,7 +542,7 @@ Parameter Tuning Suggestions:
 - Sparse data: Increase the Connectivity Threshold, decrease the Speckle Filter Threshold, decrease the Brightness Threshold.
 - Missing or broken edges: Increase the Edge Filter Threshold, decrease the Filter Parameter.
 
-.. figure:: analysis/4/camera_info_en.png
+.. figure:: analysis/camera_info.png
 	:align: center
 	:width: 3in
 
@@ -536,7 +554,7 @@ If you need to use the "Camera Calibration" and "Ground Segmentation" functions,
 - Capture Ground: Control the camera to aim at the plane where the workpiece is located, then click the button to complete ground capture.
 - Ground Effect Verification: Perform visual verification of the captured and calculated ground plane. For detailed operations, see Section 2.6, "Ground Plane Acquisition and Verification."
 
-.. figure:: analysis/4/camera_debug.png
+.. figure:: analysis/43.png
 	:align: center
 	:width: 3in
 
@@ -556,7 +574,7 @@ Oscillating Scan: The camera projects a laser and rotates 120° around the far-p
 
 Fixed Scan: The camera moves to the central position and remains stationary; real-time data can be acquired by moving the camera.
 
-.. figure:: analysis/4/slam1.png
+.. figure:: analysis/slam1.png
 	:align: center
 	:width: 3.5in
 
@@ -568,7 +586,7 @@ Start SLAM mapping. Click the "SLAM Mapping Scan" header, then directly drag the
 
 After the first capture, continue moving the robot to the next position and click the Scan button. The button will be hidden until the scan is completed and reappear automatically after the scan ends. Repeat the robot movement + scan operation until the SLAM mapping scan of the workpiece is finished. After all scans are completed, click the Rebuild SLAM Map button—the generated model will be displayed in the 3D scene on the main AIRLab interface.
 
-.. figure:: analysis/4/slam2.png
+.. figure:: analysis/slam2.png
 	:align: center
 	:width: 6in
 
@@ -582,7 +600,7 @@ Step 4: SLAM Parametric Modeling to complete the model.
 
 Click "Welding (W)" -&gt; "Collision Model Parametric Completion". For detailed steps, please follow the instructions in Section 3.7.30 of this manual..
 
-.. figure:: analysis/4/slam3.png
+.. figure:: analysis/slam3.png
 	:align: center
 	:width: 3.5in
 
@@ -594,7 +612,7 @@ Verify whether the accuracy of the SLAM mapping result meets the requirements, a
 
 After the first photo is taken successfully, move the robot to the opposite diagonal position and click Verification Capture again to take a photo of the three-surface structure at the opposite diagonal of the workpiece. After both photos are taken successfully, click Obtain Verification Result—the result will be displayed in a pop-up window. If the verification is passed, proceed to subsequent operations; if the verification fails, troubleshoot the cause of the accuracy failure and rebuild the SLAM map.
 
-.. figure:: analysis/4/slam4.png
+.. figure:: analysis/slam4.png
 	:align: center
 	:width: 6in
 
@@ -604,7 +622,7 @@ Step 6: Step 6: Parameter Settings for Calculation Rule Configuration.
 
 Open the "Welding (W)" -> "Pose Calculation Strategy Settings" pop-up window. Set the parameters in "Collision Detection and Obstacle Avoidance Planning Rule Configuration", the parameters in the Welding Torch Pose Calculation Rule Configuration, and the camera parameters in the Camera Pose Calculation Rule Configuration. As shown in the figure below. For detailed introduction, please read the detailed content in the "Pose Calculation Strategy Settings" section of this manual.
 
-.. figure:: analysis/4/slam_pose_str.png
+.. figure:: analysis/slam5.png
 	:align: center
 	:width: 3.5in
 
@@ -614,41 +632,10 @@ If an extended axis is imported, it is also necessary to set the Distance betwee
 
 Step 7: Weld Seam Selection
 
-Enter the Weld Seam Editing module and click the + icon to open the Weld Seam Selection pop-up window, as shown in the figure. Select the weld seam number, enable filtering, set the filter parameters, and click Confirm to add the weld seam. It is mandatory to add weld seam numbers in the actual welding sequence to avoid unnecessary filtering failures and collisions.
+Enter the "Weld Editing" module, click the "+" icon button to open the "Weld Seam Selection" pop-up window, and add weld seams according to the "Weld Seam Addition" section in Section 3.7.11.
 
 .. important::
 	If a Weld Seam Addition Failed prompt appears after clicking Confirm, it indicates that the algorithm has no qualified recommended pose for the weld seam. You need to select the weld seam in the weld seam list, open the Weld Seam Editing pop-up window, and manually teach the welding poses of the start point, end point and safety point of the weld seam. For the introduction of the Weld Seam Editing pop-up window, refer to Section 3.6.11 in this manual.
-
-Filter Parameter Explanations:
-
-Enable Filtering: When enabled, AIRLab will further filter the algorithm-recommended welding poses and output the optimal result; when disabled, AIRLab will directly output the first algorithm-recommended welding pose without filtering. It is recommended to enable this function.
-
-Segment Type: Only applicable for arc weld seams, divided into three types: No Segmentation, First Half, and Second Half.
-
-Reference Weld Seam Number for Calculation: Includes Reference Current Position and Reference Added Weld Seams. Reference Current Position means the robot s current joints will be referenced for welding pose filtering; Reference Added Weld Seams means AIRLab will reference the safety points of the specified weld seams for filtering the current weld seam s welding pose.
-
-Enable Reachability Filtering: Filters the reachability of the robot s Move L motion from the start point to the end point of the weld seam. It is recommended to enable this function.
-
-Enable Joint Pose Filtering: Prevents collisions or inaccessibility caused by large changes in the robot s welding pose when moving inside the workpiece. It is recommended to enable this function. Setting Method: Move the robot to a position near the start point of the first weld seam, adjust the robot joints to the welding pose, check the current J3 and J5 joint values of the robot on the right interface of AIRLab, and determine the selection of J3 Joint Angle and J5 Joint Angle in the figure based on these values.
-
-.. important:: 
-	After the joint filter parameters for the first weld seam are determined, the remaining weld seams must use the same parameters as the first one.
-
-Enable Collision Detection Filtering: Prevents collisions between the recommended welding pose and the workpiece or the robot itself. It is recommended to enable this function.
-
-If external axes are used, it is necessary to set the external axis positions for the start point, end point, and safe point/intermediate point.
-
-Extended Axis Position at Start Point: The position of the robot on the extended axis when it reaches the start point of the weld seam.
-
-Extended Axis Position at End Point: The position of the robot on the extended axis when it reaches the end point of the weld seam.
-
-Extended Axis Position at Safety Point: The position of the robot on the extended axis when it reaches the safety point of the weld seam.
-
-.. figure:: analysis/4/slam8.png
-	:align: center
-	:width: 6in
-
-	Weld Seam Recommended Pose Filter Configuration and Weld Seam Addition
 
 Step 8: Set SLAM Image Capture Pose Filter Conditions
 
@@ -664,13 +651,13 @@ Enable Collision Detection Filtering: Prevents collisions between the recommende
 
 Enable Path Planning Filtering: When enabled, AIRLab will reference the previous image capture position to filter the current one, ensuring a collision-free path between the two positions. It is recommended to enable this function.
 
-.. figure:: analysis/4/slam9.png
+.. figure:: analysis/slam8.png
 	:align: center
 	:width: 6in
 
 	Fine Positioning Menu
 
-.. figure:: analysis/4/slam10.png
+.. figure:: analysis/slam9.png
 	:align: center
 	:width: 6in
 
@@ -684,7 +671,7 @@ Capture positions that pass the filter will be automatically added to the fine p
 
 Capture positions that fail the filter will display the failure reason and corresponding weld seam number on the interface (solutions are described in Step 10), as shown in Figure below..
 
-.. figure:: analysis/4/slam9.png
+.. figure:: analysis/slam10.png
 	:align: center
 	:width: 6in
 
@@ -707,7 +694,7 @@ For the capture positions that failed the filter in the previous step, perform m
 .. important::
 	Manually add several transition points at the end of the fine positioning position list to ensure the robot can safely return from the capture end point of the last weld seam to the capture start point of the first weld seam.
 
-.. figure:: analysis/4/slam11.png
+.. figure:: analysis/slam11.png
 	:align: center
 	:width: 3in
 
@@ -723,6 +710,12 @@ Modification Methods:
 
 2. Add Transition Point: Select the failed position, click Add Transition Point Before Current Point in the pop-up submenu, and the Add Path Point pop-up window will appear, as shown in the figure.
 
+.. figure:: analysis/slam12.png
+	:align: center
+	:width: 6in
+
+	Add Path Point After Obstacle-Free Planning Failure
+
 Step 12: Run the Fine Positioning Program
 
 Click the Fine Positioning tab, select and click Run Program in the menu to execute the fine positioning program.
@@ -734,7 +727,7 @@ If obstacle-free trajectory planning is required, you can first click "Obstacle 
 .. important::
 	After the program is generated, do not modify the program nodes; do not modify the list information of weld seam editing unless necessary. If the weld seam order in the weld seam list is modified or weld seams are added/deleted, return to Step 8 and reconfigure the relevant settings.
 
-.. figure:: analysis/4/slam12.png
+.. figure:: analysis/slam13.png
 	:align: center
 	:width: 6in
 
@@ -746,7 +739,7 @@ If the workpiece to be welded does not have a model file, you need to perform a 
 
 First, create a modelfree construction program.
 
-.. figure:: analysis/4/model_less2.png
+.. figure:: analysis/44.png
 	:align: center
 	:width: 6in
 
@@ -754,13 +747,13 @@ First, create a modelfree construction program.
 
 Click Project Module → Model Construction; then click the plus sign, and the modelfree construction popup will appear as shown in the figure. If the nonspline feature is selected in the welding feature parameter configuration module, the modelfree construction popup is shown in the first figure below; if the spline feature is selected, it is shown in the second figure below.
 
-.. figure:: analysis/4/model_struct_non_spline.png
+.. figure:: analysis/45.png
 	:align: center
 	:width: 3.5in
 
 	Model-Free Construction Pop-up--Workpiece with Non-spline Features
 
-.. figure:: analysis/4/modelLess_popup_en.png
+.. figure:: analysis/modelLess_popup.png
 	:align: center
 	:width: 3in
 
@@ -771,13 +764,13 @@ You can choose to add a new model‑free construction parameter node, add a phot
 Add Movement Node: This includes two types: Real‑time Pose and Point Library. Real‑time Pose refers to the robot's current position, while Point Library allows you to select an existing point. As shown in the figure below, if no image capture is required for the current node, simply uncheck "Capture Image at Current Point".
  
 
-.. figure:: analysis/4/model_less1.png
+.. figure:: analysis/46.png
 	:align: center
 	:width: 6in
 
 	Adding Move nodes
 
-.. figure:: analysis/4/add_point2.png
+.. figure:: analysis/46_3.png
 	:align: center
 	:width: 6in
 
@@ -785,7 +778,7 @@ Add Movement Node: This includes two types: Real‑time Pose and Point Library. 
 
 The principle of the model-less photo point of demonstration is that the camera is able to clearly and completely capture all positions of the model-less workpiece, especially the position of the weld seam that needs to be welded.
 
-.. figure:: analysis/4/44.png
+.. figure:: analysis/47.png
 	:align: center
 	:width: 3.5in
 
@@ -793,7 +786,7 @@ The principle of the model-less photo point of demonstration is that the camera 
 
 Add Model Construction Node: After adding multiple movement nodes, add the model construction node. The model construction methods include two options: Line + Arc and Spline. If Spline is selected, you need to set the sampling interval. After selecting the model construction method, edit the modelfree workpiece name. Click the &quot;OK&quot; button, and the &quot;Model Construction&quot; node will appear under the modelfree module, indicating that the modelfree construction node has been successfully added.
 
-.. figure:: analysis/4/model_less3.png
+.. figure:: analysis/49.png
 	:align: center
 	:width: 6in
 
@@ -802,33 +795,51 @@ Add Model Construction Node: After adding multiple movement nodes, add the mode
 .. important::
 	If the workpiece has symmetrical features, integrity judgment must be enabled when adding model construction nodes, as shown in the figure. Additionally, the entire workpiece must be completely captured during the model building process.
 
-.. figure:: analysis/4/model_less4.png
+.. figure:: analysis/Integrity_Test.png
 	:align: center
 	:width: 3in
 
 	Enable Integrity Judgment
 
-After adding nodes, you can perform the following adjustments,
+After the nodes are added, you can modify, move up/down, or delete the added nodes as needed.
 
-Reorder Nodes: Move nodes up/down the workflow sequence;
+If you need to modify a corresponding node, click to select the node, then click the pencil-shaped edit icon (for "Modify"). The modification page for that node will pop up, where you can make changes according to your actual needs, as shown in the figures below.
 
-Delete Nodes: Remove unnecessary nodes.
+.. figure:: analysis/model_edit1.png
+	:align: center
+	:width: 5in
 
-The model-free construction program will be completed.
+	Model Reconstruction Node Modification – Move & Photo Node
+
+.. figure:: analysis/model_edit2.png
+	:align: center
+	:width: 5in
+
+	Model Reconstruction Node Modification – Modeling Node
 
 If you need to configure the modelfree construction parameters before running the program, click the first icon button to open the modelfree construction settings dialog. Modify the parameters in the "Advanced Parameters" section, and then click "Set Parameters"; to apply the new settings.
 
 When weld acquisition fails due to unreasonable model construction parameters, after setting the parameters, click &quot;Rebuild Model&quot; to reacquire the model data with the updated parameters.
 
-.. figure:: analysis/4/modelParaNode.png
+.. figure:: analysis/add_noModel_para.png
 	:align: center
 	:width: 3in
 
 	Add Model Construction Parameter Node
 
+If you wish to reconstruct the model using existing files instead of real-time scanning for this model reconstruction, you can select the "3D File Parsing" option under "Model Source", as shown in the figure below.
+
+.. figure:: analysis/3d_prase2.png
+	:align: center
+	:width: 3.5in
+
+	Model Source – 3D File Parsing
+
+Among them, three file types are available for selection: "Model File", "Process File", and "Model Process Package". If you select either "Model File" or "Model Process Package", you will need to fill in the parameters required for parsing the model data: "Minimum Retention Length for Flat Cylindrical Arc Weld Seams" and "Minimum Retention Length for Flat Cylindrical Linear Weld Seams". For the specific 3D parsing process, please refer to Section 3.7.17.
+
 After the model construction program is completed, click the “Model Const” module, click “Generate Trajectory” to view the simulation trajectory of the model construction program, and after confirming that the trajectory of the model construction program is correct, click Run program to start running the model construction program.
 
-.. figure:: analysis/4/46.png
+.. figure:: analysis/51.png
 	:align: center
 	:width: 3in
 
@@ -836,7 +847,7 @@ After the model construction program is completed, click the “Model Const” m
 
 For symmetrical workpieces with integrity judgment enabled, the software will assess the completeness of the constructed model after the model-free construction process is completed. If the constructed model is determined to be incomplete, the software will prompt "Integrity judgment failed," as shown in the figure. The user will then need to perform additional captures of the workpiece until the model is fully constructed.
 
-.. figure:: analysis/4/Integrity_Fail.png
+.. figure:: analysis/Integrity_Fail.png
 	:align: center
 	:width: 6in
 
@@ -844,7 +855,7 @@ For symmetrical workpieces with integrity judgment enabled, the software will as
 
 At the same time, the current integrity judgment point cloud will be displayed on the interface, as shown in the following figure. Here, blue and yellow represent the two symmetrical parts of the point cloud, while red indicates asymmetrical sections where no corresponding points were found. It is necessary to recapture the symmetrical areas corresponding to the red points or use the stitched point cloud in the small window to determine the recapture positions.
 
-.. figure:: analysis/4/complete_cloud.png
+.. figure:: analysis/complete_cloud.png
 	:align: center
 	:width: 6in
 
@@ -852,7 +863,7 @@ At the same time, the current integrity judgment point cloud will be displayed o
 
 After the symmetrical workpiece model is fully constructed, the software will display a "Integrity judgment successful" prompt, as shown in the figure. The user can then proceed to the next operation.
 
-.. figure:: analysis/4/Integrity_Pass.png
+.. figure:: analysis/Integrity_Pass.png
 	:align: center
 	:width: 6in
 
@@ -860,23 +871,17 @@ After the symmetrical workpiece model is fully constructed, the software will di
 
 After the model construction program has finished running, the built model workpiece model will be displayed in the AIRLab 3D scene. Check whether the model is correct or not, the model is correct, the modelless construction is successfully constructed, and the model that has been successfully constructed can be directly imported in the next time, and there is no need to model the workpiece again for the modelless workpiece modeling.
 
-.. figure:: analysis/4/47.png
+.. figure:: analysis/model_const_success.png
 	:align: center
 	:width: 6in
 
 	Model-free construct successfully
 
-If the model is built incorrectly, you need to click the “Model Construction” module, click “Clear Model Data”, and then build the model again until the modelless artifact model is created correctly.
+If the model is incomplete, move the robot to the incomplete area and perform supplementary capture. Then click "Acquire Modeling Data" to reload the supplemented model. Repeat this process until the model-free workpiece model is correctly created.
 
-When weld seam acquisition fails due to inappropriate model construction parameter settings, you can first edit and adjust the parameters, then issue the model-free modeling command, and subsequently acquire secondary recognition data. Afterward, click "Acquire Model Data" to reload the model data updated with the adjusted parameters.
+3. Model Construction Function Options
 
-.. figure:: analysis/4/model_cons_para_menu.png
-	:align: center
-	:width: 6in
-
-	Model Reconstruction Parameter Node Function
-
-By clicking on the No Model Build module, the user can select options such as Get Modeling Data, and the functions of each option are described below.
+Click the Model Construction module to access options such as acquiring modeling data. The functions are described below.
 
 - Supplementary shooting: After generating the workpiece model by running the model-free program, if there are incomplete parts in the workpiece model that need supplementary shooting, move the robot to the position where supplementary shooting is required and click "Supplementary Shooting". Then click "Acquire Modeling Data" to re-import the workpiece model after supplementary shooting.
 
@@ -890,8 +895,6 @@ By clicking on the No Model Build module, the user can select options such as Ge
 
 - Generate Trajectory: Click “Generate Trajectory” button to generate the simulation trajectory of the program in AIRLab 3D scene.
 
-- Clear trajectory:Clicked this button will delete the generated tarjectory in AIRLab 3D scene.
-
 - Show Tool: Click “Show Tool”, the virtual tool model will be shown in AIRLab 3D scene.
 
 - Clear Tool: Click “Clear Tool”, the virtual tool model displayed in AIRLab 3D scene is cleared.
@@ -901,19 +904,67 @@ Weld editing
 ~~~~~~~~~~~~~~~~~~~~~~~
 After importing the workpiece or successfully constructing the workpiece without a model, the workpiece model and weld seam data will be displayed in the 3D scene.
 
-Click the plus sign under "Weld Seam Editing" to bring up the Weld Seam Selection pop-up window. Select a weld seam number; the weld seam type field will automatically display the type of the selected weld seam, including straight weld seams, arc weld seams, spline curve weld seams, and plug weld seams. Click the "Confirm" button to add the weld seam, and repeat this until all weld seams are added.
-
-The successfully added welds here do not indent, reverse, shift, or bind to any welding process, and the progression and retreat point strategies are set to a custom distance of 100mm.
-
-.. figure:: analysis/4/48.png
+.. figure:: analysis/53.png
 	:align: center
 	:width: 6in
 
-	Weld Seam Selection Pop-up --Workpiece with Non-spline Features
+	Weld Seam Editing Scene
+
+Click the plus sign under Weld Editing to open the weld seam selection pop-up. This pop-up categorizes all currently identified weld seams into "Flat Welding" and "Vertical Welding", as shown in the figure below.
+
+.. figure:: analysis/all_not_selected.png
+	:align: center
+	:width: 6in
+
+	Weld Seam Selection Pop-up for Non-Spline Workpieces
+
+According to actual requirements, check the weld seams to be added. A "Select All" button is also provided; clicking it will automatically select all weld seams in that category for convenient addition, as shown below.
+
+.. figure:: analysis/bulk_add.png
+	:align: center
+	:width: 6in
+
+	Weld Seam Selection Pop-up – Select All
+
+On the right side of each weld seam number, there is a properties button. Clicking it allows you to set the properties for that weld seam when added. The main adjustable parameters are as follows:
+
+- Reverse: Whether to reverse the direction of the weld seam when adding it.
+
+- Segment Type: For arc weld seams, you can choose whether to add the seam in segments.
+
+.. figure:: analysis/see_properties.png
+	:align: center
+	:width: 6in
+
+	Weld Seam Add Properties – Linear Weld Seam
+
+.. figure:: analysis/selected_part.png
+	:align: center
+	:width: 6in
+
+	Weld Seam Add Properties – Arc Properties
+
+After all weld seams have been added, you can click the "Filter" icon on the "Weld Editing" header to filter the weld seams and uniformly set parameters for the added seams, as shown below.
+
+.. figure:: analysis/weld_fileter.png
+	:align: center
+	:width: 6in
+
+	Weld Seam Filtering
+
+First, set the filtering conditions. Based on the welding position, you can choose to filter "Flat Welding", "Vertical Welding", or "All Weld Seams". There are two filtering criteria available for selection: "Weld Seam Length" and "Welding Process". After setting and checking the corresponding criteria, click the "Filter" button to filter out the weld seams that meet the conditions, and they will be listed in the "Filtered Weld Seam List" below.
+
+After checking the corresponding filtered weld seams, you can perform batch modifications based on the entered welding parameters. Two welding parameters are available for filling: "Weld Indentation" and "Welding Process". After setting and checking the corresponding options, click the "Batch Modify" button to apply the set parameters to the selected weld seams.
+
+.. figure:: analysis/weld_filter_and_set_result.png
+	:align: center
+	:width: 6in
+
+	Weld Seam Filtering – Batch Modify
 
 For the welding of workpieces with spline features, Spline Feature must be selected first in the Welding Feature Parameter Configuration module. When adding weld seams, the Weld Seam Selection pop-up window is displayed as shown in the figure below. The Number of Selected Weld Seam Points on the page is non-editable, as it is a result of model construction.
 
-.. figure:: analysis/4/seamedit11.png
+.. figure:: analysis/seamedit1.png
 	:align: center
 	:width: 6in
 
@@ -921,7 +972,7 @@ For the welding of workpieces with spline features, Spline Feature must be selec
 
 If segmentation is required, set Enable Segmentation to Yes in the figure, and the page will be displayed as shown below.
 
-.. figure:: analysis/4/seamedit12.png
+.. figure:: analysis/seamedit2.png
 	:align: center
 	:width: 6in
 
@@ -929,7 +980,7 @@ If segmentation is required, set Enable Segmentation to Yes in the figure, and t
 
 First, set the Start Point and End Point, ensuring they fall within the range of the total number of points of the entire weld seam. For example, if the selected weld seam in the figure has a total of 36 points, the range of the number of points for the start and end points is [1,36]. After completing the settings, click the + icon on the page to add the segmented weld seam, as shown in the figure below.
 
-.. figure:: analysis/4/seamedit13.png
+.. figure:: analysis/seamedit3.png
 	:align: center
 	:width: 6in
 
@@ -940,7 +991,7 @@ If additional segments need to be added to the current weld seam, reset the Star
 .. important::
 	Segmentation must be complete, and the end point of one segment must coincide with the start point of the next segment.
 
-.. figure:: analysis/4/seamedit14.png
+.. figure:: analysis/seamedit4.png
 	:align: center
 	:width: 6in
 
@@ -948,19 +999,25 @@ If additional segments need to be added to the current weld seam, reset the Star
 
 After completing the weld seam segmentation, click the Confirm button in the figure, and the added segmented weld seams will be displayed in the weld seam list.
 
-If the weld needs to be re-edited, select the weld, click the edit icon at the top of the module, and complete the parameter settings in the 'Seam edit' popup.
-
-.. figure:: analysis/4/seamedit15.png
+.. figure:: analysis/seamedit5.png
 	:align: center
 	:width: 6in
 
-	Weld Seam Editing--Spline Weld Seam
+	Segmented Weld Seam Added
 
-.. figure:: analysis/4/49.png
+If the weld needs to be re-edited, select the weld, click the edit icon at the top of the module, and complete the parameter settings in the 'Seam edit' popup.
+
+.. figure:: analysis/weld_seam_edit_non_spline.png
 	:align: center
 	:width: 6in
 
 	Weld Seam Editing--Non-spline Weld Seam
+
+.. figure:: analysis/spline_edit2.png
+	:align: center
+	:width: 6in
+
+	Weld Seam Editing--Spline Weld Seam
 
 The meaning of each editing item in Weld Seam Editing is detailed in Section 3.6.9. Perform workpiece positioning or fine positioning operations only after all weld seams have been edited.
 
@@ -977,13 +1034,22 @@ Workpiece positioning
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Workpiece positioning: After editing all the welds to be welded, workpiece positioning is required. Firstly, it is necessary to create a workpiece positioning program; Click on the workpiece positioning module, click on the plus sign under workpiece positioning, and the AIRLab interface will display the workpiece positioning page as shown in the figure.
 
-.. figure:: analysis/4/regisiter_addnode.png
+.. figure:: analysis/regisiter_addnode1.png
 	:align: center
 	:width: 3in
 
-	Adding a coarse positioning node
+	Workpiece Positioning Add Node Dialog
 
-The workpiece positioning program consists of three node types:Capture Node,Move Node,Coarse Positioning Node.The Capture and Move nodes function identically to those in the Model-Free Construction module (see Section 4.5.2 for details).
+The workpiece positioning program contains four node types: Workpiece Positioning Parameter Node, Capture Node, Move Node, and Coarse Positioning Node. The parameter, capture, and move nodes are added in the same way as the corresponding nodes in the Model Construction module. See the Model Construction section for details.
+
+.. important::
+	For symmetrical workpieces, it is only necessary to capture the point cloud of the workpiece section indicated by the red cutting line in the interface, as shown below.
+
+.. figure:: analysis/wp_pcl_display.png
+	:align: center
+	:width: 6in
+
+	Point Cloud Display and Symmetrical Workpiece Prompt
 
 Add a rough positioning node: After adding multiple sets of "movement + photo" nodes, add a rough positioning node and select a workpiece positioning algorithm. The rough positioning algorithms include Model-based, Cylinder Positioning, Depth Model, Depth Model 2, and Plug Recognition. The applicable scenarios for each algorithm are as follows:
 
@@ -999,54 +1065,44 @@ Add a rough positioning node: After adding multiple sets of "movement + photo" n
   
 After selecting the workpiece positioning algorithm, click "Confirm", and a "Rough Positioning" node will be generated under the workpiece positioning program.
 
-.. figure:: analysis/4/51.png
+.. figure:: analysis/regisiter_addnode2.png
 	:align: center
-	:width: 2in
+	:width: 6in
 
-	Workpiece positioning program
+	Add Coarse Positioning Node
 
 After adding these nodes, you can adjust the added nodes as needed. Once completed, the workpiece positioning program will be successfully created.The entire program functions as follows:The robot will move to multiple capture positions and take photos until the workpiece is fully captured. Then, the program will perform coarse positioning of the workpiece.The created workpiece positioning program is shown in the figure below.
 
-After creating the workpiece positioning program,click the "POS_WP" module. The options that appear,as shown in the figure.
-
-.. figure:: analysis/4/52.png
+.. figure:: analysis/58.png
 	:align: center
 	:width: 2.5in
 
-	Click on the pos_wp blocks
+	Workpiece Positioning Program
 
 .. important::
-	For symmetrical workpieces, it is only necessary to capture the point cloud of the workpiece section indicated by the red cutting line in the interface, as shown in the figure below.
+	As with Model Construction, add a Workpiece Positioning Parameter Node if the positioning parameters need to be modified. This node is inserted before the first node by default, so its parameter configuration command is issued before the rest of the program.
 
-.. figure:: analysis/4/coarse_position_note_en.png
-	:align: center
-	:width: 4in
+If you need to modify a workpiece positioning node, select the target node in the program tree, click the "Edit" (pencil-shaped) button above, make the modifications as needed, and save, as shown in the figures below.
 
-	Point Cloud Display & Symmetrical Workpiece Prompt
-
-The functions of the remaining options are as follows:
-
-- Generate the workpiece positioning program directly: Click this button, and AIRLab will automatically generate a workpiece positioning program with reference to the points created through model-free construction.
-
-- Clear Cutting Point Cloud: Remove the cutting point cloud of symmetrical workpieces in the 3D scene.
-
-.. figure:: analysis/4/clear_cut_pcd.png
+.. figure:: analysis/coarse_position_edit1.png
 	:align: center
 	:width: 6in
 
-	Clear Cutting Point Cloud
+	Workpiece Positioning Node Modification – Parameter Node
 
-- Display Cutting Point Cloud: Show the cutting point cloud of symmetrical workpieces in the 3D scene.
-
-.. figure:: analysis/4/display_cut_pcd.png
+.. figure:: analysis/coarse_position_edit2.png
 	:align: center
 	:width: 6in
 
-	Display Cutting Point Cloud
+	Workpiece Positioning Node Modification – Move Node
 
-Click "Generate trajectory" to view the simulated trajectory of the workpiece positioning program. After confirming the trajectory is correct, click "Run Program" to execute the workpiece positioning program for coarse workpiece positioning.
+.. figure:: analysis/coarse_position_edit3.png
+	:align: center
+	:width: 6in
 
-Upon successful completion of the workpiece positioning program, the workpiece will move to the actual relative position between the workpiece and the robot.
+	Workpiece Positioning Node Modification – Positioning Node
+
+After creating the workpiece positioning program, click the "Workpiece Positioning" module. Options such as "Run Program" have the same functions as those in the Model Construction module.
 
 If no error occurs during the execution of the workpiece positioning program, a colored point cloud of the workpiece will be displayed on the interface upon completion.The meaning of the point cloud colors is as follows:
 
@@ -1059,13 +1115,13 @@ If no error occurs during the execution of the workpiece positioning program, a 
 .. important::
 	The colors only represent the visualization of the angle error result and do not affect the actual registration result. The registration result depends only on the actually calculated registration accuracy and overlap rate.
 
-.. figure:: analysis/4/point_clound_green.png
+.. figure:: analysis/point_clound_green.png
 	:align: center
 	:width: 3in
 
 	Successful Workpiece Positioning – Green Workpiece Point Cloud
 
-.. figure:: analysis/4/point_clound_color.png
+.. figure:: analysis/point_clound_color.png
 	:align: center
 	:width: 3in
 
@@ -1081,19 +1137,19 @@ The specific workpiece positioning error types are divided into the following th
 
 3. Both point cloud registration coverage and accuracy are low.Message: Point cloud registration failed. Both registration accuracy and overlapping area are unqualified. Please compare with the model point cloud, adjust the shooting angle, and perform workpiece positioning again.As shown in the figure below.
 
-.. figure:: analysis/4/error-1-en.png
+.. figure:: analysis/error_1.png
 	:align: center
 	:width: 6in
 
 	Workpiece Positioning Error – Type 1
 
-.. figure:: analysis/4/error-1.png
+.. figure:: analysis/error_2.png
 	:align: center
 	:width: 2.5in
 
 	Workpiece Positioning Error – Type 2
 
-.. figure:: analysis/4/error-3-en.png
+.. figure:: analysis/error_3.png
 	:align: center
 	:width: 6in
 
@@ -1103,11 +1159,45 @@ If workpiece positioning fails and the above problems occur, please re-position 
 
 If the above problems persist and cannot be resolved, or if other issues arise, please contact after-sales personnel and retain the current data.
 
+.. figure:: analysis/59.png
+	:align: center
+	:width: 2.5in
+
+	Click the Workpiece Positioning Module
+
+- Reposition: After issuing the workpiece positioning parameters, click "Reposition" to acquire positioning data using the modified parameters.
+
+- Generate Workpiece Positioning Program: Automatically generate a workpiece positioning program from the capture points created during model construction.
+
+- Clear Cutting Point Cloud: Remove the cutting point cloud of a symmetrical workpiece from the 3D scene.
+
+.. figure:: analysis/clear_cut_pcd.png
+	:align: center
+	:width: 6in
+
+	Clear Cutting Point Cloud
+
+- Display Cutting Point Cloud: Show the cutting point cloud of a symmetrical workpiece in the 3D scene.
+
+.. figure:: analysis/display_cut_pcd.png
+	:align: center
+	:width: 6in
+
+	Display Cutting Point Cloud
+
+Click "Generate Trajectory" to view the simulated trajectory of the workpiece positioning program. After confirming that the trajectory is correct, click "Run Program" to perform coarse workpiece positioning. When the program finishes successfully, the workpiece is moved to its actual position relative to the robot, as shown below.
+
+.. figure:: analysis/60.png
+	:align: center
+	:width: 6in
+
+	Workpiece Positioning Program Completed
+
 Welding Instructions for Plunger Workpieces
 
 Step 1: Add the plunger process, and set up the filling process, reinforcement process, arc starting process, and arc ending process.
 
-.. figure:: analysis/4/82.png
+.. figure:: analysis/93.png
 	:align: center
 	:width: 3in
 
@@ -1117,9 +1207,15 @@ Step 2: Edit the workpiece positioning program and run it.
 
 Open the AIRLab welding software system and import the project. Edit the workpiece positioning program by adding nodes for movement, photographing, and plunger recognition. 
 
+.. figure:: analysis/pluger2.png
+	:align: center
+	:width: 3in
+
+	Plunger Workpiece Positioning Program
+
 Run the workpiece positioning program to position the plunger workpiece and identify the plunger weld seams. The 3D scene displays the workpiece model and weld seam information of the plunger, as shown in the figure.
 
-.. figure:: analysis/4/pluger1.png
+.. figure:: analysis/pluger1.png
 	:align: center
 	:width: 3in
 
@@ -1131,7 +1227,7 @@ Step 4: After adding all plunger weld seams to be welded, click "Weld Seam Edit
 
 Step 5: Click "Program → Generate Trajectory". The welding trajectory will be generated in the 3D scene.
 
-.. figure:: analysis/4/pluger2.png
+.. figure:: analysis/pluger3.png
 	:align: center
 	:width: 3in
 
@@ -1143,7 +1239,7 @@ Fine pose
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After weld editing or workpiece positioning is completed, it is necessary to perform fine positioning on the workpiece welds to obtain weld data. Enter the "Fine Positioning" module and open the fine positioning function menu, as shown in the figure below.
 
-.. figure:: analysis/4/finePose1.png
+.. figure:: analysis/fine_position_menu.png
 	:align: center
 	:width: 3.5in
 
@@ -1151,7 +1247,7 @@ After weld editing or workpiece positioning is completed, it is necessary to per
 
 Step 1: First, click &quot;Set Automatic Photo Pose Filtering Strategy&quot; to enter the &quot;Photo Pose Filtering Settings&quot; page, as shown in the figure below. The meanings of the parameters are introduced as follows:
 
-.. figure:: analysis/4/finePose2.png
+.. figure:: analysis/fine_position_auto_pos.png
 	:align: center
 	:width: 3in
 
@@ -1167,7 +1263,7 @@ Whether to enable pathplanning filtering: When this filtering is enabled, AIRLa
 
 Step 2: After the filtering parameters are configured, click the "Get Automatic Photo Poses" button. AIRLab will compute and provide the fine-positioning photo points that meet the filtering criteria. The successfully filtered photo points will be automatically added to the finepositioning list. For the points that fail the filtering, the interface will display the failure reason along with the corresponding weld number (solutions are explained in Step 3), as shown in the figure below.
 
-.. figure:: analysis/4/finePose3.png
+.. figure:: analysis/61.png
 	:align: center
 	:width: 6in
 
@@ -1175,7 +1271,7 @@ Step 2: After the filtering parameters are configured, click the "Get Automatic
 
 Step 3: After the automatic photo pose acquisition is completed, click the "+" icon button to bring up the fine positioning popup window, as shown in the figure below. If you need to configure fine positioning parameter nodes, enter the parameters and click the "OK" button.
 
-.. figure:: analysis/4/finePose4.png
+.. figure:: analysis/61_1.png
 	:align: center
 	:width: 3.5in
 
@@ -1185,8 +1281,7 @@ For the photo points that failed filtering in the previous step, please manually
 
 1. Turn on the "Enable Intelligent Point Insertion" button. The "Weld Endpoint Type for Capture" dropdown box will display the points that failed recommendation in the automatic photo pose acquisition results, such as "Start point of Weld 1" shown in the figure below. After selecting the endpoint type, click the "Add Photo Point" button. The new point will be automatically inserted into the current fine positioning list based on the principle of minimizing the sum of robot joint changes.
 
-
-.. figure:: analysis/4/finePose5.png
+.. figure:: analysis/61_2.png
 	:align: center
 	:width: 6in
 
@@ -1194,25 +1289,43 @@ For the photo points that failed filtering in the previous step, please manually
 
 1. If there are no failed recommendation points in the automatic photo pose acquisition results, and the user wishes to add custom points with intelligent point insertion, as shown in the figure below, first select the "Custom Point" option from the "Weld Endpoint Type for Capture" dropdown box. Then select the "Point Name Selection" option. For custom point naming, the page provides two naming methods: "Default Name" and "Custom Name" in the "Point Name Selection" dropdown box. After confirming the point name, click the "Add Photo Point" button.
 
-.. figure:: analysis/4/finePose6.png
+.. figure:: analysis/add_point_default.png
 	:align: center
 	:width: 3.5in
 
 	Custom Point — Using Default Name
 
-1. If you are teaching a transition point that only needs to be added at the end of the fine positioning list without using the intelligent insertion function, please turn off the "Enable Intelligent Point Insertion" button and click "Add Photo Point." As shown in the figure below, the robot's current point will be added to the last position in the fine positioning list.
-
-.. figure:: analysis/4/finePose7.png
+.. figure:: analysis/add_point_defined.png
 	:align: center
 	:width: 3.5in
 
-	Custom Point — Using Custom Name
+	Custom Point - Using Custom Name
+
+If you are teaching a transition point that only needs to be added at the end of the fine positioning list without using intelligent insertion, turn off "Enable Intelligent Point Insertion" and click "Add Photo Point." The robot's current point will be added to the end of the fine positioning list, as shown below.
+
+.. figure:: analysis/add_point_directly.png
+	:align: center
+	:width: 3in
+
+	Directly Add a Demonstration Transition Point
 
 
 .. important::
-	lease manually add several transition points at the end of the fine positioning point list to ensure that the robot can safely return from the capture endpoint of the last weld to the capture start point of the first weld.
+	Please manually add several transition points at the end of the fine positioning point list to ensure that the robot can safely return from the capture endpoint of the last weld to the capture start point of the first weld.
 
-If you wish to modify or view a point in the fine positioning list, select the point in the list and click the "Edit" icon button, as shown in the figure below.
+If you need to modify a node in the fine positioning list, select the node in the list and click the "Edit" icon button. After editing the corresponding parameters, save the changes, as shown in the figures below.
+
+.. figure:: analysis/fine_position_edit1.png
+	:align: center
+	:width: 6in
+
+	Fine Positioning Node Modification – Vision Parameter Node
+
+.. figure:: analysis/fine_position_edit2.png
+	:align: center
+	:width: 6in
+
+	Fine Positioning Node Modification – Camera Pose Node
 
 Step 4: Perform obstacle-free trajectory planning for the fine positioning points. If fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, click the title "Fine Positioning," select and click "ObstacleAvoidance Planning" from the menu that appears, and wait for the AIRLab obstacl-free trajectory planning result. If planning succeeds, open the menu and click "Generate Trajectory" to display the successfully planned trajectory. If planning fails, AIRLab will display the name of the failed point, and you can either modify that point or add transition points.
 
@@ -1226,7 +1339,7 @@ After completing the fine positioning program, if fine positioning obstacl-avoid
 
 After completing the fine positioning program, click the "Automatic Camera Poses" module. Options such as "Get Automatic Camera Poses", "Generate Collision-Free Trajectory", and "Generate Trajectory" will appear.
 
-.. figure:: analysis/4/finePose8.png
+.. figure:: analysis/fine_locate_operate_ui.png
 	:align: center
 	:width: 3.5in
 
@@ -1258,25 +1371,57 @@ Program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After the fine positioning program has finished running, the final welding program will be automatically generated under the Program module.
 
+.. figure:: analysis/63.png
+	:align: center
+	:width: 6in
+
+	Generated Welding Program
+
 Click the "Program" module, and the user can select options such as "Run Program," "Stop Program," and "Generate Trajectory." The functions of these options are the same as those described above for the model-free construction "Run Program" and related options.
 
 If collision detection for the welding program is enabled in the "Pose Calculation Strategy Settings," the first step is to click "Obstacle-Avoidance Planning" to complete the obstacle-avoidance planning for the Lua program, as shown in the figure below.
 
-After the obstacle-avoidance planning is completed, if no obstacle-avoidance-related errors are reported on the interface and no nodes in the Lua program list turn red, it indicates that the obstacle-avoidance path planning was successful. You can click "Generate Trajectory" to view it, and after confirming the trajectory is correct, click "Run Program.".
+.. figure:: analysis/64.png
+	:align: center
+	:width: 6in
+
+	Click the Program Module
+
+After the obstacle-avoidance planning is completed, if no obstacle-avoidance-related errors are reported on the interface and no nodes in the Lua program list turn red, it indicates that the obstacle-avoidance path planning was successful. You can click "Generate Trajectory" to view it, and after confirming the trajectory is correct, click "Run Program."
 
 If during the obstacle-avoidance planning process, the interface displays error messages indicating collision detection or path planning failures, note that there may be slight threshold deviations between collision detection and the actual environment. Please analyze based on the prompt information whether the problematic points need to be re-taught.
 
+If you need to edit a program tree node, click the "Modify" pen-shaped icon button above. Depending on the instruction type, the corresponding editing pop-up window will appear. Modify the settings according to the actual situation, as shown in the figures below.
+
+.. figure:: analysis/lua_edit1.png
+	:align: center
+	:width: 6in
+
+	Program Node Modification – Move Instruction
+
+.. figure:: analysis/lua_edit2.png
+	:align: center
+	:width: 6in
+
+	Program Node Modification – Welding Parameter Instruction
+
+.. figure:: analysis/lua_edit3.png
+	:align: center
+	:width: 6in
+
+	Program Node Modification – Custom Instruction
+
 If after inspection, the reported point or path does not actually collide, click on that node in the Lua program, and the option "Set This Trajectory to Skip Collision Detection" will appear. After clicking it, the node color will change to yellow. You can then generate the trajectory and run the program.
 
-.. figure:: analysis/4/program1.png
+.. figure:: analysis/64_1.png
 	:align: center
 	:width: 3.5in
 
-	Click on the Program Module
+	Obstacle-Avoidance Planning Failure Point
 
 Clicking on “Generate Trajectory” generates a weld trajectory in the AIRLab 3D scene, and the user can choose to run a simulation on the trajectory.
 
-.. figure:: analysis/4/56.png
+.. figure:: analysis/65.png
 	:align: center
 	:width: 3.5in
 
@@ -1284,7 +1429,7 @@ Clicking on “Generate Trajectory” generates a weld trajectory in the AIRLab 
 
 Click “Generate Tool”, the tool position of the key node will be displayed in the 3D scene, as shown in the following figure.
 
-.. figure:: analysis/4/57.png
+.. figure:: analysis/66.png
 	:align: center
 	:width: 3.5in
 
@@ -1298,7 +1443,7 @@ Point information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Point Information Module: Click the point in the point list, you can delete or edit the point. Click “Edit Points”, the interface of AIRLab software will show the page of point information modification, users can choose to move the direct target point, synchronize the current position or save the modified points.
 
-.. figure:: analysis/4/58.png
+.. figure:: analysis/67.png
 	:align: center
 	:width: 6in
 
@@ -1315,7 +1460,13 @@ Reference coordinate system
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Reference coordinate system: click the reference coordinate system icon in the menu bar, a new reference coordinate system will be create, the user can select the reference frame of reference coordinate system for the workpiece coordinate system or base coordinate system;Also can delete the current reference coordinate system, or edit the coordinate system.
 
-.. figure:: analysis/4/59.png
+.. figure:: analysis/68.png
+	:align: center
+	:width: 3in
+
+	Reference Coordinate System Settings
+
+.. figure:: analysis/69.png
 	:align: center
 	:width: 6in
 
@@ -1336,7 +1487,7 @@ Calibration of LiDAR and Gantry Frame
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Start AIRLab and create a new welding project. Then, open the pop-up window by selecting "Welding" — "Software Mode Settings" from the menu bar, choose "Master Station", and click the "OK" button, as shown in the figure below.
 
-.. figure:: analysis/4/gantry1.png
+.. figure:: analysis/gantry1.png
 	:align: center
 	:width: 6in
 
@@ -1346,7 +1497,7 @@ First, calibrate the LiDAR. The calibration steps are as follows:
 
 Step 1: Click the "Camera" tab on the left side of the software interface. In the "Camera Settings" popup that appears, select the LiDAR section and click "Search Devices" to ensure that the LiDAR is successfully connected, as shown in the figure below.
 
-.. figure:: analysis/4/gantry2.png
+.. figure:: analysis/gantry2.png
 	:align: center
 	:width: 3in
 
@@ -1354,13 +1505,13 @@ Step 1: Click the "Camera" tab on the left side of the software interface. In th
 
 Step 2: Click the "Multi-Sensor Calibration" button in "Device Debugging" to enter the "LiDAR Calibration" popup, as shown in the figure below. Follow the prompts in the popup to place the checkerboard in the correct position, then click the "Calibrate" button to complete the LiDAR calibration.
 
-.. figure:: analysis/4/gantry10.png
+.. figure:: analysis/gantry3_1.png
 	:align: center
 	:width: 3in
 
 	LiDAR calibration
 
-.. figure:: analysis/4/gantry3.png
+.. figure:: analysis/radar_calib.png
 	:align: center
 	:width: 3in
 
@@ -1370,7 +1521,7 @@ After successful LiDAR calibration, proceed with the calibration of the gantry f
 
 Step 1: Click the "Extended Axis" section on the left side of the software interface. For extended axis import, select "Gantry", and then click the "Import" button, as shown in the figure.
 
-.. figure:: analysis/4/gantry4.png
+.. figure:: analysis/gantry4.png
 	:align: center
 	:width: 6in
 
@@ -1392,7 +1543,7 @@ Clear Fault: If a fault occurs in the gantry, the fault monitoring in the "Gantr
 
 Step 3: After successful import, click the "Calibrate" button to enter the "Gantry Extended Axis Calibration" pop-up window. Place the checkerboard according to the instructions in the pop-up window, and take calibration photos as guided by the prompts at the bottom. After all calibration photos have been taken, click the "Calculate" button to complete the gantry calibration, as shown in the figure below.
 
-.. figure:: analysis/4/gantry5.png
+.. figure:: analysis/gantry5.png
 	:align: center
 	:width: 6in
 
@@ -1404,7 +1555,7 @@ After successful calibration of the LiDAR and gantry frame, open "Welding" → "
 
 After the welding features are successfully delivered, start creating the model construction program. First, open the modelfree construction settings page, as shown in the figure below, and select the acquisition device type according to the actual sensor type.
 
-.. figure:: analysis/4/gantry6.png
+.. figure:: analysis/gantry_1.png
 	:align: center
 	:width: 3in
 
@@ -1412,7 +1563,7 @@ After the welding features are successfully delivered, start creating the model 
 
 Next, open the modelfree construction node page, as shown in the figure below. The page is divided into three sections: &quot;Gantry Movement Node,&quot; &quot;Extension Axis Movement Node,&quot; and &quot;Modeling Node.&quot; The method for adding nodes is introduced as follows:
 
-.. figure:: analysis/4/gantry11.png
+.. figure:: analysis/gantry_2.png
 	:align: center
 	:width: 3in
 
@@ -1420,7 +1571,7 @@ Next, open the modelfree construction node page, as shown in the figure below. T
 
 Gantry Movement Node: If the model construction process requires the gantry to move, enter the target position of the gantry and click the &quot;Add&quot; button. A gantry movement node will then be added to the model construction program, as shown in the figure below.
 
-.. figure:: analysis/4/gantry13.png
+.. figure:: analysis/gantry_3.png
 	:align: center
 	:width: 6in
 
@@ -1431,7 +1582,7 @@ Extension Axis Movement Node: This node is used to set the robot's scanning ang
 .. important::
 	The five fixed scanning poses are essentially custom poses as well; they can be understood as five commonly used scanning poses that have been preset for convenience.
 
-.. figure:: analysis/4/gantry14.png
+.. figure:: analysis/gantry_4.png
 	:align: center
 	:width: 3in
 
@@ -1441,7 +1592,7 @@ If you choose the custom scanning pose, turn on the &quot;Custom Scanning Pose&q
 
 Finally, set the start and end positions of the extension axis and click the &quot;Add&quot; button, as shown in the figure below.
 
-.. figure:: analysis/4/gantry15.png
+.. figure:: analysis/gantry_5.png
 	:align: center
 	:width: 3in
 
@@ -1449,7 +1600,7 @@ Finally, set the start and end positions of the extension axis and click the &qu
 
 Modeling Node: Enter the model name for the modeling node and click the &quot;Add&quot; button, as shown in the figure below.
 
-.. figure:: analysis/4/gantry16.png
+.. figure:: analysis/gantry_6.png
 	:align: center
 	:width: 3in
 
@@ -1457,7 +1608,7 @@ Modeling Node: Enter the model name for the modeling node and click the &quot;A
 
 After the program is successfully created, click &quot;Run Program&quot; in the model construction menu bar. Once the program runs successfully, the global construction map and weld data will be acquired, as shown in the figure below.
 
-.. figure:: analysis/4/gantry17.png
+.. figure:: analysis/gantry_7.png
 	:align: center
 	:width: 6in
 
@@ -1466,7 +1617,7 @@ After the program is successfully created, click &quot;Run Program&quot; in the 
 .. important::
 	The master station cannot perform weld editing; it can only view the weld editing status. All welds can only be edited at the slave station.
 
-.. figure:: analysis/4/gantry18.png
+.. figure:: analysis/gantry6.png
 	:align: center
 	:width: 6in
 
@@ -1481,7 +1632,7 @@ Start AIRLab on the slave station and create a new welding project. Open the "So
 
 Enter the "Model Building" module and click "Get Global Map" in the menu bar options to retrieve the global map and weld seam data constructed by the master station, as shown in the figure below.
 
-.. figure:: analysis/4/gantry7.png
+.. figure:: analysis/gantry7.png
 	:align: center
 	:width: 3.5in
 
@@ -1489,13 +1640,13 @@ Enter the "Model Building" module and click "Get Global Map" in the menu bar opt
 
 Enter the "Weld Seam Editing" module and click "Get Global Weld Seams" in the menu bar to retrieve the weld seam data constructed by the master station's model. Click "Local Station" below the weld seam list to return to the weld seam editing list, or click "Global" to view the editing status of all weld seams, as shown in the figure below.
 
-.. figure:: analysis/4/gantry8.png
+.. figure:: analysis/gantry8.png
 	:align: center
 	:width: 3.5in
 
 	Get global weld seams
 
-.. figure:: analysis/4/gantry9.png
+.. figure:: analysis/gantry9.png
 	:align: center
 	:width: 6in
 
@@ -1514,7 +1665,7 @@ About
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When "About" is selected, clicking the button will display the current version and release date of the AIRLab software, middleware, and vision module, as shown in the follow picture.
 
-.. figure:: analysis/4/60.png
+.. figure:: analysis/70.png
 	:align: center
 	:width: 3in
 
@@ -1528,7 +1679,7 @@ Logs are divided into four levels: INFO, WARNING, ERROR, and DEBUG. After select
 
 As shown in the follow picture,, the specific meanings are listed in Table 3-2.
 
-.. figure:: analysis/4/log-en.png
+.. figure:: analysis/log.png
 	:align: center
 	:width: 3in
 
@@ -1540,18 +1691,27 @@ Daily Retention Count: Refers to the maximum number of logs saved per day. When 
 
 Retention Period: Refers to the number of days logs can be stored. When this period expires, the software will automatically delete all logs that have reached the expiration date.
 
-.. centered:: Table 3-2  Log level information
+.. table:: Log Level Information
+   :align: center
 
-.. image:: analysis/4/表3-2.png
-	:align: center
-	:width: 6in
+   +-----------+--------------------------------------------------------------+
+   | Log Level | Recorded Information                                         |
+   +===========+==============================================================+
+   | INFO      | Records INFO-, WARNING-, and ERROR-level logs                |
+   +-----------+--------------------------------------------------------------+
+   | WARNING   | Records WARNING- and ERROR-level logs                        |
+   +-----------+--------------------------------------------------------------+
+   | ERROR     | Records ERROR-level logs                                     |
+   +-----------+--------------------------------------------------------------+
+   | DEBUG     | Records INFO-, WARNING-, ERROR-, and DEBUG-level logs        |
+   +-----------+--------------------------------------------------------------+
 
 
 Software/Firmware Upgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Click Window - Software/Firmware Upgrade to open the "Software/Firmware Upgrade" interface.
 
-.. figure:: analysis/4/SF_UI_S_en.png
+.. figure:: analysis/SF_UI_S.png
 	:align: center
 	:width: 3in
 
@@ -1561,7 +1721,7 @@ Click Window - Software/Firmware Upgrade to open the "Software/Firmware Upgrade"
 
 Click "File Selection" to open the file selection window. Select the AIRLab.tar.gz upgrade file and click "Open". Please ensure the filename and format are correct.
 
-.. figure:: analysis/4/SF_choose_S_en.png
+.. figure:: analysis/SF_choose_S.png
 	:align: center
 	:width: 4in
 
@@ -1569,7 +1729,7 @@ Click "File Selection" to open the file selection window. Select the AIRLab.tar.
 
 After selecting the file, click "Open". Confirm that the upgrade package path is correct, then click the "Upgrade" button to begin the software upgrade.
 	
-.. figure:: analysis/4/SF_chosen_S_en.png
+.. figure:: analysis/SF_chosen_S.png
 	:align: center
 	:width: 3in
 
@@ -1577,7 +1737,7 @@ After selecting the file, click "Open". Confirm that the upgrade package path is
 
 Click "Upgrade" and wait for the upgrade package to decompress. The upgrade progress will be displayed in the progress bar. Please wait patiently.
 
-.. figure:: analysis/4/65.png
+.. figure:: analysis/75.png
 	:align: center
 	:width: 3in
 
@@ -1585,7 +1745,7 @@ Click "Upgrade" and wait for the upgrade package to decompress. The upgrade prog
 
 After the upgrade progress reaches 100%, click Confirm and restart the software, the upgrade is complete.
 
-.. figure:: analysis/4/66.png
+.. figure:: analysis/76.png
 	:align: center
 	:width: 3in
 
@@ -1593,7 +1753,7 @@ After the upgrade progress reaches 100%, click Confirm and restart the software,
 
 If the upgrade package is corrupted or incomplete, the interface will display an upgrade failure message, and the AIRLab version will be rolled back to its state prior to the upgrade. After the rollback is completed, click Confirm to restart the software, recheck the upgrade package, and perform the update again.
 
-.. figure:: analysis/4/sw_update_rollback.png
+.. figure:: analysis/update_error_backup.png
 	:align: center
 	:width: 6in
 
@@ -1603,7 +1763,7 @@ If the upgrade package is corrupted or incomplete, the interface will display an
 
 Click the "Camera Firmware Upgrade" header to open the corresponding window, as shown below.
 
-.. figure:: analysis/4/SF_UI_F_en.png
+.. figure:: analysis/SF_UI_F.png
 	:align: center
 	:width: 3in
 
@@ -1611,7 +1771,7 @@ Click the "Camera Firmware Upgrade" header to open the corresponding window, as 
 
 Click "File Selection" to open the file selection window. Select the upgrade file named FRSV_XXX_PRO.tar.gz and click "Open". Please ensure the filename and format are correct.
 
-.. figure:: analysis/4/SF_choose_F_en.png
+.. figure:: analysis/SF_choose_F.png
 	:align: center
 	:width: 4in
 
@@ -1619,7 +1779,7 @@ Click "File Selection" to open the file selection window. Select the upgrade fil
 
 After selecting the file, click "Open". Confirm that the upgrade package path is correct, then click the "Upgrade" button to begin the camera firmware upgrade.
 
-.. figure:: analysis/4/SF_chosen_F_en.png
+.. figure:: analysis/SF_chosen_F.png
 	:align: center
 	:width: 3in
 
@@ -1627,7 +1787,7 @@ After selecting the file, click "Open". Confirm that the upgrade package path is
 
 Click "Upgrade" and wait for the upgrade package to decompress. The upgrade progress will be displayed in the progress bar. Please wait patiently.
 
-.. figure:: analysis/4/SF_process_F_en.png
+.. figure:: analysis/SF_process_F.png
 	:align: center
 	:width: 3in
 
@@ -1635,7 +1795,7 @@ Click "Upgrade" and wait for the upgrade package to decompress. The upgrade prog
 
 Once the upgrade progress reaches 100%, click "Confirm" and restart the camera to complete the upgrade. Afterwards, you can follow the operations described in the "Import Module" section, open the "Device Information" interface, and view the current camera firmware version.
 
-.. figure:: analysis/4/SF_success_F_en.png
+.. figure:: analysis/SF_success_F.png
 	:align: center
 	:width: 3in
 
@@ -1643,7 +1803,7 @@ Once the upgrade progress reaches 100%, click "Confirm" and restart the camera t
 
 If the upgrade package is corrupted or incomplete, the interface will display upgrade failure feedback and will roll back the camera firmware version to its state before the upgrade. Re-check the upgrade package and try the update again.
 
-.. figure:: analysis/4/SF_fail_F_en.png
+.. figure:: analysis/SF_fail_F.png
 	:align: center
 	:width: 3in
 
@@ -1653,7 +1813,7 @@ Version Verification
 ~~~~~~~~~~~~~~~~~~~~~~~
 Click “Window” - “Version Verification” to open the version verification dialog. If all versions are displayed with a green check mark, it indicates that the verification is successful and the AIRLab software can run normally, as shown below.
 
-.. figure:: analysis/4/version_verification_ui.png
+.. figure:: analysis/version_check.png
 	:align: center
 	:width: 3.5in
 
@@ -1661,7 +1821,7 @@ Click “Window” - “Version Verification” to open the version verification
 
 If the library shows a red cross status in the version verification pop-up window, it indicates that the version of the library or function package does not match, as shown in the figure below. You can report this issue to the after-sales staff and obtain the latest upgrade package.
 
-.. figure:: analysis/4/version_verification_error.png
+.. figure:: analysis/version_check_error.png
 	:align: center
 	:width: 3.5in
 
@@ -1671,7 +1831,7 @@ TCF and Camera Hand-Eye Calibration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click "Window" - "TCF and Camera Hand-Eye Calibration". The corresponding pop-up window will be displayed on the page, as shown below.
 
-.. figure:: analysis/4/TCF_hand_UI_en.png
+.. figure:: analysis/TCF_hand_UI.png
 	:align: center
 	:width: 3.5in
 
@@ -1689,7 +1849,7 @@ First, configure the hand-eye calibration parameters. After setting the paramete
 
 Next, proceed with the camera hand-eye calibration. Manually drag the robot to position the camera directly above the calibration board, at a distance of 400-600mm from the board. Then, click the "Start Calibration" button. After clicking, the following confirmation pop-up will appear. Confirm that the robot is at the start position, then click "OK" to begin calibration.
 
-.. figure:: analysis/4/TCF_hand_start_pop_en.png
+.. figure:: analysis/TCF_hand_start_pop.png
 	:align: center
 	:width: 3.5in
 
@@ -1697,7 +1857,7 @@ Next, proceed with the camera hand-eye calibration. Manually drag the robot to p
 
 After calibration is complete, the results need to be verified. Click the "Start Verification" button. After the program finishes running, the verification accuracy results will be updated in the corresponding fields, as shown below.
 
-.. figure:: analysis/4/TCF_hand_res_en.png
+.. figure:: analysis/TCF_hand_res.png
 	:align: center
 	:width: 3.5in
 
@@ -1708,7 +1868,7 @@ After calibration is complete, the results need to be verified. Click the "Start
 
 After completing the hand-eye calibration, proceed to TCF calibration. Click the "TCF Calibration" header to switch to the corresponding interface, as shown below.
 
-.. figure:: analysis/4/TCF_calib_UI_en.png
+.. figure:: analysis/TCF_calib_UI.png
 	:align: center
 	:width: 3.5in
 
@@ -1720,7 +1880,7 @@ Then, click the "Move to Start Point" button to move the robot arm to the TCP ca
 
 Upon completion, the interface will display the corresponding calibration results, as shown below. After confirming they are correct, click the "Apply" button to apply the calibrated TCF results, completing this TCF calibration.
 
-.. figure:: analysis/4/TCF_calib_res_en.png
+.. figure:: analysis/TCF_calib_res.png
 	:align: center
 	:width: 3.5in
 
@@ -1732,7 +1892,7 @@ Through the display of the virtual camera field of view, it is possible to obser
 
 Click on the menu bar - Virtual Camera, and a virtual camera pop-up window will appear in the 3D scene, displaying the camera's field of view at the current position, as shown in the figure below.
 
-.. figure:: analysis/4/68.png
+.. figure:: analysis/78.png
 	:align: center
 	:width: 4in
 
@@ -1740,7 +1900,7 @@ Click on the menu bar - Virtual Camera, and a virtual camera pop-up window will 
 
 Adjust the camera position in the 3D scene, and the corresponding virtual camera field of view will also be synchronously transformed.
 
-.. figure:: analysis/4/69.png
+.. figure:: analysis/79.png
 	:align: center
 	:width: 4in
 
@@ -1752,13 +1912,13 @@ To achieve complete retention of key data and operation records, and provide rel
 
 Open the Data Source Export pop-up window and click the Select Export Path button to bring up the path selection pop-up window; after confirming the export path, click the Export button to start exporting the data source.
 
-.. figure:: analysis/4/source_data_export1.png
+.. figure:: analysis/dataexport1.png
 	:align: center
 	:width: 6in
 
 	Select Export Path
 
-.. figure:: analysis/4/source_data_export2.png
+.. figure:: analysis/dataexport2.png
 	:align: center
 	:width: 6in
 
@@ -1766,13 +1926,13 @@ Open the Data Source Export pop-up window and click the Select Export Path butto
 
 Once the export starts, a progress prompt pop-up window will appear, displaying the current export progress as shown in the figure. A prompt pop-up window indicating the completion of export will also appear when the export is finished, as shown in the figure.
 
-.. figure:: analysis/4/source_data_export3.png
+.. figure:: analysis/dataexport3.png
 	:align: center
 	:width: 6in
 
 	Export in Progress...
 
-.. figure:: analysis/4/source_data_export4.png
+.. figure:: analysis/dataexport4.png
 	:align: center
 	:width: 6in
 
@@ -1788,7 +1948,7 @@ AIRLab provides configuration for robot collision detection and obstacle avoidan
 
 The collision detection and obstacle avoidance planning rule configuration interface includes four parameter settings, aimed at reducing the possibility of collisions during the robot's welding movement. After setting the parameters on the page, click the "OK" button to complete the configuration.
 
-.. figure:: analysis/4/global_set_collision_en.png
+.. figure:: analysis/global_set_collision.png
 	:align: center
 	:width: 3.5in
 
@@ -1803,7 +1963,7 @@ The collision detection and obstacle avoidance planning rule configuration inter
 
 The welding torch pose calculation rule configuration interface is shown below.
 
-.. figure:: analysis/4/global_set_collision_para_en.png
+.. figure:: analysis/global_set_collision_para.png
 	:align: center
 	:width: 3in
 
@@ -1819,7 +1979,7 @@ After parameter settings are completed, click the "Add Weld" button in "Weld Edi
 
 The camera pose calculation rule configuration interface is shown below.
 
-.. figure:: analysis/4/global_set_auto_photo_en.png
+.. figure:: analysis/global_set_auto_photo.png
 	:align: center
 	:width: 4in
 
@@ -1829,82 +1989,102 @@ These parameters mainly affect the camera poses automatically obtained in the "F
 
 Welding process query pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click on Process - Welding Process in the menu bar, and the AIRLab software interface displays the Process Inquiry pop-up window.
+Click Process -> Welding Process in the menu bar. The AIRLab software interface will display the process query pop-up.
 
-.. figure:: analysis/4/76.png
+.. figure:: analysis/tech1.png
 	:align: center
 	:width: 3.5in
 
-	Process Inquiry Popup
+	Process Query Pop-up
 
-The left side of the pop-up window is for welding process classification, including flat welding, flat angle welding, vertical upward welding and other 9 categories, click on the welding process under the welding process classification, the right side will display the specific information of the process.
+On the left side of the pop-up are the welding process categories, including 9 categories such as Flat Welding, Flat Fillet Welding, Vertical Up Welding, etc. Click a welding process under a category, and the specific information of that process will be displayed on the right..
 
-Add welding process: Select the category of welding process to be added, click on the plus sign next to “P_type”, a welding process will be added under the category to be edited;
+Add Welding Process: Select the category under which you want to add a welding process, click the plus sign next to "Process Category", and an editable welding process will be added under that category.;
 
-.. figure:: analysis/4/77.png
+.. figure:: analysis/tech2.png
 	:align: center
 	:width: 3.5in
 
 	Newly added welding process
 
-Click the newly added welding process and edit the welding process name and operation logic between weld passes (only applicable for multi-layer and multi-pass welding) on the right side, then add weld pass information. Click the plus button next to the weld pass list to create a new weld pass entry. If the process is multi-layer and multi-pass welding, add multiple weld passes as needed; otherwise, add only one weld pass.
+Click the newly added welding process, then edit the welding process name, the operation logic between weld passes (only used for multi-layer multi-pass welding), and add weld pass information on the right. Click the plus sign next to the weld pass list to add a new weld pass. If the process is multi-layer multi-pass welding, add multiple passes as needed; otherwise, add only one pass.
 
-.. figure:: analysis/4/78.png
+.. figure:: analysis/tech3.png
 	:align: center
 	:width: 3.5in
 
-	Modify weld channel information
+	Process Query Pop-up
 
-Click the weld channel in the weld channel list, and the information of the currently clicked weld channel will be displayed in the weld channel editing section. Modify the weld channel information by selecting the reference coordinate system, safety point, offset, and binding the welding process and click Finish, and the information of the weld channel in the weld channel list will be modified.
+Click a weld pass in the weld pass list; the weld pass editing section will display the information of the currently clicked pass. Modify the pass information, select the reference coordinate system, safe point, offset, and bind the welding process, then click "Finish". The information of that pass in the weld pass list will be updated
 
-.. figure:: analysis/4/multiweld_en.png
+.. figure:: analysis/tech4.png
 	:align: center
 	:width: 6in
 
-	Editing of Multi-layer and Multi-pass Welding
+	Multi-Layer Multi-Pass Welding Editing
 
-Operation Logic between Weld Passes: Applied for multi-layer and multi-pass welding, including two types: Pause Processing and Continuous Operation.Pause Processing means the system stops after the current weld pass is completed and does not proceed to the next weld pass;Continuous Operation means the system proceeds to the next weld pass immediately after the current weld pass is completed.
+Operation Logic Between Weld Passes: Used for multi-layer multi-pass welding, with two types: Pause and Continue. "Pause" means the process stops after the current pass and does not proceed to the next pass; "Continue" means after the current pass ends, the operation continues to the next pass.
 
-Reference Coordinate System: The coordinate system referenced for offset if the weld pass needs to be offset. It is generally divided into the base coordinate system, workpiece coordinate system and custom coordinate system. Users need to add the reference coordinate system on the main interface first.
+Reference Coordinate System: A local coordinate system. Refer to the schematic diagram for the specific meaning of the coordinates. It provides settings for Y, Z, and relative pitch angle.
 
-Safety Point: For multi-layer and multi-pass welding, safety points must be set between weld passes. That is, the robot returns to the safety point first after the completion of the first weld pass, then starts the operation of the second weld pass. The number of safety points can be customized to multiple.
+Safe Point: For multi-layer multi-pass welding, a safe point needs to be set between passes. That is, after the first pass ends, the robot returns to the safe point before starting the second pass. Multiple safe points can be defined.
 
-Offset (Relative to Reference Coordinate System): The offset position relative to the previous weld pass when adding a multi-layer and multi-pass welding process.
+Offset (Relative to Local Coordinate System): When adding multi-layer multi-pass welding, this is the offset position relative to the previous weld pass.
 
-Bind Welding Process: Set the selected weld pass to be bound or unbound to a welding process. Click the Welding Process Query button to enter the detailed parameter query and setting interface of the process.
+Bind Welding Process: For the selected weld pass, choose to bind or not bind a welding process. Click the "Welding Process Query" button to enter the specific parameter query and settings for the process.
 
-.. figure:: analysis/4/80.png
+After completing the weld pass editing, you can preview the effect of the current pass by selecting the weld type you want to view. Specific effects are shown below.
+
+.. figure:: analysis/tech_effect1.png
 	:align: center
 	:width: 3.5in
 
-	New Welding Processes Successful
+	Weld Pass Information Effect Preview – Linear
+
+.. figure:: analysis/tech_effect2.png
+	:align: center
+	:width: 3.5in
+
+	Weld Pass Information Effect Preview – Arc
+
+.. figure:: analysis/tech_effect3.png
+	:align: center
+	:width: 3.5in
+
+	Weld Pass Information Effect Preview – Spline
 	
-After modifying all the welding channel information, click the “Finish” button under the welding channel list, and the terminal will show that the new multi-layer multi-channel welding process has been successful, and then a new welding process will be successfully added.
+After modifying all weld pass information, click the "Finish" button under the weld pass list. If the terminal displays "Multi-layer multi-pass welding process added successfully", then the new welding process has been successfully added.
 
-Modify welding process: Click on the welding process to be modified, modify the welding process data as needed, and you can add, modify or delete the list of weld passes.
+.. figure:: analysis/tech5.png
+	:align: center
+	:width: 3.5in
 
-1)Add a new weld path: Click the plus sign next to the weld path list to add a weld path in the weld path list.
+	Welding Process Added Successfully
 
-2)Modify weld pass: Click the weld pass that needs to be modified in the list of weld passes, the information of the weld pass will be displayed in the editing of the weld pass, after modifying the information of the weld pass, click the “Finish” button, and the information of the weld pass in the list of weld passes will be modified.
+Modify Welding Process: Click the welding process to be modified, modify the welding process data as needed. You can add, modify, or delete weld passes in the pass list.
 
-3)Delete Path: Select the weld path that needs to be deleted, click the delete icon next to the list of weld paths, and the weld path will be deleted.
+1. Add Weld Pass: Click the plus sign next to the weld pass list to add a new pass.
 
-After all the modifications are completed, click the “Finish” button under the list of welding channels, the software page will prompt “Does the process already exist? Click “confirm” button, the terminal displays “Modify Multi-layer Multi-pass Welding Process Successfully”, that is, successfully modify the welding process.
+2. Modify Weld Pass: Click the weld pass to be modified in the list; the pass editing section will display its information. Modify the information and click "Finish"; the pass information in the list will be updated.
 
-.. figure:: analysis/4/81.png
+3. Delete Weld Pass: Select the pass to be deleted, click the delete icon next to the weld pass list, and the pass will be removed.
+
+After all modifications are complete, click the "Finish" button under the weld pass list. The software page will prompt "This process already exists. Overwrite?". Click "OK". The terminal will display "Multi-layer multi-pass welding process modified successfully", indicating that the welding process has been successfully modified.
+
+.. figure:: analysis/92.png
 	:align: center
 	:width: 3in
 
 	Modifying Welding Process Tips
 
-Delete Welding Process: Select the welding process to be deleted and click on the delete icon next to the process type and the process will be deleted.
+Delete Welding Process: Select the welding process to be deleted, click the delete icon next to the process type, and the welding process will be removed.
 
 
 Cylinder Filling Process Query Pop up Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The pop-up window for querying the cylindrical filling process is shown in the figure below. The cylindrical filling process includes two parts: filling the bottom surface of the cylinder and secondary reinforcement.
 
-.. figure:: analysis/4/82.png
+.. figure:: analysis/93.png
 	:align: center
 	:width: 3in
 
@@ -1939,17 +2119,17 @@ Delete: Select "Delete", choose a cylindrical filling process name, and then cli
 
 Welding seam edit pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click the "weld seme" module. After adding a weld seam, click the edit icon—this will bring up the Weld Seam Editing pop-up window in the 3D scene, as shown in the figure. Below is an introduction to all editing items:
+Click the "weld seam" module. After adding a weld seam, click the edit icon—this will bring up the Weld Seam Editing pop-up window in the 3D scene, as shown in the figure. Below is an introduction to all editing items:
 
-.. figure:: analysis/4/83.png
+.. figure:: analysis/weldEdit1.png
 	:align: center
-	:width: 3in
+	:width: 4in
 
 	Weld Seam Selection Pop-up--Workpiece with Non-spline Features
 
-.. figure:: analysis/4/seamedit15.png
+.. figure:: analysis/spline_edit1.png
 	:align: center
-	:width: 6in
+	:width: 4in
 
 	Weld Seam Selection Pop-up--Workpiece with Spline Features
 
@@ -1973,7 +2153,7 @@ Calibration can be performed via point offset and angle settings if the position
 
 Point Type (Non-spline Weld Seams): Select the point to be offset, set Offset for Whether to Offset, and then configure the position offset of the selected point. Offset can be set in either the base coordinate system or the workpiece coordinate system.
 
-Setting Method (Spline Weld Seams): Select Global Setting to offset the entire weld seam; select the corresponding point to offset a specific point on the weld seam.
+Setting Method (Spline Weld Seams): Regarding offsets, the offset settings for the spline segment will apply to the entire spline. For welding posture, if you want to apply a unified setting to the entire spline segment, select "Overall Setting"; if you want to achieve a smooth transition of postures between segments, select "Start-End Posture Interpolation", and then set the postures for the start and end points accordingly.
 
 Welding Posture Strategy
 
@@ -2017,37 +2197,80 @@ Precautions:
 
 3. The Lua trajectory of an inferred weld seam is purple, while that of a recognized weld seam is red. In addition, in the generated Lua program nodes and points, all inferred weld seams will contain the "_Inference" identifier, as shown in the figure below.
 
-.. figure:: analysis/4/Inferen1.png
+.. figure:: analysis/weldedit1_1.png
 	:align: center
 	:width: 6in
 
 	Enable Weld Seam Inference Function
 
-.. figure:: analysis/4/Inferen2.png
+.. figure:: analysis/weldedit1_2.png
 	:align: center
 	:width: 6in
 
 	Recognized weld seam (red) and inferred weld seam (purple) Lua program and trajectory
 
-For the editing of spline curve weld seams, when setting points and angles, you can choose the setting method as either overall setting or setting for a specific point:
-
-- If you select "Overall Setting", the configured point offset and welding posture will apply to all points of the weld seam. 
-
-- If you select "Setting for a Specific Point", the configured point offset and welding posture will only apply to the selected point.
- 
-Other editing items are the same as those for straight + arc weld seams.
-
-.. figure:: analysis/4/yangtiao.png
+.. figure:: analysis/spline_edit2.png
 	:align: center
 	:width: 6in
 
 	spline curve weld seams edit
 
+For editing spline curve weld seams, the setting mode for points and angles can be selected as either Overall Setting or Interpolation of the Entire Segment Posture:
+
+- If Overall Setting is selected, the welding posture set will be applied to all points of the weld seam.
+
+- If Start-End Posture Interpolation is selected, the posture of the entire spline segment will be smoothly interpolated according to the postures of the start and end points.
+ 
+Other editing items are the same as those for straight + arc weld seams.
+
+Program configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The program configuration page is used to configure the program before running it, including the program configuration section and the welding interrupt recovery configuration section, as shown below.
+
+The program configuration section includes program running configuration, program recognition configuration, program arc initiation configuration, model-free construction settings, and welding machine number selection.
+
+.. figure:: analysis/program_configuration.png
+	:align: center
+	:width: 6in
+
+	Program Configuration
+
+For program operation configuration, select either "Do Not Run Program After Recognition" or "Run Program After Recognition":
+
+- Do Not Run Program After Recognition: The welding program will not run automatically after the fine positioning program is executed.
+
+- Run Program After Recognition: The welding program will run automatically after the fine positioning program is executed.
+
+For program recognition configuration, select either rough positioning followed by fine positioning, or fine positioning only:
+
+- Rough Positioning Followed by Fine Positioning: AIRLab executes the workpiece positioning program first, followed by the fine positioning program.
+
+- Run Only Fine Positioning: AIRLab skips workpiece positioning and directly executes the fine positioning program.
+
+For arc ignition configuration, select "Arc Ignition" or "No Arc Ignition":
+
+- Arc Ignition: If the program contains an arc ignition command, AIRLab performs arc ignition and welding during program operation.
+
+- No Arc Ignition: AIRLab does not ignite the arc and the robot only follows the welding trajectory for simulated welding.
+
+The simulated welding speed multiplier can be configured to increase the simulated welding speed.
+
+Model-free construction settings include rebuilding and not rebuilding:
+
+- Rebuild: Reconstruct the model-free workpiece model. Use this for workpieces that have not been built or whose previous construction result is unsatisfactory.
+
+- Do Not Rebuild: Import the previously constructed model-free workpiece model without rebuilding it.
+
+.. important::
+	It is recommended to construct a model-free workpiece separately first. After successful construction, use "Do Not Rebuild" in normal operation because the weld seam numbers acquired during model-free construction may change each time.
+
+After configuring all items, click "Confirm" to complete the program configuration.
+
 Welding data calculation and collection pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click on Welding → Welding Data Collection, and the current welding information pop-up window will appear. The window displays real-time welding status information, including welding current, welding voltage, and welding speed. The arc time and arc length are statistical data, showing the total welding duration and total welding length performed using the AIRLab software since the last reset. Click &quot;Reset&quot; to clear the welding duration and arc length. To modify the welding current and voltage in real time, enter the desired values and click &quot;Set.&quot;
 
-.. figure:: analysis/4/84.png
+.. figure:: analysis/welding_data_collection.png
 	:align: center
 	:width: 3in
 
@@ -2058,7 +2281,7 @@ Torch Cleaning and Wire Cutting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click “Window”–“Torch Cleaning and Wire Cutting” to open the “Torch Cleaning and Wire Cutting Settings” popup, as shown below. The parameters to be configured on this page include: Enable Automatic Torch Cleaning and Wire Cutting, Cleaning Method, Cleaning Cycle, Enable Oil Spray Point, Torch Cleaning Safety Point, Torch Cleaning Point, Wire Cutting Safety Point, and Wire Cutting Point.
 
-.. figure:: analysis/4/85.png
+.. figure:: analysis/96.png
 	:align: center
 	:width: 2.5in
 
@@ -2070,7 +2293,7 @@ The manual mode is divided into Manual Torch Cleaning and Manual Wire Cutting.Fo
 
 For automatic torch cleaning and wire cutting, all the parameters on the page need to be configured, then click the confirm button. When the cumulative welding time of the robot’s current welding session reaches the set cleaning and cutting cycle, a prompt dialog, as shown below, will appear after the robot stops welding, asking the user whether to proceed with torch cleaning and wire cutting.If Yes is selected, the robot will automatically perform torch cleaning and wire cutting.If No is selected, the robot will skip the cleaning and cutting operations, including the Torch Cleaning Safety Point, Torch Cleaning Point, Wire Cutting Safety Point, and Wire Cutting Point.
 
-.. figure:: analysis/4/86.png
+.. figure:: analysis/97.png
 	:align: center
 	:width: 3in
 
@@ -2079,7 +2302,7 @@ For automatic torch cleaning and wire cutting, all the parameters on the page ne
 .. important::
 	If automatic torch cleaning and wire cutting is enabled, the cleaning and cutting cycle cannot be set to 0!
 
-.. figure:: analysis/4/87.png
+.. figure:: analysis/98.png
 	:align: center
 	:width: 3in
 
@@ -2101,7 +2324,7 @@ Step 1: Launch AIRLab, import the workpiece registration template project, and o
 .. important::
 	AIRLab has specific requirements for the path of the workpiece registration template project. It must be placed in /Data/Work_template under the AIRLab directory. No other USD files are allowed in this folder besides the workpiece registration template project. The project name can be arbitrary.
 
-.. figure:: analysis/4/88.png
+.. figure:: analysis/99.png
 	:align: center
 	:width: 3in
 
@@ -2109,7 +2332,7 @@ Step 1: Launch AIRLab, import the workpiece registration template project, and o
 
 Set loop parameters according to actual needs, and the introduction of each parameter is as follows:   
 
-.. figure:: analysis/4/89.png
+.. figure:: analysis/100.png
 	:align: center
 	:width: 3in
 
@@ -2138,25 +2361,37 @@ AIRLab then automatically searches for the corresponding welding project of the 
 .. important::
 	Welding projects must be placed in the /Data/Weld_template folder under the AIRLab directory.The welding project name must exactly match the workpiece name. For example, if the workpiece is named ZH-0-01-A, its corresponding welding project must be ZH-0-01-A.usd. If the welding project is not found in the specified path, AIRLab will fail to retrieve it and display a pop-up warning.
 
-.. figure:: analysis/4/90.png
+.. figure:: analysis/101.png
 	:align: center
 	:width: 6in
 
 	The workpiece is being identified
 
-.. figure:: analysis/4/91.png
+.. figure:: analysis/102.png
 	:align: center
 	:width: 6in
 
 	The workpiece recognition is successful
 	
-.. figure:: analysis/4/92.png
+.. figure:: analysis/103.png
 	:align: center
 	:width: 6in
 
 	Automatically retrieve welding projects and import new projects
 
+.. figure:: analysis/104.png
+	:align: center
+	:width: 6in
+
+	Workpiece Recognition Failed
+
 Step 3: After the welding project is automatically imported, AIRLab controls the robot to execute the project. Once the program completes, AIRLab and the robot enter the cycle interval wait state.
+
+.. figure:: analysis/105.png
+	:align: center
+	:width: 6in
+
+	Automatic Cycle Interval Waiting
 
 .. important::
 	If different workpieces need to be replaced, users should estimate the replacement time in advance and set the "Cycle Interval" parameter accordingly. If no workpiece replacement is needed, the cycle interval can be set to 0 or 1 (minimal delay).
@@ -2168,7 +2403,7 @@ Step 5:AIRLab automatically controls the robot to repeat Step 4 based on the con
 .. important::
 	If a robot controller error or AIRLab error occurs during the cycle, the automatic operation stops immediately, requiring manual troubleshooting before resuming.
 
-.. figure:: analysis/4/93.png
+.. figure:: analysis/106.png
 	:align: center
 	:width: 4.5in
 
@@ -2176,67 +2411,19 @@ Step 5:AIRLab automatically controls the robot to repeat Step 4 based on the con
 
 The above outlines the usage method and steps for AIRLab's Automatic Cycle Operation function.
 
-Wire Stick-out Length Compensation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If the wire stick-out length was not accurately set during the welding torch tool calibration, resulting in it being too long or too short, the "Wire Stick-out Length Compensation" function can be used. When enabled, subsequent welding will proceed using the compensated stick-out length. The usage method is as follows:
-
-First, click "Window"-"Wire Stick-out Length Compensation". The "Wire Stick-out Length Correction" pop-up window shown in the figure below will appear.
-
-.. figure:: analysis/4/stickout_off_en.png
-	:align: center
-	:width: 3in
-
-	Wire Stick-out Length Correction Pop-up
-
-After clicking the "Enable/Disable" button, the "Stick-out Length Compensation" parameter setting becomes available. The value of this parameter affects the final welding trajectory. After setting the parameter, click the "OK" button, as shown below.
-
-.. figure:: analysis/4/stickout_on_en.png
-	:align: center
-	:width: 3in
-
-	Wire Stick-out Length Parameter Setting Pop-up
-
-If an abnormal compensation value is entered, a warning pop-up will be displayed, and the parameter will be set to the limit value, as shown below.
-
-.. figure:: analysis/4/stickout_popup_en.png
-	:align: center
-	:width: 4in
-
-	Compensation Parameter Exceeds Limit Pop-up
-
-After completing this parameter setting, both the simulated welding trajectory in the interface and the actual welding trajectory will be calculated and executed based on the compensated wire stick-out length, as shown in the comparison below.
-
-.. figure:: analysis/4/stickout_0_offsets.png
-	:align: center
-	:width: 4in
-
-	Welding Trajectory Display Before Compensation
-
-.. figure:: analysis/4/stickout_50_offsets.png
-	:align: center
-	:width: 4in
-
-	Welding Trajectory Display After Compensation
-
 User data backup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If a user needs to transfer a pre-configured welding process, template programs, and built workpiece data from one device to another to replicate the environment, AIRLab provides a user data backup feature.  
 
-Click on the AIRLab menu bar - Window - User Data Backup, and a pop-up window titled "User Data Backup" will appear, as shown in the figure below. Below is a detailed introduction to the usage of the user data package import and export functions. 
+Click "Weld" → "User Data Backup" on the AIRLab menu bar. A "User Data Backup" dialog will appear, as shown below. The import and export functions are described in detail in this section.
 
-.. figure:: analysis/4/94.png
+.. figure:: analysis/107.png
 	:align: center
 	:width: 6in
 
 	Pop up window for user data backup function
 
-First, you need to select the "Data Backup and Restoration Type", choosing between "Single Template Data" and "All Data" as shown in the figure. Once confirmed, you can proceed with the import and export operations.
-
-.. figure:: analysis/4/95.png
-	:align: center
-	:width: 3in
-
-	Data Backup and Restoration Type
+First, select the "Data Backup and Restoration Type": either "Single Template Data" or "All Data". Once confirmed, you can proceed with the import or export operation.
 
 Export Function: 
 
@@ -2260,7 +2447,7 @@ If the data backup and restoration type is "Single Template Data", you need to f
 
 During the export process, AIRLab will display a pop-up window indicating that the data package is being exported, as shown in the figure below. If cancellation is needed, click the "Cancel Export" button in the pop-up.
 
-.. figure:: analysis/4/96.png
+.. figure:: analysis/108.png
 	:align: center
 	:width: 6in
 
@@ -2268,7 +2455,7 @@ During the export process, AIRLab will display a pop-up window indicating that t
 
 Once completed, AIRLab will show another pop-up confirming the export and displaying the export path of the data package, as shown in the figure below.
 
-.. figure:: analysis/4/96-1.png
+.. figure:: analysis/109.png
 	:align: center
 	:width: 6in
 
@@ -2281,13 +2468,13 @@ Additionally, if the permissions for any of the specified folders or files are m
 
 The directory structure of the exported compressed package is shown in the figure below: 
 
-.. figure:: analysis/4/96-2.png
+.. figure:: analysis/soloData.png
 	:align: center
 	:width: 2.5in
 
 	the directory structure of single template data
 
-.. figure:: analysis/4/97.png
+.. figure:: analysis/110.png
 	:align: center
 	:width: 2.5in
 
@@ -2299,25 +2486,25 @@ AIRLab will first verify the version number in the version.txt file within the i
 
 If the version numbers do not match, a pop-up message will appear, notifying the user of the version inconsistency and indicating that the data is incompatible and cannot be imported, as shown in the figure below. 
 
-.. figure:: analysis/4/98.png
+.. figure:: analysis/111.png
 	:align: center
 	:width: 6in
 
 	Select the data package to be imported in the image
 
-.. figure:: analysis/4/99.png
+.. figure:: analysis/112.png
 	:align: center
 	:width: 6in
 
 	The data package is currently being imported
 
-.. figure:: analysis/4/100.png
+.. figure:: analysis/113.png
 	:align: center
 	:width: 6in
 
 	Data package import completed
 
-.. figure:: analysis/4/101.png
+.. figure:: analysis/114.png
 	:align: center
 	:width: 6in
 
@@ -2330,17 +2517,11 @@ If the version numbers do not match, a pop-up message will appear, notifying the
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If the user needs to perform welding on a model that has already been built in AIRLab, the software provides the “3D File Parsing” function, which replaces the previous “Model Construction” step and simplifies the workflow. The usage is as follows:
 
-Step 1: Click AIRLab Menu – “Window” – “3D File Parsing”. The 3D File Parsing dialog will appear, as shown below.
+Step 1: Following the model source options described in Section 3.5.3, select the file type and fill in the corresponding parameters according to the actual model conditions.
 
-.. figure:: analysis/4/3Dfile_prasing_dialog.png
-	:align: center
-	:width: 3.5in
+Step 2: Click the "Select" button in the pop-up window. A selection interface will appear. Choose the file to be parsed, then click "Open" again to complete the file selection. The process is shown in the figure below.
 
-	“3D File Parsing” dialog
-
-Step 2: Click the “Open” button in the dialog. A file selection window will pop up. Choose the workpiece to be parsed, and then click “Open” again to confirm the selection, as shown below.
-
-.. figure:: analysis/4/3Dfile_prasing_selection.png
+.. figure:: analysis/3Dfile_open.png
 	:align: center
 	:width: 3.5in
 
@@ -2348,7 +2529,7 @@ Step 2: Click the “Open” button in the dialog. A file selection window will 
 
 Step 3: A parsing progress bar will appear. Please wait patiently until the parsing is completed. The process is shown below.
 
-.. figure:: analysis/4/3Dfile_prasing_progress_dialog.png
+.. figure:: analysis/3Dfile_prgressbar.png
 	:align: center
 	:width: 3.5in
 
@@ -2356,7 +2537,7 @@ Step 3: A parsing progress bar will appear. Please wait patiently until the pars
 
 Step 4: After the progress is completed, the corresponding 3D model of the workpiece will be constructed in the scene, along with its associated weld seams, as shown below.
 
-.. figure:: analysis/4/3Dfile_prasing_res_display.png
+.. figure:: analysis/prase_3Dfile_res.png
 	:align: center
 	:width: 6in
 
@@ -2372,7 +2553,7 @@ The following first describes the case where Enable Auto Recognition is set to N
 
 Step 1: Click AIRLab Menu → “Window” → “Multi-Station Automatic Operation.” The Multi-Station Automatic Operation dialog appears, as shown below.
 
-.. figure:: analysis/4/multi_station_ui.png
+.. figure:: analysis/multiple_station_popup.png
 	:align: center
 	:width: 3.5in
 
@@ -2380,7 +2561,7 @@ Step 1: Click AIRLab Menu → “Window” → “Multi-Station Automatic Operat
 
 Step 2: Move the external axis to the position required to complete welding for a given workpiece. Click “Get Position” to record the current external-axis position, as shown below.
 
-.. figure:: analysis/4/multi_station_setting.png
+.. figure:: analysis/multiple_station_get_pos.png
 	:align: center
 	:width: 3.5in
 
@@ -2388,7 +2569,7 @@ Step 2: Move the external axis to the position required to complete welding for 
 
 Step 3: Select the project file corresponding to the welding task you wish to run at this external-axis position. Click “Select” to open the file chooser, then click “Open” to confirm, as shown below.
 
-.. figure:: analysis/4/multi_station_usda_select.png
+.. figure:: analysis/multiple_station_usda_import.png
 	:align: center
 	:width: 6in
 
@@ -2396,7 +2577,7 @@ Step 3: Select the project file corresponding to the welding task you wish to ru
 
 Step 4: Choose the desired modification mode: Add, Modify, or Delete. After confirming your choice, click “OK” to apply. To modify, select the target entry and click “OK.” Deletion is similar. See below.
 
-.. figure:: analysis/4/multi_station_add_modify.png
+.. figure:: analysis/multiple_station_add_delete.png
 	:align: center
 	:width: 6in
 
@@ -2408,7 +2589,7 @@ Next is the case where Enable Auto Recognition is set to Yes:
 
 Step 1: Similarly, after obtaining the external-axis position, enabling Auto Recognition will change the dialog as shown below. For details on Auto Recognition, refer to Section 3.6.11 Automatic Loop Operation.
 
-.. figure:: analysis/4/multi_station_auto.png
+.. figure:: analysis/multiple_station_auto_detect.png
 	:align: center
 	:width: 3.5in
 
@@ -2416,11 +2597,53 @@ Step 1: Similarly, after obtaining the external-axis position, enabling Auto Rec
 
 Step 2: After choosing the modification mode, click “Confirm.” An Inquiry dialog will appear—please read carefully before proceeding. Click “Confirm” to complete the setup.
 
-.. figure:: analysis/4/multi_station_inquiry_dialog.png
+.. figure:: analysis/multiple_station_auto_detect_popup.png
 	:align: center
 	:width: 3.5in
 
 	Inquiry dialog
+
+Wire Stick-out Length Compensation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If the wire stick-out length was not accurately set during welding torch calibration, use "Wire Stick-out Length Compensation". When enabled, subsequent welding uses the compensated stick-out length.
+
+Click "Window" → "Wire Stick-out Length Compensation". The correction dialog shown below will appear.
+
+.. figure:: analysis/stickout_off.png
+	:align: center
+	:width: 3in
+
+	Wire Stick-out Length Correction Dialog
+
+After clicking "Enable/Disable", the compensation parameter becomes available. Set the parameter and click "Confirm".
+
+.. figure:: analysis/stickout_on.png
+	:align: center
+	:width: 3in
+
+	Wire Stick-out Length Parameter Settings
+
+If an invalid compensation value is entered, AIRLab displays a warning and limits the parameter to the allowed value.
+
+.. figure:: analysis/stickout_popup.png
+	:align: center
+	:width: 4in
+
+	Compensation Parameter Exceeds the Limit
+
+After the parameter is configured, both the simulated and actual welding trajectories are calculated using the compensated stick-out length.
+
+.. figure:: analysis/stickout_0_offsets.png
+	:align: center
+	:width: 4in
+
+	Welding Trajectory Before Compensation
+
+.. figure:: analysis/stickout_50_offsets.png
+	:align: center
+	:width: 4in
+
+	Welding Trajectory After Compensation
 
 Extended axis synchronous motion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2431,13 +2654,13 @@ After selecting the external axis in the import module, click confirm to open th
 .. important::
 	If the robot system version in use is 3.8.2.11 or higher, enable the Acceleration Smoothing Mode on the web terminal first as shown in the figure. Otherwise, the extended axis synchronous motion failure issue will occur in subsequent operations.
 
-.. figure:: analysis/4/axis1.png
+.. figure:: analysis/acc_smooth.png
 	:align: center
 	:width: 6in
 
 	Extension axis setting pop-up window
 
-.. figure:: analysis/4/38.png
+.. figure:: analysis/38.png
 	:align: center
 	:width: 6in
 
@@ -2453,7 +2676,7 @@ As shown in Figure below, the IO Control Module enables manual control of the di
 
 The circle next to each port represents the indicator light for that port. First, switch to the corresponding port (e.g., DO5): the indicator light will turn green if the port DO5 is at a high level at this time, and remain white if the port DO5 is at a low level.
 
-.. figure:: analysis/4/104.png
+.. figure:: analysis/other_control_port.png
 	:align: center
 	:width: 3in
 
@@ -2466,7 +2689,7 @@ The circle next to each port represents the indicator light for that port. First
 
 As shown in Figure below, the External Axis Setup module enables control of the robot's external axis.
 
-.. figure:: analysis/4/105.png
+.. figure:: analysis/other_control_exaxis.png
 	:align: center
 	:width: 3in
 
@@ -2488,60 +2711,17 @@ Simulation
 ~~~~~~~~~~~~~~
 As shown in Figure below, after generating the simulation trajectory of the program, open the operation area - simulation, set the simulation speed and simulation interval, click on the "Run" button to start the simulation of the template program, click on the "Stop" button to stop the template program simulation. Click "Stop" button to stop the template program simulation. At the same time, it will generate the simulation trajectory point table to record the simulation trajectory points. In the table, the type of simulation track endpoints is LINEND, and when you click a line in the table, the virtual simulation robot will move to the clicked simulation track point, and at the same time, it will synchronously display the TCP coordinates of the simulation track point.
 
-.. figure:: analysis/4/106.png
+.. figure:: analysis/119.png
 	:align: center
 	:width: 6in
 
 	Simulation Page
 
-Program configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The program configuration page is used to configure the program before running it, including the program configuration section and the welding interrupt recovery configuration section, as shown in below.
-
-The program configuration section includes program running configuration, program recognition configuration,program arc initiation configuration, no model construction settings, welding machine number selection and so on.
-
-.. figure:: analysis/4/108.png
-	:align: center
-	:width: 6in
-
-	Program Configuration
-
-For program operation configuration, you can select either "Do Not Run Program After Recognition" or "Run Program After Recognition": 
-
-- Do Not Run Program After Recognition: The welding program will not run automatically after the fine positioning program is executed. 
-
-- Run Program After Recognition: The welding program will run automatically after the fine positioning program is executed.
-
-The program recognition configuration is divided into rough positioning first followed by fine positioning, with the option to run only fine positioning.  
-
-- Rough Positioning Followed by Fine Positioning: After clicking the one-click run button, AIRLab will automatically execute the workpiece positioning program in the current project first, followed by the fine positioning program.  
-
-- Run Only Fine Positioning: After starting with one-click run, AIRLab will skip the workpiece positioning step and directly execute the fine positioning program.
-
-For arc ignition configuration, you can set it to "Arc Ignition" or "No Arc Ignition": 
-
-- Arc Ignition: If there is an arc ignition command in the program, arc ignition and welding will be performed during program operation. 
-
-- No Arc Ignition: No arc ignition will occur during program operation; the robot will only move along the welding trajectory for simulated welding. 
-
-You can set the simulated welding operation speed multiplier to increase the speed of the simulated welding process.
-
-No model building setup: Currently, there are two methods - rebuilding and not rebuilding.
-
-- Rebuilding: Reconstruct the model of the model free workpiece; Suitable for non model artifacts that have not been built before or have poor construction results and need to be rebuilt.
-
-- Not rebuild: If you choose not to rebuild, the model free artifact model will not be rebuilt and will be directly imported from the previously built model. Applicable to previously built model free artifacts, there is no need to re model the model free artifact.
-
-.. important::
-	In practical operation, it is recommended to separately carry out the process of building model free artifacts, and after the artifact is successfully built, operate according to the original average model method. In the absence of a model workpiece model, it is recommended to always select "not rebuild" as the parameter for model free construction settings, as the weld seam numbers obtained from model free construction may change during each construction!
-
-After configuring everything, click the "Confirm" button to complete the program configuration.
-
 Multilingual settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 AIRLab software currently provides seven language options: Chinese (Simplified), Chinese (Traditional), English, Japanese, Korean, Russian, and French. The detailed multilingual settings page is shown in the figure below. This page provides three operations: switching languages; Export existing languages in AIRLab software; Import a new language. In order to meet the needs of users to switch between multiple languages, set new languages for AIRLab software, and modify existing language content in AIRLab software.
 
-.. figure:: analysis/4/111.png
+.. figure:: analysis/124.png
 	:align: center
 	:width: 3in
 
@@ -2557,7 +2737,7 @@ Click on the dropdown menu of "Multilingual" in Figure below, select the desired
 
 Firstly, click the "Export" button to export the language file currently used by AIRLab in CSV format. The exported file path is located in the local Downloads folder, as shown in the figure below. 
 
-.. figure:: analysis/4/112.png
+.. figure:: analysis/125.png
 	:align: center
 	:width: 4in
 
@@ -2565,7 +2745,7 @@ Firstly, click the "Export" button to export the language file currently used by
 
 The content format of the CSV file is shown in the figure below(if opened with a text editor), including four columns: language_id, location, source_text, translation_text. “language_id” represents the language type, “location” represents the position of the text in the source code, 'source_text' represents the text (Chinese) in the source code, and 'translation_text' represents the translation value corresponding to the source text.
 
-.. figure:: analysis/4/113.png
+.. figure:: analysis/126.png
 	:align: center
 	:width: 5in
 
@@ -2573,13 +2753,13 @@ The content format of the CSV file is shown in the figure below(if opened with a
 
 If you use LibreOfffice software to open it, as shown in Figure below, please note that the opening format is shown in Figure below.
 
-.. figure:: analysis/4/114.png
+.. figure:: analysis/127.png
 	:align: center
 	:width: 3in
 
 	LibreOffice software
 
-.. figure:: analysis/4/115.png
+.. figure:: analysis/128.png
 	:align: center
 	:width: 5in
 
@@ -2597,19 +2777,25 @@ After completing the translation work, the user needs to rename the CSV file to 
 
 Finally, import the CSV file into the AIRLab software, copy the file to the execution directory of the AIRLab software, click the "Import" button, and select the file to import, as shown in Figure below. The AIRLab terminal displays “CSV file import successful”, indicating that the user's language file has been successfully imported, as shown in Figure below. After restarting AIRLab, select the user's newly added language switch from the drop-down menu in "Language Selection".
 
-.. figure:: analysis/4/116.png
+.. figure:: analysis/129.png
 	:align: center
 	:width: 6in
 
 	Pop up window of the "Import" button
 
-.. figure:: analysis/4/117.png
+.. figure:: analysis/130.png
 	:align: center
 	:width: 6in
 
 	Terminal display information when language file import is successful
 
 If the terminal displays "CSV file import failed", you can check the error message in the log record, and carefully check whether the imported CSV file is inconsistent with the originally exported CSV file in terms of the number of rows, columns, and the Chinese delimiter "；" between columns.
+
+.. figure:: analysis/131.png
+	:align: center
+	:width: 6in
+
+	Language File Import Failure Log
 
 .. important::
 	When modifying the content of "translation_text", it is necessary to refer to the field length of the Chinese text of "source_text". If the translation value is too long, please use abbreviations appropriately, otherwise the corresponding control text in the AIRLab interface may not be displayed completely.
@@ -2618,33 +2804,11 @@ If the terminal displays "CSV file import failed", you can check the error messa
 
 If the user needs to modify an existing language in AIRLab, they first need to click the "Export" button to export the CSV file of that language; After the modification is completed, copy the file to the execution directory of AIRLab software, click the "Import" button, select the modified file to import, and the terminal displays "CSV import successful". After restarting the software, the language modification is completed.
 
-Considering the different usage habits of AIRLab English users, AIRLab has designed the unit of measurement switching as a configuration item for users to choose whether to switch millimeters to inches, as shown in Figure 3-205.
-
-.. figure:: analysis/4/118.png
-	:align: center
-	:width: 6in
-
-	UI interface for switching measurement units
-
-After the user selects the measurement unit to switch, the input box labeled in millimeters on the AIRLab interface will be converted to inches, as shown in Figure below and Figure below.
-
-.. figure:: analysis/4/119.png
-	:align: center
-	:width: 3in
-
-	Before switching units of measurement
-
-.. figure:: analysis/4/120.png
-	:align: center
-	:width: 3in
-
-	After switching units of measurement
-
 Error prompt pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 During the operation of AIRLab software, some errors may occur, and an error prompt pop-up window will appear on the interface as shown in the figure.
 
-.. figure:: analysis/4/121.png
+.. figure:: analysis/132.png
 	:align: center
 	:width: 3in
 
@@ -2652,17 +2816,11 @@ During the operation of AIRLab software, some errors may occur, and an error pro
 
 After fixing the error based on its type, click the "one-click clear" button, the pop-up window will disappear, and then continue running. 
 
-.. figure:: analysis/4/122.png
-	:align: center
-	:width: 6in
-
-	Clean the error prompt
-
 Extended Axis Coordinate System Calibration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 AIRLab provides a calibration function for the Extended Axis Coordinate System. After normally importing the robot, tools, and external axes, click "Import Module" - "External Axes" on the main interface,open the extended axis settings interface (see Section 3.5.1). Then, select the extended axis coordinate system to calibrate and click “Modify” to enter the Extended Axis Coordinate System Calibration interface, as shown below.
 
-.. figure:: analysis/4/exaxis_calibration_ui.png
+.. figure:: analysis/exaxis_calibration_ui.png
 	:align: center
 	:width: 6in
 
@@ -2671,7 +2829,7 @@ AIRLab provides a calibration function for the Extended Axis Coordinate System. 
 .. important::
 	Exaxis0 cannot be calibrated. If you select Exaxis0, an error dialog will appear as shown below.
 
-.. figure:: analysis/4/exaxis_calibration_crd0_error.png
+.. figure:: analysis/exaxis_error_popup.png
 	:align: center
 	:width: 2.5in
 
@@ -2681,7 +2839,7 @@ A AIRLab provides a calibration method specifically for extended axes of the typ
 
 Step 1: First, open the "Extended Axis Coordinate System Calibration" interface mentioned earlier. Click the "Clear Coordinate System" button, and confirm the "Whether the currently applied tool coordinate system has been calibrated" option. The prerequisite for calibrating the external axis is that the tool coordinate system used in the current application has been correctly calibrated. After confirmation, an "Inquiry" pop-up window will appear. Once confirmed, the calibration setup will officially begin.
 
-.. figure:: analysis/4/exaxis_calibration_ui+dialog.png
+.. figure:: analysis/exaxis_calibration_ui_popup.png
 	:align: center
 	:width: 6in
 
@@ -2689,7 +2847,7 @@ Step 1: First, open the "Extended Axis Coordinate System Calibration" interface 
 
 Step 2: Click the "Servo Enable" button to activate the extended axis. If successful, the button will turn green; otherwise, it will turn red and an error pop-up will be displayed. If the enable operation is successful, move to an appropriate position and click the "Zero Point Setting" button to complete the initial setup. The process is illustrated in the figure below.
 
-.. figure:: analysis/4/exaxis_calibration_enable_disable.png
+.. figure:: analysis/exaxis_enable.png
 	:align: center
 	:width: 6in
 
@@ -2697,7 +2855,7 @@ Step 2: Click the "Servo Enable" button to activate the extended axis. If succes
 
 Step 3: Keep the extended axis stationary and adjust the posture of the robotic arm's end effector so that the end tool is aligned with a fixed point on the extended axis. Click "Set Point 1." Once the button changes to "Modify Point 1," the setting is complete. If you need to modify this point, repeat the above steps. Similarly, after adjusting the tool posture (with an angle of approximately 30°), complete the "Set Point 2" process. The entire procedure is illustrated in the figure below.
 
-.. figure:: analysis/4/exaxis_calibration_P1+P2.png
+.. figure:: analysis/exaxis_setpoint1_2.png
 	:align: center
 	:width: 6in
 
@@ -2705,7 +2863,7 @@ Step 3: Keep the extended axis stationary and adjust the posture of the robotic 
 
 Step 4: Click "Forward Jog" to move the extended axis by a distance of 200 mm. Once again, align the end tool with the previous fixed reference point, then click "Set Point 3." After the button changes to "Modify Point 3," the setting is complete. If modification of this point is needed, repeat the above steps. The process is illustrated in the figure below.
 
-.. figure:: analysis/4/exaxis_calibration_P3.png
+.. figure:: analysis/exaxis_setPoint3.png
 	:align: center
 	:width: 3.5in
 
@@ -2713,7 +2871,7 @@ Step 4: Click "Forward Jog" to move the extended axis by a distance of 200 mm. O
 
 Step 5: Click "Reverse Jog" to move the extended axis backward by 205 mm, then move it forward by 5 mm. Once again, align the end tool with the previous fixed reference point. Next, jog along the base coordinate system to move the end upward by 100 mm, then click "Set Point 4." After the button changes to "Modify Point 4," the setting is complete. If modification of this point is needed, repeat the above steps. The process is illustrated in the figure below.
 
-.. figure:: analysis/4/exaxis_calibration_P4.png
+.. figure:: analysis/exaxis_setPoint4.png
 	:align: center
 	:width: 3.5in
 
@@ -2721,7 +2879,7 @@ Step 5: Click "Reverse Jog" to move the extended axis backward by 205 mm, then m
 
 Step 6: After completing the above steps, click “Calculate” to compute the tool pose. The results will be displayed as shown below.
 
-.. figure:: analysis/4/exaxis_calibration_cal_res.png
+.. figure:: analysis/exaxis_calibration_res.png
 	:align: center
 	:width: 3.5in
 
@@ -2733,7 +2891,7 @@ under [Exaxis_coord_value_list]. In this example, Exaxis1 was calibrated, so the
 
 If the calibrated external axis coordinate system is correct (with RX, RY, and RZ values close to 0), click the "Apply" button to send the calibrated external axis coordinate system to the robot controller for application.
 
-.. figure:: analysis/4/exaxis_calibration_save_res.png
+.. figure:: analysis/exaxis_cal_res_save.png
 	:align: center
 	:width: 6in
 
@@ -2741,7 +2899,7 @@ If the calibrated external axis coordinate system is correct (with RX, RY, and R
 
 If the selected extended axis coordinate system already exists (i.e., calibration data is already stored in the above path), an Inquiry dialog will appear asking whether to overwrite the previous result. Clicking “Confirm” will overwrite the existing calibration.
 
-.. figure:: analysis/4/exaxis_calibration_inquiry_dialog.png
+.. figure:: analysis/exaxis_ask_popup.png
 	:align: center
 	:width: 3in
 
@@ -2760,29 +2918,29 @@ To modify or view the welding feature parameters during project operation, click
 
 As shown in the figure below:
 
-.. figure:: analysis/4/feature1.png
-	:align: center
-	:width: 6in
-
-	New Welding Project – Welding Feature Parameter Settings Pop-up
-
-.. figure:: analysis/4/feature2.png
+.. figure:: analysis/import.png
 	:align: center
 	:width: 6in
 
 	Import Existing Welding Project – Welding Feature Parameter Settings Pop-up
 
+.. figure:: analysis/new.png
+	:align: center
+	:width: 6in
+
+	New Welding Project – Welding Feature Parameter Settings Pop-up
+
 If you confirm to use the current feature configuration, click the Confirm Use button in above Figures.If you need to reselect features, click the Reselect Features button in the figure to enter the page shown in the following Figure.
 
 There are three workpiece model construction methods available: Camera Acquisition, 3D File Integration, and SLAM Mapping.Click the corresponding icon; a welding feature description pop-up window (shown in the follow picture) will appear, displaying a detailed description of the currently selected method/feature.Please make a matching selection based on this description and the actual workpiece.
 
-.. figure:: analysis/4/feature3.png
+.. figure:: analysis/model_struct.png
 	:align: center
 	:width: 6in
 
 	Reselect Features – Model Construction Method Selection
 
-.. figure:: analysis/4/feature4.png
+.. figure:: analysis/model_struct_camera.png
 	:align: center
 	:width: 6in
 
@@ -2793,7 +2951,7 @@ There are three workpiece model construction methods available: Camera Acquisiti
 
 If 3D File Inheritance is selected as the model construction method, click Next to proceed to the Planar Feature Selection page, as shown in the figure below.
 
-.. figure:: analysis/4/feature5.png
+.. figure:: analysis/3D_plane_box.png
 	:align: center
 	:width: 6in
 
@@ -2802,14 +2960,14 @@ If 3D File Inheritance is selected as the model construction method, click Next 
 If Camera Acquisition is selected as the model construction method, click Next to proceed to the Vision Feature Selection page, as shown in the figure below. Determine whether the current workpiece is a Non-spline Feature or Spline Feature according to the welding feature description, then click Next to enter the subsequent feature selection page.
 
 
-.. figure:: analysis/4/feature6.png
+.. figure:: analysis/feature5.png
 	:align: center
 	:width: 6in
 
 	Vision Feature Selection Page--Non-spline Feature
 
 
-.. figure:: analysis/4/feature7.png
+.. figure:: analysis/feature6.png
 	:align: center
 	:width: 6in
 
@@ -2817,23 +2975,49 @@ If Camera Acquisition is selected as the model construction method, click Next t
 
 For workpieces with spline features, it is necessary to determine whether the current workpiece uses a General Spline or an Intersecting Line Spline. Select the correct feature according to the welding feature description, as shown in the figures below.
 
+If "Ordinary Spline" is selected, after clicking Next, you will be further prompted to choose either "Large Radius" or "Small Radius" based on the actual situation. Similarly, if "Intersecting Line Spline" is selected, you will be additionally required to choose either "Large Gap" or "Small Gap".
+
 After selecting the spline feature, click the Finish button directly to complete the welding feature parameter configuration. You can then close the pop-up window and start processes such as model construction.
 
-.. figure:: analysis/4/feature8.png
+.. figure:: analysis/feature7.png
 	:align: center
 	:width: 6in
 
 	General Spline
 
-.. figure:: analysis/4/feature9.png
+.. figure:: analysis/feature_spline1.png
+	:align: center
+	:width: 6in
+
+	General Spline-Small Radius
+
+.. figure:: analysis/feature_spline2.png
+	:align: center
+	:width: 6in
+
+	General Spline-Large Radius
+
+.. figure:: analysis/feature8.png
 	:align: center
 	:width: 6in
 
 	Intersecting Line Spline
 
+.. figure:: analysis/feature_spline3.png
+	:align: center
+	:width: 6in
+
+	Intersecting Line Spline-Small Gap
+
+.. figure:: analysis/feature_spline4.png
+	:align: center
+	:width: 6in
+
+	Intersecting Line Spline-Large Gap
+
 For non-spline feature workpieces, further selection of plane features is required. When selecting a lap joint plane, the software will pop up a lap joint plane selection window, in which three types of lap joint planes are available: staggered-layer lap joint, flat-plate lap joint, and vertical-plate lap joint. You can make your selection based on the plane feature descriptions.
 
-.. figure:: analysis/4/feature10.png
+.. figure:: analysis/feature2.png
 	:align: center
 	:width: 6in
 
@@ -2841,25 +3025,25 @@ For non-spline feature workpieces, further selection of plane features is requir
 
 Considering that the four plane features currently have a priority order, when selecting other plane features, the interface will sequentially prompt whether the workpiece contains a higher-priority feature. Based on the actual features of the workpiece, you can select "Yes" or "No," as shown in the figure below. The selected features will appear in the list under "Selected Features" on the page.
 
-.. figure:: analysis/4/feature11.png
+.. figure:: analysis/feature2_1.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Lap Joint Planar Feature
 
-.. figure:: analysis/4/feature12.png
+.. figure:: analysis/feature3.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Narrow Planar Feature
 
-.. figure:: analysis/4/feature13.png
+.. figure:: analysis/feature4.png
 	:align: center
 	:width: 6in
 
 	Non-spline Feature--Box Girder Planar Feature
 
-.. figure:: analysis/4/feature14.png
+.. figure:: analysis/feature1.png
 	:align: center
 	:width: 6in
 
@@ -2872,13 +3056,13 @@ After completing planar feature selection, click the Next button in above Figure
 
 If the current workpiece does not involve cylinder or cone features, click Deselect and then click Next.If no cylinder or cone features have been selected, you may click Next directly.
 
-.. figure:: analysis/4/tall_cylinder.png
+.. figure:: analysis/short_cylinder.png
 	:align: center
 	:width: 6in
 
 	Cylinder & Cone Features – Select tall Cylinder Feature
 
-.. figure:: analysis/4/cancle_cylinder.png
+.. figure:: analysis/cancle_cylinder.png
 	:align: center
 	:width: 6in
 
@@ -2888,13 +3072,13 @@ Following the cylinder and cone features is the planar relationship feature sele
 
 There are only two types of planar relationship features: small gap and large gap. After selecting according to the actual features of the workpiece, check whether the features listed under Selected Features on the page are correct. If correct, click Confirm Selection to complete the welding feature parameter configuration. The pop-up window will close automatically upon successful setup.
 
-.. figure:: analysis/4/small_gap.png
+.. figure:: analysis/large_gap.png
 	:align: center
 	:width: 6in
 
 	Planar Relationship Features – Small Gap
 
-.. figure:: analysis/4/large_gap.png
+.. figure:: analysis/small_gap.png
 	:align: center
 	:width: 6in
 
@@ -2904,7 +3088,7 @@ Welder Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Collaborative robots carrying welding torches for welding operations can significantly improve welding efficiency and welding quality. FAU collaborative robots can implement welding control through three methods: Controller IO, Digital Communication Protocol (UDP), and Digital Communication Protocol (Modbus TCP).
 
-.. figure:: analysis/4/welder1.png
+.. figure:: analysis/welder1.png
 	:align: center
 	:width: 6in
 
@@ -2934,7 +3118,7 @@ I. Controller I/O
 
 - Step 1:As shown in the figure below, select the welder status signal DI input port and the welder control signal DO output port, and click the Configure button. The meaning of each signal is as follows:
 
-.. figure:: analysis/4/welder2.png
+.. figure:: analysis/welder2.png
 	:align: center
 	:width: 6in
 
@@ -2960,7 +3144,7 @@ Reverse Wire Feeding: The DO output port for the robot to control welder reverse
 
 As shown in the figure, find the Analog Current-Voltage Relationship Diagram on the welder configuration page, where A-V represents the corresponding relationship between welding current and the analog output voltage of the control box, and V-V represents the corresponding relationship between welding voltage and the analog output voltage of the control box.
 
-.. figure:: analysis/4/welder3.png
+.. figure:: analysis/welder3.png
 	:align: center
 	:width: 6in
 
@@ -2970,7 +3154,7 @@ Select A-V, input the welding current range of 0-1000A, analog output voltage of
 
 As shown in the figure, click V-V to set the corresponding relationship between welding voltage and the analog output voltage of the control box, input the welding voltage range of 0-100V, analog output voltage value of 0-10V, set the output AO to Ctrl-AO1 (the analog output port for welding voltage control is AO1), and click the Configure button.
 
-.. figure:: analysis/4/welder4.png
+.. figure:: analysis/welder4.png
 	:align: center
 	:width: 6in
 
@@ -2978,7 +3162,7 @@ As shown in the figure, click V-V to set the corresponding relationship between 
 
 - Step 3: Welder debugging.Find Welder Debugging on the welder configuration page, input the timeout time as 1000ms, click Gas Feeding, and the robot will control the welder to start delivering protective gas. Click the Stop Gas Feeding button, and the robot will control the welder to stop delivering protective gas. The operation methods of other buttons such as Arc Striking, Forward Wire Feeding, and Reverse Wire Feeding are the same and will not be repeated here.
 
-.. figure:: analysis/4/welder5.png
+.. figure:: analysis/welder5.png
 	:align: center
 	:width: 6in
 
@@ -2990,7 +3174,7 @@ Essentially, the robot implements welding control through the Digital Communicat
 
 - Step 1: UDP communication configuration.Since the robot communicates with the PLC via UDP, it is necessary to configure UDP communication parameters. The meaning of each parameter is as follows:
 
-.. figure:: analysis/4/welder6.png
+.. figure:: analysis/welder6.png
 	:align: center
 	:width: 6in
 
@@ -3016,7 +3200,7 @@ After configuring the above parameters, click the Configure button. After succes
 
 - Step 2:Select the welder status signal DI input port and the welder control signal DO output port, and click the Configure button. The meaning of each signal is as follows:
 
-.. figure:: analysis/4/welder7.png
+.. figure:: analysis/welder7.png
 	:align: center
 	:width: 6in
 
@@ -3040,7 +3224,7 @@ Reverse Wire Feeding: The DO output port for the robot to control welder reverse
 
 - Step 3: Welder debugging.Find Welder Debugging on the welder configuration page, input the timeout time as 1000ms, click Gas Feeding, and the robot will control the welder to start delivering protective gas. Click the Stop Gas Feeding button, and the robot will control the welder to stop delivering protective gas. The operation methods of other buttons such as Arc Striking, Forward Wire Feeding, and Reverse Wire Feeding are the same and will not be repeated here.
 
-.. figure:: analysis/4/welder8.png
+.. figure:: analysis/welder8.png
 	:align: center
 	:width: 6in
 
@@ -3050,7 +3234,7 @@ Reverse Wire Feeding: The DO output port for the robot to control welder reverse
 
 Welding interruption recovery configuration refers to the parameters that need to be configured for resuming welding after a program interruption occurs during the welding process; it includes the configuration of welding arc tracking accidental interruption detection parameters and weld seam interruption detection parameters.
 
-.. figure:: analysis/4/welder9.png
+.. figure:: analysis/welder9.png
 	:align: center
 	:width: 6in
 
@@ -3088,7 +3272,7 @@ After the welding interruption recovery configuration is fully completed, run th
 
 After an interruption occurs during the robot's welding process, the operator can switch the robot to manual mode, drag the robot to a safe position, and handle the cause of the interruption. After checking the environment and troubleshooting the problem, click the Resume Welding button in the following pop-up window, and the program will resume the interruption according to the configured parameters.
 
-.. figure:: analysis/4/110.png
+.. figure:: analysis/123.png
 	:align: center
 	:width: 3in
 
@@ -3098,7 +3282,7 @@ III. Digital Communication Protocol (Modbus TCP)
 
 - Step 1:In the open protocol configuration, click the Upload button to upload the compiled open protocol LUA program file to the controller. Select an open protocol ID and an open protocol name, and click the Configure button (the selected protocol ID must be consistent with the ID compiled in the open protocol file) to assign an ID to each open protocol. Upload the welder open protocol CtrlDev_WELDING.lua (the protocol file name must start with `CtrlDev_` and have a suffix of .lua).
 
-.. figure:: analysis/4/welder10_en.png
+.. figure:: analysis/welder10.png
 	:align: center
 	:width: 6in
 
@@ -3106,13 +3290,13 @@ III. Digital Communication Protocol (Modbus TCP)
 
 - Step 2:The configured welder open protocol is displayed in the list in Device Operation and Status. Select the configured protocol and click the Load button. A green icon for the connection status indicates successful loading; a red icon indicates loading failure.
 
-.. figure:: analysis/4/welder11_en.png
+.. figure:: analysis/welder11.png
 	:align: center
 	:width: 6in
 
 	Successful Open Protocol Loading
 
-.. figure:: analysis/4/welder12_en.png
+.. figure:: analysis/welder12.png
 	:align: center
 	:width: 6in
 
@@ -3120,7 +3304,7 @@ III. Digital Communication Protocol (Modbus TCP)
 
 - Step 3:Before conducting welder debugging, ensure that the welder open protocol has been loaded normally and the relevant register address configuration is correct. Click buttons such as Arc Striking, Arc Extinguishing, Gas Feeding, and Stop Gas Feeding to observe whether the actual welder actions are consistent with the settings. If the welder does not perform the set actions, check whether the register configuration in the welder open protocol is incorrect and conduct further debugging.
 
-.. figure:: analysis/4/welder14.png
+.. figure:: analysis/welder14.png
 	:align: center
 	:width: 6in
 
@@ -3128,7 +3312,7 @@ III. Digital Communication Protocol (Modbus TCP)
 
 - Step 4:Unload the welder open protocol. Click the Unload button in Device Operation and Status, and the protocol running status will be disconnected at this time. Click the Delete button to remove the protocol from the protocol list.
 
-.. figure:: analysis/4/welder13_en.png
+.. figure:: analysis/welder13.png
 	:align: center
 	:width: 6in
 
@@ -3138,7 +3322,7 @@ Extended Axis Communication Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click the icon button in Communication Mode in the Extended Axis Settings pop-up window to enter the corresponding communication configuration mode page.
 
-.. figure:: analysis/4/38.png
+.. figure:: analysis/38.png
 	:align: center
 	:width: 6in
 
@@ -3148,7 +3332,7 @@ Click the icon button in Communication Mode in the Extended Axis Settings pop-up
 
 Before using the extended axis UDP communication mode, it is necessary to first establish the corresponding extended axis coordinate system, configure the corresponding extended axis scheme under the corresponding extended axis coordinate system, and apply the established tool coordinate system after the extended axis is imported. The extended axis function is mainly used in conjunction with the welder function and the laser tracking sensor function.
 
-.. figure:: analysis/4/UDP1.png
+.. figure:: analysis/UDP1.png
 	:align: center
 	:width: 6in
 
@@ -3212,19 +3396,19 @@ Model: The model list is automatically matched according to the manufacturer;
 
 Mode: Incremental system and absolute position system.
 
-.. figure:: analysis/4/exaxis_1.png
+.. figure:: analysis/UDP2.png
 	:align: center
 	:width: 6in
 
 	Configured Extended Axis Settings Page
 
-.. figure:: analysis/4/exaxis_2.png
+.. figure:: analysis/UDP3.png
 	:align: center
 	:width: 6in
 
 	Extended Axis Configuration Information Edit Page 1 (Slide the mouse up and down to view the complete information)
 
-.. figure:: analysis/4/exaxis_3.png
+.. figure:: analysis/UDP4.png
 	:align: center
 	:width: 6in
 
@@ -3232,7 +3416,7 @@ Mode: Incremental system and absolute position system.
 
 - Step 4:After the extended axis parameters are configured, click the Disable button to enable the corresponding extended axis number. After successful enabling, the zero return mode and extended axis test can be set. The zero return mode setting and extended axis test cannot be performed when the extended axis is not enabled.
 
-.. figure:: analysis/4/exaxis_4.png
+.. figure:: analysis/UDP5.png
 	:align: center
 	:width: 6in
 
@@ -3246,7 +3430,7 @@ Zero Seeking Speed: 0~2000mm/s;
 
 Zero Point Clamping Speed: 0~2000mm/s.
 
-.. figure:: analysis/4/exaxis_5.png
+.. figure:: analysis/UDP6.png
 	:align: center
 	:width: 6in
 
@@ -3254,7 +3438,7 @@ Zero Point Clamping Speed: 0~2000mm/s.
 
 - Step 6:The function setting cannot be performed if the extended axis is not enabled successfully; after the extended axis is enabled successfully and the zero return mode is set, click the Test button to enter the extended axis test interface. Set the running speed, acceleration, and maximum distance, perform forward and reverse rotation tests on the extended axis, and click the Stop button during rotation to test whether the extended axis can stop normally.
 
-.. figure:: analysis/4/exaxis_6.png
+.. figure:: analysis/UDP7.png
 	:align: center
 	:width: 6in
 
@@ -3262,7 +3446,7 @@ Zero Point Clamping Speed: 0~2000mm/s.
 
 - Step 7 (Optional Setting):Set the positioning completion time, which is used to monitor the stop time of the extended axis movement. After the extended axis establishes UDP communication, enter the time and click the Configure button to complete the setting.
 
-.. figure:: analysis/4/exaxis_7.png
+.. figure:: analysis/UDP8.png
 	:align: center
 	:width: 6in
 
@@ -3272,7 +3456,7 @@ II. Controller + Servo Drive (485 Communication)
 
 Before using RS485 communication to control the servo extended axis, it is necessary to first connect the RS485 communication interface of the servo drive to the RS485 communication interface on the robot control box. The schematic diagram of the electrical interface of the FAU robot easy manufacturing control box is as follows:
 
-.. figure:: analysis/4/485-en.png
+.. figure:: analysis/485.png
 	:align: center
 	:width: 6in
 
@@ -3280,13 +3464,13 @@ Before using RS485 communication to control the servo extended axis, it is neces
 
 Taking the Danatek servo drive model FD100-750C as an example, referring to the schematic diagram of the drive panel terminals and the X3A-IN terminal definition of FD100-750C, when the robot is configured to communicate with the FD100-750C servo extended axis, it is necessary to connect the 485-A0 terminal and 485-B0 terminal on the control box to the 4th and 5th pins of the drive X3A-IN terminal respectively. (Note: You can see a wiring terminal marked with "485" on the servo drive panel, which is not open to users for the time being. Do not connect your RS485 communication cable to this terminal.) At the same time, if multiple servo drives are connected and the drive is the last one in the link, it is necessary to turn on the RS485 communication termination resistor DIP switch (No. 2 DIP switch) on the panel.
 
-.. figure:: analysis/4/FD100-750C-en.png
+.. figure:: analysis/fd100_750c.png
 	:align: center
 	:width: 6in
 
 	FD100-750C Drive Panel
 
-.. figure:: analysis/4/FD100-750C_port-en.png
+.. figure:: analysis/fd100_750c_port.png
 	:align: center
 	:width: 6in
 
@@ -3298,7 +3482,7 @@ In the servo drive configuration, select the number as 1 (Note: When connecting 
 
 If there is no error returned on the main page after clicking the Configure button, the 485 communication configuration between the robot and the servo drive has been completed so far. Users can also view the real-time status information of the servo through the Servo Status Bar on the right side of the web terminal.
 
-.. figure:: analysis/4/485_1.png
+.. figure:: analysis/485_1.png
 	:align: center
 	:width: 6in
 
@@ -3308,7 +3492,7 @@ After the servo is successful, it is necessary to enable the extended axis devic
 
 - Step 1:In Configured Servo Drives, select the control mode as Position Mode and select the corresponding servo number. The five icon buttons on the page are, from left to right:
 
-.. figure:: analysis/4/485_2.png
+.. figure:: analysis/485_2.png
 	:align: center
 	:width: 6in
 
@@ -3324,7 +3508,7 @@ Test Button: Test the servo drive.
 
 Servo Error Clear Button: Click to clear when the servo drive prompts an error.
 
-.. figure:: analysis/4/485_4.png
+.. figure:: analysis/485_3.png
 	:align: center
 	:width: 6in
 
@@ -3332,7 +3516,7 @@ Servo Error Clear Button: Click to clear when the servo drive prompts an error.
 
 - Step 2:Click the Disable button, the servo drive number will be set first at this time. After the setting is successful, the control mode is set. After the control mode is set successfully, the servo drive is enabled. After the servo is enabled successfully, you can observe that the Servo Enable status light is on in Servo in various robot status bars, indicating that the servo drive has been enabled. Click the Enable status button to disable the servo drive, and the Servo Enable status light goes out.
 
-.. figure:: analysis/4/485_3.png
+.. figure:: analysis/485_4.png
 	:align: center
 	:width: 6in
 
@@ -3343,7 +3527,7 @@ Servo Error Clear Button: Click to clear when the servo drive prompts an error.
 
 - Step 3:After the servo drive is enabled successfully, click the Zero Return button, select the zero return mode as Zero Return from Current Position, set the zero return speed to 5mm/s and the zero point clamping speed to 1mm/s; click the Set button to complete the servo zero return operation from the current position. Users can observe that the current Servo Position is 0 in Servo in various robot status bars; (Please read this manual completely before selecting Zero Return from Negative Limit or Zero Return from Positive Limit for the zero return mode to perform the zero return test).
 
-.. figure:: analysis/4/485_5.png
+.. figure:: analysis/485_4_8.png
 	:align: center
 	:width: 6in
 
@@ -3357,13 +3541,13 @@ Position Mode: You can input certain motion speed and target position parameters
 
 Speed Mode: You can input a certain target speed, the servo will keep moving at the set target speed until you set the target speed to 0 or disable the servo motor.
 
-.. figure:: analysis/4/485_6.png
+.. figure:: analysis/485_5.png
 	:align: center
 	:width: 6in
 
 	Position Mode Content
 
-.. figure:: analysis/4/485_7.png
+.. figure:: analysis/485_6.png
 	:align: center
 	:width: 6in
 
@@ -3375,7 +3559,7 @@ Change the control mode of the servo to Speed Mode, click the Enable status butt
 
 - Step 5:In emergency situations such as robot collision and emergency stop being pressed, the extended axis can trigger an emergency stop and stop moving according to the set emergency stop deceleration. After the collision alarm is restored, instructions can be issued again to resume the operation of the extended axis. It is necessary to set the servo acceleration/deceleration and servo emergency stop acceleration/deceleration in the advanced settings, as shown in the figure below:
 
-.. figure:: analysis/4/485_8.png
+.. figure:: analysis/485_7.png
 	:align: center
 	:width: 6in
 
@@ -3385,7 +3569,7 @@ Software Mode Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Currently, AIRLab provides three modes: Standalone, Master Station, and Slave Station. Standalone is the default mode, while Master Station and Slave Station are used for gantry welding. In the AIRLab menu bar, click "Welding (W)" → "Software Mode Settings", as shown in the figure below.
 
-.. figure:: analysis/4/software_model.png
+.. figure:: analysis/software_model.png
 	:align: center
 	:width: 3in
 
@@ -3402,7 +3586,7 @@ After setting the parameters, click the "Set Properties" button, then click the 
 .. important::
 	After a point is selected, it turns yellow. Before all four points have been selected, clicking a selected point again will cancel the selection. If you find an error in the generated model body after selecting the four points, click "Delete" to clear the selected model body and re-select.
 
-.. figure:: analysis/4/collision_comple.png
+.. figure:: analysis/collision_make_up.png
 	:align: center
 	:width: 3.5in
 

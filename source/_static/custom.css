@@ -89,6 +89,53 @@ body {
     margin-bottom: 0 !important
 }
 
+/* Native RST tables use a Word-like three-line style by default. */
+.rst-content table.docutils {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #404040;
+    border-right: 0;
+    border-bottom: 2px solid #404040;
+    border-left: 0;
+}
+
+.rst-content table.docutils thead {
+    border-bottom: 1px solid #404040;
+}
+
+.rst-content table.docutils tr,
+.rst-content table.docutils th,
+.rst-content table.docutils td {
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.rst-content table.docutils th,
+.rst-content table.docutils td {
+    padding: 8px 12px;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.rst-content table.docutils th,
+.rst-content table.docutils caption {
+    font-style: normal !important;
+}
+
+.rst-content table.docutils caption .headerlink {
+    display: none;
+}
+
+/* Add :class: full-grid-table when a special table needs full cell borders. */
+.rst-content table.docutils.full-grid-table {
+    border: 1px solid #e1e4e5;
+}
+
+.rst-content table.docutils.full-grid-table th,
+.rst-content table.docutils.full-grid-table td {
+    border: 1px solid #e1e4e5 !important;
+}
+
 .rst-content .toctree-wrapper ul li>* {
     margin-top: 0 !important;
     margin-bottom: 0 !important

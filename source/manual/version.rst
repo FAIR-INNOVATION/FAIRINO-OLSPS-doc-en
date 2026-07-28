@@ -1,32 +1,32 @@
-Version V2.1.0
+Version V2.2.0
 ===================
-Date：2026-06-30
+Date: 2026-07-27
 
-.. toctree:: 
+.. toctree::
     :maxdepth: 5
 
 
-- Added visual feature types for lap joint and vertical lap joint;
-    Path: AIRLab Software Analysis -> Pop-ups & Other Pages -> Welding Feature Parameter Settings
+- Added support for multi-layer multi-pass and weaving welding processes for spline welds;
+    Path: AIRLab Software Analysis -> Pop-Ups and Other Pages -> Welding Seam Edit Pop-up Window
 
-    Description: The software now includes visual feature configurations for two new weld seam types: lap joint and vertical lap joint, with corresponding UI interaction updates completed. The software overall now supports workpieces with these two visual features, enabling the complete welding process through visual recognition.
+    Description: Added support for multi-layer multi-pass and weaving processes for spline curves; added smooth orientation interpolation to eliminate jerky transitions between segments; introduced a weld seam local coordinate system to make multi-layer multi-pass programming more intuitive and convenient.
 
-- Optimized Palletizing Plugin V2.0 functionality;
-    Path: Plugins -> Palletizing
+- Added weld seam database generation based on OCC parsing and prior weld seam information;
+    Path: AIRLab Software Analysis -> Engineering Module Analysis -> Model Construction
 
-    Description: Resolved defects identified during field testing of Palletizing V1.0, and improved usability and ease of use. The robot, in coordination with the camera, can now accurately locate and identify paper boxes, pallets, and spacers for material picking. Under regular stacking scenarios, palletizing accuracy reaches within 3mm, with strong versatility and scalability to accommodate various palletizing tasks.
+    Description: Enables rapid conversion from models to data. After a model is imported and prior information (such as length and arc length) is configured, the system can automatically parse the model and generate a weld seam database, eliminating tedious manual data entry.
 
-- Optimized environment requirements;
-    Path: Preface -> Environment Requirements
-
-    Description: Compatible with the latest controller software version 3.9.7.
-
-- Optimized AIRLab welding functionality (usability improvements);
+- Added node editing;
     Path: AIRLab Software Analysis -> Engineering Module Analysis -> Fine Positioning
 
-    Description: Resolved the issue of prolonged fine positioning time in AIRLab welding usability. Added resume functionality for fine positioning interrupted during obstacle avoidance planning, and optimized the obstacle avoidance logic in welding programs.
+    Description: Eliminates the need to delete and recreate nodes. Once a node has been added, it can be modified and adjusted at any time, making program optimization more flexible and significantly improving efficiency.
 
-- Optimized AIRLab Gantry Welding System functionality;
-    Path: AIRLab Software Analysis -> AIRLab Gantry Welding System
+- Optimized the description of environment requirements;
+    Path: Preamble -> Environment and Version Management Requirements
 
-    Description: Added an extended-axis + end-of-arm camera line-scan mapping method; resolved outstanding issues from Phase 1; achieved full-process business logic closure for gantry welding workstations at the interaction level.
+    Description: Added information about AIRLab version compatibility and the corresponding upgrade and downgrade requirements.
+
+- Optimized weld editing interactions;
+    Path: AIRLab Software Analysis -> Engineering Module Analysis -> Weld Editing
+
+    Description: Supports batch creation, filtering and grouping, and batch property modification, eliminating the need to configure similar weld seams individually. Filtering enables weld seams of the same type to be grouped quickly, while shared properties such as indentation and welding processes can be modified in batches to reduce repetitive operations. Automatic weld seam sorting has also been added, significantly reducing the overall operation time.

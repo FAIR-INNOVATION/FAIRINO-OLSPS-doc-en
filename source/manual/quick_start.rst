@@ -74,10 +74,48 @@ System Requirements
 Product parameters
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. centered:: Table 2-1  Product Parameters
-.. image:: quick_start/表2-1.png
-	:align: center
-	:width: 5in
+.. table:: Product Parameters
+   :align: center
+
+   +--------------------------+--------------------------------------------------------------+
+   | Category                 | Specification                                                |
+   +==========================+==============================================================+
+   | Field of view            | FOV: 52° × 50° (H × V)                                       |
+   +--------------------------+--------------------------------------------------------------+
+   | Near field               | 329 mm × 287 mm @ 350 mm                                     |
+   +--------------------------+--------------------------------------------------------------+
+   | Far field                | 1021 mm × 881 mm @ 1100 mm                                   |
+   +--------------------------+--------------------------------------------------------------+
+   | Working range            | 350 mm–1100 mm (varies with the environment)                 |
+   +--------------------------+--------------------------------------------------------------+
+   | Point cloud resolution   | 1280 × 1024                                                  |
+   +--------------------------+--------------------------------------------------------------+
+   | Accuracy                 | < 0.05% @ 1100 mm                                            |
+   +--------------------------+--------------------------------------------------------------+
+   | Point cloud frame rate   | < 3 Hz                                                       |
+   +--------------------------+--------------------------------------------------------------+
+   | Power mode               | External power: 12 V–24 V; POE power supply                  |
+   +--------------------------+--------------------------------------------------------------+
+   | Operating current        | 1 A                                                          |
+   +--------------------------+--------------------------------------------------------------+
+   | Data interface           | GigE                                                         |
+   +--------------------------+--------------------------------------------------------------+
+   | Trigger mode             | Software trigger / hardware trigger                          |
+   +--------------------------+--------------------------------------------------------------+
+   | Output data              | Raw image (grayscale), depth map, point cloud                |
+   +--------------------------+--------------------------------------------------------------+
+   | Supported OS             | Windows / Ubuntu                                             |
+   +--------------------------+--------------------------------------------------------------+
+   | Operating temperature    | -10℃ to 70℃ (operating), 0℃ to 50℃ (recommended)             |
+   +--------------------------+--------------------------------------------------------------+
+   | Weight                   | 482 g (excluding the electric protective cover)              |
+   +--------------------------+--------------------------------------------------------------+
+   | Safety                   | Laser Class 3R                                               |
+   +--------------------------+--------------------------------------------------------------+
+   | Product body dimensions  | 139 mm × 61.5 mm × 46 mm (without the camera protective      |
+   |                          | cover); 139 mm × 61.5 mm × 58 mm (with the camera protective |
+   |                          | cover)                                                       |
+   +--------------------------+--------------------------------------------------------------+
 
 
 Field of view measurement range
@@ -115,49 +153,175 @@ Camera power interface
 
 1. Body power socket (8pin)
 
-.. centered:: Table 2-2  Power socket on the body (8pin)
-.. image:: quick_start/表2-2.png
-	:align: center
-	:width: 5in
+.. |power-socket| image:: quick_start/body_power_socket_8pin.png
+   :width: 1.4in
+
+.. table:: Power Socket on the Body (8pin)
+   :align: center
+
+   +--------+-----------------------------------------------+--------------------+
+   | Number | Explanation                                   | Diagram            |
+   +========+===============================================+====================+
+   | 1      | Undefined                                     | |power-socket|     |
+   +--------+-----------------------------------------------+                    +
+   | 2      | GND (external power supply negative)          |                    |
+   +--------+-----------------------------------------------+                    +
+   | 3      | POWER (external power supply positive)        |                    |
+   +--------+-----------------------------------------------+                    +
+   | 4      | TRIN+ (external trigger input negative)       |                    |
+   +--------+-----------------------------------------------+                    +
+   | 5      | TRIN- (external trigger input positive)       |                    |
+   +--------+-----------------------------------------------+                    +
+   | 6      | TROUT+ (trigger output positive)              |                    |
+   +--------+-----------------------------------------------+                    +
+   | 7      | TROUT- (trigger output negative)              |                    |
+   +--------+-----------------------------------------------+                    +
+   | 8      | Undefined                                     |                    |
+   +--------+-----------------------------------------------+--------------------+
 
 2. 8-pin power cable
 
-.. centered:: Table 2-3  Power cable (8pin)
-.. image:: quick_start/表2-3.png
-	:align: center
-	:width: 5in
+.. |power-cable| image:: quick_start/power_cable_8pin.png
+   :width: 1.4in
+
+.. table:: Power Cable (8pin)
+   :align: center
+
+   +--------+-----------------------------------------------+--------------------+
+   | Number | Explanation                                   | Diagram            |
+   +========+===============================================+====================+
+   | 1      | Undefined                                     | |power-cable|      |
+   +--------+-----------------------------------------------+                    +
+   | 2      | GND (external power supply negative)          |                    |
+   +--------+-----------------------------------------------+                    +
+   | 3      | POWER (external power supply positive)        |                    |
+   +--------+-----------------------------------------------+                    +
+   | 4      | TRIN+ (external trigger input negative)       |                    |
+   +--------+-----------------------------------------------+                    +
+   | 5      | TRIN- (external trigger input positive)       |                    |
+   +--------+-----------------------------------------------+                    +
+   | 6      | TROUT+ (trigger output positive)              |                    |
+   +--------+-----------------------------------------------+                    +
+   | 7      | TROUT- (trigger output negative)              |                    |
+   +--------+-----------------------------------------------+                    +
+   | 8      | Undefined                                     |                    |
+   +--------+-----------------------------------------------+--------------------+
 
 Camera communication control interface
 
 1. POE Ethernet port socket on the body (12pin)
 
-.. centered:: Table 2-4  POE network port on the body (12pin)
-.. image:: quick_start/表2-4.png
-	:align: center
-	:width: 5in
+.. |poe-socket| image:: quick_start/body_poe_socket_12pin.png
+   :width: 1.4in
+
+.. table:: POE Network Port on the Body (12pin)
+   :align: center
+
+   +--------+-----------------------------------------------+--------------------+
+   | Number | Explanation                                   | Diagram            |
+   +========+===============================================+====================+
+   | 1      | TRIN- (external trigger input positive)       | |poe-socket|       |
+   +--------+-----------------------------------------------+                    +
+   | 2      | TX4- (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 3      | TX4+ (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 4      | TX3- (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 5      | TX3+ (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 6      | TX2- (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 7      | TX2+ (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 8      | TX1- (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 9      | TX1+ (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 10     | TRIN+ (external trigger input negative)       |                    |
+   +--------+-----------------------------------------------+                    +
+   | 11     | TROUT- (trigger output negative)              |                    |
+   +--------+-----------------------------------------------+                    +
+   | 12     | TROUT+ (trigger output positive)              |                    |
+   +--------+-----------------------------------------------+--------------------+
 
 2. POE Ethernet cable (12pin)
    
-.. centered:: Table 2-5  POE network cable (12pin)
-.. image:: quick_start/表2-5.png
-	:align: center
-	:width: 5in
+.. |poe-cable| image:: quick_start/poe_cable_12pin.png
+   :width: 1.4in
+
+.. table:: POE Network Cable (12pin)
+   :align: center
+
+   +--------+-----------------------------------------------+--------------------+
+   | Number | Explanation                                   | Diagram            |
+   +========+===============================================+====================+
+   | 1      | TRIN- (external trigger input positive)       | |poe-cable|        |
+   +--------+-----------------------------------------------+                    +
+   | 2      | TX4- (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 3      | TX4+ (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 4      | TX3- (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 5      | TX3+ (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 6      | TX2- (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 7      | TX2+ (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 8      | TX1- (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 9      | TX1+ (network)                                |                    |
+   +--------+-----------------------------------------------+                    +
+   | 10     | TRIN+ (external trigger input negative)       |                    |
+   +--------+-----------------------------------------------+                    +
+   | 11     | TROUT- (trigger output negative)              |                    |
+   +--------+-----------------------------------------------+                    +
+   | 12     | TROUT+ (trigger output positive)              |                    |
+   +--------+-----------------------------------------------+--------------------+
 
 Camera protective cover external control interface
 
 1. Protective cover outer control seat (4pin)
 
-.. centered:: Table 2-6  Protective cover external control seat (4pin)
-.. image:: quick_start/表2-6.png
-	:align: center
-	:width: 5in
+.. |cover-socket| image:: quick_start/protective_cover_control_socket_4pin.png
+   :width: 1.4in
+
+.. table:: Protective Cover External Control Socket (4pin)
+   :align: center
+
+   +--------+-----------------------------------------------+--------------------+
+   | Number | Explanation                                   | Diagram            |
+   +========+===============================================+====================+
+   | 1      | 24V (external power supply positive)          | |cover-socket|     |
+   +--------+-----------------------------------------------+                    +
+   | 2      | 0V (external power supply negative)           |                    |
+   +--------+-----------------------------------------------+                    +
+   | 3      | OUT (status output)                           |                    |
+   +--------+-----------------------------------------------+                    +
+   | 4      | IN (cover opening/closing control)            |                    |
+   +--------+-----------------------------------------------+--------------------+
 
 2. Protective cover external control cable (4pin)
 
-.. centered:: Table 2-7  Protective cover external control cable (4pin)
-.. image:: quick_start/表2-7.png
-	:align: center
-	:width: 5in
+.. |cover-cable| image:: quick_start/protective_cover_control_cable_4pin.png
+   :width: 1.4in
+
+.. table:: Protective Cover External Control Cable (4pin)
+   :align: center
+
+   +--------+-----------------------------------------------+--------------------+
+   | Number | Explanation                                   | Diagram            |
+   +========+===============================================+====================+
+   | 1      | 24V (external power supply positive)          | |cover-cable|      |
+   +--------+-----------------------------------------------+                    +
+   | 2      | 0V (external power supply negative)           |                    |
+   +--------+-----------------------------------------------+                    +
+   | 3      | OUT (status output)                           |                    |
+   +--------+-----------------------------------------------+                    +
+   | 4      | IN (cover opening/closing control)            |                    |
+   +--------+-----------------------------------------------+--------------------+
 
 Camera installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -189,10 +353,56 @@ Camera installation instructions:
 
 Installation Requirements:
 
-.. centered:: Table 2-8  Installation Requirements
-.. image:: quick_start/表2-8.png
-	:align: center
-	:width: 5in
+.. table:: Installation Requirements
+   :align: center
+
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   | Category                 | Item            | Requirement                                                              |
+   +==========================+=================+==========================================================================+
+   | Installation Environment | Temperature     | Camera: comply with operating temperature requirements; laser:           |
+   |                          |                 | -20℃ to +50℃                                                             |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Humidity        | Relative humidity: 5%–95% (non-condensing)                               |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Air             | Do not use the device in flammable, explosive, corrosive-gas, smoky,     |
+   |                          |                 | or dusty environments                                                    |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Outdoor         | For outdoor installation, avoid direct sunlight on the lens. Provide     |
+   |                          | Environment     | waterproof, dustproof, and anti-theft protection for the device,         |
+   |                          |                 | including any external laser                                             |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   | Power Supply             | Power           | Camera input: 24V±4V, current ≥2A; comply with grounding standards;      |
+   |                          |                 | the 220V AC supply must comply with national standards                   |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Power On        | When connecting the power cable, connect the device end first and then   |
+   |                          |                 | the power-supply end                                                     |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Power Off       | Disconnect the power before installing or removing the device; power off |
+   |                          |                 | the device only when it is not operating                                 |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   | Device Installation      | Height          | Calculate the installation height from the calibration distance on the   |
+   |                          |                 | device label                                                             |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Orientation     | Ensure the installed device is level and vertical and is oriented        |
+   |                          |                 | correctly                                                                |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Stability       | Secure the device and cables. Ensure the device does not vibrate during  |
+   |                          |                 | operation, as vibration may reduce accuracy                              |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   | Device Safety            | Structure       | Handle the device carefully and avoid strong impacts or vibration        |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Electromagnetic | Keep the device away from strong magnetic objects. Provide electrostatic |
+   |                          |                 | protection and keep it away from electromagnetic radiation               |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Cleaning        | Keep the device's glass window clean                                     |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Integrity       | Do not disassemble the device without authorization, and keep all        |
+   |                          |                 | accessories intact                                                       |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   | Personnel Safety         | Personal Safety | Operate carefully to avoid cuts, crushing injuries, or falls             |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
+   |                          | Protection      | Do not look directly into the laser beam or expose skin to it            |
+   +--------------------------+-----------------+--------------------------------------------------------------------------+
 
 Usage Instructions and Precautions:
 
@@ -236,7 +446,7 @@ Tool Coordinate System Calibration
 ---------------------------------------
 AIRLab software provides a manual calibration function for the tool coordinate system. Import the robot and tool normally, click "Import Module" - "Tool" on the main interface, and open the tool settings interface(refer to Section 3.5.1). Then, select the tool coordinate system you want to calibrate and click the “Modify” button to enter the “Manual Tool Coordinate System Calibration” interface, as shown below.
 
-.. figure:: quick_start/tool_calibration_ui.png
+.. figure:: quick_start/12.png
 	:align: center
 	:width: 3.5in
 
@@ -249,7 +459,7 @@ AIRLab offers two calibration methods: the Four-Point Method and the Six-Point M
 
 Step 1: Open the “Manual Tool Coordinate System Calibration” interface as mentioned earlier, then click the calibration method you want to use. In this demonstration, click the “Six-Point Method” button. The interface is shown below.
 
-.. figure:: quick_start/tool_calibration_6Point_method.png
+.. figure:: quick_start/13.png
 	:align: center
 	:width: 3.5in
 
@@ -257,7 +467,7 @@ Step 1: Open the “Manual Tool Coordinate System Calibration” interface as me
 
 Step 2: Control the robot arm to align the end tool with the tip of the calibration tool (fixed reference point) in a certain posture. After the robot arm moves into position, click the "Set Point 1" button on the interface. When the button changes to "Modify Point 1", the point is set successfully. To modify the set point, click "Modify Point 1" and repeat the steps. The process is shown in the figure below.
 
-.. figure:: quick_start/tool_calibration_P1.png
+.. figure:: quick_start/14.png
 	:align: center
 	:width: 6in
 
@@ -265,7 +475,7 @@ Step 2: Control the robot arm to align the end tool with the tip of the calibrat
 
 Step 3: Change the posture of the robot arm, again pointing the tool to the fixed reference point. After the robot arm moves into position, click the “Set Point 2” button. When the button changes to “Modify Point 2”, the point is successfully set. To change the point, click “Modify Point 2” and repeat the process. See the figure below.
 
-.. figure:: quick_start/tool_calibration_P2.png
+.. figure:: quick_start/15.png
 	:align: center
 	:width: 6in
 
@@ -273,7 +483,7 @@ Step 3: Change the posture of the robot arm, again pointing the tool to the fixe
 
 Step 4: Change the posture of the robot arm once again, pointing the tool to the fixed reference point. After the robot arm moves into position, click the “Set Point 3” button. When the button changes to “Modify Point 3”, the point is successfully set. To change the point, click “Modify Point 3” and repeat the process.After the setup of Point 3 is completed, the calibration point diagram on the page will switch to Point 4. Simply follow the diagram to start setting up Point 4. See the figure below.
 
-.. figure:: quick_start/tool_calibration_P3.png
+.. figure:: quick_start/16.png
 	:align: center
 	:width: 6in
 
@@ -284,7 +494,7 @@ Step 5: Adjust the posture of the robot arm so that the tool end is vertically a
 .. important::
 	When adjusting the posture of Point 4, the bent direction of the welding torch must be aligned with the X or Y axis direction of the robot base coordinate system! In this way, in Step 6, a single movement in the X or Y axis direction will yield Point 5.
 
-.. figure:: quick_start/tool_calibration_P4.png
+.. figure:: quick_start/17.png
 	:align: center
 	:width: 6in
 
@@ -292,7 +502,7 @@ Step 5: Adjust the posture of the robot arm so that the tool end is vertically a
 
 Step 6: Keep the robot arm's posture unchanged, use base coordinate system movement to move a certain distance horizontally in the direction of the welding torch's bend. This direction is the positive X-axis direction of the set tool coordinate system.. After the robot arm moves into position, click the “Set Point 5” button. When the button changes to “Modify Point 5”, the point is successfully set. To change, click “Modify Point 5” and repeat the process.After the setup of Point 5 is completed, the calibration point diagram on the page will switch to Point 6. Simply follow the diagram to start setting up Point 6. See the figure below.
 
-.. figure:: quick_start/tool_calibration_P5.png
+.. figure:: quick_start/18.png
 	:align: center
 	:width: 6in
 
@@ -300,7 +510,7 @@ Step 6: Keep the robot arm's posture unchanged, use base coordinate system movem
 
 Step 7: Return to the fixed reference point and move vertically upward. This direction defines the positive Z-axis of the tool coordinate system. The positive Y-axis is determined according to the right-hand rule. After the robot arm moves into position, click the “Set Point 6” button. When the button changes to “Modify Point 6”, the point is successfully set. To modify, click “Modify Point 6” and repeat the process. See the figure below.
 
-.. figure:: quick_start/tool_calibration_P6.png
+.. figure:: quick_start/19.png
 	:align: center
 	:width: 6in
 
@@ -308,7 +518,7 @@ Step 7: Return to the fixed reference point and move vertically upward. This dir
 
 Step 8: After completing the above steps, click the “Calculate” button to compute the tool pose. The result is shown below.
 
-.. figure:: quick_start/tool_calibration_cal_res.png
+.. figure:: quick_start/20.png
 	:align: center
 	:width: 3.5in
 
@@ -316,7 +526,7 @@ Step 8: After completing the above steps, click the “Calculate” button to co
 
 Step 9: After verifying the calculation result, click the “Save” button. The calibration result will be saved to the local path:~/AIRLabExe/Data/import_config/Cleargun_cutwire_settings.config under the section [Tool_coord_value_list]. In this example, tool3 is calibrated, so the saved entry will be:<3 = "calibration result">At the same time, the calibrated tool3 option will also appear in the Tool Settings. See the figure below.
 
-.. figure:: quick_start/tool_calibration_save_res.png
+.. figure:: quick_start/21.png
 	:align: center
 	:width: 6in
 
@@ -324,7 +534,7 @@ Step 9: After verifying the calculation result, click the “Save” button. The
 
 If the selected tool coordinate system already exists (i.e., a value is already present under the above local path), a confirmation dialog will pop up asking whether to overwrite the previous result. If “Confirm” is selected, the previous result will be overwritten.
 
-.. figure:: quick_start/tool_calibration_confirm_dialog.png
+.. figure:: quick_start/22.png
 	:align: center
 	:width: 3.5in
 
@@ -339,7 +549,7 @@ After the robot is powered on, start the AIRLab software to ensure all modules a
 1. Open the camera module in the import module, and a "Camera Settings" pop-up window is displayed in the 3D scene.
 2. Connect the camera; click Import Module -> Camera. The 3D scene displays the camera settings pop-up window, and the camera connects automatically. Upon successful connection, "Connection Status" in the pop-up window will display "Connected", as shown in the figure below. If the connection fails, "Connection Status" will display "Disconnected". In this case, please manually check whether the camera cable is connected correctly.
 
-.. figure:: quick_start/19.png
+.. figure:: quick_start/camera_info_set.png
 	:align: center
 	:width: 2.5in
 
@@ -373,13 +583,13 @@ Parameter configuration: Select the shooting mode as "Structured Light", and set
 	
 3. Place the calibration board directly under the camera. The robot should control the end effector to position the camera directly facing the calibration board in a suitable posture, with the camera positioned at an effective shooting distance of 400–600 mm from the calibration board, as shown in Figure 2-24. Switch the main display area of AIRLab to the camera view, as shown in Figure 2-25.
 
-.. figure:: quick_start/16.png
+.. figure:: quick_start/24.png
 	:align: center
 	:width: 3in
 
 	Placement of the calibration board
 
-.. figure:: quick_start/17.png
+.. figure:: quick_start/25.png
 	:align: center
 	:width: 6in
 
@@ -387,13 +597,13 @@ Parameter configuration: Select the shooting mode as "Structured Light", and set
 
 4. After selecting the operation mode as "Automatic," click the "Auto Run" button. The software will then begin the hand-eye calibration automatically. During the image capture process, the camera will emit a blue light to indicate a successful shot. In automatic mode, the robot will autonomously capture images of the calibration board and change its pose accordingly. One complete cycle involves the robot altering its pose eight times and capturing eight images of the calibration board. If a calibration failure is prompted during the process, click the "Auto Run" button again to restart the current calibration cycle.
 
-.. figure:: quick_start/22.png
+.. figure:: quick_start/28.png
 	:align: center
 	:width: 3.5in
 
 	Point cloud camera hand-eye calibration
 
-.. figure:: quick_start/23.png
+.. figure:: quick_start/29.png
 	:align: center
 	:width: 5in
 
@@ -417,7 +627,7 @@ After the hand-eye calibration is completed, perform precision verification on t
 
 3. After successful accuracy verification shooting, click the "Verification Result" button. A pop-up window will appear showing "Error! Unrecognized switch parameter." A comprehensive error value between 0.5mm and 1.0mm indicates that the hand-eye calibration result is good; a value between 1.0mm and 1.5mm indicates acceptable calibration results. Other results represent poor calibration, and recalibration is required.
 
-.. figure:: quick_start/24.png
+.. figure:: quick_start/30.png
 	:align: center
 	:width: 3.5in
 
@@ -433,7 +643,7 @@ Step 1: Open the "Camera Settings" interface, select "Structured Light" as the s
 
 Step 2: After completing ground capture, adjust the camera position to aim at the workpiece. Click the "Ground Effect Verification" button. The interface is shown in the figure below. Aim the camera at the workpiece and click the "Capture" button. After capturing, click the "View Segmented Point Cloud" button. The pop-up window will display the ground effect verification point cloud, as shown in the figure below.
 
-.. figure:: quick_start/Grd_Effect_UI_en.png
+.. figure:: quick_start/Grd_Effect_UI.png
 	:align: center
 	:width: 3.5in
 
@@ -449,7 +659,7 @@ Model Reconstruction
 -------------------------------
 Move the robot to teach the shooting points (the shooting range of the points should cover the workpiece model), and create a model reconstruction program, as shown in the figure below.
 
-.. figure:: quick_start/model_const_prg.png
+.. figure:: quick_start/model_const.png
 	:align: center
 	:width: 3.5in
 
@@ -457,7 +667,7 @@ Move the robot to teach the shooting points (the shooting range of the points sh
 
 Click "Run Program" as shown in the figure below. The robot will start moving, taking photos, and performing model reconstruction.
 
-.. figure:: quick_start/model_const_start_run.png
+.. figure:: quick_start/model_const_start.png
 	:align: center
 	:width: 3.5in
 
@@ -465,7 +675,7 @@ Click "Run Program" as shown in the figure below. The robot will start moving, t
 
 Upon successful reconstruction, the point cloud model of the workpiece will appear in the interface, as shown below.
 
-.. figure:: quick_start/model_const_pc_res.png
+.. figure:: quick_start/model_const_success.png
 	:align: center
 	:width: 3.5in
 
@@ -477,7 +687,7 @@ After the model is successfully reconstructed, please complete the following ste
 
 After the Lua program is successfully generated, please first set the parameters in the "Program Configuration" pop-up window, as shown in the figure below. For detailed parameter descriptions, please refer to the "Welding Program Configuration" section in Chapter 3 of this manual.
 
-.. figure:: quick_start/25.png
+.. figure:: quick_start/start_run.png
 	:align: center
 	:width: 3in
 

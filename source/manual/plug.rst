@@ -10,7 +10,7 @@ Plugin Authorization
 --------------------------------------
 Click on Plugins → Plugin Authorization to view the unique identifier of AIRLab and the authorization status of each plugin.
 
-.. figure:: analysis/4/plugin_authr_en.png
+.. figure:: plug/Plugin_License.png
 	:align: center
 	:width: 3.5in
 
@@ -18,7 +18,7 @@ Click on Plugins → Plugin Authorization to view the unique identifier of AIRLa
 
 If the status shows "Authorized," the plugin can be opened and used normally. If it shows "Unauthorized," a prompt indicating that the plugin failed to load will appear when attempting to open the plugin, as shown in the figure.
 
-.. figure:: analysis/4/plugin_authr_load_fail_en.png
+.. figure:: plug/Load_Failed.png
 	:align: center
 	:width: 6in
 
@@ -26,7 +26,7 @@ If the status shows "Authorized," the plugin can be opened and used normally. If
 
 To authorize a plugin, please contact the after-sales service to obtain the authorization file (in .bin format). Then, select this file in the authorization interface and click "Authorize" to proceed with the upgrade.
 
-.. figure:: analysis/4/plugin_authr_process_en.png
+.. figure:: plug/Authorizing.png
 	:align: center
 	:width: 6in
 
@@ -34,7 +34,7 @@ To authorize a plugin, please contact the after-sales service to obtain the auth
 
 Once the progress bar has finished loading, the page will display a "Authorization Successful" prompt.
 
-.. figure:: analysis/4/plugin_authr_sucess_en.png
+.. figure:: plug/Auth_Successful.png
 	:align: center
 	:width: 6in
 
@@ -44,7 +44,7 @@ Reinsert the encryption dongle and wait approximately 30 seconds. Once the plugi
 
 If an error occurs during the authorization process, the procedure will automatically terminate, and an error prompt will pop up as shown in the figure. In such cases, please contact the after-sales personnel for assistance.
 
-.. figure:: analysis/4/plugin_authr_fail_en.png
+.. figure:: plug/Auth_Failed.png
 	:align: center
 	:width: 6in
 
@@ -59,7 +59,7 @@ Create a bin-picking project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click File in the menu bar, select the file type as bin-picking, and click New. Then import the required robot, tool, and workpiece, or directly open an existing bin-picking project file.
 
-.. figure:: plug/binpicking_new_project_en.png
+.. figure:: plug/binpicking_new_project.png
 	:align: center
 	:width: 4in
 
@@ -67,7 +67,7 @@ Click File in the menu bar, select the file type as bin-picking, and click New. 
 	
 After opening the plug-in, three new options appear in the menu bar: Model, Settings, and Debug, as shown in the figure below.
 
-.. figure:: plug/binpicking_menu_bar.png
+.. figure:: plug/binpicking_menu.png
 	:align: center
 	:width: 6in
 
@@ -77,7 +77,7 @@ bin-picking Model Pop-up Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click Model in the menu bar to open the model training pop-up window, as shown below.
 
-.. figure:: plug/binpicking_model_ui.png
+.. figure:: plug/binpicking_model_data_collection.png
 	:align: center
 	:width: 4in
 
@@ -91,7 +91,7 @@ Step 1: First click the Data Collection title to open the sub-interface. This in
 - Dataset size: The total number of images to be collected automatically.
 - Dataset save path: The directory where the captured dataset images will be stored. Click the Select Path button on the right to open the path selection dialog.
 
-.. figure:: plug/binpicking_model_path_choose.png
+.. figure:: plug/binpicking_model_path.png
 	:align: center
 	:width: 4in
 
@@ -101,7 +101,7 @@ After completing the parameter settings, click Start to begin capturing images. 
 
 Step 2: After obtaining the raw dataset, click the Data Annotation title to open its sub-interface, as shown below.
 
-.. figure:: plug/binpicking_model_data_annotation.png
+.. figure:: plug/binpicking_model_data_annotaion.png
 	:align: center
 	:width: 4in
 
@@ -132,7 +132,7 @@ The parameters in this interface are explained as follows:
 - Class ID: Fill in the same class IDs used during annotation.  
 - Class name: The name used for the target object during training; simply using the same value as the ID is practical. After configuration, click the Add icon to insert the entry into the table, as shown below.  
 
-.. figure:: plug/binpicking_model_training_target.png
+.. figure:: plug/binpicking_model_training_table.png
 	:align: center
 	:width: 4in
 
@@ -163,7 +163,7 @@ bin-picking Settings Pop-up Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click Settings in the menu bar to open the bin-picking settings pop-up window, as shown below. The bin-picking pop-up consists of five sections: Project Configuration, Initial Settings, Position Binding, Grasp Position Error Compensation, and Program Execution. The workflow of the whole interface is as follows:  
 
-.. figure:: plug/binpicking_project_ui.png
+.. figure:: plug/binpicking_init_target_screw.png
 	:align: center
 	:width: 3.5in
 
@@ -175,7 +175,7 @@ This involves many parameter settings, explained as follows:
 
 - Project name: Three pre-configured scenarios are reserved in the plug-in: wooden block, screw, and lock, plus an Add New option for custom projects. If Add New is selected, the interface changes as shown below. Enter the new project name and click OK; the new project name will be added to the dropdown list for selection and editing.  
 
-.. figure:: plug/binpicking_project_add.png
+.. figure:: plug/binpicking_project_add_new.png
 	:align: center
 	:width: 4in
 
@@ -199,13 +199,13 @@ After setting the above three parameters (class ID, CAD path, candidate path), c
 
 After completing all parameter settings, click the Confirm button to finalize the project configuration. At the same time, the corresponding AI nodes will start. Wait a moment; if the nodes start successfully, a pop-up as shown below will appear. Otherwise, a failure pop-up will be shown.  
 
-.. figure:: plug/binpicking_ai_node_success.png
+.. figure:: plug/binpicking_project_ai_node_success.png
 	:align: center
 	:width: 4in
 
 	AI Node Started Successfully
 
-.. figure:: plug/binpicking_ai_node_fail.png
+.. figure:: plug/binpicking_project_ai_node_fail.png
 	:align: center
 	:width: 4in
 
@@ -271,7 +271,7 @@ If the previously selected target object is Lock, due to its special placement r
 
 Its interface is displayed as follows:
 
-.. figure:: plug/binpicking_bind_fix_en.png
+.. figure:: plug/binpicking_bind_fix.png
 	:align: center
 	:width: 3in
 
@@ -281,7 +281,7 @@ Step 4: Grasp Position Error Compensation
 
 Grasping Position Error Compensation is configured to eliminate systematic errors during the grasping process. If the error is large during grasping, set the error compensation coefficient (based on the tool coordinate system) and click OK after configuration. The instruction feedback area displays "Error Compensation Coefficient Set Successfully", indicating that the error compensation coefficient has been set successfully.
 
-.. figure:: plug/binpicking_grasp_comp_en.png
+.. figure:: plug/binpicking_grasp_comp.png
 	:align: center
 	:width: 3in
 
@@ -293,7 +293,7 @@ After the grasping posture is generated successfully and the position is bound s
 
 Manual run: Select manual run, and the robot will perform an automatic grasp;
 
-.. figure:: plug/binpicking_run_manual_en.png
+.. figure:: plug/binpicking_run_manual.png
 	:align: center
 	:width: 3in
 
@@ -307,7 +307,7 @@ Wait for the calculation to complete, then click Run LUA—the robot will perfor
 
 If the target type is Lock, three additional buttons will appear on the manual interface: Initial Grasping, Pose Adjustment, and Re-grasping, corresponding to the AI Calculation process of the three stages in re-grasping. This allows manual operation of each stage. The interface is as follows:
 
-.. figure:: plug/binpicking_run_manual_lock_en.png
+.. figure:: plug/binpicking_run_manual_lock.png
 	:align: center
 	:width: 3in
 
@@ -320,7 +320,7 @@ If the target type is Lock, three additional buttons will appear on the manual i
 - Pause: Pause the current program execution.
 - Resume: Resume the action from the paused action cycle.
 
-.. figure:: plug/binpicking_run_auto_en.png
+.. figure:: plug/binpicking_run_auto.png
 	:align: center
 	:width: 3in
 
@@ -330,7 +330,7 @@ bin-picking Debug File Export Pop-up Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click Debug in the menu bar to open the debug file export pop-up window, as shown below.
 
-.. figure:: plug/binpicking_data_export.png
+.. figure:: plug/binpicking_file_export.png
 	:align: center
 	:width: 3in
 
@@ -338,7 +338,7 @@ Click Debug in the menu bar to open the debug file export pop-up window, as show
 
 Select the export path for the debug files and click the Export button. The export process begins, the progress bar moves, and upon completion, the following pop-up appears.
 
-.. figure:: plug/binpicking_data_export_success.png
+.. figure:: plug/binpicking_file_export_finish.png
 	:align: center
 	:width: 3in
 
@@ -401,7 +401,7 @@ The first, second, and third path points determine the placement matrix for regu
 
 5) Custom Placement Teaching Points
 
-.. figure:: plug/binpicking_bind_custum_en.png
+.. figure:: plug/binpicking_bind_custom.png
 	:align: center
 	:width: 3in
 
@@ -409,7 +409,7 @@ The first, second, and third path points determine the placement matrix for regu
 
 Similar to fixed placement, first determine the target types for the current task and add corresponding placement points in sequence. If multiple placement points are required for the same target, change the placement point and continue adding while keeping the target model unchanged.
 
-.. figure:: plug/binpicking_bind_custum_add2_en.png
+.. figure:: plug/binpicking_bind_custum_add2.png
 	:align: center
 	:width: 3in
 
@@ -425,7 +425,7 @@ The palletizing plugin enables automatic recognition and grasping of objects and
 
 At the same time, the following three options will be added to the menu bar: "Model", "Settings", and "Debug", as shown in the figure below.
 
-.. figure:: plug/palletizing1.png
+.. figure:: plug/palletizing_menu.png
 	:align: center
 	:width: 4in
 
@@ -433,7 +433,7 @@ At the same time, the following three options will be added to the menu bar: "Mo
 
 Click the "Settings" button to open the pop-up window of the palletizing plugin, as shown in the figure below.
 
-.. figure:: plug/palletizing2.png
+.. figure:: plug/palletizing1.png
 	:align: center
 	:width: 3.5in
 
@@ -466,7 +466,7 @@ After that, click "Palletizing - Pallet Position Settings," select the taught ph
 	The recognized pallet coordinates may have pose errors. Please check the RX and RY angles in the "Pallet Coordinates" column in the figure below. The acceptable ranges are -180° to -175°, 175° to 180°, and -5° to 5°. If the deviation is too large, it is recommended to re-take the photo for recognition.
 
 
-.. figure:: plug/palletizing4.png
+.. figure:: plug/palletizing2.png
 	:align: center
 	:width: 6in
 
@@ -474,7 +474,7 @@ After that, click "Palletizing - Pallet Position Settings," select the taught ph
 
 After successful pallet recognition and positioning, set the pallet dimensions and click the OK button to confirm.
 
-.. figure:: plug/palletizing5.png
+.. figure:: plug/palletizing2_1.png
 	:align: center
 	:width: 3in
 
@@ -486,7 +486,7 @@ Pallet Stacking Pattern Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Open "Palletizing - Palletized Item Dimensions and Arrangement Settings," set the dimensions of the palletized items and the stacking spacing, and click the "Confirm" button. The software will then automatically calculate the stacking pattern parameters (maximum number of rows and columns on the pallet) based on the pallet dimensions and the dimensions of the palletized items.
 
-.. figure:: plug/palletizing6.png
+.. figure:: plug/palletizing4.png
 	:align: center
 	:width: 6in
 
@@ -500,7 +500,7 @@ Palletizing Parameter Settings
 
 Initial settings for automatic palletizing operation, including end effector settings, speed settings, etc. The interface is shown below.
 
-.. figure:: plug/palletizing7.png
+.. figure:: plug/palletizing4_1.png
 	:align: center
 	:width: 4in
 
@@ -521,7 +521,7 @@ After completing the settings, click the "Confirm" button.
 
 It is necessary to bind the shelf camera pose, the palletizing object camera pose, and the waiting placement pose. The interface is shown below.
 
-.. figure:: plug/palletizing8.png
+.. figure:: plug/palletizing4_2.png
 	:align: center
 	:width: 4in
 
@@ -543,7 +543,7 @@ Palletizing Program Execution
 
 Open "Palletizing - Palletizing Program Execution" and click the "Start Palletizing" button.
 
-.. figure:: plug/palletizing9.png
+.. figure:: plug/palletizing8.png
 	:align: center
 	:width: 4in
 
@@ -551,7 +551,7 @@ Open "Palletizing - Palletizing Program Execution" and click the "Start Palletiz
 
 The program will automatically run according to the preset stacking pattern. The robot will first move to a transition point, then from the transition point to the palletized object photographing point for recognition. After successful recognition, the robot's grasping trajectory will be generated in the 3D scene, and the robot will follow the trajectory to complete the grasping and placement.
 
-.. figure:: plug/palletizing10.png
+.. figure:: plug/palletizing9.png
 	:align: center
 	:width: 6in
 
@@ -559,7 +559,7 @@ The program will automatically run according to the preset stacking pattern. The
 
 After completing one layer of stacking, the robot will move to the divider photographing point to photograph and recognize the divider, then place the divider on top of the palletized items of that layer. It will then proceed to the next cycle of recognition and stacking until all layers are completed according to the preset stacking pattern.
 
-.. figure:: plug/palletizing11.png
+.. figure:: plug/palletizing10.png
 	:align: center
 	:width: 4in
 
@@ -577,7 +577,7 @@ Smart Assistant Pop-up Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click Plug-in → AI Smart Ass3`istant in the menu bar to open the Smart Assistant plug-in. Its interface is shown below.
 
-.. figure:: plug/ai_assitant_ui.png
+.. figure:: plug/ai_assistant_ui.png
 	:align: center
 	:width: 4in
 
@@ -587,7 +587,7 @@ This UI is mainly divided into two parts: the right half is the interactive cont
 
 - Start New Conversation button: Starts a new conversation while saving the current conversation content into the History information.
 
-.. figure:: plug/ai_assitant_history.png
+.. figure:: plug/ai_assistant_history.png
 	:align: center
 	:width: 4in
 
@@ -596,7 +596,7 @@ This UI is mainly divided into two parts: the right half is the interactive cont
 - History interface: Records the content of previous conversations. Click the corresponding conversation title to switch between conversations, ensuring that historical messages are not lost. Switching back to the original conversation allows you to continue the previous dialogue.
 - Parameter Summary page: During the conversation with the AI large model, if any internal program parameters are changed or set, this page will summarize the parameters involved in the current change, making it convenient to view parameter modifications, as shown in the figure below.
 
-.. figure:: plug/ai_assitant_para.png
+.. figure:: plug/ai_assistant_para.png
 	:align: center
 	:width: 4in
 
