@@ -153,6 +153,36 @@ body {
 .rst-content figure {
     margin-bottom: 24px !important;
 }
+
+/* One numbered figure containing two independently maintained images. */
+.rst-content figure.figure-row .figure-row-images {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.rst-content figure.figure-row .figure-row-images > img,
+.rst-content figure.figure-row .figure-row-images > a.image-reference {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.rst-content figure.figure-row .figure-row-images > a.image-reference img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .rst-content figure.figure-row .figure-row-images {
+        gap: 6px;
+    }
+
+}
+
 .rst-content .section>a>img, .rst-content .section>img, .rst-content section>a>img, .rst-content section>img {
     margin-bottom: 24px !important;
 }

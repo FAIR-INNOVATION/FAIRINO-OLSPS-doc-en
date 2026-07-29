@@ -179,12 +179,7 @@ This function is used to quickly record the current position of the robot. After
 
 Coordinate system creation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Click this button, and AIRLab will create a new reference coordinate system. The newly created reference coordinate system will be displayed on the left side of the AIRLab interface under the module - coordinate system, which is used for weld offset and welding process, assisting users in quickly and accurately setting weld/bead offset.
-
-Click the reference coordinate system icon on the far left to enter the reference coordinate system module. Select a reference coordinate system and click the "Edit" button above to configure it. You can then set parameters such as selecting the reference base (workpiece coordinate system, base coordinate system, or world coordinate system), adjusting the coordinate system's position, and choosing whether to display the reference coordinate system.
-
-Click the Delete button above to remove the selected reference coordinate system.
 
 .. figure:: analysis/14.png
 	:align: center
@@ -192,13 +187,15 @@ Click the Delete button above to remove the selected reference coordinate system
 
 	AIRLab Reference Coordinate System Menu
 
+Click the reference coordinate system icon on the far left to enter the reference coordinate system module. Select a reference coordinate system and click the "Edit" button above to configure it. You can then set parameters such as selecting the reference base (workpiece coordinate system, base coordinate system, or world coordinate system), adjusting the coordinate system's position, and choosing whether to display the reference coordinate system.
+
 .. figure:: analysis/15.png
 	:align: center
 	:width: 6in
 
 	AIRLab - Reference Coordinate System
 
-Figure below shows the coordinate system displayed, and Figure below shows the coordinate system not displayed.
+The reference coordinate system can be selected from the workpiece coordinate system, base coordinate system, or world coordinate system. Set the position of the coordinate system, and choose whether to display the reference coordinate system. Figure below shows the coordinate system displayed and it not displayed.
 
 .. figure:: analysis/16.png
 	:align: center
@@ -212,17 +209,19 @@ Figure below shows the coordinate system displayed, and Figure below shows the c
 
 	AIRLab menu bar-RCS-Not show CS
 
-
 Offline Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+The offline simulation function is primarily used in the weld editing module. After weld editing is completed, it simulates the edited weld trajectory. Its main purpose is to simulate and verify the correctness of the welding trajectory before generating the final welding program.
 
-To enable intelligent recommendation of offline welding postures and improve simulation efficiency, AIRLab has added an "Offline Simulation" function. As shown in the figure, click the "Offline Simulation" icon button in the toolbar to enter the simulation state, and the icon color will turn yellow and highlighted.Click the icon again,exit the simulation state.
+Click the offline simulation icon to enable the offline simulation function. The enabled state is shown in the figure below.
 
 .. figure:: analysis/offline_imulation1.png
 	:align: center
 	:width: 6in
 
-	open "Offline Simulation" state 
+	Open "Offline Simulation" state
+
+Click the offline simulation icon again to disable the function, as shown in the figure below.
 
 .. figure:: analysis/offline_imulation2.png
 	:align: center
@@ -230,7 +229,7 @@ To enable intelligent recommendation of offline welding postures and improve sim
 
 	Close "Offline Simulation" state
 
-After importing the robot, tool, and workpiece, click "Weld Seam Editing". Select a weld seam for editing, and after completion, click the "Offline Simulation" button in the pop-up window. AIRLab will dynamically simulate the path trajectory of the current weld seam from the approach point to the exit point in the 3D scene, showing whether the welding torch posture and robot position of the weld seam are reasonable, as shown in the figure.
+With the offline simulation function enabled, edit the weld seams. After editing a single weld seam, click the "Offline Simulation" button in the weld editing pop-up window. The edited welding trajectory of that seam will be displayed in the 3D scene.
 
 .. figure:: analysis/offline_imulation3.png
 	:align: center
@@ -238,17 +237,15 @@ After importing the robot, tool, and workpiece, click "Weld Seam Editing". Selec
 
 	Offline Simulate one weld seam
 
-After editing all the weld seams to be welded, click the "Weld Seam Editing" icon button, and then click "Weld Seams Edited in Offline Simulation" in the menu.
+After all weld seams have been edited, click the "Weld Editing" module and select "Offline Simulation for Edited Weld Seams".
 
-AIRLab will automatically generate a Lua program under the program module, and display the offline simulated welding torch posture, weld seam position, welding process, trajectory planning and other contents in the 3D scene.
+The 3D scene will generate the simulated trajectories for all edited weld seams. Click "Clear Trajectory" to remove the simulated trajectories from the 3D scene.
 
 .. figure:: analysis/offline_imulation4.png
 	:align: center
 	:width: 6in
 
 	Offline Simulation of Edited Weld Seams
-
-
 
 Pause running
 ~~~~~~~~~~~~~~~~~~~
@@ -564,11 +561,7 @@ SLAM mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 First, click the SLAM Mapping Module in the Project Module to configure the method and image capture settings for the entire process. Click the + icon, and the SLAM Mapping Image Capture Settings pop-up window will appear. The main steps of the entire SLAM mapping process are described in detail below.
 
-Step 1: Configure SLAM Mapping Scanning Settings
-
-After entering the pop-up window, click the SLAM Mapping Scanning tab. Two sensor options are currently available: Camera and Lidar. Note: The Lidar mode is not yet implemented; please select Camera for now. Two scanning methods are provided: Oscillating Scan and Fixed Scan—please select Oscillating Scan. Finally, enter a name for the SLAM mapping workpiece model (no Chinese characters allowed in the name), as shown in Figure below..
-
-Scanning Method Explanation:
+Step 1: After entering the pop-up window, click the SLAM Mapping Scanning tab. Two sensor options are currently available: Camera and Lidar. The Lidar mode is not yet implemented; please select Camera for now. Two scanning methods are provided: Oscillating Scan and Fixed Scan. Please select Oscillating Scan. Finally, enter a name for the SLAM mapping workpiece model. Do not include Chinese characters in the name, as shown in the figure below.
 
 Oscillating Scan: The camera projects a laser and rotates 120° around the far-point position.
 
@@ -580,9 +573,7 @@ Fixed Scan: The camera moves to the central position and remains stationary; rea
 
 	SLAM Mapping Scanning
 
-Step 2: Start SLAM Mapping
-
-Start SLAM mapping. Click the "SLAM Mapping Scan" header, then directly drag the robot to the first point, and click the "First Scan" button.
+Step 2: Start SLAM mapping. Click the SLAM Mapping Scan header, directly drag the robot to the first point, and then click the First Scan button.
 
 After the first capture, continue moving the robot to the next position and click the Scan button. The button will be hidden until the scan is completed and reappear automatically after the scan ends. Repeat the robot movement + scan operation until the SLAM mapping scan of the workpiece is finished. After all scans are completed, click the Rebuild SLAM Map button—the generated model will be displayed in the 3D scene on the main AIRLab interface.
 
@@ -592,25 +583,19 @@ After the first capture, continue moving the robot to the next position and clic
 
 	SLAM Mapping Supplementary Image Capture
 
-Step 3: Perform Supplementary Scanning
+Step 3: Perform supplementary scanning. If the obtained SLAM map is incomplete, supplementary scanning and reconstruction are required. Click the Supplementary Scan Initialization button under the SLAM Mapping Supplementary Image Capture tab. There is no need to click the First Capture button again. Move the robot to the incomplete area of the model and click the Scan button. After all supplementary scans are completed, click Rebuild SLAM Map to obtain the reconstructed model.
 
-If the obtained SLAM map is incomplete, supplementary scanning and reconstruction are required. Click the Supplementary Scan Initialization button under the SLAM Mapping Supplementary Image Capture tab (there is no need to click the First Capture button again). Move the robot to the incomplete area of the model and click the Scan button. After all supplementary scans are completed, click Rebuild SLAM Map to obtain the reconstructed model.
-
-Step 4: SLAM Parametric Modeling to complete the model. 
-
-Click "Welding (W)" -&gt; "Collision Model Parametric Completion". For detailed steps, please follow the instructions in Section 3.7.30 of this manual..
+Step 4: Perform SLAM parametric modeling to complete the model. Click Welding (W) — Collision Model Parametric Completion. For detailed steps, follow the instructions in Section 3.7.30 of this manual.
 
 .. figure:: analysis/slam3.png
 	:align: center
 	:width: 3.5in
 
 	Parametric Completion
-	
-Step 5: SLAM Mapping Result Accuracy Verification
 
-Verify whether the accuracy of the SLAM mapping result meets the requirements, as shown in the figure. After the SLAM map is successfully obtained, click Start Verification. Move the robot to a diagonal position of the workpiece and click Verification Capture to take a photo of a three-surface structure on the workpiece.
+Step 5: Verify whether the accuracy of the SLAM mapping result meets the requirements, as shown in the figure. After the SLAM map is successfully obtained, click Start Verification. Move the robot to a diagonal position of the workpiece and click Verification Capture to take a photo of a three-surface structure on the workpiece. After the photo is taken successfully, move the robot to the opposite diagonal position and click Verification Capture again to take a photo of the three-surface structure at the opposite diagonal of the workpiece.
 
-After the first photo is taken successfully, move the robot to the opposite diagonal position and click Verification Capture again to take a photo of the three-surface structure at the opposite diagonal of the workpiece. After both photos are taken successfully, click Obtain Verification Result—the result will be displayed in a pop-up window. If the verification is passed, proceed to subsequent operations; if the verification fails, troubleshoot the cause of the accuracy failure and rebuild the SLAM map.
+After both photos are taken successfully, click Obtain Verification Result. The result will be displayed in a pop-up window. If the verification passes, proceed to subsequent operations. If the verification fails, troubleshoot the cause of the accuracy failure and rebuild the SLAM map.
 
 .. figure:: analysis/slam4.png
 	:align: center
@@ -618,30 +603,22 @@ After the first photo is taken successfully, move the robot to the opposite diag
 
 	SLAM Mapping Result Accuracy Verification
 
-Step 6: Step 6: Parameter Settings for Calculation Rule Configuration.
-
-Open the "Welding (W)" -> "Pose Calculation Strategy Settings" pop-up window. Set the parameters in "Collision Detection and Obstacle Avoidance Planning Rule Configuration", the parameters in the Welding Torch Pose Calculation Rule Configuration, and the camera parameters in the Camera Pose Calculation Rule Configuration. As shown in the figure below. For detailed introduction, please read the detailed content in the "Pose Calculation Strategy Settings" section of this manual.
+Step 6: Configure the calculation rule parameters. Open the Welding (W) — Pose Calculation Strategy Settings pop-up window. Set the parameters in Collision Detection and Obstacle Avoidance Planning Rule Configuration, the parameters in Welding Torch Pose Calculation Rule Configuration, and the camera parameters in Camera Pose Calculation Rule Configuration, as shown in the figure below. For details, refer to the Pose Calculation Strategy Settings section of this manual.
 
 .. figure:: analysis/slam5.png
 	:align: center
 	:width: 3.5in
 
 	Pose Calculation Strategy Settings
-	
-If an extended axis is imported, it is also necessary to set the Distance between Extended Axis Zero Point and Actual Zero Point on the right interface of AIRLab.
 
-Step 7: Weld Seam Selection
+If an extended axis is imported, also set Distance between Extended Axis Zero Point and Actual Zero Point on the right side of the AIRLab interface. Move the robot to the configured extended-axis zero position, and then move the robot as far as possible toward the outermost position of the extended axis. Set the absolute value of the traveled distance as Distance between Extended Axis Zero Point and Actual Zero Point.
 
-Enter the "Weld Editing" module, click the "+" icon button to open the "Weld Seam Selection" pop-up window, and add weld seams according to the "Weld Seam Addition" section in Section 3.7.11.
+Step 7: Select weld seams. Enter the Weld Editing module, click the + icon to open the Weld Seam Selection pop-up window, and add weld seams according to the Weld Seam Addition instructions in Section 3.7.11.
 
 .. important::
 	If a Weld Seam Addition Failed prompt appears after clicking Confirm, it indicates that the algorithm has no qualified recommended pose for the weld seam. You need to select the weld seam in the weld seam list, open the Weld Seam Editing pop-up window, and manually teach the welding poses of the start point, end point and safety point of the weld seam. For the introduction of the Weld Seam Editing pop-up window, refer to Section 3.6.11 in this manual.
 
-Step 8: Set SLAM Image Capture Pose Filter Conditions
-
-After completing the addition of weld seams, enter the "Fine Positioning" module, click the "Fine Positioning" header, and the menu shown in the figure below will appear. Select and click "Set Automatic Camera Pose Screening Strategy". A pop-up window titled "Shooting Pose Screening Settings" will appear, as shown in the figure below. After setting the parameters, click the "Confirm" button.
-
-Filter Parameter Explanations:
+Step 8: After completing the addition of weld seams, enter the Fine Positioning module and click the Fine Positioning header. In the menu shown below, select Set Automatic Camera Pose Screening Strategy. The Shooting Pose Screening Settings pop-up window appears. After setting the parameters, click Confirm.
 
 Enable Filtering: When enabled, AIRLab will further filter the algorithm-recommended fine positioning image capture poses. It is recommended to enable this function.
 
@@ -663,13 +640,7 @@ Enable Path Planning Filtering: When enabled, AIRLab will reference the previous
 
 	SLAM Image Capture Pose Filter Condition Settings
 
-Step 9: Obtain Automatic Image Capture Poses
-
-Click the Fine Positioning tab, select and click Obtain Automatic Image Capture Poses in the pop-up menu—AIRLab will calculate and output the fine positioning image capture positions that meet the filter conditions.
-
-Capture positions that pass the filter will be automatically added to the fine positioning list;
-
-Capture positions that fail the filter will display the failure reason and corresponding weld seam number on the interface (solutions are described in Step 10), as shown in Figure below..
+Step 9: Obtain automatic image capture poses. Click the Fine Positioning header and select Obtain Automatic Image Capture Poses from the menu. AIRLab calculates and provides the fine positioning image capture positions that meet the filter conditions. Positions that pass the filter are automatically added to the fine positioning list. For positions that fail the filter, the interface displays the failure reason and corresponding weld seam number. The solution is described in Step 10.
 
 .. figure:: analysis/slam10.png
 	:align: center
@@ -677,52 +648,34 @@ Capture positions that fail the filter will display the failure reason and corre
 
 	Obtain Automatic Image Capture Poses
 
-Step 10: Fine Positioning Parameter Configuration and Manual Teaching of Failed Positions
+Step 10: After automatic image capture pose acquisition is complete, click the + icon to open the Fine Positioning pop-up window, as shown below. To configure a fine positioning parameter node, enter the parameters and click Confirm. To perform collision detection on the added capture positions, set Enable Collision Detection to Yes. Enabling this option is recommended.
 
-After obtaining the automatic image capture poses, click the + icon to open the Fine Positioning pop-up window, as shown in Figure below..
-
-If you need to set fine positioning parameter nodes, enter the parameters and click Confirm;
-
-If you need to perform collision detection on the added capture positions, set Enable Collision Detection to Yes (recommended).
-
-For the capture positions that failed the filter in the previous step, perform manual teaching here:
-
-1. Click Add New Capture Point—AIRLab will record the robot s current position and add it to the last position of the fine positioning list;
-
-2. According to the weld seam number of the failed filter, select the newly added position and click the ↑ icon to move it to the correct position.
+For positions that failed the filter in the previous step, perform manual teaching here. Click Add New Capture Point. AIRLab records the robot's current position and adds it to the end of the fine positioning list. According to the weld seam number of the failed position, select the newly added position and click the ↑ icon to move it to the correct location.
 
 .. important::
 	Manually add several transition points at the end of the fine positioning position list to ensure the robot can safely return from the capture end point of the last weld seam to the capture start point of the first weld seam.
 
 .. figure:: analysis/slam11.png
 	:align: center
-	:width: 3in
+	:width: 3.5in
 
 	Fine Positioning Pop-up Window
 
-Step 11: Perform obstacle-free trajectory planning for the fine positioning points.
+Step 11: Perform obstacle-free trajectory planning for the fine positioning points. Click the Fine Positioning header and select Obstacle Avoidance Planning from the menu. Wait for the AIRLab planning result. If planning succeeds, open the menu and click Generate Trajectory to display the planned trajectory. If planning fails, AIRLab displays the name of the failed point. You can modify the point or add a transition point.
 
-Click the "Fine Positioning" header, then in the menu that appears, select and click "Obstacle Avoidance Planning". Wait for the AIRLab obstacle-free trajectory planning result. If planning succeeds, open the menu and click "Generate Trajectory" to display the successfully planned trajectory. If planning fails, AIRLab will display the name of the point where planning failed. You can modify that point or add transition points.
+To modify a point, enter the Position Information module, find and select the failed point, open the Position Information Modification pop-up window, modify the point, and save it.
 
-Modification Methods:
-
-1. Modify Position: Enter the Position Information module, find and select the failed position, open the Position Information Modification pop-up window, modify the parameters and save;
-
-2. Add Transition Point: Select the failed position, click Add Transition Point Before Current Point in the pop-up submenu, and the Add Path Point pop-up window will appear, as shown in the figure.
+To add a transition point, select the failed point and click Add Transition Point Before Current Point in the pop-up menu. The Add Path Point pop-up window appears, as shown below.
 
 .. figure:: analysis/slam12.png
 	:align: center
 	:width: 6in
 
-	Add Path Point After Obstacle-Free Planning Failure
+	Failed Point in Obstacle-Free Trajectory Planning
 
-Step 12: Run the Fine Positioning Program
+Step 12: Run the fine positioning program. Click the Fine Positioning header and select Run Program from the menu.
 
-Click the Fine Positioning tab, select and click Run Program in the menu to execute the fine positioning program.
-
-Step 13: After the fine positioning program runs successfully, enter the "Program" module and click the "Program" header, as shown in the figure below.
-
-If obstacle-free trajectory planning is required, you can first click "Obstacle Avoidance Planning" in the menu. After successful planning, click "Generate Trajectory" to first check whether the trajectory is normal. Once confirmed, click "Run Program" to start welding.
+Step 13: After the fine positioning program runs successfully, enter the Program module and click the Program header, as shown below. If obstacle-free trajectory planning is required, first click Obstacle Avoidance Planning in the menu. After planning succeeds, click Generate Trajectory to check whether the trajectory is correct. After confirming the trajectory, click Run Program to start welding.
 
 .. important::
 	After the program is generated, do not modify the program nodes; do not modify the list information of weld seam editing unless necessary. If the weld seam order in the weld seam list is modified or weld seams are added/deleted, return to Step 8 and reconfigure the relevant settings.
@@ -735,169 +688,172 @@ If obstacle-free trajectory planning is required, you can first click "Obstacle 
 
 Model Construction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If the workpiece to be welded does not have a model file, you need to perform a model-less build of the workpiece first, otherwise, you can directly import the workpiece model to perform the 3.5.4 weld editing operation.
+If the workpiece to be welded does not have a model file, perform model-free construction first. Otherwise, directly import the workpiece model and proceed to the weld editing operations described in Section 3.5.4.
 
-First, create a modelfree construction program.
+1. First, create a model-free construction program.
+
+Click Project Module - Model Construction.
 
 .. figure:: analysis/44.png
 	:align: center
 	:width: 6in
 
-	Model-Free Construction Pop-up--Workpiece
+	Project Module - Model Construction
 
-Click Project Module → Model Construction; then click the plus sign, and the modelfree construction popup will appear as shown in the figure. If the nonspline feature is selected in the welding feature parameter configuration module, the modelfree construction popup is shown in the first figure below; if the spline feature is selected, it is shown in the second figure below.
+Click the plus sign. The Model-Free Construction pop-up appears as shown below. If a non-spline feature is selected in Welding Feature Parameter Configuration, the pop-up is as shown in the first figure below. If a spline feature is selected, the pop-up is as shown in the second figure.
 
 .. figure:: analysis/45.png
 	:align: center
-	:width: 3.5in
+	:width: 3in
 
-	Model-Free Construction Pop-up--Workpiece with Non-spline Features
+	Model-Free Construction Pop-up - Workpiece with Non-Spline Features
 
 .. figure:: analysis/modelLess_popup.png
 	:align: center
 	:width: 3in
 
-	Model-Free Construction Pop-up--Workpiece with Spline Features
+	Model-Free Construction Pop-up - Workpiece with Spline Features
 
-You can choose to add a new model‑free construction parameter node, add a photo node, add a movement node, or add a model construction node. There is no difference between spline and non‑spline features in terms of node addition and meaning. The following uses the non‑spline feature as an example to explain the meaning and addition method of each node type.
+You can add a Model-Free Construction Parameter node, Capture node, Move node, or Model Construction node. Spline and non-spline features use the same node types and node definitions. The following uses a non-spline feature as an example to explain the purpose of each node type and how to add it.
 
-Add Movement Node: This includes two types: Real‑time Pose and Point Library. Real‑time Pose refers to the robot's current position, while Point Library allows you to select an existing point. As shown in the figure below, if no image capture is required for the current node, simply uncheck "Capture Image at Current Point".
- 
+Add Move Node: There are two types, Real-Time Pose and Point Library. Real-Time Pose uses the robot's current pose, while Point Library allows you to select an existing point. As shown below, if image capture is not required at the current node, clear the "Capture at Current Point" check box.
 
-.. figure:: analysis/46.png
-	:align: center
-	:width: 6in
+.. figure-row:: analysis/model_move_node_point_library.png analysis/model_move_node_realtime_pose.png
+	:alt-1: Add Move Node - Point Library
+	:alt-2: Add Move Node - Real-Time Pose
 
-	Adding Move nodes
+	Model-Free Construction Pop-up - Add Move Node
 
 .. figure:: analysis/46_3.png
 	:align: center
 	:width: 6in
 
-	Adding Move nodes
+	Model-Free Construction Pop-up - Successfully Added Move Node
 
-The principle of the model-less photo point of demonstration is that the camera is able to clearly and completely capture all positions of the model-less workpiece, especially the position of the weld seam that needs to be welded.
+When teaching capture points for model-free construction, ensure that the camera can clearly and completely capture all areas of the model-free workpiece, especially the weld seam locations.
 
 .. figure:: analysis/47.png
 	:align: center
-	:width: 3.5in
+	:width: 5in
 
-	Photographic points of the workpiece at different angles    
+	Workpiece Capture Points from Different Angles
 
-Add Model Construction Node: After adding multiple movement nodes, add the model construction node. The model construction methods include two options: Line + Arc and Spline. If Spline is selected, you need to set the sampling interval. After selecting the model construction method, edit the modelfree workpiece name. Click the &quot;OK&quot; button, and the &quot;Model Construction&quot; node will appear under the modelfree module, indicating that the modelfree construction node has been successfully added.
+Add Model Construction Node: After adding multiple groups of Move nodes, add a Model Construction node. The available model construction methods are Line + Arc and Spline. If Spline is selected, set the sampling interval. After selecting the construction method, enter a name for the model-free workpiece. Click "OK". A "Model Construction" node appears under the Model-Free Construction module, indicating that the node has been added successfully.
 
 .. figure:: analysis/49.png
 	:align: center
 	:width: 6in
 
-	Adding Modeless cons nodes
+	Add Model Construction Node
 
 .. important::
-	If the workpiece has symmetrical features, integrity judgment must be enabled when adding model construction nodes, as shown in the figure. Additionally, the entire workpiece must be completely captured during the model building process.
+	If the workpiece is symmetrical, enable the completeness check when adding the Model Construction node, as shown below. The entire workpiece must also be captured completely during model construction.
 
 .. figure:: analysis/Integrity_Test.png
 	:align: center
-	:width: 3in
+	:width: 2.5in
 
-	Enable Integrity Judgment
+	Enable Completeness Check
 
-After the nodes are added, you can modify, move up/down, or delete the added nodes as needed.
+After adding the nodes, you can edit, move up or down, and delete them as needed.
 
-If you need to modify a corresponding node, click to select the node, then click the pencil-shaped edit icon (for "Modify"). The modification page for that node will pop up, where you can make changes according to your actual needs, as shown in the figures below.
+To edit a node, select it and click the pencil-shaped "Edit" icon. The corresponding node editing page appears. Make the required changes, as shown below.
 
 .. figure:: analysis/model_edit1.png
 	:align: center
 	:width: 5in
 
-	Model Reconstruction Node Modification – Move & Photo Node
+	Edit Model Construction Node - Move/Capture Node
 
 .. figure:: analysis/model_edit2.png
 	:align: center
 	:width: 5in
 
-	Model Reconstruction Node Modification – Modeling Node
+	Edit Model Construction Node - Model Construction Node
 
-If you need to configure the modelfree construction parameters before running the program, click the first icon button to open the modelfree construction settings dialog. Modify the parameters in the "Advanced Parameters" section, and then click "Set Parameters"; to apply the new settings.
+If model-free construction parameters need to be configured before running the program, click the first icon button to open the Model-Free Construction Settings pop-up. Modify the parameters under "Advanced Parameters", and then click "Set Parameters" to issue the new parameters.
 
-When weld acquisition fails due to unreasonable model construction parameters, after setting the parameters, click &quot;Rebuild Model&quot; to reacquire the model data with the updated parameters.
+If improper model construction parameters cause weld seam acquisition to fail, set the parameters and then click "Rebuild Model" to reacquire the model data using the updated parameters.
 
 .. figure:: analysis/add_noModel_para.png
 	:align: center
-	:width: 3in
+	:width: 3.5in
 
 	Add Model Construction Parameter Node
 
-If you wish to reconstruct the model using existing files instead of real-time scanning for this model reconstruction, you can select the "3D File Parsing" option under "Model Source", as shown in the figure below.
+To construct the model from an existing file instead of scanning in real time, select "3D File Parsing" under "Model Source", as shown below.
 
 .. figure:: analysis/3d_prase2.png
 	:align: center
 	:width: 3.5in
 
-	Model Source – 3D File Parsing
+	Model Source - 3D File Parsing
 
-Among them, three file types are available for selection: "Model File", "Process File", and "Model Process Package". If you select either "Model File" or "Model Process Package", you will need to fill in the parameters required for parsing the model data: "Minimum Retention Length for Flat Cylindrical Arc Weld Seams" and "Minimum Retention Length for Flat Cylindrical Linear Weld Seams". For the specific 3D parsing process, please refer to Section 3.7.17.
+Three file types are available: "Model File", "Process File", and "Model Process Compressed Package". If "Model File" or "Model Process Compressed Package" is selected, enter the parameters required to parse the model data: "Minimum Retained Length of Flat Cylindrical Arc Weld Seam" and "Minimum Retained Length of Flat Cylindrical Straight Weld Seam". For details about 3D parsing, see Section 3.7.17.
 
-After the model construction program is completed, click the “Model Const” module, click “Generate Trajectory” to view the simulation trajectory of the model construction program, and after confirming that the trajectory of the model construction program is correct, click Run program to start running the model construction program.
+2. Run the model-free construction program.
+
+After creating the model-free construction program, click the "Model Construction" module and then click "Generate Trajectory" to view the simulated trajectory. After confirming that the trajectory is correct, click "Run Program" to run the model-free construction program.
 
 .. figure:: analysis/51.png
 	:align: center
-	:width: 3in
+	:width: 2.5in
 
-	Click on the model const blocks
+	Click the Model-Free Construction Module
 
-For symmetrical workpieces with integrity judgment enabled, the software will assess the completeness of the constructed model after the model-free construction process is completed. If the constructed model is determined to be incomplete, the software will prompt "Integrity judgment failed," as shown in the figure. The user will then need to perform additional captures of the workpiece until the model is fully constructed.
+For a symmetrical workpiece with the completeness check enabled, the software checks the completeness of the constructed model after the model-free construction program finishes. If the model is incomplete, the software displays a completeness check failure, as shown below. Capture the missing areas until the model is complete.
 
 .. figure:: analysis/Integrity_Fail.png
 	:align: center
 	:width: 6in
 
-	Integrity Judgment Failed
+	Completeness Check Failed
 
-At the same time, the current integrity judgment point cloud will be displayed on the interface, as shown in the following figure. Here, blue and yellow represent the two symmetrical parts of the point cloud, while red indicates asymmetrical sections where no corresponding points were found. It is necessary to recapture the symmetrical areas corresponding to the red points or use the stitched point cloud in the small window to determine the recapture positions.
+The current completeness-check point cloud is also displayed, as shown below. Blue and yellow indicate the two symmetrical parts of the point cloud. Red indicates an asymmetrical part for which no corresponding point was found. Capture points at the positions symmetrical to the red areas, or use the stitched point cloud in the small window to determine the areas that require additional capture.
 
 .. figure:: analysis/complete_cloud.png
 	:align: center
-	:width: 6in
+	:width: 5in
 
-	Integrity Judgment Point Cloud
+	Completeness-Check Point Cloud
 
-After the symmetrical workpiece model is fully constructed, the software will display a "Integrity judgment successful" prompt, as shown in the figure. The user can then proceed to the next operation.
+After the symmetrical workpiece model is complete, the software displays a completeness check success message, as shown below. You can then proceed to the next operation.
 
 .. figure:: analysis/Integrity_Pass.png
 	:align: center
 	:width: 6in
 
-	Integrity Judgment Successful
+	Completeness Check Successful
 
-After the model construction program has finished running, the built model workpiece model will be displayed in the AIRLab 3D scene. Check whether the model is correct or not, the model is correct, the modelless construction is successfully constructed, and the model that has been successfully constructed can be directly imported in the next time, and there is no need to model the workpiece again for the modelless workpiece modeling.
+After the model-free construction program finishes, the generated workpiece model, weld seams, and surface-structure information are displayed in the AIRLab 3D scene. Red spheres indicate three-surface structures, and blue spheres indicate two-surface structures. Check whether the model, weld seams, and surface-structure information are correct. If they are correct, model-free construction is successful. A successfully constructed model can be imported directly for later use without reconstructing the model-free workpiece.
 
 .. figure:: analysis/model_const_success.png
 	:align: center
 	:width: 6in
 
-	Model-free construct successfully
+	Model-Free Workpiece Constructed Successfully
 
-If the model is incomplete, move the robot to the incomplete area and perform supplementary capture. Then click "Acquire Modeling Data" to reload the supplemented model. Repeat this process until the model-free workpiece model is correctly created.
+If the model is incomplete, capture the missing areas and then click "Get Model Data" to reacquire the supplemented model. Repeat until the model-free workpiece model is created correctly.
 
-3. Model Construction Function Options
+3. Model construction function options.
 
-Click the Model Construction module to access options such as acquiring modeling data. The functions are described below.
+Click the Model-Free Construction module to access options such as Get Model Data. The function of each option is described below.
 
-- Supplementary shooting: After generating the workpiece model by running the model-free program, if there are incomplete parts in the workpiece model that need supplementary shooting, move the robot to the position where supplementary shooting is required and click "Supplementary Shooting". Then click "Acquire Modeling Data" to re-import the workpiece model after supplementary shooting.
+- Supplementary Capture: If the workpiece model generated by the model-free construction program has incomplete areas, move the robot to each area that requires additional capture and click "Supplementary Capture". After all additional captures are complete, click "Get Model Data" to import the supplemented workpiece model again.
 
-- Get Modeling Data: Click “Get Modeling Data”, after clearing the modeling data, click Get Modeling Data to get the modeled artifact model again.
+- Get Model Data: Click "Get Model Data". After clearing the model data, click this option to reacquire the model-free workpiece model.
 
-- Clear Modeling Data: Click “Clear Modeling Data” to clear the modelless workpiece model in the 3D scene.
+- Clear Model Data: Click "Clear Model Data" to remove the model-free workpiece model from the 3D scene.
 
-- Run Program: Click “Run Program” to run the current program of the modelless building module.
+- Run Program: Click "Run Program" to run the program in the current Model-Free Construction module.
 
-- Stop Program: Click “Stop Program”, the robot will stop running immediately.
+- Stop Program: Click "Stop Program" to stop the robot immediately.
 
-- Generate Trajectory: Click “Generate Trajectory” button to generate the simulation trajectory of the program in AIRLab 3D scene.
+- Generate Trajectory: Click "Generate Trajectory" to generate the simulated program trajectory in the AIRLab 3D scene.
 
-- Show Tool: Click “Show Tool”, the virtual tool model will be shown in AIRLab 3D scene.
+- Show Tool: Click "Show Tool" to display the virtual tool model in the AIRLab 3D scene.
 
-- Clear Tool: Click “Clear Tool”, the virtual tool model displayed in AIRLab 3D scene is cleared.
+- Clear Tool: Click "Clear Tool" to remove the virtual tool model from the AIRLab 3D scene.
 
 
 Weld editing
@@ -1026,10 +982,6 @@ The meaning of each editing item in Weld Seam Editing is detailed in Section 3.6
 
 After completing the weld seam editing for plug workpieces, click the "Weld Seam Editing" module and then click the "Generate Welding Program" button. A plug welding program will be generated under the "Program" node. Subsequent operations such as generating trajectories for the created welding nodes or running the program can be performed; details are provided in Section 3.4.6.
 
-.. important::
-	If AIRLab provides too many automatic photo poses (such as far more than the number of welds), some points should be deleted or manually taught again. The teaching points only need to capture the starting and ending points of the welds.
-
-
 Workpiece positioning
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Workpiece positioning: After editing all the welds to be welded, workpiece positioning is required. Firstly, it is necessary to create a workpiece positioning program; Click on the workpiece positioning module, click on the plus sign under workpiece positioning, and the AIRLab interface will display the workpiece positioning page as shown in the figure.
@@ -1104,13 +1056,7 @@ If you need to modify a workpiece positioning node, select the target node in th
 
 After creating the workpiece positioning program, click the "Workpiece Positioning" module. Options such as "Run Program" have the same functions as those in the Model Construction module.
 
-If no error occurs during the execution of the workpiece positioning program, a colored point cloud of the workpiece will be displayed on the interface upon completion.The meaning of the point cloud colors is as follows:
-
-1.Green: Workpiece positioning angle error < 5°
-
-2.Yellow: 5° ≤ Workpiece positioning angle error ≤ 10°
-
-3.Red: Workpiece positioning angle error > 10°
+If no error occurs during the execution of the workpiece positioning program, a colored point cloud of the workpiece will be displayed on the interface upon completion.The meaning of the point cloud colors is as follows:1.Green: Workpiece positioning angle error < 5°;2.Yellow: 5° ≤ Workpiece positioning angle error ≤ 10°;3.Red: Workpiece positioning angle error > 10°.
 
 .. important::
 	The colors only represent the visualization of the angle error result and do not affect the actual registration result. The registration result depends only on the actually calculated registration accuracy and overlap rate.
@@ -1127,9 +1073,7 @@ If no error occurs during the execution of the workpiece positioning program, a 
 
 	Successful Workpiece Positioning – Colored Workpiece Point Cloud
 
-If workpiece positioning fails, the interface will display a visualization result of the registration error, where blue represents the workpiece positioning point cloud and white represents the workpiece model point cloud, with a corresponding prompt popup window appearing at the same time.
-
-The specific workpiece positioning error types are divided into the following three categories:
+If workpiece positioning fails, the interface will display a visualization result of the registration error, where blue represents the workpiece positioning point cloud and white represents the workpiece model point cloud, with a corresponding prompt popup window appearing at the same time.The specific workpiece positioning error types are divided into the following three categories:
 
 1. Low point cloud registration coverage but qualified accuracy, with misalignment.Message: Point cloud registration failed. Local registration accuracy is qualified, but the overall overlapping area is insufficient, and there is a risk of point cloud misalignment. Please compare with the model point cloud, adjust the shooting angle, and perform workpiece positioning again.As shown in the figure below.
 
@@ -1155,9 +1099,7 @@ The specific workpiece positioning error types are divided into the following th
 
 	Workpiece Positioning Error – Type 3
 
-If workpiece positioning fails and the above problems occur, please re-position according to the error message instructions.
-
-If the above problems persist and cannot be resolved, or if other issues arise, please contact after-sales personnel and retain the current data.
+If workpiece positioning fails and the above problems occur, please re-position according to the error message instructions.If the above problems persist and cannot be resolved, or if other issues arise, please contact after-sales personnel and retain the current data.
 
 .. figure:: analysis/59.png
 	:align: center
@@ -1245,7 +1187,7 @@ After weld editing or workpiece positioning is completed, it is necessary to per
 
 	Fine Positioning Menu
 
-Step 1: First, click &quot;Set Automatic Photo Pose Filtering Strategy&quot; to enter the &quot;Photo Pose Filtering Settings&quot; page, as shown in the figure below. The meanings of the parameters are introduced as follows:
+Step 1: First, click "Set Automatic Photo Pose Filtering Strategy" to enter the "Photo Pose Filtering Settings" page, as shown in the figure below. The meanings of the parameters are introduced as follows:
 
 .. figure:: analysis/fine_position_auto_pos.png
 	:align: center
@@ -1279,7 +1221,7 @@ Step 3: After the automatic photo pose acquisition is completed, click the "+" 
 
 For the photo points that failed filtering in the previous step, please manually teach them here. The teaching method is as follows:
 
-1. Turn on the "Enable Intelligent Point Insertion" button. The "Weld Endpoint Type for Capture" dropdown box will display the points that failed recommendation in the automatic photo pose acquisition results, such as "Start point of Weld 1" shown in the figure below. After selecting the endpoint type, click the "Add Photo Point" button. The new point will be automatically inserted into the current fine positioning list based on the principle of minimizing the sum of robot joint changes.
+Turn on the "Enable Intelligent Point Insertion" button. The "Weld Endpoint Type for Capture" dropdown box will display the points that failed recommendation in the automatic photo pose acquisition results, such as "Start point of Weld 1" shown in the figure below. After selecting the endpoint type, click the "Add Photo Point" button. The new point will be automatically inserted into the current fine positioning list based on the principle of minimizing the sum of robot joint changes.
 
 .. figure:: analysis/61_2.png
 	:align: center
@@ -1287,7 +1229,7 @@ For the photo points that failed filtering in the previous step, please manually
 
 	Adding Missing Recommended Auto Photo Points
 
-1. If there are no failed recommendation points in the automatic photo pose acquisition results, and the user wishes to add custom points with intelligent point insertion, as shown in the figure below, first select the "Custom Point" option from the "Weld Endpoint Type for Capture" dropdown box. Then select the "Point Name Selection" option. For custom point naming, the page provides two naming methods: "Default Name" and "Custom Name" in the "Point Name Selection" dropdown box. After confirming the point name, click the "Add Photo Point" button.
+If there are no failed recommendation points in the automatic photo pose acquisition results, and the user wishes to add custom points with intelligent point insertion, as shown in the figure below, first select the "Custom Point" option from the "Weld Endpoint Type for Capture" dropdown box. Then select the "Point Name Selection" option. For custom point naming, the page provides two naming methods: "Default Name" and "Custom Name" in the "Point Name Selection" dropdown box. After confirming the point name, click the "Add Photo Point" button.
 
 .. figure:: analysis/add_point_default.png
 	:align: center
@@ -1327,17 +1269,13 @@ If you need to modify a node in the fine positioning list, select the node in th
 
 	Fine Positioning Node Modification – Camera Pose Node
 
-Step 4: Perform obstacle-free trajectory planning for the fine positioning points. If fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, click the title "Fine Positioning," select and click "ObstacleAvoidance Planning" from the menu that appears, and wait for the AIRLab obstacl-free trajectory planning result. If planning succeeds, open the menu and click "Generate Trajectory" to display the successfully planned trajectory. If planning fails, AIRLab will display the name of the failed point, and you can either modify that point or add transition points.
+Step 4: Perform obstacle-free trajectory planning for the fine positioning points. If fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, click the title "Fine Positioning," select and click "Obstacle-Avoidance Planning" from the menu that appears, and wait for the AIRLab obstacl-free trajectory planning result. If planning succeeds, open the menu and click "Generate Trajectory" to display the successfully planned trajectory. If planning fails, AIRLab will display the name of the failed point, and you can either modify that point or add transition points.
 
-Method for modifying a point: Go to the Point Information module, locate and select the point that failed planning, open the point information modification popup, modify it, and save.
-
-Method for adding a transition point: Select the point, click "Add Transition Point Before Current Point" in the small menu that appears, and the "Add Waypoint" popup will open, as shown in the figure below.
+Method for modifying a point: Go to the Point Information module, locate and select the point that failed planning, open the point information modification popup, modify it, and save.
 
 Step 5: Run the fine positioning program. Click the title "Fine Positioning," and in the menu that appears, select and click "Run Program."
 
-After completing the fine positioning program, if fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, please first click "ObstacleAvoidance Planning" in the fine positioning function menu. If the obstacleavoidance planning succeeds, click "Run Program" in the menu bar (which has already been enabled).
-
-After completing the fine positioning program, click the "Automatic Camera Poses" module. Options such as "Get Automatic Camera Poses", "Generate Collision-Free Trajectory", and "Generate Trajectory" will appear.
+After completing the fine positioning program, if fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, please first click "Obstacle-Avoidance Planning" in the fine positioning function menu. If the obstacle-avoidance planning succeeds, click "Run Program" in the menu bar (which has already been enabled).
 
 .. figure:: analysis/fine_locate_operate_ui.png
 	:align: center
@@ -1347,23 +1285,23 @@ After completing the fine positioning program, click the "Automatic Camera Poses
 
 The following is an introduction to the functions of each option:
 
-Get Automatic Photo Poses: Click to obtain the recommended finepositioning photo points for all welds that have been added to the weld list.
+- Get Automatic Photo Poses: Click to obtain the recommended finepositioning photo points for all welds that have been added to the weld list.
 
-Generate Photo Poses from ModelFree Construction Reference: Automatically retrieves the photo points taught during modelfree construction and uses them as the finepositioning photo points.
+- Generate Photo Poses from ModelFree Construction Reference: Automatically retrieves the photo points taught during modelfree construction and uses them as the finepositioning photo points.
 
-Set Automatic Photo Pose Filtering Strategy: Click to open the &quot;Photo Pose Filtering Settings&quot; page, where you can configure the filtering criteria for photo poses.
+- Set Automatic Photo Pose Filtering Strategy: Click to open the "Photo Pose Filtering Settings" page, where you can configure the filtering criteria for photo poses.
 
-Get Weld Recognition Data: Generates the welding program based on the finepositioning recognition results and the edited welds and their attributes.
+- Get Weld Recognition Data: Generates the welding program based on the finepositioning recognition results and the edited welds and their attributes.
 
-ObstacleAvoidance Planning: Click &quot;ObstacleFree Trajectory Planning&quot; to plan the welding program after collision detection.
+- ObstacleAvoidance Planning: Click "ObstacleFree Trajectory Planning" to plan the welding program after collision detection.
 
-Generate ObstacleFree Trajectory: Click &quot;Generate ObstacleFree Trajectory&quot; to generate the robot motion trajectory after collision detection in the 3D scene.
+- Generate ObstacleFree Trajectory: Click "Generate ObstacleFree Trajectory" to generate the robot motion trajectory after collision detection in the 3D scene.
 
-Run ObstacleFree Program: Click &quot;Run ObstacleFree Program&quot; to make the robot move according to the collisiondetected motion trajectory.
+- Run ObstacleFree Program: Click "Run ObstacleFree Program" to make the robot move according to the collisiondetected motion trajectory.
 
-Run Program: Click &quot;Run Program&quot; to make the robot execute the finepositioning program to perform fine positioning on the welds. After the program runs successfully, the final welding program will be generated in the &quot;Program&quot; module.
+- Run Program: Click "Run Program" to make the robot execute the finepositioning program to perform fine positioning on the welds. After the program runs successfully, the final welding program will be generated in the "Program" module.
 
-Stop Running: Click &quot;Stop Running&quot; to immediately halt the execution of the finepositioning program.
+- Stop Running: Click "Stop Running" to immediately halt the execution of the finepositioning program.
 
 After the user confirms the trajectory, they can choose to run the program or run the obstaclefree program to perform weld recognition. Once the automatic photo pose program has finished running, the final welding nodes will be generated under the Program module.
  
@@ -1449,11 +1387,11 @@ Point Information Module: Click the point in the point list, you can delete or e
 
 	Modification of point information
 
-Move to target point: user clicks “Move to target point” button, the robot end will move to the current edited point.
+1. Move to target point: user clicks “Move to target point” button, the robot end will move to the current edited point.
    
-Synchronize the current point position: When the user clicks the "Synchronize Current Position" button, the pose of the currently selected point target0 will be modified to the pose of the robot that is actually taught.
+2. Synchronize the current point position: When the user clicks the "Synchronize Current Position" button, the pose of the currently selected point target0 will be modified to the pose of the robot that is actually taught.
 
-Modify and save point position: The user modifies the point information, and then clicks the "Save Modify Point" button to modify the current point coordinates.
+3. Modify and save point position: The user modifies the point information, and then clicks the "Save Modify Point" button to modify the current point coordinates.
 
 
 Reference coordinate system
@@ -1466,13 +1404,13 @@ Reference coordinate system: click the reference coordinate system icon in the m
 
 	Reference Coordinate System Settings
 
+Select which coordinate system is the reference coordinate system, then set the coordinates of the reference coordinate system, select “Show” and click the “Set” button, the reference coordinate system will be displayed in the AIRLab 3D scene. Select “Do not show” and click “Set”, the displayed coordinate system will be hidden.
+
 .. figure:: analysis/69.png
 	:align: center
 	:width: 6in
 
 	Reference coordinate system page
-
-Select which coordinate system is the reference coordinate system, then set the coordinates of the reference coordinate system, select “Show” and click the “Set” button, the reference coordinate system will be displayed in the AIRLab 3D scene. Select “Do not show” and click “Set”, the displayed coordinate system will be hidden.
 
 AIRlab Gantry Welding System
 ----------------------------------
@@ -1577,10 +1515,7 @@ Gantry Movement Node: If the model construction process requires the gantry to 
 
 	Add Gantry Movement Node
 
-Extension Axis Movement Node: This node is used to set the robot's scanning angle and path. The interface provides five fixed scanning poses as well as a custom scanning pose option, as shown in the figure below.
-
-.. important::
-	The five fixed scanning poses are essentially custom poses as well; they can be understood as five commonly used scanning poses that have been preset for convenience.
+Extension Axis Movement Node: This node is used to set the robot's scanning angle and path. The interface provides five fixed scanning poses as well as a custom scanning pose option, as shown in the figure below. Note: The five fixed scanning poses are essentially custom poses as well; they can be understood as five commonly used scanning poses that have been preset for convenience.
 
 .. figure:: analysis/gantry_4.png
 	:align: center
@@ -1671,7 +1606,7 @@ When "About" is selected, clicking the button will display the current version a
 
 	AIRLab version information and release date display
 
-Log
+Log Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Logs are used to record the system running process and exception information, enabling quick problem location. Clicking this button opens a Log Management pop-up window.
 
@@ -2347,16 +2282,11 @@ Cycle Mode: There are two types,Continuous Cycle: Runs indefinitely. Fixed Cycle
 Cycle Count: This parameter only needs to be set when the cycle mode is Fixed Cycle. (Note: The cycle count cannot be set to 0.)
 
 .. important::
-	The cycle count cannot be set to 0.
-
-.. important::
 	Once the automatic cycle operation parameters are configured, they are automatically saved and loaded. If no changes are needed, simply import the workpiece registration template—the system will use the last saved settings without requiring repeated configuration.
 
 Step 2: Click the "One-Click Run" icon button in the AIRLab menu bar to start executing the Workpiece Registration Template Project, initiating workpiece recognition. The recognition process is shown in the figure below.
 
-The progress of workpiece recognition is displayed as shown in the figure below.Upon successful recognition, the matching score of the workpiece is shown Figure below.
-
-AIRLab then automatically searches for the corresponding welding project of the recognized workpiece. If the project exists in the specified path, it will be imported automatically,and terminal will show the path,as shown in the figure below.If recognition fails, AIRLab will display an error message and suggest corrective actions.
+The progress of workpiece recognition is displayed as shown in the figure below.Upon successful recognition, the matching score of the workpiece is shown Figure below.AIRLab then automatically searches for the corresponding welding project of the recognized workpiece. If the project exists in the specified path, it will be imported automatically,and terminal will show the path,as shown in the figure below.If recognition fails, AIRLab will display an error message and suggest corrective actions.
 
 .. important::
 	Welding projects must be placed in the /Data/Weld_template folder under the AIRLab directory.The welding project name must exactly match the workpiece name. For example, if the workpiece is named ZH-0-01-A, its corresponding welding project must be ZH-0-01-A.usd. If the welding project is not found in the specified path, AIRLab will fail to retrieve it and display a pop-up warning.
@@ -2400,16 +2330,14 @@ Step 4: After the waiting period ends, the next cycle begins. AIRLab automatical
 
 Step 5:AIRLab automatically controls the robot to repeat Step 4 based on the configured Cycle Mode and Cycle Count until all automatic welding cycles are completed，as shown in the figure below.
 
-.. important::
-	If a robot controller error or AIRLab error occurs during the cycle, the automatic operation stops immediately, requiring manual troubleshooting before resuming.
-
 .. figure:: analysis/106.png
 	:align: center
 	:width: 4.5in
 
 	Reaching the set number of cycles, ending the automatic loop operation
 
-The above outlines the usage method and steps for AIRLab's Automatic Cycle Operation function.
+.. important::
+	If a robot controller error or AIRLab error occurs during the cycle, the automatic operation stops immediately, requiring manual troubleshooting before resuming.
 
 User data backup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2425,35 +2353,15 @@ Click "Weld" → "User Data Backup" on the AIRLab menu bar. A "User Data Backup"
 
 First, select the "Data Backup and Restoration Type": either "Single Template Data" or "All Data". Once confirmed, you can proceed with the import or export operation.
 
-Export Function: 
+Export Function: If the data backup and restoration type is "All Data,click the "Export" button, and AIRLab will first write the version of the current software data package into the version.txt file for version matching verification during import. Then, AIRLab will proceed to copy the following data: Located in the Data folder under the executable file directory:The Work_template folder (storing workpiece registration templates);The Weld_template folder (storing welding template programs);The entity folder (storing workpiece and tool models);The database file Airlab_weld_process.db(storing user-created welding process data);Located in the data folder under the main directory:The output folder (for models).If the data backup and restoration type is "Single Template Data", you need to first open the template project in AIRLab, then click the "Export" button. AIRLab will package and compress the template and its dependent files, and place the output compressed file in the /Downloads directory of the main folder. The file name is the workpiece name with the .tar.gz extension, such as ZH-401-01-A.tar.gz. Similarly, AIRLab will write the version of the current single template data package into the single_version.txt document within the package for version matching verification.
 
-If the data backup and restoration type is "All Data,click the "Export" button, and AIRLab will first write the version of the current software data package into the version.txt file for version matching verification during import. Then, AIRLab will proceed to copy the following data:  
-
-Located in the Data folder under the executable file directory:
-
-- The Work_template folder (storing workpiece registration templates)  
-
-- The Weld_template folder (storing welding template programs)  
-
-- The entity folder (storing workpiece and tool models)  
-
-- The database file Airlab_weld_process.db(storing user-created welding process data)  
-
-Located in the data folder under the main directory:
-
-- The output folder (for models)   
-
-If the data backup and restoration type is "Single Template Data", you need to first open the template project in AIRLab, then click the "Export" button. AIRLab will package and compress the template and its dependent files, and place the output compressed file in the /Downloads directory of the main folder. The file name is the workpiece name with the .tar.gz extension, such as ZH-401-01-A.tar.gz. Similarly, AIRLab will write the version of the current single template data package into the single_version.txt document within the package for version matching verification.
-
-During the export process, AIRLab will display a pop-up window indicating that the data package is being exported, as shown in the figure below. If cancellation is needed, click the "Cancel Export" button in the pop-up.
+During the export process, AIRLab will display a pop-up window indicating that the data package is being exported, as shown in the figure below. If cancellation is needed, click the "Cancel Export" button in the pop-up.Once completed, AIRLab will show another pop-up confirming the export and displaying the export path of the data package, as shown in the figure below.
 
 .. figure:: analysis/108.png
 	:align: center
 	:width: 6in
 
 	User Single Template Data is currently being packaged and exported
-
-Once completed, AIRLab will show another pop-up confirming the export and displaying the export path of the data package, as shown in the figure below.
 
 .. figure:: analysis/109.png
 	:align: center
@@ -2462,9 +2370,7 @@ Once completed, AIRLab will show another pop-up confirming the export and displa
 	User Single Template Data export completed
 
 .. important::
-	If a user initiates the export function but any of the folders listed above do not exist, AIRLab will display a pop-up notification indicating the names and paths of the missing folders. The user must create these missing files or folders before proceeding with the export.
-
-Additionally, if the permissions for any of the specified folders or files are modified to restrict access or copying, AIRLab will fail to export and provide the file path where the error occurred. Please check the file permissions based on the error message, correct them, and retry. (In some cases, restarting the edge PC may be required for permission changes to take effect.)  
+	If a user initiates the export function but any of the folders listed above do not exist, AIRLab will display a pop-up notification indicating the names and paths of the missing folders. The user must create these missing files or folders before proceeding with the export.Additionally, if the permissions for any of the specified folders or files are modified to restrict access or copying, AIRLab will fail to export and provide the file path where the error occurrecd. Please check the file permissions based on the error message, correct them, and retry. (In some cases, restarting the edge PC may be required for permission changes to take effect.)
 
 The directory structure of the exported compressed package is shown in the figure below: 
 
@@ -2480,11 +2386,7 @@ The directory structure of the exported compressed package is shown in the figur
 
 	The directory structure of the complete data package
 
-Import Function:Click the "Select File" button to choose the data package to be imported (ensure the directory structure of the data package matches the one shown in the figure below). Then, click the "Import" button.  
-
-AIRLab will first verify the version number in the version.txt file within the imported data package. If the version numbers match, the system will proceed with importing the data package contents.  
-
-If the version numbers do not match, a pop-up message will appear, notifying the user of the version inconsistency and indicating that the data is incompatible and cannot be imported, as shown in the figure below. 
+Import Function:Click the "Select File" button to choose the data package to be imported (ensure the directory structure of the data package matches the one shown in the figure below). Then, click the "Import" button.AIRLab will first verify the version number in the version.txt file within the imported data package. If the version numbers match, the system will proceed with importing the data package contents.If the version numbers do not match, a pop-up message will appear, notifying the user of the version inconsistency and indicating that the data is incompatible and cannot be imported, as shown in the figure below.
 
 .. figure:: analysis/111.png
 	:align: center
