@@ -103,11 +103,11 @@ See Table 3-1 for a description of the specific functions of the view.
 
 Window
 ~~~~~~~~~~~~~~~~~~~
-The "Window" menu contains six secondary options: "Software/Firmware Upgrade", "About", "Version Verification", "Log", "Virtual Camera", and "TCF and Camera Hand-Eye Calibration",and "Data source export". Clicking on different options will trigger different functional pop-up windows in AIRLab. For detailed functions and usage instructions, refer to the pop-up window introduction in Section 3.6.
+The "Window" menu contains "Software/Firmware Upgrade", "About", "Version Verification", "Log", "Virtual Camera", "TCF and Camera Hand-Eye Calibration", "Data Source Export", and "Custom Icon". Clicking an option opens the corresponding AIRLab function dialog box. For detailed functions and instructions, see the dialog box descriptions in Section 3.7.
 
-.. figure:: analysis/8.png
+.. figure:: analysis/menu_funcs_1.png
 	:align: center
-	:width: 3.5in
+	:width: 2.5in
 
 	AIRLab Menu Bar-Window
 
@@ -866,7 +866,7 @@ After importing the workpiece or successfully constructing the workpiece without
 
 	Weld Seam Editing Scene
 
-Click the plus sign under Weld Editing to open the weld seam selection pop-up. This pop-up categorizes all currently identified weld seams into "Flat Welding" and "Vertical Welding", as shown in the figure below.
+Click the plus sign under Weld Editing, then click "Batch Add Weld Seams" to open the Weld Seam Selection dialog box. This dialog box categorizes all currently identified weld seams into "Flat Welding" and "Vertical Welding", as shown below.
 
 .. figure:: analysis/all_not_selected.png
 	:align: center
@@ -899,6 +899,54 @@ On the right side of each weld seam number, there is a properties button. Clicki
 	:width: 6in
 
 	Weld Seam Add Properties – Arc Properties
+
+AIRLab also provides a continuous weld seam option, which treats multiple connected weld seams as one complete continuous weld seam for subsequent operations. To add a continuous weld seam, click the plus sign under Weld Editing, then click "Add Continuous Weld Seam". The Add Continuous Weld Seam dialog box opens, as shown below.
+
+.. figure:: analysis/ContinueWeld_1.png
+	:align: center
+	:width: 6in
+
+	Add Continuous Weld Seam Dialog Box
+
+Select the desired continuous weld seam numbers by selecting their check boxes. AIRLab disables weld seams that are not connected to the selected weld seam and leaves only the connected weld seams available for selection.
+
+.. figure:: analysis/ContinueWeld_2.png
+	:align: center
+	:width: 6in
+
+	Continuous Weld Seam Selection
+
+After selecting the desired continuous weld seams, click "Complete Selection". If a weld seam was selected by mistake, click "Reset Selection" to select the weld seams again. The selected weld seams are added to the "Selected Weld Seams" list below.
+
+.. figure:: analysis/ContinueWeld_3.png
+	:align: center
+	:width: 6in
+
+	Continuous Weld Seam Selection Completed
+
+You can bind welding processes to the weld seams in the selection list and set the reverse parameter for individual weld seams, as shown below.
+
+.. figure:: analysis/ContinueWeld_4.png
+	:align: center
+	:width: 6in
+
+	Continuous Weld Seam Addition - Parameter Editing
+
+After editing the continuous weld seam parameters, click "Confirm Add". The continuous weld seam is added to the weld seam list, as shown below.
+
+.. figure:: analysis/ContinueWeld_5.png
+	:align: center
+	:width: 6in
+
+	Continuous Weld Seam Added
+
+After a continuous weld seam has been added, if you open the batch-add dialog box again, the check boxes of the already-added weld seams display the corresponding status and cannot be selected for duplicate addition.
+
+.. figure:: analysis/ContinueWeld_6.png
+	:align: center
+	:width: 6in
+
+	Duplicate Addition Status
 
 After all weld seams have been added, you can click the "Filter" icon on the "Weld Editing" header to filter the weld seams and uniformly set parameters for the added seams, as shown below.
 
@@ -1197,13 +1245,16 @@ Step 1: First, click "Set Automatic Photo Pose Filtering Strategy" to enter the 
 
 Whether to enable filtering: After filtering is enabled, AIRLab will perform further rational screening on the algorithmrecommended finepositioning photo poses. It is recommended to keep this enabled.
 
-Whether to enable joint-angle filtering: This serves the same purpose as the "Enable joint-angle filtering" option in the weld selection popup – it prevents the robot from experiencing large pose changes during the finepositioning photo capture process, which could lead to collisions or unreachable states. Method: Move the robot to a position near the first weld, adjust the robot joints to the photocapture pose, and check the current joint values of J3 and J5 displayed on the right-side interface of AIRLab. Based on these values, determine the selections for "J3 Joint Angle" and "J5 Joint Angle" in the figure.
+Whether to enable joint-angle filtering: This serves the same purpose as the "Enable joint-angle filtering" option in the weld selection popup – it prevents the robot from experiencing large pose changes during the fine
+positioning photo capture process, which could lead to collisions or unreachable states. Method: Move the robot to a position near the first weld, adjust the robot joints to the photo
+capture pose, and check the current joint values of J3 and J5 displayed on the right-side interface of AIRLab. Based on these values, determine the selections for "J3 Joint Angle" and "J5 Joint Angle" in the figure.
 
 Whether to enable collisiondetection filtering: To avoid the recommended photo poses from actually colliding with the workpiece or the robot itself, it is recommended to enable this filtering.
 
 Whether to enable pathplanning filtering: When this filtering is enabled, AIRLab will reference the previous photo point to filter the current photo point, ensuring that a collisionfree path exists between the two points. It is recommended to enable this.
 
-Step 2: After the filtering parameters are configured, click the "Get Automatic Photo Poses" button. AIRLab will compute and provide the fine-positioning photo points that meet the filtering criteria. The successfully filtered photo points will be automatically added to the finepositioning list. For the points that fail the filtering, the interface will display the failure reason along with the corresponding weld number (solutions are explained in Step 3), as shown in the figure below.
+Step 2: After the filtering parameters are configured, click the "Get Automatic Photo Poses" button. AIRLab will compute and provide the fine-positioning photo points that meet the filtering criteria. The successfully filtered photo points will be automatically added to the fine
+positioning list. For the points that fail the filtering, the interface will display the failure reason along with the corresponding weld number (solutions are explained in Step 3), as shown in the figure below.
 
 .. figure:: analysis/61.png
 	:align: center
@@ -1491,7 +1542,8 @@ Master Station Builds Global Map
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After successful calibration of the LiDAR and gantry frame, open "Welding" → "Welding Feature Parameter Configuration" from the menu bar, and select "SLAM Mapping". For detailed operation steps, please refer to section 3.7.26 of this manual.
 
-After the welding features are successfully delivered, start creating the model construction program. First, open the modelfree construction settings page, as shown in the figure below, and select the acquisition device type according to the actual sensor type.
+After the welding features are successfully delivered, start creating the model construction program. First, open the model
+free construction settings page, as shown in the figure below, and select the acquisition device type according to the actual sensor type.
 
 .. figure:: analysis/gantry_1.png
 	:align: center
@@ -1688,9 +1740,9 @@ After the upgrade progress reaches 100%, click Confirm and restart the software,
 
 If the upgrade package is corrupted or incomplete, the interface will display an upgrade failure message, and the AIRLab version will be rolled back to its state prior to the upgrade. After the rollback is completed, click Confirm to restart the software, recheck the upgrade package, and perform the update again.
 
-.. figure:: analysis/update_error_backup.png
-	:align: center
-	:width: 6in
+.. figure-row:: analysis/software_upgrade_failure.png analysis/software_upgrade_rollback_completed.png
+	:alt-1: AIRLab software upgrade failure feedback
+	:alt-2: AIRLab software upgrade rollback completed
 
 	AIRLab Software Upgrade Failure Interface Feedback
 
@@ -2054,6 +2106,8 @@ Delete: Select "Delete", choose a cylindrical filling process name, and then cli
 
 Welding seam edit pop-up window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Non-continuous Weld Seam Editing
+
 Click the "weld seam" module. After adding a weld seam, click the edit icon—this will bring up the Weld Seam Editing pop-up window in the 3D scene, as shown in the figure. Below is an introduction to all editing items:
 
 .. figure:: analysis/weldEdit1.png
@@ -2118,19 +2172,41 @@ For weld seams that require binding to a welding process:
 
 (2)Select the type of welding process to bind and the specific welding process (parameters, procedures, etc.).
 
+- Continuous Weld Seam Editing
+
+As with a non-continuous weld seam, select the target weld seam and click the edit icon to open the corresponding Weld Seam Editing dialog box, as shown below.
+
+.. figure:: analysis/ContinueWeld_edit_1.png
+	:align: center
+	:width: 5in
+
+	Weld Seam Editing Dialog Box - Continuous Weld Seam
+
+The parameters have the same meanings as those for a non-continuous weld seam. When editing an entire continuous weld seam, however, only the approach and retract points of the complete weld seam can be edited. To edit an individual weld seam segment, select "Yes" for "Enable Single-Segment Editing". The interface changes as shown below.
+
+.. figure:: analysis/ContinueWeld_edit_2.png
+	:align: center
+	:width: 5in
+
+	Continuous Weld Seam - Single-Segment Editing
+
+The editing parameters are then the same as those for a non-continuous weld seam, and the editing result for the individual segment is updated accordingly in the 3D scene.
+
 Weld Seam Inference Function
 
-Use Cases:1. The camera interferes with the workpiece, fixture, or environment, resulting in incomplete point cloud data.2. The weld seam features of the workpiece are not obvious or local features are missing, making some weld seams unable to be effectively recognized.
+Usage Scenario: The weld inference function serves as a supplementary method to camera-based recognition. Camera-based recognition should be prioritized and used only in scenarios where it is restricted and the system error is relatively small. It is applicable in the following cases:
 
-Usage Method:When editing the weld seam, turn on this function button. During fine positioning, there is no need to take photos of the weld seam again.
+1. The camera interferes with the workpiece, fixture, or surrounding environment, making it impossible to fully acquire the point cloud data of the weld seam area.
+2. The weld seam features are not distinct or partial feature loss exists on the workpiece, resulting in some weld seams not being effectively recognized via camera.
 
-Precautions:
+Usage Method: When editing the weld seam, turn on this function button. During fine positioning, there is no need to take photos of the weld seam again.
 
-1. It must be ensured that there are more than two non-collinear straight weld seams in the weld seam editing list that have been recognized.
+.. admonition:: Precautions
+   :class: attention
 
-2. If the number of inferred weld seams exceeds half of the total number of edited weld seams (i.e., the inference ratio is too large), welding accuracy may be affected.
-
-3. The Lua trajectory of an inferred weld seam is purple, while that of a recognized weld seam is red. In addition, in the generated Lua program nodes and points, all inferred weld seams will contain the "_Inference" identifier, as shown in the figure below.
+   1. It must be ensured that there are more than two non-collinear straight weld seams in the weld seam editing list that have been recognized;
+   2. If the number of inferred weld seams exceeds half of the total number of edited weld seams (i.e., the inference ratio is too large), welding accuracy may be affected;
+   3. The Lua trajectory of an inferred weld seam is purple, while that of a recognized weld seam is red. In addition, in the generated Lua program nodes and points, all inferred weld seams will contain the ``_Inference`` identifier, as shown in the figure below.
 
 .. figure:: analysis/weldedit1_1.png
 	:align: center
@@ -2471,17 +2547,17 @@ Step 2: Move the external axis to the position required to complete welding for 
 
 Step 3: Select the project file corresponding to the welding task you wish to run at this external-axis position. Click “Select” to open the file chooser, then click “Open” to confirm, as shown below.
 
-.. figure:: analysis/multiple_station_usda_import.png
-	:align: center
-	:width: 6in
+.. figure-row:: analysis/multiple_station_project_file_selection.png analysis/multiple_station_project_path_result.png
+	:alt-1: Multi-station automatic operation - project file selection dialog
+	:alt-2: Multi-station automatic operation - selected project path result
 
 	Project path selection and result
 
 Step 4: Choose the desired modification mode: Add, Modify, or Delete. After confirming your choice, click “OK” to apply. To modify, select the target entry and click “OK.” Deletion is similar. See below.
 
-.. figure:: analysis/multiple_station_add_delete.png
-	:align: center
-	:width: 6in
+.. figure-row:: analysis/multiple_station_add_result.png analysis/multiple_station_modify_result.png
+	:alt-1: Multi-station automatic operation - added setting result
+	:alt-2: Multi-station automatic operation - modified setting result
 
 	Add and Modify
 
@@ -2741,25 +2817,25 @@ A AIRLab provides a calibration method specifically for extended axes of the typ
 
 Step 1: First, open the "Extended Axis Coordinate System Calibration" interface mentioned earlier. Click the "Clear Coordinate System" button, and confirm the "Whether the currently applied tool coordinate system has been calibrated" option. The prerequisite for calibrating the external axis is that the tool coordinate system used in the current application has been correctly calibrated. After confirmation, an "Inquiry" pop-up window will appear. Once confirmed, the calibration setup will officially begin.
 
-.. figure:: analysis/exaxis_calibration_ui_popup.png
-	:align: center
-	:width: 6in
+.. figure-row:: analysis/exaxis_calibration_setup.png analysis/exaxis_calibration_confirmation.png
+	:alt-1: Extended axis coordinate system calibration - calibration setup interface
+	:alt-2: Extended axis coordinate system calibration - start-calibration confirmation dialog
 
 	Calibration interface (left) and Inquiry dialog (right)
 
 Step 2: Click the "Servo Enable" button to activate the extended axis. If successful, the button will turn green; otherwise, it will turn red and an error pop-up will be displayed. If the enable operation is successful, move to an appropriate position and click the "Zero Point Setting" button to complete the initial setup. The process is illustrated in the figure below.
 
-.. figure:: analysis/exaxis_enable.png
-	:align: center
-	:width: 6in
+.. figure-row:: analysis/exaxis_servo_enabled.png analysis/exaxis_zero_set.png
+	:alt-1: Extended axis coordinate system calibration - servo enabled
+	:alt-2: Extended axis coordinate system calibration - zero point set
 
 	Servo enable and zero point setting
 
 Step 3: Keep the extended axis stationary and adjust the posture of the robotic arm's end effector so that the end tool is aligned with a fixed point on the extended axis. Click "Set Point 1." Once the button changes to "Modify Point 1," the setting is complete. If you need to modify this point, repeat the above steps. Similarly, after adjusting the tool posture (with an angle of approximately 30°), complete the "Set Point 2" process. The entire procedure is illustrated in the figure below.
 
-.. figure:: analysis/exaxis_setpoint1_2.png
-	:align: center
-	:width: 6in
+.. figure-row:: analysis/exaxis_point1_set.png analysis/exaxis_point2_set.png
+	:alt-1: Extended axis coordinate system calibration - Point 1 set
+	:alt-2: Extended axis coordinate system calibration - Point 2 set
 
 	Setting Point 1 and Point 2
 
@@ -2793,9 +2869,9 @@ under [Exaxis_coord_value_list]. In this example, Exaxis1 was calibrated, so the
 
 If the calibrated external axis coordinate system is correct (with RX, RY, and RZ values close to 0), click the "Apply" button to send the calibrated external axis coordinate system to the robot controller for application.
 
-.. figure:: analysis/exaxis_cal_res_save.png
-	:align: center
-	:width: 6in
+.. figure-row:: analysis/exaxis_saved_config.png analysis/exaxis_settings_result.png
+	:alt-1: Extended axis coordinate system calibration result - local configuration file
+	:alt-2: Extended axis coordinate system calibration result - Extended Axis Settings interface
 
 	Saving Extended Axis Coordinate System Calibration Result
 
@@ -3477,6 +3553,26 @@ Currently, AIRLab provides three modes: Standalone, Master Station, and Slave St
 
 	Software Mode Settings
 
+The system statuses monitored by AIRLab vary with the selected mode. In the default mode, AIRLab monitors the robot and camera at the local station. In Master Station mode, AIRLab monitors the external slave-station status, the gantry-device status at the master station, and the robot and camera status at the slave station. In Slave Station mode, AIRLab monitors the local robot and camera status and the workstation status at the master station, as shown below.
+
+.. figure:: analysis/gantry_device_state_1.png
+	:align: center
+	:width: 5in
+
+	System Status - Default Mode
+
+.. figure:: analysis/gantry_device_state_2.png
+	:align: center
+	:width: 5in
+
+	System Status - Master Station Mode
+
+.. figure:: analysis/gantry_device_state_3.png
+	:align: center
+	:width: 5in
+
+	System Status - Slave Station Mode
+
 Collision Model Parametric Completion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The Collision Model Parametric Completion function is primarily aimed at modeling collision models for relatively complex large workpieces. The operation steps are as follows:
@@ -3502,3 +3598,54 @@ After setting the parameters, click the "Set Properties" button, then click the 
 
 .. important::
 	The modeling of model bodies will affect the effectiveness of the obstacle avoidance function in subsequent steps. Please ensure that the model bodies are as consistent as possible with the actual workpiece structure.
+
+Custom Icon Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Click "Window" > "Custom Icon" to open the Custom Icon dialog box. Enter the administrator password to access the settings page, as shown below.
+
+.. figure:: analysis/custom_icon_1.png
+	:align: center
+	:width: 4in
+
+	Custom Icon - Administrator Password
+
+After entering the correct administrator password, the Custom Icon settings page opens, as shown below.
+
+.. figure:: analysis/custom_icon_2.png
+	:align: center
+	:width: 4in
+
+	Custom Icon - Settings Page
+
+Click "Select Path" to open the dialog box for selecting a custom icon package (.zip), as shown below.
+
+.. figure:: analysis/custom_icon_3.png
+	:align: center
+	:width: 4in
+
+	Custom Icon - Package Selection
+
+After selecting the package, the path to the selected custom icon package is displayed in the input field, as shown below.
+
+.. figure:: analysis/custom_icon_4.png
+	:align: center
+	:width: 4in
+
+	Custom Icon - Package Path
+
+After selecting the package, click "Save Config" to apply the custom icons. The application title-bar icon and desktop shortcut icon change to the selected custom icons, as shown below.
+
+.. figure:: analysis/custom_icon_6.png
+	:align: center
+	:width: 6in
+
+	Custom Icon - Custom Icon Mode
+
+To restore the default AIRLab icons, click "Reset Config" and complete the confirmation. The application title-bar icon and desktop icon return to the AIRLab defaults, as shown below.
+
+.. figure:: analysis/custom_icon_5.png
+	:align: center
+	:width: 6in
+
+	Custom Icon - Default Icon Mode

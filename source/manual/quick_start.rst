@@ -29,9 +29,9 @@ This High-Precision 3D Camera utilizes grating-structured light projection and
 
 	Standard version
 
-.. figure:: quick_start/4.png
-	:align: center
-	:width: 3in
+.. figure-row:: quick_start/camera_protective_cover_closed.png quick_start/camera_protective_cover_open.png
+	:alt-1: Version with protective cover - cover closed
+	:alt-2: Version with protective cover - cover open
 
 	Version with protective cover
 
@@ -467,25 +467,26 @@ Step 1: Open the “Manual Tool Coordinate System Calibration” interface as me
 
 Step 2: Control the robot arm to align the end tool with the tip of the calibration tool (fixed reference point) in a certain posture. After the robot arm moves into position, click the "Set Point 1" button on the interface. When the button changes to "Modify Point 1", the point is set successfully. To modify the set point, click "Modify Point 1" and repeat the steps. The process is shown in the figure below.
 
-.. figure:: quick_start/14.png
-	:align: center
-	:width: 6in
+.. figure-row:: quick_start/tool_calibration_point1_pose.png quick_start/tool_calibration_point1_set.png
+	:alt-1: Tool coordinate system six-point calibration - Point 1 robot pose
+	:alt-2: Tool coordinate system six-point calibration - Point 1 calibration interface
 
 	Setting Point 1
 
 Step 3: Change the posture of the robot arm, again pointing the tool to the fixed reference point. After the robot arm moves into position, click the “Set Point 2” button. When the button changes to “Modify Point 2”, the point is successfully set. To change the point, click “Modify Point 2” and repeat the process. See the figure below.
 
-.. figure:: quick_start/15.png
-	:align: center
-	:width: 6in
+.. figure-row:: quick_start/tool_calibration_point2_pose.png quick_start/tool_calibration_point2_set.png
+	:alt-1: Tool coordinate system six-point calibration - Point 2 robot pose
+	:alt-2: Tool coordinate system six-point calibration - Point 2 calibration interface
 
 	Setting Point 2
 
 Step 4: Change the posture of the robot arm once again, pointing the tool to the fixed reference point. After the robot arm moves into position, click the “Set Point 3” button. When the button changes to “Modify Point 3”, the point is successfully set. To change the point, click “Modify Point 3” and repeat the process.After the setup of Point 3 is completed, the calibration point diagram on the page will switch to Point 4. Simply follow the diagram to start setting up Point 4. See the figure below.
 
-.. figure:: quick_start/16.png
-	:align: center
-	:width: 6in
+.. figure-row:: quick_start/tool_calibration_point3_pose.png quick_start/tool_calibration_point3_set.png quick_start/tool_calibration_point4_guide.png
+	:alt-1: Tool coordinate system six-point calibration - Point 3 robot pose
+	:alt-2: Tool coordinate system six-point calibration - Point 3 calibration interface
+	:alt-3: Tool coordinate system six-point calibration - Point 4 pose guide
 
 	Setting Point 3
 
@@ -494,25 +495,27 @@ Step 5: Adjust the posture of the robot arm so that the tool end is vertically a
 .. important::
 	When adjusting the posture of Point 4, the bent direction of the welding torch must be aligned with the X or Y axis direction of the robot base coordinate system! In this way, in Step 6, a single movement in the X or Y axis direction will yield Point 5.
 
-.. figure:: quick_start/17.png
-	:align: center
-	:width: 6in
+.. figure-row:: quick_start/tool_calibration_point4_pose.png quick_start/tool_calibration_point4_set.png quick_start/tool_calibration_point5_guide.png
+	:alt-1: Tool coordinate system six-point calibration - Point 4 robot pose
+	:alt-2: Tool coordinate system six-point calibration - Point 4 calibration interface
+	:alt-3: Tool coordinate system six-point calibration - Point 5 pose guide
 
 	Setting Point 4
 
 Step 6: Keep the robot arm's posture unchanged, use base coordinate system movement to move a certain distance horizontally in the direction of the welding torch's bend. This direction is the positive X-axis direction of the set tool coordinate system.. After the robot arm moves into position, click the “Set Point 5” button. When the button changes to “Modify Point 5”, the point is successfully set. To change, click “Modify Point 5” and repeat the process.After the setup of Point 5 is completed, the calibration point diagram on the page will switch to Point 6. Simply follow the diagram to start setting up Point 6. See the figure below.
 
-.. figure:: quick_start/18.png
-	:align: center
-	:width: 6in
+.. figure-row:: quick_start/tool_calibration_point5_pose.png quick_start/tool_calibration_point5_set.png quick_start/tool_calibration_point6_guide.png
+	:alt-1: Tool coordinate system six-point calibration - Point 5 robot pose
+	:alt-2: Tool coordinate system six-point calibration - Point 5 calibration interface
+	:alt-3: Tool coordinate system six-point calibration - Point 6 pose guide
 
 	Setting Point 5
 
 Step 7: Return to the fixed reference point and move vertically upward. This direction defines the positive Z-axis of the tool coordinate system. The positive Y-axis is determined according to the right-hand rule. After the robot arm moves into position, click the “Set Point 6” button. When the button changes to “Modify Point 6”, the point is successfully set. To modify, click “Modify Point 6” and repeat the process. See the figure below.
 
-.. figure:: quick_start/19.png
-	:align: center
-	:width: 6in
+.. figure-row:: quick_start/tool_calibration_point6_pose.png quick_start/tool_calibration_point6_set.png
+	:alt-1: Tool coordinate system six-point calibration - Point 6 robot pose
+	:alt-2: Tool coordinate system six-point calibration - Point 6 calibration interface
 
 	Setting Point 6
 
@@ -526,9 +529,9 @@ Step 8: After completing the above steps, click the “Calculate” button to co
 
 Step 9: After verifying the calculation result, click the “Save” button. The calibration result will be saved to the local path:~/AIRLabExe/Data/import_config/Cleargun_cutwire_settings.config under the section [Tool_coord_value_list]. In this example, tool3 is calibrated, so the saved entry will be:<3 = "calibration result">At the same time, the calibrated tool3 option will also appear in the Tool Settings. See the figure below.
 
-.. figure:: quick_start/21.png
-	:align: center
-	:width: 6in
+.. figure-row:: quick_start/tool_calibration_saved_config.png quick_start/tool_calibration_tool_settings.png
+	:alt-1: Tool coordinate system calibration result - local configuration file
+	:alt-2: Tool coordinate system calibration result - Tool Settings interface
 
 	Saving Tool Coordinate System Result
 
