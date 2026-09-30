@@ -1,27 +1,27 @@
-Version V2.3.0
+Version V2.4.0
 ===================
-Date: 2026-08-26
+Date: 2026-09-28
 
 .. toctree::
     :maxdepth: 5
 
 
-- Added support for continuous weld seams;
-    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Weld Seam Editing Dialog
+- Added support for teaching weld seams;
+    Path: AIRLab Software Analysis -> Engineering Module Analysis -> Weld Editing
 
-    Description: Added support for continuous weld seams, allowing multiple connected weld seam segments to be grouped together for configuration and welding operations.
+    Description: Teaching weld seams can now be created by manually teaching and recording points without using visual recognition.
 
-- Added custom LOGO functionality;
-    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Custom Icon Settings
+- Added support for teaching weld seam editing;
+    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Weld Seam Editing Dialog Box
 
-    Description: Added support for customizing the LOGO displayed in the AIRLab title bar and the desktop shortcut icon.
+    Description: The editing dialog box now supports teaching weld seams and provides the corresponding entry point and editing workflow.
 
-- Optimized device status monitoring;
-    Path: AIRLab Software Analysis -> Pop-ups and Other Pages -> Software Mode Settings
+- Added historical-data secondary recognition for spline model-free construction and fine positioning, as well as supplementary capture for model-free construction;
+    Path: AIRLab Software Analysis -> Engineering Module Analysis -> Fine Positioning
 
-    Description: Added device status monitoring for multiple software modes, enabling more effective monitoring of the devices required in different modes.
+    Description: An AIRLab spline template program now requires only one complete acquisition and recognition cycle. Historical data can be reused for subsequent reconstruction and recognition, avoiding repeated robot motion and image capture.
 
-- Optimized the description of the Window menu;
-    Path: AIRLab Software Analysis -> Menu Bar -> Window
+- Optimized the import of surface-based IGES visualization models;
+    Path: AIRLab Software Analysis -> Engineering Module Analysis -> Import Module
 
-    Description: Added descriptions for newly introduced features.
+    Description: Added support for importing models as surface models and for importing OBJ models, improving visual quality and import speed.

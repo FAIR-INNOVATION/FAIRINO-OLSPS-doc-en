@@ -460,7 +460,7 @@ If you need to modify the appearance position of the tool, modify the coordinate
 
 You can delete the currently imported tool model by clicking the “Delete” button on the tool settings page.
 
-- Import artifacts: Select the artifact,AIRLab interface will display the artifact setup page.
+- Import Workpiece: Select Workpiece, and AIRLab displays the Workpiece Settings page.
 
 .. figure:: analysis/36.png
 	:align: center
@@ -468,17 +468,17 @@ You can delete the currently imported tool model by clicking the “Delete” bu
 
 	Workpiece Setting Page
 
-Click “Open” button, select the workpiece model to be imported under the corresponding path, click “Open”, the imported workpiece model will be displayed in the 3D scene, and the workpiece will be imported successfully.
+Click "Open", select the workpiece model to import from the corresponding path, and then click "Open" again. The imported workpiece model, model weld seams, and surface-structure information are displayed in the 3D scene, indicating that the workpiece has been imported successfully.
+
+.. figure:: analysis/obj_work.png
+	:align: center
+	:width: 6in
+
+	Workpiece Imported Successfully
 
 Set workpiece coordinate system: After setting workpiece coordinate system in the workpiece setting page, click “Save Workpiece Coordinate System” to set workpiece coordinate system.
 
 Delete workpiece: Click “Delete Workpiece” button in the workpiece setting page to delete the imported workpiece in the current 3D scene.
-
-.. figure:: analysis/37.png
-	:align: center
-	:width: 6in
-
-	Imported artifacts successfully
 
 - Import Extended Axis: Select the Extended Axis.The AIRLab interface displays the Extended Axis Settings page, select the Extended Axis and click Import.
 
@@ -773,7 +773,7 @@ To edit a node, select it and click the pencil-shaped "Edit" icon. The correspon
 
 If model-free construction parameters need to be configured before running the program, click the first icon button to open the Model-Free Construction Settings pop-up. Modify the parameters under "Advanced Parameters", and then click "Set Parameters" to issue the new parameters.
 
-If improper model construction parameters cause weld seam acquisition to fail, set the parameters and then click "Rebuild Model" to reacquire the model data using the updated parameters.
+If unreasonable model construction parameter settings cause weld seam acquisition to fail, configure the parameters and then click "Rebuild Model". AIRLab issues the model-free historical-data secondary-recognition command and reacquires the model data using the updated parameters.
 
 .. figure:: analysis/add_noModel_para.png
 	:align: center
@@ -947,6 +947,85 @@ After a continuous weld seam has been added, if you open the batch-add dialog bo
 	:width: 6in
 
 	Duplicate Addition Status
+
+The same plus-sign menu now also provides an "Add Teaching Weld Seam" option. A teaching weld seam is manually taught and does not undergo visual recognition. Its addition dialog box is shown below.
+
+.. figure:: analysis/tech_weld_1.png
+	:align: center
+	:width: 8in
+
+	Add Teaching Weld Seam Dialog Box
+
+The steps for adding teaching weld seams are as follows. If a workpiece has already been imported, the workpiece name is filled in automatically; otherwise, enter a name first. Then move the robot to a suitable photographing pose (or select a recorded point from the Point Library), and click "Acquire Features and Points" to photograph and verify the current feature, as shown below.
+
+.. figure:: analysis/tech_weld_2.png
+	:align: center
+	:width: 8in
+
+	Teaching Weld Seam Feature Acquisition
+
+Click the plus button to the right of "Teaching Weld Seam List" to add the weld seams to be used for subsequent welding. Because these weld seams have not yet been configured, the Status column displays them in red as incomplete, as shown below.
+
+.. figure:: analysis/tech_weld_3.png
+	:align: center
+	:width: 5in
+
+	Adding Teaching Weld Seams to the List
+
+Select the target weld seam in the list, and click "Set Points" below.
+
+.. figure:: analysis/tech_weld_4.png
+	:align: center
+	:width: 5in
+
+	Teaching Weld Seam Point Setting
+
+The "Set Teaching Points" dialog box opens. Use the Weld Seam Type drop-down list to select the type of weld seam to teach. Straight and arc teaching weld seams are currently supported, as shown below.
+
+.. figure:: analysis/tech_weld_5.png
+	:align: center
+	:width: 5in
+
+	Teaching Weld Seam Setting - Straight Line
+
+.. figure:: analysis/tech_weld_6.png
+	:align: center
+	:width: 5in
+
+	Teaching Weld Seam Setting - Arc
+
+The icons above the point list are, from left to right: 1. Record Current Point, 2. Move to Selected Point, 3. Modify Point, and 4. Delete Point. For subsequent operations, select a point in the list below and click the corresponding icon to add, delete, or modify the point. The completed point settings are shown below.
+
+.. figure:: analysis/tech_weld_7.png
+	:align: center
+	:width: 5in
+
+	Teaching Weld Seam Point Setting - Straight Line
+
+.. figure:: analysis/tech_weld_8.png
+	:align: center
+	:width: 5in
+
+	Teaching Weld Seam Point Setting - Arc
+
+.. important::
+	Note: A straight line requires two taught points: a start point and an end point. An arc requires three taught points: a start point, an intermediate point, and an end point.
+
+After completing the point settings, click "Save" below. The status of every weld seam whose points have been set changes to green and is shown as completed, as illustrated below.
+
+.. figure:: analysis/tech_weld_9.png
+	:align: center
+	:width: 5in
+
+	Completed Status in the Teaching Weld Seam List
+
+After confirming that all teaching weld seams have been configured, click "Confirm Settings" below to finish adding them. The teaching weld seams are also added to the Weld Editing program tree, and are displayed as dashed lines in the scene, as shown below.
+
+.. figure:: analysis/tech_weld_10.png
+	:align: center
+	:width: 5in
+
+	Teaching Weld Seam Addition Completed
 
 After all weld seams have been added, you can click the "Filter" icon on the "Weld Editing" header to filter the weld seams and uniformly set parameters for the added seams, as shown below.
 
@@ -1320,15 +1399,31 @@ If you need to modify a node in the fine positioning list, select the node in th
 
 	Fine Positioning Node Modification – Camera Pose Node
 
+For a teaching-weld photo point, click Edit to open the corresponding editing page shown below. The point can likewise be set using either "Real-Time Pose" or a point from the "Point Library". After confirming the point, click "Confirm Modification" to complete the change.
+
+.. figure:: analysis/fine_pose_edit1.png
+	:align: center
+	:width: 6in
+
+	Fine Positioning Node Modification - Teaching Weld Seam Photo Point
+
 Step 4: Perform obstacle-free trajectory planning for the fine positioning points. If fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, click the title "Fine Positioning," select and click "Obstacle-Avoidance Planning" from the menu that appears, and wait for the AIRLab obstacl-free trajectory planning result. If planning succeeds, open the menu and click "Generate Trajectory" to display the successfully planned trajectory. If planning fails, AIRLab will display the name of the failed point, and you can either modify that point or add transition points.
 
 Method for modifying a point: Go to the Point Information module, locate and select the point that failed planning, open the point information modification popup, modify it, and save.
 
 Step 5: Run the fine positioning program. Click the title "Fine Positioning," and in the menu that appears, select and click "Run Program."
 
+After the fine positioning program has run, if you need to obtain the target fine-positioning result again, click the Fine Positioning Parameter node in the program tree and select "Recognize Again" from the menu. AIRLab then issues the fine-positioning historical-data secondary-recognition command and obtains the fine-positioning result again, as shown below.
+
+.. figure:: analysis/fine_pose_recog.png
+	:align: center
+	:width: 6in
+
+	Fine Positioning Historical-Data Secondary Recognition
+
 After completing the fine positioning program, if fine positioning obstacl-avoidance planning was enabled in the "Pose Calculation Strategy Settings" popup, please first click "Obstacle-Avoidance Planning" in the fine positioning function menu. If the obstacle-avoidance planning succeeds, click "Run Program" in the menu bar (which has already been enabled).
 
-.. figure:: analysis/fine_locate_operate_ui.png
+.. figure:: analysis/fine_pose1.png
 	:align: center
 	:width: 3.5in
 
@@ -1341,6 +1436,8 @@ The following is an introduction to the functions of each option:
 - Generate Photo Poses from ModelFree Construction Reference: Automatically retrieves the photo points taught during modelfree construction and uses them as the finepositioning photo points.
 
 - Set Automatic Photo Pose Filtering Strategy: Click to open the "Photo Pose Filtering Settings" page, where you can configure the filtering criteria for photo poses.
+
+- Get Teaching Weld Seam Photo Poses: Click to add the teaching-weld photo poses to the point list. First click "Get Automatic Photo Poses" to create the photo poses for non-teaching weld seams, and then click "Get Teaching Weld Seam Photo Poses" to obtain all photo poses.
 
 - Get Weld Recognition Data: Generates the welding program based on the finepositioning recognition results and the edited welds and their attributes.
 
@@ -2191,6 +2288,34 @@ The parameters have the same meanings as those for a non-continuous weld seam. W
 	Continuous Weld Seam - Single-Segment Editing
 
 The editing parameters are then the same as those for a non-continuous weld seam, and the editing result for the individual segment is updated accordingly in the 3D scene.
+
+- Teaching Weld Seam Editing
+
+Like ordinary weld seams, teaching weld seams can also be edited. The editable parameters are shown below.
+
+.. figure:: analysis/tech_weld_edit1.png
+	:align: center
+	:width: 5in
+
+	Weld Seam Editing Dialog Box - Teaching Weld Seam
+
+"Modify Teaching Points" and "Modify Teaching Weld Seam Common Configuration" are settings unique to teaching weld seams. The meanings of the other options are the same as the corresponding editing parameters for ordinary weld seams.
+
+Modify Teaching Points: Click the button to open the Modify Teaching Points dialog box, as shown below. The operation is the same as the point-setting process described in the "Weld Editing" section. See that section for details.
+
+.. figure:: analysis/tech_weld_edit2.png
+	:align: center
+	:width: 5in
+
+	Modify Teaching Points
+
+Modify Teaching Weld Seam Common Configuration: Click the button to open the corresponding common-configuration dialog box, as shown below. Move the robot to the required pose or record the required point, and then click "Confirm Modification" to update the photographing point.
+
+.. figure:: analysis/tech_weld_edit3.png
+	:align: center
+	:width: 5in
+
+	Modify Teaching Weld Seam Common Configuration
 
 Weld Seam Inference Function
 

@@ -18,7 +18,7 @@ Applicable Robots and Version Compatibility
 
 Applicable robots: FR3, FR3-WMS, FR3-WML, FR5, FR5-WML, FR10, FR16, and FR20.
 
-Applicable controller software versions: v3.8.2.11、v3.9.0、v3.9.4、v3.9.5、v3.9.6、v3.9.7、v3.9.8、v3.9.9. For compatibility with AIRLab, see Table 1-1.
+Applicable controller software versions: v3.8.2.11、v3.9.0、v3.9.4、v3.9.5、v3.9.6、v3.9.7、v3.9.8、v3.9.9、v4.0.0. For compatibility with AIRLab, see Table 1-1.
 
 .. table:: Compatibility Between AIRLab and Robot Controller Software Versions
    :align: center
@@ -39,6 +39,8 @@ Applicable controller software versions: v3.8.2.11、v3.9.0、v3.9.4、v3.9.5、
    | v2.2.0             | v3.9.8                              |
    +--------------------+-------------------------------------+
    | v2.3.0             | v3.9.9                              |
+   +--------------------+-------------------------------------+
+   | v2.4.0             | v4.0.0                              |
    +--------------------+-------------------------------------+
 
 Version Upgrade Requirements
@@ -71,6 +73,8 @@ If the current version is v1.2.0 or later, upgrade sequentially according to Tab
    | < v2.2.0                | v2.2.0                  | Use the AIRLab upgrade function                  |
    +-------------------------+-------------------------+--------------------------------------------------+
    | < v2.3.0                | v2.3.0                  | Use the AIRLab upgrade function                  |
+   +-------------------------+-------------------------+--------------------------------------------------+
+   | < v2.4.0                | v2.4.0                  | Use the AIRLab upgrade function                  |
    +-------------------------+-------------------------+--------------------------------------------------+
 
 Version Downgrade and Recovery Requirements
