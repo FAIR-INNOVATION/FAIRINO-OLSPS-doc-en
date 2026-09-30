@@ -1,4 +1,4 @@
 AIRLab Software
 ========================================
 
-   :download:`FAIRINO-AIRLabSoftware-V2.3.0-20260831 <https://drive.google.com/drive/folders/1fPi1hy4e7V8UMGqcauMAcloZTtRszkbO?usp=sharing>`
+   :download:`FAIRINO-AIRLabSoftware-V2.4.0-20260930 <https://drive.google.com/drive/folders/1gsHJ9ml7GOfe9iwxm6q8u6xTF_wzxiL2>`
